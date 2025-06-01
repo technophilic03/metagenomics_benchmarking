@@ -1,10 +1,10 @@
 # parseMethods configuration file #
 # add comments using the pound character
 
-ANALYSISTYPE=ROC_CURVE,R2,RMS_RE
+ANALYSISTYPE=R2,RRMSE,ROC
 TOTALGENOMES=426
 
-
+#Methods: R2,RRMSE,ROC,SIMOBS
 #ANALYSISTYPE is a flag that specify the analysis that you want to do.
 #TOTALGENOMES is a flag that you need to specify if ROC CURVE analysis flag is on. its mean the universe of genomes (data base) that you used in mapping step (all genomes)
 

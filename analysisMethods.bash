@@ -35,19 +35,20 @@ function parsefastaFunction {
 }
 
 function groupingFunction {
-	echo 'args<-commandArgs()
-	file<-c(args[6])
-	headr<-c(args[7])
+	echo 'args <- commandArgs(trailingOnly = TRUE)
+	file <- c(args[1])
+	headr <- c(args[2])
 	if(headr=="T"){
-			df<-read.csv(file, header = T, check.names = F)
-			newdf<-aggregate(. ~ Species, df, FUN = sum)
+			df <- read.csv(file, header = T, check.names = F)
+			newdf <- aggregate(. ~ Species, df, FUN = sum)
 
 	}else{
-			df<-read.csv(file, header = F)
-			colnames(df)<-c("COL1","COL2")
-			newdf<-aggregate(. ~ COL1, df, FUN = sum)
+			df <- read.csv(file, header = F)
+			colnames(df) <- c("Species","Abundance")
+			newdf <- aggregate(. ~ Species, df, FUN = sum)
 	}
 	write.table(newdf,file,row.names = F,quote = F)' > grp.R
+	
 }
 
 
@@ -138,6 +139,7 @@ do
 								;;
 							esac
 						done < <(grep "" $REALDATAFILE)
+						sleep 1
 						rm parsefasta.awk
 						REALDATAFILE="rtmp"
 
@@ -169,6 +171,7 @@ do
 							if curl -s "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=$ti" > tmp.xml ;then
 								touch tmp.xml
 								nofetch=$(cat tmp.xml)
+								sleep 1
 							else
 								echo "curl error fetch, internet connection?, retrying"
 							fi
@@ -229,19 +232,16 @@ do
 				BACKUPS=$i
 				ORIGINALSNAME=$(echo "$SIMDATAFILE" |rev |cut -d "/" -f 1 |rev)
 
-				#if [ $((notiWorkband)) -eq 1 ]; then
-					echo "metaphlan,constrains,sigma convertion working" #now convertions apply to all softwares, check parseMethods for know the changes
-					colti=$(awk -F"," '{if(NR==1){for (i=1;i<=9;i++){if($i ~ "Name"){print i;exit}}}}' $SIMDATAFILE)		
-				#else
-				#	colti=$(awk -F"," '{if(NR==1){for (i=1;i<=9;i++){if($i ~ "ti"){print i;exit}}}}' $SIMDATAFILE)
-				#fi
+				echo "metaphlan,constrains,sigma convertion working" #now convertions apply to all softwares, check parseMethods for know the changes
+				colti=$(awk -F"," '{if(NR==1){for (i=1;i<=9;i++){if($i ~ "Species"){print i;exit}}}}' $SIMDATAFILE)		
+				
 
 				if [ "$colti" == "" ];then
 					echo "header 'ti' not found in $SIMDATAFILE, check your csv"
 					exit
 				else
 					#make sim data only with ti numbers
-					awk -v initial=$colti -F"," '{for (i=initial;i<=NF;i++){printf "%s ",$i}printf "\n"}' $SIMDATAFILE > stmp
+					awk -F"," '{printf "%s %s %s %s %s %s\n", $7, $9, $10, $11, $12, $13}' $SIMDATAFILE > stmp
 					SIMDATAFILE="stmp"
 
 				fi
@@ -258,165 +258,35 @@ do
 done
 
 function getR2Function {
-	
-	echo 'args <-commandArgs()
-	myfile<-args[6]
-	
-	correlaciones<-read.table(myfile,header=FALSE)
-	
-	summary(lm(V1~V2, data=correlaciones))'
 
-}
-function RMSfunction {
 	folder=$(pwd)
-	echo "RRMSE function called in $folder"
-
-	totalcol=$(awk '{if(NR>1){print NF;exit}}' $SIMDATAFILE)
-	echo -e "Analysis,RRMSE,NAVGRE" > RMS.$ORIGINALSNAME
-	for coli in $(seq 3 1 $totalcol)	#col 1 and 2 always be the name
-	do
-		awk -v coli=$coli '{if(NR>1){print $1, $2, $coli}else{print $(coli-1) > "htmp"}}' $SIMDATAFILE > name_reads_tmp
-		#in the next line, we find the ti that match in simulation data file.
-		suma=0
-		sumprom=0
-		firstline=0
-
-		while read line 
-		do
-			if [ $((firstline)) -eq 0 ];then
-				firstline=1
-			else
-				name1=$(echo $line |awk '{print $1}')
-				name2=$(echo $line |awk '{print $2}')
-				abu=$(echo $line |awk '{print $3}')
-				backupsuma=$suma
-				backupprom=$sumprom
-
-				suma=$(awk -v realname1=$name1 -v realname2=$name2 -v abu=$abu -v suma=$suma 'function abs(v) {return v < 0 ? -v : v}{
-																		if($1==realname1 && $2==realname2){
-																			if(abu==0){
-																				exit #to avoid the 0/0
-																			}
-																			re=abs(($3-abu)/abu);
-																			print (suma+(re*re));										
-																			exit
-																		}
-																	}' name_reads_tmp)
-
-				sumprom=$(awk -v realname1=$name1 -v realname2=$name2 -v abu=$abu -v suma=$sumprom 'function abs(v) {return v < 0 ? -v : v}{
-																		if($1==realname1 && $2==realname2){
-																				if(abu==0){
-																					exit
-																				}
-																				re=abs(($3-abu)/abu);
-																				print (suma+re);																						
-																				exit
-																			}
-																		}' name_reads_tmp)
-				if [ "$suma" == "" ];then
-					suma=$(echo "$backupsuma")
-				fi
-		
-				if [ "$sumprom" == "" ];then
-					sumprom=$(echo "$backupprom")
-				fi
-
-			fi
-		done < <(grep "" $REALDATAFILE)	#mprf parsed file have 'ti abundance' format
-		#exit
-
-		awk -v suma=$suma 'END{print sqrt(suma/(NR-1))}' $REALDATAFILE > rrmsetmp
-		awk -v suma=$sumprom 'END{print suma/(NR-1)}' $REALDATAFILE > avg
-
-		paste -d "," rrmsetmp avg > 2rms
-		paste -d "," htmp 2rms > rrmse
-		cat rrmse
-		cat RMS.$ORIGINALSNAME rrmse > rmsvalues
-		mv rmsvalues RMS.$ORIGINALSNAME
-	done
-
-	rm -f name_reads_tmp htmp rrmsetmp rrmse avg 2rms
-
+	echo "R2 function called in $folder"
+	
+  Rscript getR2Function.R "$REALDATAFILE" "$SIMDATAFILE" "$ORIGINALSNAME"
 }
+
+function RMSfunction {
+
+   folder=$(pwd)
+   echo "RRMSE function called in $folder"
+
+   Rscript RMSFunction.R "$REALDATAFILE" "$SIMDATAFILE" "$ORIGINALSNAME"
+    
+}
+
 function ROCfunction {
-	
-	re='^[0-9]+$'
-	#only number no spaces
-	if ! [[ "$TOTALGENOMES" =~ $re ]] ; then
-		echo "you need to specify TOTALGENOMES flag with a integer number to calculate roc curves"
-	else
-		folder=$(pwd)
-		echo "ROCfunction called in $folder"
-	
-		echo "fpr,tpr" > ROCtmp.dat
-		echo "file" > filerocname
-		totalcol=$(awk '{if(NR>1){print NF;exit}}' $SIMDATAFILE)
-		for coli in $(seq 3 1 $totalcol)	#col 1 and 2 always be name in metaphlan,constrains and kraken, we begin in reads cols >=2
-		do
-			awk -v coli=$coli '{if(NR>1){print $1, $2, $coli}else{print $(coli-1) > "htmp"}}' $SIMDATAFILE > name_reads_tmp
-			filename=$(cat htmp)
-			TP=0	#true positive
-			TN=0	#true negative
-			FP=0	#false positive
-			FN=0	#false negative
-				
-			###########TRUE POSITIVE AND FALSE POSITIVE###########
-			while read name1 name2 reads
-			do
-				linetir=$(awk -v name1=$name1 -v name2=$name2 '{if($1==name1 && $2==name2){print $1, $2, $3;exit}}' $REALDATAFILE)
-	
-				if [ "$linetir" != "" ]; then
-					name1=$(echo "$linetir" |awk '{print $1}')
-					name2=$(echo "$linetir" |awk '{print $2}')
-					readr=$(echo "$linetir" |awk '{print $3}')
-					resultado=$(echo "$reads $readr" |awk '{if($1 >= $2/2){print "1"}else{print "0"}}') #bash doesn't work with float
-					
-					if [ "$resultado" == "1" ]; then
-						TP=$(echo  "$TP+1" |bc)
-					else
-						band=$(echo "$reads $readr" |awk '{if($1==0 && $2>0){print "fp";exit}}')
-						if [ "$band" == "fp" ]; then
-							FP=$(echo "$FP+1" |bc)
-						fi
-					fi
-					
-				else
-					FP=$(echo "$FP+1" |bc)
-				fi
-				
-			done < <(grep "" name_reads_tmp)	#mprf parsed file have 'ti abundance' format
-			
-			###########FALSE NEGATIVE AND TRUE NEGATIVE###########
-	
-			while read line
-			do	
-				name1=$(echo "$line" |awk '{print $1}')
-				name2=$(echo "$line" |awk '{print $2}')
-				names=$(awk -v name1=$name1 -v name2=$name2 '{if($1==name1 && $2==name2){print $1, $2;exit}}' name_reads_tmp)
-				if [ "$names" == "" ]; then
-					FN=$(echo "$FN+1" |bc)
-				fi								
-			done < <(grep "" $REALDATAFILE)	#mprf parsed file have 'ti abundance' format
-			TN=$(wc -l name_reads_tmp |awk '{print $1}' |awk -v total=$TOTALGENOMES -v tn=$TN '{print tn+(total-$1)}')
-	
-			######################################################
-			
-			echo -e "\nTP: $TP FP:$FP FN: $FN TN:$TN"
-			tpr=$(echo "$TP $FN" | awk '{print $1/($1+$2)}')
-			fpr=$(echo "$FP $TN" | awk '{print ($1/($1+$2))}')
-			echo "fpr: $fpr tpr: $tpr"
-			echo "$filename" >> filerocname
-			echo "$fpr,$tpr" >> ROCtmp.dat
-		done
-		
-		paste -d "," filerocname ROCtmp.dat > ROC.$ORIGINALSNAME
-	#	sed "2d" ROC.$ORIGINALSNAME > tmp
-	#	rm ROC.$ORIGINALSNAME
-	#	mv tmp ROC.$ORIGINALSNAME
-		rm -f name_reads_tmp htmp filerocname ROCtmp.dat
-	fi
+    re='^[0-9]+$'
+    if ! [[ "$TOTALGENOMES" =~ $re ]]; then
+        echo "You need to specify the TOTALGENOMES flag with an integer number to calculate ROC curves"
+        return 1
+    fi
 
+    folder=$(pwd)
+    echo "ROCfunction called in $folder"
+
+    Rscript ROCFunction.R "$REALDATAFILE" "$SIMDATAFILE" "$TOTALGENOMES" "$ORIGINALSNAME"
 }
+
 function SIMOBSfunction {
 	folder=$(pwd)
 	echo "Simulation vs Observed function called in: $folder"
@@ -465,7 +335,7 @@ if [ $((statusband)) -ge 3 ]; then
 	do
 		case $a in
 			"R2")
-				R2function
+				getR2Function
 			;;
 			"RRMSE")
 				RMSfunction
@@ -483,7 +353,6 @@ if [ $((statusband)) -ge 3 ]; then
 		esac
 	done
 			
-	rm -f stmp rtmp
 else
 	echo "Invalid or Missing Parameters, print --help to see the options"
 	echo "Usage: bash analysisMethods.bash --cfile [config file] --simdata [table csv] --realdata [mconf from metasim maybe]"
