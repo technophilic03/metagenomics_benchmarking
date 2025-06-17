@@ -48,13 +48,14 @@ echo "=========================================================="
 start_time=$(date +%s)
 
 stem=/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark
-mapfile -t inputFastqFiles < ${stem}/MeSS_code/mess_manifest.txt
+mapfile -t inputFastqFiles < ${stem}/MeSS_code/mess_manifest_test.txt
 index=$(($SGE_TASK_ID-1))
 dataDir="${inputFastqFiles[$index]%/*}"
+sampleType=$(basename "$(dirname "$dataDir")")
 sampleName=($(echo ${inputFastqFiles[$index]##*/} | sed 's/_R1.*//'))
 
 ### MAKE WORKING DIR
-workingDir=${sampleName}_tmp
+workingDir="${sampleType}_${sampleName}_tmp"
 rm -rf $TMPDIR/$workingDir
 mkdir $TMPDIR/$workingDir
 
@@ -67,7 +68,8 @@ pathoscope="/restricted/projectnb/pathoscope/code/PathoScope/pathoscope/pathosco
 indDir="/restricted/projectnb/pathoscope/reflib/2020_index_bowtie"
 targLibs="bacteria,viral,fungi"
 filterLibs="human_mouse,phix174"
-outDir=${stem}/profilers/PathoScope2/outputs
+outDir="${stem}/profilers/PathoScope2/outputs/${sampleType}"
+mkdir -p "$outDir"
 
 # Run Pathoscope
 module load bowtie2

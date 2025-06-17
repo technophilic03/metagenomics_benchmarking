@@ -48,16 +48,17 @@ start_time=$(date +%s)
 
 # Data location
 stem=/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark
-mapfile -t inputFastqFiles < ${stem}/test_data/Mock_Lluch_manifest.txt
+mapfile -t inputFastqFiles < ${stem}/MeSS_code/mess_manifest_test.txt
 index=$(($SGE_TASK_ID-1))
 dataDir="${inputFastqFiles[$index]%/*}"
+sampleType=$(basename "$(dirname "$dataDir")")
 sampleName=($(echo ${inputFastqFiles[$index]##*/} | sed 's/_R1.*//'))
 
 readP1=${dataDir}/${sampleName}_R1.fastq.gz
 readP2=${dataDir}/${sampleName}_R2.fastq.gz
 
 ### MAKE WORKING DIR
-workingDir=${sampleName}_tmp
+workingDir="${sampleType}_${sampleName}_tmp"
 rm -rf $TMPDIR/$workingDir
 mkdir $TMPDIR/$workingDir
 
@@ -86,17 +87,18 @@ module load miniconda
 loc=${stem}/my_conda_env
 mamba activate $loc
 
-output_loc=${stem}/profilers/mOTUs/outputs
+outDir="${stem}/profilers/mOTUs/outputs/${sampleType}"
+mkdir -p "$outDir"
 
 motus profile \
     -f $readPath1 -r $readPath2 \
     -n $sampleName \
     -t $NSLOTS \
-    -o ${output_loc}/${sampleName}.profile \
+    -o ${outDir}/${sampleName}.profile \
     -p -q -c -l 20 -g 1
 
 rm -rf $TMPDIR/$workingDir
 
 end_time=$(date +%s)
 elapsed_time=$((end_time - start_time))
-echo "Execution Time: ${elapsed_time} seconds" >> ${output_loc}/${sampleName}_timing.txt
+echo "Execution Time: ${elapsed_time} seconds" >> ${outDir}/${sampleName}_timing.txt

@@ -38,9 +38,10 @@ start_time=$(date +%s)
 
 # Define samples
 stem=/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark
-mapfile -t inputFastqFiles < ${stem}/test_data/Mock_Lluch_manifest.txt
+mapfile -t inputFastqFiles < ${stem}/MeSS_code/mess_manifest_test.txt
 index=$(($SGE_TASK_ID-1))
 dataDir="${inputFastqFiles[$index]%/*}"
+sampleType=$(basename "$(dirname "$dataDir")")
 sampleName=($(echo ${inputFastqFiles[$index]##*/} | sed 's/_R1.*//'))
 
 # Obtain read files
@@ -50,7 +51,9 @@ ReverseRead=$dataDir/${sampleName}_R2.fastq.gz
 # Load software
 module load kraken2/2.1.2
 inputDB=${stem}/db/StandardKrakenDB
-OUTREPORT=${stem}/profilers/Bracken/outputs/${sampleName}
+outDir="${stem}/profilers/Bracken/outputs/${sampleType}"
+mkdir -p "$outDir"
+OUTREPORT="${outDir}/${sampleName}"
 
 # Kraken-Classify a Sample AND Generate a Report File
 # https://ccb.jhu.edu/software/bracken/index.shtml?t=manual
@@ -68,7 +71,7 @@ rm -rf ${OUTREPORT}.out
 
 READ_LEN=150 # Dependent on database read_len param...
 THRESHOLD=10 # Default
-brkn_loc=${stem}/profilers/Bracken/Bracken-2.9/bracken
+brkn_loc=${stem}/code/Bracken-2.9/bracken
 
 ${brkn_loc} -d ${inputDB} \
     -i ${OUTREPORT}.kreport2 \
