@@ -1,0 +1,65 @@
+#!/bin/bash -l
+
+# Set SCC project
+#$ -P pathoscope
+
+# Specify hard time limit for the job. 
+#   The job will be aborted if it runs longer than this time.
+#   The default time is 12 hours
+#$ -l h_rt=50:00:00
+
+# Send an email when the job is aborted
+#$ -m e
+
+# Request cores
+#$ -pe omp 8
+
+# Memory overall
+#$ -l mem_total=150G
+
+# Memory per core
+#$ -l mem_per_core=11G
+
+# Give job a name
+#$ -N brknbuild
+
+# Specify the output file name
+#$ -j y
+#$ -o bracken_build.qlog
+
+# Ask for scratch space
+#$ -l scratch=100G
+
+# Use the SGE_TASK_ID environment variable to select the appropriate input file from bash array
+# Bash array index starts from 0, so we need to subtract one from SGE_TASK_ID value
+#$ -t 1
+
+# Keep track of information related to the current job
+echo "=========================================================="
+echo "Start date : $(date)"
+echo "Job name : $JOB_NAME"
+echo "Job ID : $SGE_TASK_ID"
+echo "=========================================================="
+
+# Set threads according to qsub settings
+THREADS=8
+
+# Load Kraken
+module load kraken2/2.1.2
+
+# path to bracken
+br_path="/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/Bracken"
+brbuild=${br_path}/"Bracken-2.9/bracken-build"
+
+KRAKEN_DB=/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/db/StandardKrakenDB
+
+# Use default kmer length
+KMER_LEN=35
+
+# Need to alter for each group of read lengths in sim data??
+READ_LEN=150
+
+## Bracken-build
+$brbuild -d ${KRAKEN_DB} -t ${THREADS} -k ${KMER_LEN} -l ${READ_LEN}
+
+

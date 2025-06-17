@@ -1,0 +1,102 @@
+#!/bin/bash -l
+
+# Set SCC project
+#$ -P pathoscope
+
+# Specify hard time limit for the job. 
+#   The job will be aborted if it runs longer than this time.
+#   The default time is 12 hours
+#$ -l h_rt=100:00:00
+
+# Send an email when the job finishes or if it is aborted (by default no email is sent).
+#$ -m a
+
+# Give job a name
+#$ -N motus_run
+
+# Request cores
+#$ -pe omp 6
+
+# Memory overall
+#$ -l mem_total=150G
+
+# Memory per core
+#$ -l mem_per_core=11G
+
+# Combine output and error files into a single file
+#$ -j y
+
+# Specify the output file name
+#$ -o run_motus.qlog
+
+# Submit an array job with N tasks 
+#$ -t 1-10
+
+# Ask for scratch space
+#$ -l scratch=100G
+
+# Use SGE_TASK_ID env variable to select appropriate input file from bash array
+# Bash array index starts from 0, so need to subtract one from SGE_TASK_ID value
+
+# Keep track of information related to the current job
+echo "=========================================================="
+echo "Start date : $(date)"
+echo "Job name : $JOB_NAME"
+echo "Job ID : $SGE_TASK_ID"
+echo "=========================================================="
+start_time=$(date +%s)
+
+# Data location
+stem=/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark
+mapfile -t inputFastqFiles < ${stem}/test_data/Mock_Lluch_manifest.txt
+index=$(($SGE_TASK_ID-1))
+dataDir="${inputFastqFiles[$index]%/*}"
+sampleName=($(echo ${inputFastqFiles[$index]##*/} | sed 's/_R1.*//'))
+
+readP1=${dataDir}/${sampleName}_R1.fastq.gz
+readP2=${dataDir}/${sampleName}_R2.fastq.gz
+
+### MAKE WORKING DIR
+workingDir=${sampleName}_tmp
+rm -rf $TMPDIR/$workingDir
+mkdir $TMPDIR/$workingDir
+
+### TRIM the reads
+ module load trimmomatic/0.39
+ trimmomatic PE \
+     -threads $NSLOTS $readP1 $readP2 \
+     $TMPDIR/$workingDir/reads1.paired.fastq.gz \
+     $TMPDIR/$workingDir/reads1.unpaired.fastq.gz \
+     $TMPDIR/$workingDir/reads2.paired.fastq.gz \
+     $TMPDIR/$workingDir/reads2.unpaired.fastq.gz \
+     SLIDINGWINDOW:4:20 LEADING:6 TRAILING:6 MINLEN:36 \
+     CROP:220 HEADCROP:10
+ 
+ readPath1=$TMPDIR/$workingDir/reads1.paired.fastq.gz
+ readPath2=$TMPDIR/$workingDir/reads2.paired.fastq.gz
+
+# Load dependencies
+module load samtools
+module load bwa/0.7.17
+module load htslib
+module load boost
+module load miniconda
+
+# Activate conda environment
+loc=${stem}/my_conda_env
+mamba activate $loc
+
+output_loc=${stem}/profilers/mOTUs/outputs
+
+motus profile \
+    -f $readPath1 -r $readPath2 \
+    -n $sampleName \
+    -t $NSLOTS \
+    -o ${output_loc}/${sampleName}.profile \
+    -p -q -c -l 20 -g 1
+
+rm -rf $TMPDIR/$workingDir
+
+end_time=$(date +%s)
+elapsed_time=$((end_time - start_time))
+echo "Execution Time: ${elapsed_time} seconds" >> ${output_loc}/${sampleName}_timing.txt
