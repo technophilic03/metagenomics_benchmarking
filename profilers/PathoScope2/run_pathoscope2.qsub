@@ -47,10 +47,8 @@ echo "=========================================================="
 
 start_time=$(date +%s)
 
-threads=8
-
 stem=/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark
-mapfile -t inputFastqFiles < ${stem}/test_data/Mock_Lluch_manifest.txt
+mapfile -t inputFastqFiles < ${stem}/MeSS_code/mess_manifest.txt
 index=$(($SGE_TASK_ID-1))
 dataDir="${inputFastqFiles[$index]%/*}"
 sampleName=($(echo ${inputFastqFiles[$index]##*/} | sed 's/_R1.*//'))
@@ -83,7 +81,7 @@ $pathoscope MAP \
     -filterIndexPrefixes $filterLibs \
     -expTag $sampleName \
     -outDir ${TMPDIR}/${workingDir} \
-    -numThreads $threads
+    -numThreads $NSLOTS
 
 $pathoscope ID \
     -expTag $sampleName \
