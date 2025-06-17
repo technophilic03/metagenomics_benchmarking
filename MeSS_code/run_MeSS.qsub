@@ -1,0 +1,89 @@
+#!/bin/bash -l
+
+# Set SCC project
+#$ -P pathoscope
+
+# Specify hard time limit for the job. 
+#   The job will be aborted if it runs longer than this time.
+#   The default time is 12 hours
+#$ -l h_rt=200:00:00
+
+# Send an email when the job finishes or if it is aborted (by default no email is sent).
+#$ -m a
+
+# Give job a name
+#$ -N MeSS
+
+# Request cores
+#$ -pe omp 16
+
+# Memory overall
+#$ -l mem_total=150G
+
+# Memory per core
+#$ -l mem_per_core=11G
+
+# Combine output and error files into a single file
+#$ -j y
+
+# Submit an array job with N tasks 
+#$ -t 1
+
+#   ask for scratch space
+#$ -l scratch=100G
+
+# Specify the output file name
+#$ -o run_MeSS_${SGE_TASK_ID}.qlog
+
+
+# Use SGE_TASK_ID env variable to select appropriate input file from bash array
+# Bash array index starts from 0, so need to subtract one from SGE_TASK_ID value
+
+# Keep track of information related to the current job
+echo "=========================================================="
+echo "Start date : $(date)"
+echo "Job name : $JOB_NAME"
+echo "Job ID : $SGE_TASK_ID"
+echo "=========================================================="
+
+stem=/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark
+output_location=${stem}/MeSS/out_samples
+input_tsv=${stem}/MeSS/all_samples_filtered_tax.tsv
+
+module load miniconda
+
+# Get sample params from manifest
+index=$(($SGE_TASK_ID-1))
+mapfile -t lines < ${stem}/MeSS/manifest_MeSS_params.tsv
+this_param_line="${lines[$index]}"
+IFS=$'\t' read -r samplename err total_bases <<< "$this_param_line"
+samplename_1=${stem}/MeSS/out_samples/${samplename}
+
+# Assembly tsv
+a_summary=${stem}/MeSS/out_samples/mess_sample_1mil_err/assembly_finder/assembly_summary.tsv
+
+# Check if $err is "TRUE"
+if [ "$err" = "TRUE" ]; then
+    conda activate "${stem}/MeSS/mess"
+    echo "Error is TRUE"
+    mess simulate -i "$input_tsv" \
+        --asm-summary ${a_summary} \
+        -o "$samplename_1" \
+        --threads "$NSLOTS" \
+        --mean-len 150 --bam --bases "$total_bases"
+    conda deactivate
+
+else
+    conda activate "${stem}/MeSS/mess"
+    echo "Error is FALSE"
+    mess simulate -i "$input_tsv" \
+        --asm-summary ${a_summary} \
+        -o "$samplename_1" \
+        --threads "$NSLOTS" \
+        --mean-len 150 --bam --bases "$total_bases" \
+        --errfree
+    conda deactivate
+fi
+
+echo "DONE!"
+
