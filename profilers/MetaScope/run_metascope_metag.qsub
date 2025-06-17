@@ -47,13 +47,14 @@ echo "=========================================================="
 start_time=$(date +%s)
 
 stem=/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark
-mapfile -t inputFastqFiles < ${stem}/test_data/Mock_Lluch_manifest.txt
+mapfile -t inputFastqFiles < ${stem}/MeSS_code/mess_manifest_test.txt
 index=$(($SGE_TASK_ID-1))
 dataDir="${inputFastqFiles[$index]%/*}"
+sampleType=$(basename "$(dirname "$dataDir")")
 sampleName=($(echo ${inputFastqFiles[$index]##*/} | sed 's/_R1.*//'))
 
 ### MAKE WORKING DIR
-workingDir=${sampleName}_tmp
+workingDir="${sampleType}_${sampleName}_tmp"
 rm -rf $TMPDIR/$workingDir
 mkdir $TMPDIR/$workingDir
 
@@ -64,7 +65,8 @@ readPath2=$dataDir/${sampleName}_R2.fastq.gz
 ### Run MetaScope
 indexDir="/restricted/projectnb/pathoscope/reflib/2020_index_bowtie/"
 expTag=$sampleName
-outDir=${stem}/profilers/MetaScope/outputs
+outDir="${stem}/profilers/MetaScope/outputs/${sampleType}"
+mkdir -p "$outDir"
 tmpDir="$TMPDIR/$workingDir/"
 
 ### NEW parameters for MetaScope 1.7.3

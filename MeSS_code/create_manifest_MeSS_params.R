@@ -4,7 +4,7 @@
 # 5/1/25
 
 library(tidyverse)
-stem <- "/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/MeSS"
+stem <- "/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/MeSS_code"
 options(scipen = 999)
 
 # For notation

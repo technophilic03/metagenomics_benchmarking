@@ -48,28 +48,34 @@ start_time=$(date +%s)
 NTHREADS=8
 
 stem=/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark
-mapfile -t inputFastqFiles < ${stem}/test_data/Mock_Lluch_manifest.txt
+mapfile -t inputFastqFiles < ${stem}/MeSS_code/mess_manifest_test.txt
 index=$(($SGE_TASK_ID-1))
 dataDir="${inputFastqFiles[$index]%/*}"
+sampleType=$(basename "$(dirname "$dataDir")")
 sampleName=($(echo ${inputFastqFiles[$index]##*/} | sed 's/_R1.*//'))
 
 ### get read files
 readPath1=$dataDir/${sampleName}_R1.fastq.gz
 readPath2=$dataDir/${sampleName}_R2.fastq.gz
 
-# Path to Centrifuge scripts
-CENTRIFUGE_HOME=${stem}/profilers/Centrifuge/centrifuge-1.0.4.2
+# Path to Centrifuge files
+CENTRIFUGE_HOME=${stem}/code/centrifuge-1.0.4.2
+db_loc="${stem}/db/centrifuge/p_compressed+h+v"
+
+# Dir to save output files
+outDir="${stem}/profilers/Centrifuge/outputs/${sampleType}"
+mkdir -p "$outDir"
 
 # Run centrifuge
-$CENTRIFUGE_HOME/centrifuge -x "p_compressed+h+v" \
+$CENTRIFUGE_HOME/centrifuge -x $db_loc \
     -k 18 \
     --seed 55 \
     -1 $readPath1 \
     -2 $readPath2 \
     -p $NTHREADS \
-    --report-file ${stem}/profilers/Centrifuge/outputs/${sampleName}_summary.tsv \
-    -S ${stem}/profilers/Centrifuge/outputs/${sampleName}_report.txt
+    --report-file ${outDir}/${sampleName}_summary.tsv \
+    -S ${outDir}/${sampleName}_report.txt
     
 end_time=$(date +%s)
 elapsed_time=$((end_time - start_time))
-echo "Execution Time: ${elapsed_time} seconds" >> ${stem}/profilers/Centrifuge/timings/${sampleName}_timing.txt
+echo "Execution Time: ${elapsed_time} seconds" >> ${outDir}/${sampleName}_timing.txt
