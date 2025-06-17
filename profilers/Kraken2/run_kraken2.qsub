@@ -1,0 +1,72 @@
+#!/bin/bash -l
+
+# Set SCC project
+#$ -P pathoscope
+
+# Specify hard time limit for the job. 
+#   The job will be aborted if it runs longer than this time.
+#   The default time is 12 hours
+#$ -l h_rt=50:00:00
+
+# Send an email when the job is aborted
+#$ -m e
+
+# Request cores
+#$ -pe omp 8
+
+# Give job a name
+#$ -N std_kraken
+
+# Specify the output file name
+#$ -j y
+#$ -o run_kraken2.qlog
+
+# Ask for scratch space
+#$ -l scratch=100G
+
+# Use the SGE_TASK_ID environment variable to select the appropriate input file from bash array
+# Bash array index starts from 0, so we need to subtract one from SGE_TASK_ID value
+#$ -t 1-10
+
+# Keep track of information related to the current job
+echo "=========================================================="
+echo "Start date : $(date)"
+echo "Job name : $JOB_NAME"
+echo "Job ID : $SGE_TASK_ID"
+echo "=========================================================="
+start_time=$(date +%s)
+
+# Define samples
+stem=/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark
+mapfile -t inputFastqFiles < ${stem}/test_data/Mock_Lluch_manifest.txt
+index=$(($SGE_TASK_ID-1))
+dataDir="${inputFastqFiles[$index]%/*}"
+sampleName=($(echo ${inputFastqFiles[$index]##*/} | sed 's/_R1.*//'))
+
+# Obtain read files
+ForwardRead=$dataDir/${sampleName}_R1.fastq.gz
+ReverseRead=$dataDir/${sampleName}_R2.fastq.gz
+
+# Load software
+module load kraken2/2.1.2
+inputDB=${stem}/db/StandardKrakenDB
+OUTREPORT=${stem}/profilers/Kraken2/outputs/${sampleName}
+
+# Kraken-Classify a Sample AND Generate a Report File
+# https://ccb.jhu.edu/software/bracken/index.shtml?t=manual
+
+kraken2 --db $inputDB \
+    --threads ${NSLOTS} \
+    --report ${OUTREPORT}_taxa.txt \
+    --paired \
+    --gzip-compressed $ForwardRead $ReverseRead \
+    --output ${OUTREPORT}.out \
+    --use-mpa-style # Output in metaphlan style
+
+rm -rf ${OUTREPORT}.out
+
+echo DONE!
+
+end_time=$(date +%s)
+elapsed_time=$((end_time - start_time))
+echo "Execution Time: ${elapsed_time} seconds" >> ${stem}/profilers/Kraken2/outputs/${sampleName}_timing.txt

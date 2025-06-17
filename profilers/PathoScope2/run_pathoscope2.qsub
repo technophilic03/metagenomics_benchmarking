@@ -1,0 +1,100 @@
+#!/bin/bash -l
+
+# Set SCC project
+#$ -P pathoscope
+
+# Specify hard time limit for the job. 
+#   The job will be aborted if it runs longer than this time.
+#   The default time is 12 hours
+#$ -l h_rt=50:00:00
+
+# Send an email when the job finishes or if it is aborted (by default no email is sent).
+#$ -m a
+
+# Give job a name
+#$ -N runpatho
+
+# Request 16 cores
+#$ -pe omp 8
+
+# Memory overall
+#$ -l mem_total=150G
+
+# Memory per core
+#$ -l mem_per_core=11G
+
+# Combine output and error files into a single file
+#$ -j y
+
+# Specify the output file name
+#$ -o run_pathoscope2.qlog
+
+# Submit an array job with N tasks 
+#$ -t 1-10
+
+#   ask for scratch space
+#$ -l scratch=100G
+
+# Use SGE_TASK_ID env variable to select appropriate input file from bash array
+# Bash array index starts from 0, so need to subtract one from SGE_TASK_ID value
+
+# Keep track of information related to the current job
+echo "=========================================================="
+echo "Start date : $(date)"
+echo "Job name : $JOB_NAME"
+echo "Job ID : $SGE_TASK_ID"
+echo "=========================================================="
+
+start_time=$(date +%s)
+
+threads=8
+
+stem=/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark
+mapfile -t inputFastqFiles < ${stem}/test_data/Mock_Lluch_manifest.txt
+index=$(($SGE_TASK_ID-1))
+dataDir="${inputFastqFiles[$index]%/*}"
+sampleName=($(echo ${inputFastqFiles[$index]##*/} | sed 's/_R1.*//'))
+
+### MAKE WORKING DIR
+workingDir=${sampleName}_tmp
+rm -rf $TMPDIR/$workingDir
+mkdir $TMPDIR/$workingDir
+
+### get read files
+readPath1=$dataDir/${sampleName}_R1.fastq.gz
+readPath2=$dataDir/${sampleName}_R2.fastq.gz
+
+# Set filepaths; indices
+pathoscope="/restricted/projectnb/pathoscope/code/PathoScope/pathoscope/pathoscope2.py"
+indDir="/restricted/projectnb/pathoscope/reflib/2020_index_bowtie"
+targLibs="bacteria,viral,fungi"
+filterLibs="human_mouse,phix174"
+outDir=${stem}/profilers/PathoScope2/outputs
+
+# Run Pathoscope
+module load bowtie2
+module load python2/2.7.16
+
+$pathoscope MAP \
+    -1 $readPath1 \
+    -2 $readPath2 \
+    -indexDir $indDir \
+    -targetIndexPrefixes $targLibs \
+    -filterIndexPrefixes $filterLibs \
+    -expTag $sampleName \
+    -outDir ${TMPDIR}/${workingDir} \
+    -numThreads $threads
+
+$pathoscope ID \
+    -expTag $sampleName \
+    -alignFile ${TMPDIR}/${workingDir}/outalign.sam \
+    --noUpdatedAlignFile \
+    -outDir $outDir
+
+# Remove working directory
+rm -rf $TMPDIR/$workingDir
+
+# End of timing
+end_time=$(date +%s)
+elapsed_time=$((end_time - start_time))
+echo "Execution Time: ${elapsed_time} seconds" >> ${outDir}/${sampleName}_timing.txt

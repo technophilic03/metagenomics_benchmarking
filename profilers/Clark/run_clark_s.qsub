@@ -1,0 +1,98 @@
+#!/bin/bash -l
+
+# Set SCC project
+#$ -P pathoscope
+
+# Specify hard time limit for the job. 
+#   The job will be aborted if it runs longer than this time.
+#   The default time is 12 hours
+#$ -l h_rt=50:00:00
+
+# Send an email when the job finishes or if it is aborted (by default no email is sent).
+#$ -m a
+
+# Give job a name
+#$ -N runclark
+
+# Request cores
+#$ -pe omp 6
+
+# Memory overall
+#$ -l mem_total=150G
+
+# Memory per core
+#$ -l mem_per_core=11G
+
+# Combine output and error files into a single file
+#$ -j y
+
+# Specify the output file name
+#$ -o run_clark_s.qlog
+
+# Submit an array job with N tasks 
+#$ -t 1
+
+#   ask for scratch space
+#$ -l scratch=100G
+
+# Use SGE_TASK_ID env variable to select appropriate input file from bash array
+# Bash array index starts from 0, so need to subtract one from SGE_TASK_ID value
+
+# Keep track of information related to the current job
+echo "=========================================================="
+echo "Start date : $(date)"
+echo "Job name : $JOB_NAME"
+echo "Job ID : $SGE_TASK_ID"
+echo "=========================================================="
+
+# Record time
+start_time=$(date +%s)
+
+# Data location
+stem=/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark
+mapfile -t inputFastqFiles < ${stem}/test_data/Mock_Lluch_manifest.txt
+index=$(($SGE_TASK_ID-1))
+dataDir="${inputFastqFiles[$index]%/*}"
+sampleName=($(echo ${inputFastqFiles[$index]##*/} | sed 's/_R1.*//'))
+
+### MAKE WORKING DIR
+workingDir=${sampleName}_tmp
+rm -rf $TMPDIR/$workingDir
+mkdir $TMPDIR/$workingDir
+
+### get read files
+readPath1=${dataDir}/${sampleName}_R1.fastq.gz
+readPath2=${dataDir}/${sampleName}_R2.fastq.gz
+
+# Unzip the files into the working directory
+gunzip -c "$readPath1" > $TMPDIR/$workingDir/${sampleName}_R1.fastq
+gunzip -c "$readPath2" > $TMPDIR/$workingDir/${sampleName}_R2.fastq
+
+# Profiler output locations
+output_dir=${stem}/profilers/Clark/outputs
+DIR_DB=${stem}/profilers/Clark/DIR_DB
+
+module load clark/1.3.0.0
+
+export OMP_NUM_THREAD=$NSLOTS
+
+# Run CLARK-S
+
+## Classification
+bash ${SCC_CLARK_BIN}/classify_metagenome.sh \
+    -D $DIR_DB \
+    -P $TMPDIR/$workingDir/${sampleName}_R1.fastq $TMPDIR/$workingDir/${sampleName}_R2.fastq \
+    -R ${output_dir}/${sampleName}.report.csv \
+    -m 2 \
+    -n $NSLOTS 
+    
+## Analyze results
+## NOTE: CAN PASS IN SEVERAL FILES AT ONCE
+bash ${SCC_CLARK_BIN}/estimate_abundance.sh \
+    -F ${output_dir}/${sampleName}.report.csv \
+    -D $DIR_DB
+
+end_time=$(date +%s)
+elapsed_time=$((end_time - start_time))
+echo "Execution Time: ${elapsed_time} seconds" >> ${stem}/profilers/Clark/timings/${sampleName}_timing.txt
+
