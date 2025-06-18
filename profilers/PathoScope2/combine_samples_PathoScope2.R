@@ -32,8 +32,8 @@ for (this_batch in all_batches) {
   these_filenames <- all_files |>
     basename() |>
     stringr::str_remove(ending)
-  read.csv(file.path(test_dir, "annot.csv")) |>
-    filter(Name %in% these_filenames) |>
+  dplyr::tibble(Name = these_filenames,
+                sampletype = this_batch) |>
     write.csv(row.names = FALSE, quote = FALSE,
               file.path(test_dir, "temp_annot.csv"))
   
