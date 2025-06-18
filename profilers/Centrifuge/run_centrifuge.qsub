@@ -30,7 +30,7 @@
 #$ -o run_centrifuge.qlog
 
 # Submit an array job with N tasks 
-#$ -t 1-10
+#$ -t 1-7
 
 # ask for scratch space
 #$ -l scratch=100G
@@ -55,8 +55,8 @@ sampleType=$(basename "$(dirname "$dataDir")")
 sampleName=($(echo ${inputFastqFiles[$index]##*/} | sed 's/_R1.*//'))
 
 ### get read files
-readPath1=$dataDir/${sampleName}_R1.fastq.gz
-readPath2=$dataDir/${sampleName}_R2.fastq.gz
+readPath1=$dataDir/${sampleName}_R1.fq.gz
+readPath2=$dataDir/${sampleName}_R2.fq.gz
 
 # Path to Centrifuge files
 CENTRIFUGE_HOME=${stem}/code/centrifuge-1.0.4.2
