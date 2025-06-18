@@ -30,7 +30,7 @@
 #$ -o run_metascope_metag.qlog
 
 # Submit an array job with N tasks 
-#$ -t 1-10
+#$ -t 1-7
 
 #   ask for scratch space
 #$ -l scratch=100G
@@ -59,8 +59,8 @@ rm -rf $TMPDIR/$workingDir
 mkdir $TMPDIR/$workingDir
 
 ### get read files
-readPath1=$dataDir/${sampleName}_R1.fastq.gz
-readPath2=$dataDir/${sampleName}_R2.fastq.gz
+readPath1=$dataDir/${sampleName}_R1.fq.gz
+readPath2=$dataDir/${sampleName}_R2.fq.gz
 
 ### Run MetaScope
 indexDir="/restricted/projectnb/pathoscope/reflib/2020_index_bowtie/"

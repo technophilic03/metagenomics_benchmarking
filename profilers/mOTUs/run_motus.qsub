@@ -30,7 +30,7 @@
 #$ -o run_motus.qlog
 
 # Submit an array job with N tasks 
-#$ -t 1-10
+#$ -t 1-7
 
 # Ask for scratch space
 #$ -l scratch=100G
@@ -54,8 +54,8 @@ dataDir="${inputFastqFiles[$index]%/*}"
 sampleType=$(basename "$(dirname "$dataDir")")
 sampleName=($(echo ${inputFastqFiles[$index]##*/} | sed 's/_R1.*//'))
 
-readP1=${dataDir}/${sampleName}_R1.fastq.gz
-readP2=${dataDir}/${sampleName}_R2.fastq.gz
+readP1=${dataDir}/${sampleName}_R1.fq.gz
+readP2=${dataDir}/${sampleName}_R2.fq.gz
 
 ### MAKE WORKING DIR
 workingDir="${sampleType}_${sampleName}_tmp"
