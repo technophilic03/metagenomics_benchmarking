@@ -27,13 +27,13 @@
 #$ -j y
 
 # Submit an array job with N tasks 
-#$ -t 1
+#$ -t 1-2
 
 #   ask for scratch space
 #$ -l scratch=100G
 
 # Specify the output file name
-#$ -o run_MeSS_${SGE_TASK_ID}.qlog
+#$ -o run_MeSS.qlog
 
 
 # Use SGE_TASK_ID env variable to select appropriate input file from bash array
@@ -48,13 +48,13 @@ echo "=========================================================="
 
 stem=/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark
 output_location=${stem}/MeSS/out_samples
-input_tsv=${stem}/MeSS/all_samples_filtered_tax.tsv
+input_tsv=${stem}/MeSS_code/all_samples_filtered_tax.tsv
 
 module load miniconda
 
 # Get sample params from manifest
 index=$(($SGE_TASK_ID-1))
-mapfile -t lines < ${stem}/MeSS/manifest_MeSS_params.tsv
+mapfile -t lines < ${stem}/MeSS_code/manifest_MeSS_params.tsv
 this_param_line="${lines[$index]}"
 IFS=$'\t' read -r samplename err total_bases <<< "$this_param_line"
 samplename_1=${stem}/MeSS/out_samples/${samplename}
