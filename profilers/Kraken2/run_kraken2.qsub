@@ -26,7 +26,7 @@
 
 # Use the SGE_TASK_ID environment variable to select the appropriate input file from bash array
 # Bash array index starts from 0, so we need to subtract one from SGE_TASK_ID value
-#$ -t 1-7
+#$ -t 1-96
 
 # Keep track of information related to the current job
 echo "=========================================================="
@@ -38,7 +38,7 @@ start_time=$(date +%s)
 
 # Define samples
 stem=/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark
-mapfile -t inputFastqFiles < ${stem}/MeSS_code/mess_manifest_test.txt
+mapfile -t inputFastqFiles < ${stem}/MeSS_code/mess_manifest.txt
 index=$(($SGE_TASK_ID-1))
 dataDir="${inputFastqFiles[$index]%/*}"
 sampleType=$(basename "$(dirname "$dataDir")")

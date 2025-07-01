@@ -9,6 +9,9 @@
 # consolidate them, and create a formatted
 # table to use in downstream analysis
 
+## IMPORTANT
+## MUST RUN combine_outputs_kraken2.sh FIRST!!!
+
 # Setup ----
 suppressPackageStartupMessages({
   library(tidyverse)
@@ -53,9 +56,9 @@ for (this_batch in all_batches) {
     # Get the Kraken table for that sample
     kraken_new_calc <- kraken_res |>
       kraken_exclusive_counts() |>
-      mutate(!!this_sample := exclusive_count)
+      dplyr::mutate(!!this_sample := exclusive_count)
     return(kraken_new_calc)
-  }
+    }
   
   all_sample_names <- colnames(df_all)[-1]
   all_kraken_counts <- lapply(all_sample_names, get_new_counts_tabs) |>
@@ -79,8 +82,8 @@ for (this_batch in all_batches) {
     # Get the bracken table for that sample
     bracken_new_calc <- add_taxonomy_bracken(all_kraken_counts[[this_sample]],
                                              br_tab) |>
-      select(-"taxonomy_id", -!!this_sample) |>
-      rename(!!this_sample := new_est_reads)
+      dplyr::select(-"taxonomy_id", -!!this_sample) |>
+      dplyr::rename(!!this_sample := "new_est_reads")
     
     return(bracken_new_calc)
   }
