@@ -30,7 +30,7 @@
 #$ -o run_pathoscope2.qlog
 
 # Submit an array job with N tasks 
-#$ -t 1-7
+#$ -t 1-96
 
 #   ask for scratch space
 #$ -l scratch=100G
@@ -48,7 +48,7 @@ echo "=========================================================="
 start_time=$(date +%s)
 
 stem=/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark
-mapfile -t inputFastqFiles < ${stem}/MeSS_code/mess_manifest_test.txt
+mapfile -t inputFastqFiles < ${stem}/MeSS_code/mess_manifest.txt
 index=$(($SGE_TASK_ID-1))
 dataDir="${inputFastqFiles[$index]%/*}"
 sampleType=$(basename "$(dirname "$dataDir")")
