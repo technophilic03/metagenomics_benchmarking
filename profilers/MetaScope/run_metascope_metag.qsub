@@ -6,7 +6,7 @@
 # Specify hard time limit for the job. 
 #   The job will be aborted if it runs longer than this time.
 #   The default time is 12 hours
-#$ -l h_rt=100:00:00
+#$ -l h_rt=50:00:00
 
 # Send an email when the job finishes or if it is aborted (by default no email is sent).
 #$ -m a
@@ -18,10 +18,10 @@
 #$ -pe omp 8
 
 # Memory overall
-#$ -l mem_total=150G
+# -l mem_total=256G
 
 # Memory per core
-#$ -l mem_per_core=11G
+#$ -l mem_per_core=16G
 
 # Combine output and error files into a single file
 #$ -j y
@@ -30,7 +30,7 @@
 #$ -o run_metascope_metag.qlog
 
 # Submit an array job with N tasks 
-#$ -t 1-96
+#$ -t 1-48
 
 #   ask for scratch space
 #$ -l scratch=100G
