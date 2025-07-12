@@ -28,6 +28,7 @@ all_batches <- list.dirs(path = file.path(stem, "profilers/Kraken2/outputs"),
 source(file.path(stem, "/profilers/Kraken2/combine_kraken2_bracken_functions.R"))
 
 for (this_batch in all_batches) {
+  message("Running ", this_batch)
   # Read in combined raw output ----
   sample_names <- read.table(file.path(out_path,
                                        paste0(this_batch, "_samplenames.txt")),
