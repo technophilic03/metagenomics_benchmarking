@@ -1,6 +1,5 @@
 args <- commandArgs(trailingOnly = TRUE)
 suppressPackageStartupMessages({library(tidyverse)})
-
 real_data_file <- args[1]	# rtmp($REALDATAFILE)
 sim_data_file <- args[2]	# stmp($SIMDATAFILE)
 original_name <- args[3] # $ORIGINALSNAME
@@ -34,44 +33,18 @@ sim <- sim_data |>
 
 group_data <- merge(real, sim, by = "Species")
 
-df_rms <- data.frame(matrix(ncol = 0, nrow = 2))
-rownames(df_rms) <- c("RRMSE", "AVGRE")
-
-# rrmse = rmse / mean of observation
-# observed: SIMDATA/true microbial abd
-# predicted: REALDATA/ground truth/real_abundance
-
-# excellent <10%< good 10<20%, fair 20<30, poor >30
-get_rrmse <- function(observed, predicted) {
-  squared_diff <- (observed - predicted) ^ 2
-  mse <- mean(squared_diff)
-  rmse <- sqrt(mse)
-  mean_observed <- mean(observed)
-  rrmse <- (rmse / mean_observed) * 100
-  return(rrmse)
-}
-
-get_avgre <- function(observed, predicted) {
-  if (0 %in% observed) {
-    valid_indices <- observed != 0
-    observed <- observed[valid_indices]
-    predicted <- predicted[valid_indices]
-  }
-  avgre <- mean(abs(observed - predicted) / observed)
-  return(avgre)
-
-}
+df_r2 <- data.frame(matrix(ncol = 0, nrow = 1))
+rownames(df_r2) <- c("R2")
 
 if (length(group_data) > 1) {
   for (i in 3:6) {
-    rrmse <- get_rrmse(group_data[, i], group_data$real_abundance)
-    avgre <- get_avgre(group_data[, i], group_data$real_abundance)
-    df_rms[[colnames(group_data)[i]]] <- c(rrmse, avgre)
+    model <- lm(group_data[, i] ~ real_abundance, data = group_data)
+    r2 <- summary(model)$r.squared
+    df_r2[[colnames(group_data)[i]]] <- r2
   }
 } else {
   r2 <- c(NA)
   return(NA)
 }
 
-
-write.csv(df_rms, paste("RMS_", original_name, ".csv"), row.names = TRUE)
+write.csv(df_r2, paste("R2_", original_name), row.names = TRUE)

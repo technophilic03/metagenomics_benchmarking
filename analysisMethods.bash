@@ -28,7 +28,7 @@ function parsefastaFunction {
 						exit 0
 					}
 			}
-					
+
 		}
 	}
 	}'
@@ -48,7 +48,7 @@ function groupingFunction {
 			newdf <- aggregate(. ~ Species, df, FUN = sum)
 	}
 	write.table(newdf,file,row.names = F,quote = F)' > grp.R
-	
+
 }
 
 
@@ -77,9 +77,9 @@ do
 		exit
 	;;
 	*)
-		
+
 		if [ $((cfileband)) -eq 1 ];then
-			
+
 			if ! [ -f $i ];then
 				echo "$i file no exist"
 				exit
@@ -87,7 +87,7 @@ do
 
 			for parameter in $(awk '{print}' $i)
 			do
-				Pname=$(echo "$parameter" |awk -F"=" '{print $1}')		
+				Pname=$(echo "$parameter" |awk -F"=" '{print $1}')
 				case $Pname in
 					"TOTALGENOMES")
 						TOTALGENOMES=$(echo "$parameter" |awk -F"=" '{print $2}' |sed "s/,/ /g")
@@ -100,7 +100,7 @@ do
 			statusband=$((statusband+1))
 			cfileband=0
 		fi
-		
+
 		if [ $((realdataband)) -eq 1 ];then
 			if [ -f $i ];then
 				statusband=$((statusband+1))
@@ -123,19 +123,19 @@ do
 							#parsed file
 							case $ID in
 								"ti")
-									echo "$line" |awk '{print $3, $1}' >> rtmp				
+									echo "$line" |awk '{print $3, $1}' >> rtmp
 								;;
 								"gi")
 									abu=$(echo "$line" |awk '{print $1}')
 									gi=$(echo "$line" |awk '{print $3}')
 									ti=""
 									echo "fetching ti by gi: $gi"
-									
+
 									while [ "$ti" == "" ]
 									do
 										ti=$(curl -s "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?dbfrom=nuccore&db=taxonomy&id=$gi" |grep "<Id>"|tail -n1 |awk '{print $1}' |cut -d '>' -f 2 |cut -d '<' -f 1)
 									done
-									echo "$ti $abu" >> rtmp				
+									echo "$ti $abu" >> rtmp
 								;;
 							esac
 						done < <(grep "" $REALDATAFILE)
@@ -213,17 +213,17 @@ do
 						rm -f tmp.xml tmp.txt
 					fi
 				done < <(grep "" $REALDATAFILE)
-				
+
 				awk '{if(NR>1){print "\""$1" "$2"\""","$3}}' newrealtmp >rtmp
 				rm -f newrealtmp
 				REALDATAFILE="rtmp"
-				
+
 				#Grouping same names
 				groupingFunction
 				Rscript grp.R rtmp F
 
 		fi
-		
+
 		if [ $((simdataband)) -eq 1 ];then
 			if [ -f $i ];then
 				#this is csv file
@@ -233,8 +233,8 @@ do
 				ORIGINALSNAME=$(echo "$SIMDATAFILE" |rev |cut -d "/" -f 1 |rev)
 
 				echo "metaphlan,constrains,sigma convertion working" #now convertions apply to all softwares, check parseMethods for know the changes
-				colti=$(awk -F"," '{if(NR==1){for (i=1;i<=9;i++){if($i ~ "Species"){print i;exit}}}}' $SIMDATAFILE)		
-				
+				colti=$(awk -F"," '{if(NR==1){for (i=1;i<=9;i++){if($i ~ "Species"){print i;exit}}}}' $SIMDATAFILE)
+
 
 				if [ "$colti" == "" ];then
 					echo "header 'ti' not found in $SIMDATAFILE, check your csv"
@@ -261,7 +261,7 @@ function getR2Function {
 
 	folder=$(pwd)
 	echo "R2 function called in $folder"
-	
+
   Rscript getR2Function.R "$REALDATAFILE" "$SIMDATAFILE" "$ORIGINALSNAME"
 }
 
@@ -271,7 +271,7 @@ function RMSfunction {
    echo "RRMSE function called in $folder"
 
    Rscript RMSFunction.R "$REALDATAFILE" "$SIMDATAFILE" "$ORIGINALSNAME"
-    
+
 }
 
 function ROCfunction {
@@ -352,7 +352,7 @@ if [ $((statusband)) -ge 3 ]; then
 	   		;;
 		esac
 	done
-			
+
 else
 	echo "Invalid or Missing Parameters, print --help to see the options"
 	echo "Usage: bash analysisMethods.bash --cfile [config file] --simdata [table csv] --realdata [mconf from metasim maybe]"

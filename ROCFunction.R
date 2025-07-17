@@ -58,14 +58,14 @@ if (length(group_data) > 1) {
         FP <- FP + 1 # FP +1 when simulated reads = 0 but real reads >0
       }
     }
-    
+
     get_TPR <- TP / (TP + FN)
     get_FPR <- FP / (FP + TN)
     df_roc[[colnames(group_data)[i]]] <- c(get_TPR, get_FPR)
     t_df_roc <- as.data.frame(t(df_roc)) # transposed
-    
+
   }
-  
+
 } else{
   return(NA)
 }
