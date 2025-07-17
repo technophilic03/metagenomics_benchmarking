@@ -3,7 +3,11 @@ suppressPackageStartupMessages({
   library(tidyverse)
 })
 
-input <- 'profilers/Bracken/combined_files/mess_sample_100k_err_bracken_final_summary.csv'
+csv_files <- list.files(
+  path      = "profilers/Bracken/combined_files",
+  pattern   = "\\.csv$",       # only .csv
+  full.names= TRUE             # give full path
+)
 
 df <- read.csv(input) |>
   select(Name)
@@ -39,13 +43,23 @@ fetch_record <- function(name_from_profilers) {
     old_name = name_from_profilers,
     current_name = current_name
   )
-  
-  
 }
 
-result <- lapply(df$Name, fetch_record)
-result_df <- do.call(rbind, result)
-diff <- result_df %>%
-  filter(old_name != current_name)
-
-write.csv(diff, file = "analysisMethods/update_names/output.csv")
+process_file <- function(input_path) {
+  message("Processing ", basename(input_path))
+  
+  df <- read.csv(input_path) |>
+    select(Name)
+  
+  result <- lapply(df$Name, fetch_record)
+  result_df <- do.call(rbind, result)
+  diff <- result_df |> 
+    filter(old_name != current_name)
+  
+  out_dir  <- "profilers/Bracken/combined_files/name_update/"
+  out_name <- paste0("diff_", basename(input_path))
+  out_path <- file.path(out_dir, out_name)
+  
+  write.csv(diff, file = out_path, row.names = FALSE)
+}
+# purrr::walk(csv_files, process_file)
