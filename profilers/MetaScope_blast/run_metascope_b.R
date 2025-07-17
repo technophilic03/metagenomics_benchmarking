@@ -12,6 +12,7 @@ targets <- stringr::str_split(args[8], ",")[[1]]
 filters <- stringr::str_split(args[9], ",")[[1]]
 taxDB <- args[10]
 priors_df <- args[11]
+blast_db <- args[12]
 
 # Time this!
 now <- Sys.time()
@@ -50,21 +51,20 @@ final_map <- filter_host_bowtie(reads_bam = target_map,
 message("FILTER STEP COMPLETE")
 # MetaScope ID
 message("running id step")
-metascope_id(final_map, input_type = "csv.gz", aligner = "bowtie2",
-             db = "ncbi",
-             num_species_plot = 0,
-             maxitsEM = 100,
-             accession_path = taxDB,
-             tmp_dir = tmpDir,
-             update_bam = TRUE,
-             quiet = FALSE,
-             out_dir = outDir,
-             priors_df = priors_df)
+output_id_csv <- metascope_id(final_map, input_type = "csv.gz", aligner = "bowtie2",
+                              db = "ncbi",
+                              num_species_plot = 0,
+                              maxitsEM = 100,
+                              accession_path = taxDB,
+                              tmp_dir = tmpDir,
+                              update_bam = TRUE,
+                              quiet = FALSE,
+                              out_dir = outDir,
+                              priors_df = priors_df)
 
 # MetaBlast
 message("running MetaBlast")
-blast_db_path <- "!!!!!!!!!!!!!!!!!!!!!!!!!!NEED BLAST DB PATH HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-metascope_id_path <- "!!!!!!!!!!!!!!!!!!!!!!!!!!NEED METASCOPE ID PATH HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+metascope_id_path <- output_id_csv
 metascope_blast(metascope_id_path = metascope_id_path, 
                 bam_file_path = list.files(tmpDir, ".updated.bam$",full.names = TRUE)[1], # THIS ASSUMES EACH SAMPLE HAS THEIR OWN TMP DIRECTORY
                 tmp_dir = tmpDir, 
@@ -75,7 +75,7 @@ metascope_blast(metascope_id_path = metascope_id_path,
                 num_reads = 50, 
                 hit_list = 10,
                 num_threads = threads, 
-                db_path = blast_db_path, 
+                db_path = blast_db, 
                 quiet = FALSE,
                 db = "ncbi", 
                 accession_path = taxDB)

@@ -27,10 +27,10 @@
 #$ -j y
 
 # Specify the output file name
-#$ -o run_metascope_metag.qlog
+#$ -o run_metascope_p.qlog
 
 # Submit an array job with N tasks 
-#$ -t 1-7
+#$ -t 1-48
 
 #   ask for scratch space
 #$ -l scratch=100G
@@ -47,7 +47,7 @@ echo "=========================================================="
 start_time=$(date +%s)
 
 stem=/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark
-mapfile -t inputFastqFiles < ${stem}/MeSS_code/mess_manifest_test.txt
+mapfile -t inputFastqFiles < ${stem}/MeSS_code/mess_manifest.txt
 index=$(($SGE_TASK_ID-1))
 dataDir="${inputFastqFiles[$index]%/*}"
 sampleType=$(basename "$(dirname "$dataDir")")
@@ -77,13 +77,13 @@ target="bacteria,fungi,viral"
 filter="human_mouse,phix174"
 
 ## Select which priors_df
-priors_dfs=("${stem}/profilers/MetaScope_priors/priors_df/*")
-priors_df="${priors_dfs[$index]}"
+priors_df_path=${stem}/profilers/MetaScope_priors/priors_df
+priors_df=${priors_df_path}/${sampleName}.csv
 
 # Run MetaScope
 module load samtools
 module load R/4.4.3
-Rscript --vanilla --max-ppsize=500000 run_metascope_metag.R \
+Rscript --vanilla --max-ppsize=500000 run_metascope_p.R \
 ${readPath1} ${readPath2} ${indexDir} ${expTag} ${outDir} ${tmpDir} ${NSLOTS} \
 ${target} ${filter} \
 ${taxDB} ${priors_df}
