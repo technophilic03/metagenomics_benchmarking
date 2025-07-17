@@ -22,6 +22,18 @@ fetch_record <- function(name_from_profilers) {
     html_element("strong") |> 
     html_text2()
   
+  if (!is.na(current_name) && current_name == "1)") {
+    current_name <- name_from_profilers
+  }else if (grepl("\\([A-Za-z]+ [0-9]+\\)", current_name)) {
+    bracketed <- regmatches(current_name,
+                            regexpr("\\[[A-Za-z]+\\]", current_name))
+    if (length(bracketed) > 0 && bracketed != name_from_profilers) {
+      current_name <- bracketed
+    }else{
+      current_name <- name_from_profilers
+    }
+  }
+  
   
   res <- data.frame(
     old_name = name_from_profilers,
@@ -36,4 +48,4 @@ result_df <- do.call(rbind, result)
 diff <- result_df %>%
   filter(old_name != current_name)
 
-write.csv2(diff, file = "output.csv", sep = ";")
+write.csv(diff, file = "analysisMethods/update_names/output.csv")
