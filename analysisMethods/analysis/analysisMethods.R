@@ -117,7 +117,8 @@ RMSFunction <- function(real_data_file, sim_data_file) {
         mse <- mean(squared_diff)
         rmse <- sqrt(mse)
         mean_observed <- mean(observed)
-        rrmse <- (rmse / mean_observed) * 100 # mean_observed becomes small if many 0 in observed; should we exclude 0?
+        rrmse <- (rmse / mean_observed) * 100 # mean_observed becomes small if many 0 in observed; 
+        # TODO: should we exclude 0?
         return(rrmse)
     }
 
@@ -149,63 +150,67 @@ RMSFunction <- function(real_data_file, sim_data_file) {
 }
 
 
-ROCFunction <- function(real_data, sim_data, total_genomes) {
-    real_data <- read.csv(real_data)
-    sim_data <- read.csv(sim_data)
-
-    real <- real_data |>
-        rename(Species = species, real_abundance = abundance)
-
-    sim <- sim_data |>
-        rename(Species = species) |>
-        group_by(Species) |>
+ROCFunction <- function(real_data_file, sim_data_file, total_genomes) {
+    
+    # real_data_file = processed_real_data.csv
+    # sim_data_file = processed_sim_data.csv
+    real_data <- read.csv(real_data_file)
+    sim_data <- read.csv(sim_data_file)
+    
+    processed_real_data <- real_data |>
+        rename(real_abundance = abundance)
+    
+    processed_sim_data <- sim_data |>
+        group_by(species) |> # group_by(Name); after process_sim_data function, species == Name
         summarise(across(everything(), sum))
-
-    group_data <- merge(real, sim, by = "Species")
-
-    missing_in_real <- anti_join(sim, real, by = "Species")
-    missing_in_sim <- anti_join(real, sim, by = "Species")
-
-    df_roc <- data.frame(matrix(ncol = 0, nrow = 2))
-    rownames(df_roc) <- c("TPR", "FPR")
+    
+    grouped_data_roc <- full_join(processed_real_data, processed_sim_data, by = "species")
+    grouped_data_roc$real_abundance[is.na(grouped_data_roc$real_abundance)] <- 0
+    grouped_data_roc[, 3:ncol(grouped_data_roc)][is.na(grouped_data_roc[, 3:ncol(grouped_data_roc)])] <- 0
+    
 
     TP <- 0
-    FP <- 0
-    FN <- 0
-    FP <- FP + nrow(missing_in_real) # FP when a sequence found in the simulation isn't in the real data
-    FN <- FN + nrow(missing_in_sim) # FN when sequences in real data but missing in simulation
-    TN <- as.numeric(total_genomes) - nrow(sim) # TN = total genomes - total simulated entries
-
-    if (ncol(group_data) > 2) {
-        for (i in 3:ncol(group_data)) {
+    
+    FP <- sum(grouped_data_roc$real_abundance == 0 & rowSums(grouped_data_roc[, 3:ncol(grouped_data_roc)]) > 0)
+    FN <- sum(grouped_data_roc$real_abundance > 0 & rowSums(grouped_data_roc[, 3:ncol(grouped_data_roc)]) == 0)
+    
+    TN <- as.numeric(total_genomes) - nrow(grouped_data_roc)
+    
+    output_roc <- data.frame(matrix(ncol = 0, nrow = 2))
+    rownames(output_roc) <- c("TPR", "FPR")
+    
+    if (ncol(grouped_data_roc) > 2) {
+        for (i in 3:ncol(grouped_data_roc)) {
             TP_col <- TP
             FP_col <- FP
-
-            for (j in 1:nrow(group_data)) {
-                if (group_data[j, i] >= group_data$real_abundance[j] * 0.5) {
-                    TP_col <- TP_col + 1 # TP + 1 when sim_read >= real_reads/2
-                } else if (group_data[j, i] == 0 && group_data$real_abundance[j] > 0) {
-                    FP_col <- FP_col + 1 # FP +1 when simulated reads = 0 but real reads >0
-                }
+            
+            for (j in 1:nrow(grouped_data_roc)) {
+                if (grouped_data_roc[j, i] >= grouped_data_roc$real_abundance[j] * 0.5) {
+                    TP_col <- TP_col + 1 # TP when sim >= real * 0.5
+                    # TODO: do we want to apply a threshold?
+                } 
             }
-
+            
             get_TPR <- TP_col / (TP_col + FN)
             get_FPR <- FP_col / (FP_col + TN)
-            df_roc[[colnames(group_data)[i]]] <- c(get_TPR, get_FPR)
+            df_roc[[colnames(grouped_data_roc)[i]]] <- c(get_TPR, get_FPR)
         }
     } else {
         return(NA)
     }
 
-    t_df_roc <- as.data.frame(t(df_roc))
-
-    result_file <- paste0("ROC_", original_name, ".csv")
-    write.csv(t_df_roc, result_file, row.names = TRUE)
-    return(t_df_roc)
+    t_output_roc <- as.data.frame(t(output_roc))
+    
+    out_dir<- "profilers/Bracken/combined_files/name_update/updated/analysis_results/"
+    out_name <- paste0("ROC_", basename(sim_data_file))
+    out_path <- file.path(out_dir, out_name)
+    write.csv(output_ROC, file = out_path, row.names = TRUE)
+    message("ROC result saved to ", out_dir, "\n")
 }
 
 
 ### Run Function
+
 # process_real_data(real_files[1]) # only need to run once
 
 
@@ -219,11 +224,17 @@ process_file <- function(sim_file) {
         paste0("processed_", basename(sim_file))
     )
     
-    # getR2Function(
-    #     "MeSS_code/ground_truth/updated/temp/processed_real_data.csv", 
-    #     sim_processed_path
-    # )
+    getR2Function(
+        "MeSS_code/ground_truth/updated/temp/processed_real_data.csv",
+        sim_processed_path
+    )
+    
     RMSFunction(
+        "MeSS_code/ground_truth/updated/temp/processed_real_data.csv",
+        sim_processed_path
+    )
+    
+    ROCFunction(
         "MeSS_code/ground_truth/updated/temp/processed_real_data.csv",
         sim_processed_path
     )
