@@ -1,22 +1,26 @@
 suppressPackageStartupMessages({
   library(rvest)
   library(tidyverse)
+  library(future)
+  library(furrr)
+  library(progressr)
 })
 
+# availableCores()
+plan(multisession, workers = 4)
+
 csv_files <- list.files(
-  path      = "profilers/Bracken/combined_files",
-  pattern   = "\\.csv$",       # only .csv
-  full.names= TRUE             # give full path
+  path      = "profilers/Centrifuge/combined_outputs/",
+  pattern   = "\\.csv$",
+  full.names= TRUE
 )
-
-df <- read.csv(input) |>
-  select(Name)
-
 
 fetch_record <- function(name_from_profilers) {
   url <- URLencode(
     paste0("https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?name=", name_from_profilers)
   )
+  
+  Sys.sleep(0.1)
   
   request <- read_html(url)
   current_name <- request |> 
@@ -26,20 +30,20 @@ fetch_record <- function(name_from_profilers) {
     html_element("strong") |> 
     html_text2()
   
+  ## special cases
   if (!is.na(current_name) && current_name == "1)") {
     current_name <- name_from_profilers
-  }else if (grepl("\\([A-Za-z]+ [0-9]+\\)", current_name)) {
+  } else if (grepl("\\([A-Za-z]+ [0-9]+\\)", current_name)) {
     bracketed <- regmatches(current_name,
                             regexpr("\\[[A-Za-z]+\\]", current_name))
     if (length(bracketed) > 0 && bracketed != name_from_profilers) {
       current_name <- bracketed
-    }else{
+    } else {
       current_name <- name_from_profilers
     }
   }
   
-  
-  res <- data.frame(
+  data.frame(
     old_name = name_from_profilers,
     current_name = current_name
   )
@@ -49,17 +53,38 @@ process_file <- function(input_path) {
   message("Processing ", basename(input_path))
   
   df <- read.csv(input_path) |>
-    select(Name)
+    select(Name) |> 
+    distinct()
   
-  result <- lapply(df$Name, fetch_record)
-  result_df <- do.call(rbind, result)
+  # df <- read.csv(input_path) |>
+  #   select(Name)
+  
+  ## progress
+  with_progress({
+    p <- progressor(steps = nrow(df))
+    
+    result_df <- future_map_dfr(
+      
+      df$Name, 
+      # df$species,
+      
+      function(name) {
+        result <- fetch_record(name)
+        p()  
+        return(result)
+      }
+    )
+  })
+  
   diff <- result_df |> 
     filter(old_name != current_name)
   
-  out_dir  <- "profilers/Bracken/combined_files/name_update/"
+  out_dir  <- "profilers/Centrifuge/combined_outputs/name_update/"
   out_name <- paste0("diff_", basename(input_path))
   out_path <- file.path(out_dir, out_name)
   
   write.csv(diff, file = out_path, row.names = FALSE)
 }
-# purrr::walk(csv_files, process_file)
+
+## close multisession workers
+plan(sequential)
