@@ -68,8 +68,9 @@ getR2Function <- function(real_data_file, sim_data_file) {
         group_by(species) |> # group_by(Name); after process_sim_data function, species == Name
         summarise(across(everything(), sum))
 
-    grouped_data_r2 <- processed_real_data |>
-        left_join(processed_sim_data, by = "species")
+    grouped_data_r2 <- full_join(processed_real_data, processed_sim_data, by = "species")
+    grouped_data_r2$real_abundance[is.na(grouped_data_r2$real_abundance)] <- 0
+    grouped_data_r2[, 3:ncol(grouped_data_r2)][is.na(grouped_data_r2[, 3:ncol(grouped_data_r2)])] <- 0
     
     output_r2 <- data.frame(matrix(ncol = 0, nrow = 1))
     rownames(output_r2) <- c("R2")
