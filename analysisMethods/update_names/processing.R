@@ -6,24 +6,32 @@ if (RUN_SCRIPT) {
   )
   
   original_files <- list.files(
-    path      = "profilers/Bracken/combined_files/",
+    path      = "MeSS_code/ground_truth/",
     pattern   = "\\.csv$",
     full.names= TRUE
   )
   
   ref_files <- list.files(
-    path      = "profilers/Bracken/combined_files/name_update/diff/",
+    path      = "MeSS_code/ground_truth/diff/",
     pattern   = "\\.csv$",
     full.names= TRUE
   )
   
   update <- function(original_df, reference_df) {
-    updated_df <- left_join(original_df, reference_df, by = join_by(Name == old_name))
-    updated_df$Name <- ifelse(
+    # updated_df <- left_join(original_df, reference_df, by = join_by(Name == old_name))
+    updated_df <- left_join(original_df, reference_df, by = join_by(species == old_name))
+    
+    # updated_df$Name <- ifelse(
+    #   is.na(updated_df$current_name), 
+    #   updated_df$Name, 
+    #   updated_df$current_name
+    # )
+    updated_df$species <- ifelse(
       is.na(updated_df$current_name), 
-      updated_df$Name, 
+      updated_df$species, 
       updated_df$current_name
     )
+    
     updated_df <- updated_df |> 
       select(-current_name)
     return(updated_df)
@@ -33,11 +41,13 @@ if (RUN_SCRIPT) {
     message("Processing ", basename(original))
     
     df <- read.csv(original)
-    ref_df <- read.csv(reference)
+    # ref_df <- read.csv(reference)
+    ref_df <- read.csv(reference) |> 
+      distinct(old_name, .keep_all = TRUE)
     
     result_df <- update(df, ref_df)
     
-    out_dir  <- "profilers/Bracken/combined_files/name_update/updated/"
+    out_dir  <- "MeSS_code/ground_truth/updated/"
     out_name <- paste0("updated_", basename(original))
     out_path <- file.path(out_dir, out_name)
     
