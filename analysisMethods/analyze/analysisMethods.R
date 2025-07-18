@@ -1,107 +1,92 @@
-library(tidyverse)
-run_analysis <- function(real_data_file, sim_data_file, analysis_methods = c("R2", "RRMSE", "ROC"), total_genomes = NULL) {
+suppressPackageStartupMessages(
+    library(tidyverse)
+)
 
-    cat("Processing data files...\n")
-    process_real_data(real_data_file)
-    process_sim_data(sim_data_file)
+real_files <- list.files(
+    path      = "MeSS_code/ground_truth/updated/",
+    pattern   = "\\.csv$",
+    full.names= TRUE
+)
 
-    original_name <- tools::file_path_sans_ext(basename(sim_data_file))
+sim_files <- list.files(
+    path      = "profilers/Bracken/combined_files/name_update/updated/",
+    pattern   = "\\.csv$",
+    full.names= TRUE
+)
 
-    results <- list()
-
-    for (method in analysis_methods) {
-        cat("Running", method, "analysis...\n")
-
-        if (method == "R2") {
-            results$R2 <- getR2Function("processed_real_data.csv",
-                                       "processed_sim_data.csv",
-                                       original_name)
-        } else if (method == "RRMSE") {
-            results$RRMSE <- RMSFunction("processed_real_data.csv",
-                                             "processed_sim_data.csv",
-                                             original_name)
-        } else if (method == "ROC") {
-            results$SIMOBS <- ROCFunction("processed_real_data.csv",
-                                              "processed_sim_data.csv",
-                                              total_genomes <- 1000,
-                                              original_name)
-        }
-    }
-
-    cat("Analysis complete!\n")
-    return(results)
-}
 
 process_real_data <- function(real_data_file) {
+    message("processing groud truth (real data)")
     real_data_raw <- read.csv(real_data_file)
 
     real_data <- data.frame(
         species = real_data_raw$species,
-        abundance = as.numeric(real_data_raw$tax_abundance)
+        abundance = real_data_raw$tax_abundance
     )
 
     grouped_data <- aggregate(abundance ~ species, real_data, sum)
 
     write.csv(
         grouped_data,
-        "processed_real_data.csv",
+        "MeSS_code/ground_truth/updated/temp/processed_real_data.csv",
         row.names = FALSE,
         quote = FALSE
         )
+    message("real_data saved to MeSS_code/ground_truth/updated/temp/processed_real_data.csv\n")
 }
 
 process_sim_data <- function(sim_data_file) {
     sim_data_raw <- read.csv(sim_data_file)
 
     sim_data <- data.frame(
-        species = sim_data_raw$Species,
-        abundence_cols <- sim_data_raw[, 10:ncol(sim_data_raw)]
+        species = sim_data_raw$Name,
+        abundence_cols = sim_data_raw[, 10:ncol(sim_data_raw)]
     )
-
+    
+    out_dir<- "profilers/Bracken/combined_files/name_update/updated/analysis_results/temp/"
+    out_name <- paste0("processed_", basename(sim_data_file))
+    out_path <- file.path(out_dir, out_name)
+    
     write.csv(
         sim_data,
-        "processed_sim_data.csv",
+        out_path,
         row.names = FALSE,
         quote = FALSE
     )
 }
 
-getR2Function <- function(real_data, sim_data, original_name) {
+getR2Function <- function(real_data_file, sim_data_file) {
 
-    real_data <- read.csv(real_data)
-    sim_data <- read.csv(sim_data)
+    real_data <- read.csv(real_data_file)
+    sim_data <- read.csv(sim_data_file)
 
-    real <- real_data |>
-        rename(Species = species, real_abundance = abundance)
+    
+    processed_real_data <- real_data |>
+        rename(real_abundance = abundance)
 
-    sim <- sim_data |>
-        rename(Species = species) |>
-        group_by(Species) |>
+    processed_sim_data <- sim_data |>
+        group_by(species) |> # group_by(Name); after process_sim_data function, species == Name
         summarise(across(everything(), sum))
 
-    group_data <- merge(real, sim, by = "Species")
+    grouped_data_r2 <- processed_real_data |>
+        left_join(processed_sim_data, by = "species")
+    
+    output_r2 <- data.frame(matrix(ncol = 0, nrow = 1))
+    rownames(output_r2) <- c("R2")
+    
 
-    df_r2 <- data.frame(matrix(ncol = 0, nrow = 1))
-    rownames(df_r2) <- c("R2")
-
-
-    df_r2 <- data.frame(matrix(ncol = 0, nrow = 1))
-    rownames(df_r2) <- c("R2")
-
-    if (ncol(group_data) > 2) {
-        for (i in 3:ncol(group_data)) {
-            model <- lm(group_data[, i] ~ real_abundance, data = group_data)
-            r2 <- summary(model)$r.squared
-            df_r2[[colnames(group_data)[i]]] <- r2
-        }
-    } else {
-        r2 <- c(NA)
-        return(NA)
+    for (i in 3:ncol(grouped_data_r2)) {
+        model <- lm(real_abundance ~ grouped_data_r2[, i], 
+                    data = grouped_data_r2)
+        r2 <- summary(model)$r.squared
+        output_r2[[colnames(grouped_data_r2)[i]]] <- r2
     }
 
-    result_file <- paste0("R2_", original_name, ".csv")
-    write.csv(df_r2, result_file, row.names = TRUE)
-    return(df_r2)
+    out_dir<- "profilers/Bracken/combined_files/name_update/updated/analysis_results/"
+    out_name <- paste0("R2_", basename(sim_data_file))
+    out_path <- file.path(out_dir, out_name)
+    write.csv(output_r2, file = out_path, row.names = FALSE)
+    message("R2 result saved to ", out_dir, "\n")
 }
 
 RMSFunction <- function(real_data, sim_data, original_name) {
@@ -210,4 +195,26 @@ ROCFunction <- function(real_data, sim_data, total_genomes, original_name) {
     write.csv(t_df_roc, result_file, row.names = TRUE)
     return(t_df_roc)
 }
+
+
+### Run Function
+process_real_data(real_files[1])
+
+process_file <- function(sim_file) {
+    message("Processing: ", basename(sim_file))
+    
+    process_sim_data(sim_file)
+    
+    sim_processed_path <- file.path(
+        "profilers/Bracken/combined_files/name_update/updated/analysis_results/temp/", 
+        paste0("processed_", basename(sim_file))
+    )
+    
+    getR2Function(
+        "MeSS_code/ground_truth/updated/temp/processed_real_data.csv", 
+        sim_processed_path
+    )
+}
+
+walk(sim_files, process_file)
 
