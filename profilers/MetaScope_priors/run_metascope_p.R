@@ -1,3 +1,11 @@
+# Time this!
+now <- Sys.time()
+
+suppressPackageStartupMessages({
+    library(MetaScope)
+    library(tidyverse)
+    })
+
 # Take in arguments from bash script
 args <- commandArgs(trailingOnly = TRUE)
 
@@ -11,15 +19,7 @@ threads <- args[7]
 targets <- stringr::str_split(args[8], ",")[[1]]
 filters <- stringr::str_split(args[9], ",")[[1]]
 taxDB <- args[10]
-priors_df <- args[11]
-
-# Time this!
-now <- Sys.time()
-
-suppressPackageStartupMessages({
-    library(MetaScope)
-    library(tidyverse)
-    })
+priors_df <- args[11] |> read_csv()
 
 # Using bt2 params
 bt2_params <- "--local -R 2 -N 0 -L 25 -i S,1,0.75 -k 9 --score-min L,0,1.7"

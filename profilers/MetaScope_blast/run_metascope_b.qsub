@@ -63,9 +63,10 @@ readPath1=$dataDir/${sampleName}_R1.fq.gz
 readPath2=$dataDir/${sampleName}_R2.fq.gz
 
 ### Run MetaScope
+stem_profiler=${stem}/profilers/MetaScope_blast
 indexDir="/restricted/projectnb/pathoscope/reflib/2020_index_bowtie/"
 expTag=$sampleName
-outDir="${stem}/profilers/MetaScope/outputs/${sampleType}"
+outDir="${stem_profiler}/outputs/${sampleType}"
 mkdir -p "$outDir"
 tmpDir="$TMPDIR/$workingDir/"
 
@@ -77,7 +78,7 @@ target="bacteria,fungi,viral"
 filter="human_mouse,phix174"
 
 ## Select which priors_df
-priors_df_path=${stem}/profilers/MetaScope_blast/priors_df
+priors_df_path=${stem_profiler}/priors_df
 priors_df=${priors_df_path}/${sampleName}.csv
 
 # BLAST db
@@ -86,7 +87,7 @@ blast_db="/restricted/projectnb/pathoscope/data/blastdb/nt/nt"
 # Run MetaScope
 module load samtools
 module load R/4.4.3
-Rscript --vanilla --max-ppsize=500000 run_metascope_metag.R \
+Rscript --vanilla --max-ppsize=500000 ${stem_profiler}/run_metascope_b.R \
 ${readPath1} ${readPath2} ${indexDir} ${expTag} ${outDir} ${tmpDir} ${NSLOTS} \
 ${target} ${filter} \
 ${taxDB} ${priors_df} ${blast_db}
