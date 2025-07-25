@@ -47,6 +47,7 @@ final_map <- filter_host_bowtie(reads_bam = target_map,
                                 threads = threads,
                                 overwrite = TRUE,
                                 quiet = FALSE)
+
 message("FILTER STEP COMPLETE")
 # MetaScope ID
 message("running id step")
