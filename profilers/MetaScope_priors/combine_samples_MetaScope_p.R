@@ -1,5 +1,5 @@
 
-# R Script to combine outputs - MetaScope
+# R Script to combine outputs - MetaScope priors
 # Metagenomics benchmarking
 # Aubrey Odom
 # 4/27/25
@@ -12,10 +12,11 @@ suppressPackageStartupMessages({
 })
 
 # Set file paths ----
-stem <- "/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope"
+stem <- "/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_priors"
 test_dir <- "/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/test_data"
 dat_path <- file.path(stem, "outputs")
 out_path <- file.path(stem, "combined_outputs")
+if (!dir.exists(out_path)) dir.create(out_path)
 taxa_db <- "/restricted/projectnb/pathoscope/data/blastdb/2024_accession_taxa/accessionTaxa.sql"
 all_batches <- list.dirs(path = dat_path, full.names = FALSE, recursive = FALSE)
 

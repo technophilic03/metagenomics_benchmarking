@@ -47,7 +47,6 @@ final_map <- filter_host_bowtie(reads_bam = target_map,
                                 threads = threads,
                                 overwrite = TRUE,
                                 quiet = FALSE)
-file.copy(final_map, outDir, overwrite = TRUE)
 
 message("FILTER STEP COMPLETE")
 # MetaScope ID

@@ -1,6 +1,6 @@
-/var/spool/sge/scc-cb4/job_scripts/9418015: line 21: $: command not found
+/var/spool/sge/scc-cb4/job_scripts/9425300: line 21: $: command not found
 ==========================================================
-Start date : Thu Jul 24 18:52:48 EDT 2025
+Start date : Fri Jul 25 09:36:32 EDT 2025
 Job name : m_blast
 Job ID : 1
 ==========================================================
@@ -77,11 +77,11 @@ samtools found on system. Merging with samtools.
 [E::sam_hrecs_error] Malformed key:value pair at line 1: "@HD	VN:1.0	SO:coordinate	"
 [E::sam_hrecs_error] Malformed key:value pair at line 1: "@HD	VN:1.0	SO:coordinate	"
 Sorting merged bam file
-DONE! Alignments written to /scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp/healthy_stool_100_100.bam
+DONE! Alignments written to /restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100.bam
 TARGET STEP COMPLETE
-Writing Intermediate FASTQ file to /scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp/intermediate.fastq.gz
+Writing Intermediate FASTQ file to /restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/intermediate.fastq.gz
   |                                                                              |                                                                      |   0%  |                                                                              |======================================================================| 100%
-Intermediate FASTQ file written to/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp/intermediate.fastq.gz
+Intermediate FASTQ file written to/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/intermediate.fastq.gz
 Attempting to perform Bowtie2 alignment on human_mouse index
 [1] "Samtools found on system. Using samtools to create bam file"
 arguments 'show.output.on.console', 'minimized' and 'invisible' are for Windows only
@@ -101,10 +101,10 @@ arguments 'show.output.on.console', 'minimized' and 'invisible' are for Windows 
     0 (0.00%) aligned >1 times
 0.00% overall alignment rate
 Removing reads mapped to host indices
-DONE! Alignments written to /scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//healthy_stool_100_100.filtered.bam
+DONE! Alignments written to /restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100.filtered.bam
 FILTER STEP COMPLETE
 running id step
-Reading .bam file: /scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//healthy_stool_100_100.filtered.bam
+Reading .bam file: /restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100.filtered.bam
 Setting up the EM algorithm
 	Found 3731 unique taxa
 Starting EM iterations
@@ -210,1178 +210,14 @@ Starting EM iterations
 100 0.0180054346538365
 DONE! Converged in 100 iterations.
 Found reads for 384 genomes
-Results written to /restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/outputs/mess_sample_100k_err/healthy_stool_100_100.metascope_id.csv
-Updated bam file written to /scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//healthy_stool_100_100.updated.bam
+Results written to /restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100.metascope_id.csv
+Updated bam file written to /restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100.updated.bam
 No coverage plots created
 There were 50 or more warnings (use warnings() to see the first 50)
 running MetaBlast
-Sorting bam file to /scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//healthy_stool_100_100_sorted.bam
+Sorting bam file to /restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_sorted.bam
   |                                                                              |                                                                      |   0%  |                                                                              |                                                                      |   1%  |                                                                              |=                                                                     |   1%  |                                                                              |=                                                                     |   2%  |                                                                              |==                                                                    |   2%  |                                                                              |==                                                                    |   3%  |                                                                              |===                                                                   |   4%  |                                                                              |===                                                                   |   5%  |                                                                              |====                                                                  |   5%  |                                                                              |====                                                                  |   6%  |                                                                              |=====                                                                 |   7%  |                                                                              |=====                                                                 |   8%  |                                                                              |======                                                                |   8%  |                                                                              |======                                                                |   9%  |                                                                              |=======                                                               |   9%  |                                                                              |=======                                                               |  10%  |                                                                              |=======                                                               |  11%  |                                                                              |========                                                              |  11%  |                                                                              |========                                                              |  12%  |                                                                              |=========                                                             |  12%  |                                                                              |=========                                                             |  13%  |                                                                              |=========                                                             |  14%  |                                                                              |==========                                                            |  14%  |                                                                              |==========                                                            |  15%  |                                                                              |===========                                                           |  15%  |                                                                              |===========                                                           |  16%  |                                                                              |============                                                          |  17%  |                                                                              |============                                                          |  18%  |                                                                              |=============                                                         |  18%  |                                                                              |=============                                                         |  19%  |                                                                              |==============                                                        |  20%  |                                                                              |==============                                                        |  21%  |                                                                              |===============                                                       |  21%  |                                                                              |===============                                                       |  22%  |                                                                              |================                                                      |  22%  |                                                                              |================                                                      |  23%  |                                                                              |=================                                                     |  24%  |                                                                              |=================                                                     |  25%  |                                                                              |==================                                                    |  25%  |                                                                              |==================                                                    |  26%  |                                                                              |===================                                                   |  27%  |                                                                              |===================                                                   |  28%  |                                                                              |====================                                                  |  28%  |                                                                              |====================                                                  |  29%  |                                                                              |=====================                                                 |  29%  |                                                                              |=====================                                                 |  30%  |                                                                              |======================                                                |  31%  |                                                                              |======================                                                |  32%  |                                                                              |=======================                                               |  32%  |                                                                              |=======================                                               |  33%  |                                                                              |========================                                              |  34%  |                                                                              |========================                                              |  35%  |                                                                              |=========================                                             |  35%  |                                                                              |=========================                                             |  36%  |                                                                              |==========================                                            |  36%  |                                                                              |==========================                                            |  37%  |                                                                              |==========================                                            |  38%  |                                                                              |===========================                                           |  38%  |                                                                              |===========================                                           |  39%  |                                                                              |============================                                          |  39%  |                                                                              |============================                                          |  40%  |                                                                              |============================                                          |  41%  |                                                                              |=============================                                         |  41%  |                                                                              |=============================                                         |  42%  |                                                                              |==============================                                        |  42%  |                                                                              |==============================                                        |  43%  |                                                                              |===============================                                       |  44%  |                                                                              |===============================                                       |  45%  |                                                                              |================================                                      |  45%  |                                                                              |================================                                      |  46%  |                                                                              |=================================                                     |  47%  |                                                                              |=================================                                     |  48%  |                                                                              |==================================                                    |  48%  |                                                                              |==================================                                    |  49%  |                                                                              |===================================                                   |  49%  |                                                                              |===================================                                   |  50%  |                                                                              |===================================                                   |  51%  |                                                                              |====================================                                  |  51%  |                                                                              |====================================                                  |  52%  |                                                                              |=====================================                                 |  52%  |                                                                              |=====================================                                 |  53%  |                                                                              |======================================                                |  54%  |                                                                              |======================================                                |  55%  |                                                                              |=======================================                               |  55%  |                                                                              |=======================================                               |  56%  |                                                                              |========================================                              |  57%  |                                                                              |========================================                              |  58%  |                                                                              |=========================================                             |  58%  |                                                                              |=========================================                             |  59%  |                                                                              |==========================================                            |  59%  |                                                                              |==========================================                            |  60%  |                                                                              |==========================================                            |  61%  |                                                                              |===========================================                           |  61%  |                                                                              |===========================================                           |  62%  |                                                                              |============================================                          |  62%  |                                                                              |============================================                          |  63%  |                                                                              |============================================                          |  64%  |                                                                              |=============================================                         |  64%  |                                                                              |=============================================                         |  65%  |                                                                              |==============================================                        |  65%  |                                                                              |==============================================                        |  66%  |                                                                              |===============================================                       |  67%  |                                                                              |===============================================                       |  68%  |                                                                              |================================================                      |  68%  |                                                                              |================================================                      |  69%  |                                                                              |=================================================                     |  70%  |                                                                              |=================================================                     |  71%  |                                                                              |==================================================                    |  71%  |                                                                              |==================================================                    |  72%  |                                                                              |===================================================                   |  72%  |                                                                              |===================================================                   |  73%  |                                                                              |====================================================                  |  74%  |                                                                              |====================================================                  |  75%  |                                                                              |=====================================================                 |  75%  |                                                                              |=====================================================                 |  76%  |                                                                              |======================================================                |  77%  |                                                                              |======================================================                |  78%  |                                                                              |=======================================================               |  78%  |                                                                              |=======================================================               |  79%  |                                                                              |========================================================              |  79%  |                                                                              |========================================================              |  80%  |                                                                              |=========================================================             |  81%  |                                                                              |=========================================================             |  82%  |                                                                              |==========================================================            |  82%  |                                                                              |==========================================================            |  83%  |                                                                              |===========================================================           |  84%  |                                                                              |===========================================================           |  85%  |                                                                              |============================================================          |  85%  |                                                                              |============================================================          |  86%  |                                                                              |=============================================================         |  86%  |                                                                              |=============================================================         |  87%  |                                                                              |=============================================================         |  88%  |                                                                              |==============================================================        |  88%  |                                                                              |==============================================================        |  89%  |                                                                              |===============================================================       |  89%  |                                                                              |===============================================================       |  90%  |                                                                              |===============================================================       |  91%  |                                                                              |================================================================      |  91%  |                                                                              |================================================================      |  92%  |                                                                              |=================================================================     |  92%  |                                                                              |=================================================================     |  93%  |                                                                              |==================================================================    |  94%  |                                                                              |==================================================================    |  95%  |                                                                              |===================================================================   |  95%  |                                                                              |===================================================================   |  96%  |                                                                              |====================================================================  |  97%  |                                                                              |====================================================================  |  98%  |                                                                              |===================================================================== |  98%  |                                                                              |===================================================================== |  99%  |                                                                              |======================================================================|  99%  |                                                                              |======================================================================| 100%
-Saving metascope grouped species to /restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/outputs/mess_sample_100k_err/healthy_stool_100_100.metascope_species.csv
-Generating fasta sequences from bam file
-Running BLASTN on all sequences
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-BLAST executable not found. Please install before running.
-
-Running BLAST metrics on all blast results
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
-Caused by error:
-! object 'species' not found/n
-Results written to /restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/outputs/mess_sample_100k_err/healthy_stool_100_100.metascope_blast.csv
-  superkingdom kingdom       phylum       class          order          family
-1         <NA>    <NA> Bacteroidota Bacteroidia  Bacteroidales  Bacteroidaceae
-2         <NA>    <NA> Bacteroidota Bacteroidia  Bacteroidales  Bacteroidaceae
-3         <NA>    <NA> Bacteroidota Bacteroidia  Bacteroidales  Bacteroidaceae
-4         <NA>    <NA> Bacteroidota Bacteroidia  Bacteroidales  Bacteroidaceae
-5         <NA>    <NA>    Bacillota  Clostridia Lachnospirales Lachnospiraceae
-6         <NA>    <NA> Bacteroidota Bacteroidia  Bacteroidales  Bacteroidaceae
-        genus                      species read_counts Proportion readsEM
-1 Bacteroides           Bacteroides ovatus        2731 0.03666412  2781.2
-2 Phocaeicola         Phocaeicola vulgatus        2640 0.03544243  2500.3
-3 Bacteroides Bacteroides cellulosilyticus        2518 0.03380456  2372.6
-4 Bacteroides Bacteroides thetaiotaomicron        2419 0.03247547  2390.5
-5     Blautia                Blautia obeum        2090 0.02805859  2055.5
-6 Bacteroides         Bacteroides fragilis        1646 0.02209782  1578.9
-  EMProportion IDs TaxonomyIDs read_proportions uniqueness_score
-1   0.03734260   1       28116                1                0
-2   0.03357072   2      435590                1                0
-3   0.03185637   3      246787                1                0
-4   0.03209703   4      226186                1                0
-5   0.02759913   5       40520                1                0
-6   0.02120006   6      295405                1                0
-  species_percentage_hit genus_percentage_hit species_contaminant_score
-1                      0                    0                         0
-2                      0                    0                         0
-3                      0                    0                         0
-4                      0                    0                         0
-5                      0                    0                         0
-6                      0                    0                         0
-  genus_contaminant_score best_hit_genus best_hit_species
-1                       0             NA               NA
-2                       0             NA               NA
-3                       0             NA               NA
-4                       0             NA               NA
-5                       0             NA               NA
-6                       0             NA               NA
-MetaBlast COMPLETE
-Running blast reassignment
-Problem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00001_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00002_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00003_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00004_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00005_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00006_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00007_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00008_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00009_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00010_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00011_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00012_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00013_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00014_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00015_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00016_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00017_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00018_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00019_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00020_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00021_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00022_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00023_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00024_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00025_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00026_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00027_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00028_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00029_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00030_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00031_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00032_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00033_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00034_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00035_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00036_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00037_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00038_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00039_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00040_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00041_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00042_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00043_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00044_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00045_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00046_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00047_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00048_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00049_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00050_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00051_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00052_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00053_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00054_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00055_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00056_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00057_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00058_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00059_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00060_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00061_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00062_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00063_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00064_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00065_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00066_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00067_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00068_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00069_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00070_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00071_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00072_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00073_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00074_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00075_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00076_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00077_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00078_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00079_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00080_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00081_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00082_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00083_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00084_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00085_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00086_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00087_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00088_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00089_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00090_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00091_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00092_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00093_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00094_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00095_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00096_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00097_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00098_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00099_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418015.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00100_healthy_stool_100_100.csv
-i In argument: `species = paste0(genus, " ", species)`.
-Caused by error:
-! object 'genus' not foundError in -drop_indices : invalid argument to unary operator
-Calls: blast_reassignment -> <Anonymous> -> [ -> [.tbl_df
-Execution halted
-/var/spool/sge/scc-cb4/job_scripts/9418037: line 21: $: command not found
-==========================================================
-Start date : Thu Jul 24 19:01:47 EDT 2025
-Job name : m_blast
-Job ID : 1
-==========================================================
-Rows: 840 Columns: 2
--- Column specification --------------------------------------------------------
-Delimiter: ","
-chr (1): species
-dbl (1): tax_abundance
-
-i Use `spec()` to retrieve the full column specification for this data.
-i Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Attempting to perform Bowtie2 alignment on bacteria index
-[1] "Samtools found on system. Using samtools to create bam file"
-arguments 'show.output.on.console', 'minimized' and 'invisible' are for Windows only
-99804 reads; of these:
-  99804 (100.00%) were paired; of these:
-    62456 (62.58%) aligned concordantly 0 times
-    34399 (34.47%) aligned concordantly exactly 1 time
-    2949 (2.95%) aligned concordantly >1 times
-    ----
-    62456 pairs aligned concordantly 0 times; of these:
-      22101 (35.39%) aligned discordantly 1 time
-    ----
-    40355 pairs aligned 0 times concordantly or discordantly; of these:
-      80710 mates make up the pairs; of these:
-        60449 (74.90%) aligned 0 times
-        12499 (15.49%) aligned exactly 1 time
-        7762 (9.62%) aligned >1 times
-69.72% overall alignment rate
-Filtering unmapped reads
-Attempting to perform Bowtie2 alignment on fungi index
-[1] "Samtools found on system. Using samtools to create bam file"
-arguments 'show.output.on.console', 'minimized' and 'invisible' are for Windows only
-99804 reads; of these:
-  99804 (100.00%) were paired; of these:
-    99802 (100.00%) aligned concordantly 0 times
-    2 (0.00%) aligned concordantly exactly 1 time
-    0 (0.00%) aligned concordantly >1 times
-    ----
-    99802 pairs aligned concordantly 0 times; of these:
-      0 (0.00%) aligned discordantly 1 time
-    ----
-    99802 pairs aligned 0 times concordantly or discordantly; of these:
-      199604 mates make up the pairs; of these:
-        199588 (99.99%) aligned 0 times
-        15 (0.01%) aligned exactly 1 time
-        1 (0.00%) aligned >1 times
-0.01% overall alignment rate
-Filtering unmapped reads
-Attempting to perform Bowtie2 alignment on viral index
-[1] "Samtools found on system. Using samtools to create bam file"
-arguments 'show.output.on.console', 'minimized' and 'invisible' are for Windows only
-99804 reads; of these:
-  99804 (100.00%) were paired; of these:
-    99796 (99.99%) aligned concordantly 0 times
-    8 (0.01%) aligned concordantly exactly 1 time
-    0 (0.00%) aligned concordantly >1 times
-    ----
-    99796 pairs aligned concordantly 0 times; of these:
-      0 (0.00%) aligned discordantly 1 time
-    ----
-    99796 pairs aligned 0 times concordantly or discordantly; of these:
-      199592 mates make up the pairs; of these:
-        199429 (99.92%) aligned 0 times
-        56 (0.03%) aligned exactly 1 time
-        107 (0.05%) aligned >1 times
-0.09% overall alignment rate
-Filtering unmapped reads
-Library alignment complete
-Merging the bam files into healthy_stool_100_100.bam
-Merging .bam files
-samtools found on system. Merging with samtools.
-[E::sam_hrecs_error] Malformed key:value pair at line 1: "@HD	VN:1.0	SO:coordinate	"
-[E::sam_hrecs_error] Malformed key:value pair at line 1: "@HD	VN:1.0	SO:coordinate	"
-[E::sam_hrecs_error] Malformed key:value pair at line 1: "@HD	VN:1.0	SO:coordinate	"
-Sorting merged bam file
-DONE! Alignments written to /scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp/healthy_stool_100_100.bam
-TARGET STEP COMPLETE
-Writing Intermediate FASTQ file to /scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp/intermediate.fastq.gz
-  |                                                                              |                                                                      |   0%  |                                                                              |======================================================================| 100%
-Intermediate FASTQ file written to/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp/intermediate.fastq.gz
-Attempting to perform Bowtie2 alignment on human_mouse index
-[1] "Samtools found on system. Using samtools to create bam file"
-arguments 'show.output.on.console', 'minimized' and 'invisible' are for Windows only
-1 reads; of these:
-  1 (100.00%) were unpaired; of these:
-    1 (100.00%) aligned 0 times
-    0 (0.00%) aligned exactly 1 time
-    0 (0.00%) aligned >1 times
-0.00% overall alignment rate
-Attempting to perform Bowtie2 alignment on phix174 index
-[1] "Samtools found on system. Using samtools to create bam file"
-arguments 'show.output.on.console', 'minimized' and 'invisible' are for Windows only
-1 reads; of these:
-  1 (100.00%) were unpaired; of these:
-    1 (100.00%) aligned 0 times
-    0 (0.00%) aligned exactly 1 time
-    0 (0.00%) aligned >1 times
-0.00% overall alignment rate
-Removing reads mapped to host indices
-DONE! Alignments written to /scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//healthy_stool_100_100.filtered.bam
-FILTER STEP COMPLETE
-running id step
-Reading .bam file: /scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//healthy_stool_100_100.filtered.bam
-Setting up the EM algorithm
-	Found 3731 unique taxa
-Starting EM iterations
-1 125.013593098217
-2 2.91330250025425
-3 0.491870823611574
-4 0.232306474658909
-5 0.21026894611381
-6 0.29694365031894
-7 0.396945350664619
-8 0.34493317652748
-9 0.14466443069578
-10 0.0884199347494793
-11 0.0683161439726111
-12 0.0515162537037789
-13 0.0394103435159292
-14 0.0521495119215605
-15 0.0669761459344929
-16 0.0816434810342617
-17 0.0914273681460894
-18 0.0904779456900911
-19 0.0765849966690386
-20 0.0549040067359516
-21 0.0340287238181344
-22 0.0189740136625343
-23 0.00990535274744051
-24 0.00498410889117221
-25 0.0024600072533813
-26 0.00123319030816829
-27 0.0013149700725728
-28 0.0014019441517409
-29 0.0014944107814981
-30 0.00159268090876608
-31 0.00169707808892108
-32 0.00180793826469804
-33 0.00192560940806838
-34 0.0020504510047568
-35 0.00218283335927782
-36 0.0023231366965978
-37 0.00247175003480962
-38 0.00262906980159797
-39 0.00279549816584161
-40 0.00297144105452389
-41 0.00315730582429772
-42 0.00335349855668752
-43 0.003560420946128
-44 0.00377846675098316
-45 0.00400801777950671
-46 0.00424943938556671
-47 0.00450307545303648
-48 0.00476924285323102
-49 0.00504822536682125
-50 0.0053402670704583
-51 0.00564556519903448
-52 0.00596426250721543
-53 0.00629643916867453
-54 0.00664210426834958
-55 0.00700118696196305
-56 0.00737352739782546
-57 0.00775886751830267
-58 0.00815684188184852
-59 0.00856696867063186
-60 0.00898864107279616
-61 0.00942111925141603
-62 0.00986352313322083
-63 0.0103148262679975
-64 0.0107738510229832
-65 0.0112392653842063
-66 0.011709581637292
-67 0.0121831571924659
-68 0.0126581978012538
-69 0.0131327633848029
-70 0.0136047766553136
-71 0.0140720346626136
-72 0.0145322233378136
-73 0.0149829350361315
-74 0.0154216890028814
-75 0.0158459546023206
-76 0.0162531770611667
-77 0.0166408053901866
-78 0.0170063220617225
-79 0.0173472739420067
-80 0.0176613039081903
-81 0.017946182524711
-82 0.0181998391149762
-83 0.0184203915449326
-84 0.0186061740367341
-85 0.0187557623543935
-86 0.0188679957490577
-87 0.018941995118465
-88 0.0189771769213351
-89 0.0189732624901671
-90 0.018930282501632
-91 0.0188485764883133
-92 0.0187287874044163
-93 0.0185718513864585
-94 0.0183789829731639
-95 0.0181516561622726
-96 0.0178915817817592
-97 0.017600681735595
-98 0.0175220648125194
-99 0.017779422308574
-100 0.0180054346538365
-DONE! Converged in 100 iterations.
-Found reads for 384 genomes
-Results written to /restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/outputs/mess_sample_100k_err/healthy_stool_100_100.metascope_id.csv
-Updated bam file written to /scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//healthy_stool_100_100.updated.bam
-No coverage plots created
-There were 50 or more warnings (use warnings() to see the first 50)
-running MetaBlast
-Sorting bam file to /scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//healthy_stool_100_100_sorted.bam
-  |                                                                              |                                                                      |   0%  |                                                                              |                                                                      |   1%  |                                                                              |=                                                                     |   1%  |                                                                              |=                                                                     |   2%  |                                                                              |==                                                                    |   2%  |                                                                              |==                                                                    |   3%  |                                                                              |===                                                                   |   4%  |                                                                              |===                                                                   |   5%  |                                                                              |====                                                                  |   5%  |                                                                              |====                                                                  |   6%  |                                                                              |=====                                                                 |   7%  |                                                                              |=====                                                                 |   8%  |                                                                              |======                                                                |   8%  |                                                                              |======                                                                |   9%  |                                                                              |=======                                                               |   9%  |                                                                              |=======                                                               |  10%  |                                                                              |=======                                                               |  11%  |                                                                              |========                                                              |  11%  |                                                                              |========                                                              |  12%  |                                                                              |=========                                                             |  12%  |                                                                              |=========                                                             |  13%  |                                                                              |=========                                                             |  14%  |                                                                              |==========                                                            |  14%  |                                                                              |==========                                                            |  15%  |                                                                              |===========                                                           |  15%  |                                                                              |===========                                                           |  16%  |                                                                              |============                                                          |  17%  |                                                                              |============                                                          |  18%  |                                                                              |=============                                                         |  18%  |                                                                              |=============                                                         |  19%  |                                                                              |==============                                                        |  20%  |                                                                              |==============                                                        |  21%  |                                                                              |===============                                                       |  21%  |                                                                              |===============                                                       |  22%  |                                                                              |================                                                      |  22%  |                                                                              |================                                                      |  23%  |                                                                              |=================                                                     |  24%  |                                                                              |=================                                                     |  25%  |                                                                              |==================                                                    |  25%  |                                                                              |==================                                                    |  26%  |                                                                              |===================                                                   |  27%  |                                                                              |===================                                                   |  28%  |                                                                              |====================                                                  |  28%  |                                                                              |====================                                                  |  29%  |                                                                              |=====================                                                 |  29%  |                                                                              |=====================                                                 |  30%  |                                                                              |======================                                                |  31%  |                                                                              |======================                                                |  32%  |                                                                              |=======================                                               |  32%  |                                                                              |=======================                                               |  33%  |                                                                              |========================                                              |  34%  |                                                                              |========================                                              |  35%  |                                                                              |=========================                                             |  35%  |                                                                              |=========================                                             |  36%  |                                                                              |==========================                                            |  36%  |                                                                              |==========================                                            |  37%  |                                                                              |==========================                                            |  38%  |                                                                              |===========================                                           |  38%  |                                                                              |===========================                                           |  39%  |                                                                              |============================                                          |  39%  |                                                                              |============================                                          |  40%  |                                                                              |============================                                          |  41%  |                                                                              |=============================                                         |  41%  |                                                                              |=============================                                         |  42%  |                                                                              |==============================                                        |  42%  |                                                                              |==============================                                        |  43%  |                                                                              |===============================                                       |  44%  |                                                                              |===============================                                       |  45%  |                                                                              |================================                                      |  45%  |                                                                              |================================                                      |  46%  |                                                                              |=================================                                     |  47%  |                                                                              |=================================                                     |  48%  |                                                                              |==================================                                    |  48%  |                                                                              |==================================                                    |  49%  |                                                                              |===================================                                   |  49%  |                                                                              |===================================                                   |  50%  |                                                                              |===================================                                   |  51%  |                                                                              |====================================                                  |  51%  |                                                                              |====================================                                  |  52%  |                                                                              |=====================================                                 |  52%  |                                                                              |=====================================                                 |  53%  |                                                                              |======================================                                |  54%  |                                                                              |======================================                                |  55%  |                                                                              |=======================================                               |  55%  |                                                                              |=======================================                               |  56%  |                                                                              |========================================                              |  57%  |                                                                              |========================================                              |  58%  |                                                                              |=========================================                             |  58%  |                                                                              |=========================================                             |  59%  |                                                                              |==========================================                            |  59%  |                                                                              |==========================================                            |  60%  |                                                                              |==========================================                            |  61%  |                                                                              |===========================================                           |  61%  |                                                                              |===========================================                           |  62%  |                                                                              |============================================                          |  62%  |                                                                              |============================================                          |  63%  |                                                                              |============================================                          |  64%  |                                                                              |=============================================                         |  64%  |                                                                              |=============================================                         |  65%  |                                                                              |==============================================                        |  65%  |                                                                              |==============================================                        |  66%  |                                                                              |===============================================                       |  67%  |                                                                              |===============================================                       |  68%  |                                                                              |================================================                      |  68%  |                                                                              |================================================                      |  69%  |                                                                              |=================================================                     |  70%  |                                                                              |=================================================                     |  71%  |                                                                              |==================================================                    |  71%  |                                                                              |==================================================                    |  72%  |                                                                              |===================================================                   |  72%  |                                                                              |===================================================                   |  73%  |                                                                              |====================================================                  |  74%  |                                                                              |====================================================                  |  75%  |                                                                              |=====================================================                 |  75%  |                                                                              |=====================================================                 |  76%  |                                                                              |======================================================                |  77%  |                                                                              |======================================================                |  78%  |                                                                              |=======================================================               |  78%  |                                                                              |=======================================================               |  79%  |                                                                              |========================================================              |  79%  |                                                                              |========================================================              |  80%  |                                                                              |=========================================================             |  81%  |                                                                              |=========================================================             |  82%  |                                                                              |==========================================================            |  82%  |                                                                              |==========================================================            |  83%  |                                                                              |===========================================================           |  84%  |                                                                              |===========================================================           |  85%  |                                                                              |============================================================          |  85%  |                                                                              |============================================================          |  86%  |                                                                              |=============================================================         |  86%  |                                                                              |=============================================================         |  87%  |                                                                              |=============================================================         |  88%  |                                                                              |==============================================================        |  88%  |                                                                              |==============================================================        |  89%  |                                                                              |===============================================================       |  89%  |                                                                              |===============================================================       |  90%  |                                                                              |===============================================================       |  91%  |                                                                              |================================================================      |  91%  |                                                                              |================================================================      |  92%  |                                                                              |=================================================================     |  92%  |                                                                              |=================================================================     |  93%  |                                                                              |==================================================================    |  94%  |                                                                              |==================================================================    |  95%  |                                                                              |===================================================================   |  95%  |                                                                              |===================================================================   |  96%  |                                                                              |====================================================================  |  97%  |                                                                              |====================================================================  |  98%  |                                                                              |===================================================================== |  98%  |                                                                              |===================================================================== |  99%  |                                                                              |======================================================================|  99%  |                                                                              |======================================================================| 100%
-Saving metascope grouped species to /restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/outputs/mess_sample_100k_err/healthy_stool_100_100.metascope_species.csv
+Saving metascope grouped species to /restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100.metascope_species.csv
 Generating fasta sequences from bam file
 Running BLASTN on all sequences
 Warning: [blastn] Query is Empty!
@@ -1985,7 +821,7 @@ Caused by error:
 Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
 Caused by error:
 ! object 'species' not found/n
-Results written to /restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/outputs/mess_sample_100k_err/healthy_stool_100_100.metascope_blast.csv
+Results written to /restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100.metascope_blast.csv
   superkingdom kingdom       phylum       class          order          family
 1         <NA>    <NA> Bacteroidota Bacteroidia  Bacteroidales  Bacteroidaceae
 2         <NA>    <NA> Bacteroidota Bacteroidia  Bacteroidales  Bacteroidaceae
@@ -2024,403 +860,403 @@ Results written to /restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta
 MetaBlast COMPLETE
 Running blast reassignment
 Problem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00001_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00001_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00002_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00002_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00003_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00003_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00004_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00004_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00005_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00005_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00006_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00006_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00007_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00007_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00008_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00008_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00009_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00009_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00010_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00010_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00011_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00011_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00012_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00012_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00013_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00013_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00014_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00014_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00015_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00015_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00016_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00016_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00017_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00017_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00018_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00018_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00019_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00019_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00020_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00020_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00021_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00021_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00022_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00022_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00023_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00023_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00024_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00024_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00025_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00025_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00026_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00026_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00027_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00027_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00028_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00028_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00029_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00029_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00030_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00030_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00031_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00031_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00032_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00032_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00033_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00033_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00034_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00034_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00035_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00035_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00036_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00036_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00037_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00037_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00038_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00038_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00039_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00039_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00040_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00040_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00041_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00041_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00042_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00042_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00043_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00043_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00044_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00044_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00045_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00045_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00046_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00046_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00047_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00047_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00048_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00048_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00049_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00049_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00050_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00050_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00051_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00051_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00052_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00052_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00053_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00053_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00054_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00054_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00055_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00055_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00056_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00056_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00057_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00057_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00058_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00058_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00059_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00059_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00060_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00060_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00061_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00061_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00062_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00062_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00063_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00063_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00064_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00064_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00065_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00065_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00066_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00066_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00067_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00067_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00068_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00068_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00069_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00069_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00070_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00070_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00071_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00071_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00072_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00072_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00073_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00073_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00074_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00074_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00075_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00075_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00076_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00076_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00077_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00077_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00078_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00078_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00079_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00079_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00080_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00080_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00081_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00081_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00082_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00082_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00083_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00083_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00084_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00084_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00085_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00085_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00086_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00086_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00087_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00087_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00088_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00088_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00089_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00089_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00090_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00090_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00091_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00091_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00092_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00092_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00093_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00093_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00094_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00094_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00095_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00095_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00096_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00096_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00097_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00097_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00098_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00098_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00099_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00099_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundProblem with blast summary for current file: 
-/scratch/9418037.1.johnsonlab.q/mess_sample_100k_err_healthy_stool_100_100_tmp//blast/00100_healthy_stool_100_100.csv
+/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot/blast/00100_healthy_stool_100_100.csv
 i In argument: `species = paste0(genus, " ", species)`.
 Caused by error:
 ! object 'genus' not foundError in -drop_indices : invalid argument to unary operator

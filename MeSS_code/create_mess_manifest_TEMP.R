@@ -9,7 +9,7 @@ suppressPackageStartupMessages({
   library(tidyverse)
 })
 
-stem <- "/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_priors/outputs"
+stem <- "/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope/outputs"
 all_files <- list.files(stem, recursive = TRUE, pattern = "id.csv$")
 
 # Look at processed samples
