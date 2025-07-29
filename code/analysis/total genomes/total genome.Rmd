@@ -40,14 +40,10 @@ all_lines <- c(line_bacteria, line_fungi, line_viral)
 accession_numbers <- as.vector(str_extract(all_lines, "(?<=^>)[^ ]+"))
 
 taxid <- taxonomizr::accessionToTaxa(accession_numbers, sqlFile = "../../../../taxonomizr_db/accessionTaxa.sql")
-taxid_unique <- unique(taxid)
-
-unique_genome_names <- apply(taxonomizr::getTaxonomy(taxid_unique, sqlFile = "../../../../taxonomizr_db/accessionTaxa.sql", desiredTaxa = c("genus", "species")), 1, function(x) paste0(x, collapse = ";"))
 ```
 
 ```{r}
-length(unique_genome_names)
-length(taxid_unique)
+length(taxid)
 ```
 
 ```{r}
@@ -57,20 +53,12 @@ sum(is.na(taxid))
 ### use batch entrez NCBI
 ```{r}
 line_retry_taxid <- readLines("metascope/batch_process_na/results/metascope_na_NCBI.txt")
-taxid_retry_unique <- unique(line_retry_taxid)
-
-unique_genome_names_retry <- apply(taxonomizr::getTaxonomy(taxid_retry_unique, sqlFile = "../../../../taxonomizr_db/accessionTaxa.sql", desiredTaxa = c("genus", "species")), 1, function(x) paste0(x, collapse = ";"))
 ```
-
-```{r}
-length(unique_genome_names_retry)
-length(taxid_retry_unique)
-```
-
 ### total genomes for metascope
 ```{r}
-total_genomes_metascope <- length(taxid_retry_unique) + length(taxid_unique)
-total_genomes_metascope
+total_taxid_metascope <- c(taxid, line_retry_taxid)
+unique_taxid_metascope <- unique(total_genomes_metascope)
+length(unique_taxid_metascope)
 ```
 
 
@@ -112,7 +100,8 @@ centrifuge_accessions <- sapply(split_centrifuge_accessions, function(x) x[[1]])
 ```
 
 ```{r}
-accessions_taxid_centrifuge <- taxonomizr::accessionToTaxa(centrifuge_accessions, sqlFile = "../../../../taxonomizr_db/accessionTaxa.sql")
+accessions_taxid_centrifuge_taxonomizr <- taxonomizr::accessionToTaxa(centrifuge_accessions, sqlFile = "../../../../taxonomizr_db/accessionTaxa.sql")
+length(unique(accessions_taxid_centrifuge_taxonomizr))
 ```
 
 ```{r}
@@ -129,8 +118,13 @@ write.table(na_accession_centrifuge, file = "centrifuge/centrifuge_na_accession.
 ```
 
 ```{r}
-gbk <- read_gbk("NCBI Batch Entrez/centrifuge_accession_output/section1.txt")
-df <- gbk_features_to_df(gbk, feature = "source")
+lines_na_accession_centrifuge_ncbi <- readLines("centrifuge/results/centrifuge_success.txt")
+```
+
+```{r}
+accession_taxid_centrifuge <- c(lines_na_accession_centrifuge_ncbi, accessions_taxid_centrifuge_taxonomizr)
+unique_accession_taxid_centrifuge <- unique(accession_taxid_centrifuge)
+length(unique_accession_taxid_centrifuge)
 ```
 
 

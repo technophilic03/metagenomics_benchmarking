@@ -157,7 +157,7 @@ ROCFunction <- function(real_data_file,
                         sim_data_file,
                         total_genomes) {
   
-  # total_genomes = 21434 for Metascope Pathoscope
+  # total_genomes = 21418 for Metascope Pathoscope
   
   
   # real_data_file = processed_real_data.csv
@@ -249,7 +249,7 @@ process_file <- function(sim_file) {
    ROCFunction(
      real_data_dir,
      sim_processed_path,
-     total_genomes = 21434
+     total_genomes = 21418
    )
  }
 
