@@ -191,11 +191,15 @@ ROCFunction <- function(real_data_file,
       } else {
         if (predicted == 0 & observed > 0){
           FP <- FP + 1
-        } else if (predicted > 0 & observed == 0){
-          FN <- FN + 1
-        }
+        } 
       }
-    }
+      
+      if (predicted > 0 & observed == 0){
+        FN <- FN + 1
+      }
+    } 
+    
+
     
     get_TPR <- TP / (TP + FN)
     get_FPR <- FP / (FP + TN)
