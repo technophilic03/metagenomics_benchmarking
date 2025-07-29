@@ -1,15 +1,16 @@
 suppressPackageStartupMessages(library(tidyverse))
 
-real_files <- list.files(path      = "MeSS_code/ground_truth/updated/",
+real_files <- list.files(path      = "MeSS_code/ground_truth/",
                          pattern   = "\\.csv$",
                          full.names = TRUE)
 
-sim_files <- list.files(path      = "profilers/MetaScope/combined_outputs/name_update/updated/",
+sim_files <- list.files(path      = "profilers/MetaScope_priors/combined_outputs/",
                         pattern   = "\\.csv$",
                         full.names = TRUE)
 
-process_sim_temp_dir <- "profilers/MetaScope/combined_outputs/name_update/updated/analysis_results/temp/"
-analysis_res_dir <- "profilers/MetaScope/combined_outputs/name_update/updated/analysis_results/"
+process_real_temp_dir <- "MeSS_code/ground_truth/temp/"
+process_sim_temp_dir <- "profilers/MetaScope_priors/combined_outputs/analysis_results/temp/"
+analysis_res_dir <- "profilers/MetaScope_priors/combined_outputs/analysis_results/"
 
 
 process_real_data <- function(real_data_file) {
@@ -23,12 +24,14 @@ process_real_data <- function(real_data_file) {
   
   write.csv(
     grouped_data,
-    "MeSS_code/ground_truth/updated/temp/processed_real_data.csv",
+    paste0(process_real_temp_dir, "processed_real_data.csv"),
     row.names = FALSE,
     quote = FALSE
   )
   message(
-    "real_data saved to MeSS_code/ground_truth/updated/temp/processed_real_data.csv\n"
+    "real_data saved to",
+    process_real_temp_dir,
+    "\n"
   )
 }
 
@@ -227,23 +230,16 @@ process_file <- function(sim_file) {
   
   process_sim_data(sim_file)
   
-  sim_processed_path <- file.path(
-    process_sim_temp_dir,
-    paste0("processed_", basename(sim_file))
-  )
+  sim_processed_path <- file.path(process_sim_temp_dir, paste0("processed_", basename(sim_file)))
   
-  getR2Function(
-    "MeSS_code/ground_truth/updated/temp/processed_real_data.csv",
-    sim_processed_path
-  )
+  getR2Function("MeSS_code/ground_truth/temp/processed_real_data.csv",
+                sim_processed_path)
   
-  RMSFunction(
-    "MeSS_code/ground_truth/updated/temp/processed_real_data.csv",
-    sim_processed_path
-  )
+  RMSFunction("MeSS_code/ground_truth/temp/processed_real_data.csv",
+              sim_processed_path)
   
   ROCFunction(
-    "MeSS_code/ground_truth/updated/temp/processed_real_data.csv",
+    "MeSS_code/ground_truth/temp/processed_real_data.csv",
     sim_processed_path,
     total_genomes = 21434
   )
