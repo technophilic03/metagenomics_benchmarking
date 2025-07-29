@@ -104,31 +104,28 @@ split_kraken <- strsplit(line_kraken, split = "\t")
 ## Centrifuge
 
 ```{r}
-centrifuge <- "centrifuge_raw.txt"
-line_centrifuge <- readLines(centrifuge)
-line_accession_centrifuge <- line_centrifuge[1:8243]
-split_centrifuge <- strsplit(line_accession_centrifuge, split = " ")
-centrifuge_accession <- sapply(split_centrifuge, function(x) x[[1]])
-
+centrifuge <- "centrifuge/centrifuge_raw.txt"
+all_lines_centrifuge <- readLines(centrifuge)
+line_with_accessions_centrifuge <- all_lines_centrifuge[1:8243]
+split_centrifuge_accessions <- strsplit(line_with_accessions_centrifuge, split = " ")
+centrifuge_accessions <- sapply(split_centrifuge_accessions, function(x) x[[1]])
 ```
 
 ```{r}
-taxid_centrifuge <- taxonomizr::accessionToTaxa(centrifuge_accession, sqlFile = "../../../../taxonomizr_db/accessionTaxa.sql")
+accessions_taxid_centrifuge <- taxonomizr::accessionToTaxa(centrifuge_accessions, sqlFile = "../../../../taxonomizr_db/accessionTaxa.sql")
 ```
 
 ```{r}
-sum(is.na(taxid_centrifuge))
+sum(is.na(accessions_taxid_centrifuge))
 ```
 
 ```{r}
-na_position <- which(is.na(taxid_centrifuge))
-na_accession_centrifuge <- centrifuge_accession[na_position]
-
-na_line_centrifuge <- line_accession_centrifuge[na_position]
+na_position_accession <- which(is.na(accessions_taxid_centrifuge))
+na_accession_centrifuge <- centrifuge_accession[na_position_accession]
 ```
 ### use batch entrez NCBI
 ```{r}
-write.table(na_accession_centrifuge, file = "centrifuge_na_accession.txt", row.names = FALSE, col.names = FALSE, quote = FALSE)
+write.table(na_accession_centrifuge, file = "centrifuge/centrifuge_na_accession.txt", row.names = FALSE, col.names = FALSE, quote = FALSE)
 ```
 
 ```{r}

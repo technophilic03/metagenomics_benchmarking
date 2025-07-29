@@ -224,25 +224,33 @@ ROCFunction <- function(real_data_file,
 
 # process_real_data(real_files[1]) # only need to run once
 
+real_data_dir <- "MeSS_code/ground_truth/temp/processed_real_data.csv"
 
 process_file <- function(sim_file) {
-  message("Processing: ", basename(sim_file))
-  
-  process_sim_data(sim_file)
-  
-  sim_processed_path <- file.path(process_sim_temp_dir, paste0("processed_", basename(sim_file)))
-  
-  getR2Function("MeSS_code/ground_truth/temp/processed_real_data.csv",
-                sim_processed_path)
-  
-  RMSFunction("MeSS_code/ground_truth/temp/processed_real_data.csv",
-              sim_processed_path)
-  
-  ROCFunction(
-    "MeSS_code/ground_truth/temp/processed_real_data.csv",
-    sim_processed_path,
-    total_genomes = 21434
-  )
-}
+   message("Processing: ", basename(sim_file))
 
-walk(sim_files, process_file)
+   process_sim_data(sim_file)
+
+   sim_processed_path <- file.path(
+     process_sim_temp_dir,
+     paste0("processed_", basename(sim_file))
+   )
+
+   getR2Function(
+     real_data_dir,
+     sim_processed_path
+   )
+
+   RMSFunction(
+     real_data_dir,
+     sim_processed_path
+   )
+
+   ROCFunction(
+     real_data_dir,
+     sim_processed_path,
+     total_genomes = 21434
+   )
+ }
+
+ walk(sim_files, process_file)
