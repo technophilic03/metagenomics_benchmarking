@@ -1,0 +1,1189 @@
+
+LOCUS       NW_015148966          196940 bp    DNA     linear   CON 22-NOV-2021
+DEFINITION  Homo sapiens chromosome 11 genomic patch of type FIX, GRCh38.p13
+            PATCHES HG107_PATCH.
+ACCESSION   NW_015148966
+VERSION     NW_015148966.1
+DBLINK      BioProject: PRJNA168
+            Assembly: GCF_000001405.39
+KEYWORDS    RefSeq; FIX_PATCH.
+SOURCE      Homo sapiens (human)
+  ORGANISM  Homo sapiens
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+            Catarrhini; Hominidae; Homo.
+REFERENCE   1  (bases 1 to 196940)
+  CONSRTM   Genome Reference Consortium
+  TITLE     Direct Submission
+  JOURNAL   Submitted (17-DEC-2015) NCBI, NIH, Bethesda, MD 20892, USA
+COMMENT     REFSEQ INFORMATION: The reference sequence is identical to
+            KQ759759.1.
+            
+            [WARNING] On Apr 6, 2022 this sequence was replaced by
+            NW_015148966.2.
+            The DNA sequence is composed of genomic sequence, primarily
+            finished clones that were sequenced as part of the Human Genome
+            Project. PCR products and WGS shotgun sequence have been added
+            where necessary to fill gaps or correct errors. All such additions
+            are manually curated by GRC staff. For more information see:
+            https://genomereference.org.
+            This sequence will be incorporated into the reference assembly in
+            the next major assembly release. At that time, the accession number
+            for this patch will be made secondary to the reference chromosome
+            accession. This scaffold adds finished component AC256300.1 to the
+            reference assembly, replacing AC239832.3 and improving the
+            representation of the tandem repeat in MUC2 (GeneID: 4583). It also
+            replaces GRCh38 WGS components KF455302.1 and AUXG01000101.1 and
+            draft sequence FP326773.16.
+            
+            ##Genome-Annotation-Data-START##
+            Annotation Provider         :: NCBI
+            Annotation Status           :: Updated annotation
+            Annotation Name             :: Homo sapiens Updated Annotation
+                                           Release 109.20211119
+            Annotation Version          :: 109.20211119
+            Annotation Pipeline         :: NCBI eukaryotic genome annotation
+                                           pipeline
+            Annotation Software Version :: 9.0
+            Annotation Method           :: Best-placed RefSeq; propagated
+                                           RefSeq model
+            Features Annotated          :: Gene; mRNA; CDS; ncRNA
+            ##Genome-Annotation-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..196940
+                     /organism="Homo sapiens"
+                     /mol_type="genomic DNA"
+                     /db_xref="taxon:9606"
+                     /chromosome="11"
+                     /map="11p15.5"
+     misc_feature    1..2390
+                     /note="Anchor sequence. This sequence is derived from alt
+                     loci or patch scaffold components that are also components
+                     of the primary assembly unit. It was included to ensure a
+                     robust alignment of this scaffold to the primary assembly
+                     unit. Anchor component: AC139749.4"
+     gene            complement(280..24175)
+                     /gene="MUC6"
+                     /gene_synonym="MUC-6"
+                     /note="mucin 6, oligomeric mucus/gel-forming; Derived by
+                     automated computational analysis using gene prediction
+                     method: BestRefSeq."
+                     /db_xref="GeneID:4588"
+                     /db_xref="HGNC:HGNC:7517"
+                     /db_xref="MIM:158374"
+     mRNA            complement(join(280..1090,1356..1458,3219..6227,
+                     6732..6953,7547..7714,8141..8191,8672..8734,10966..11109,
+                     11404..11560,12301..12540,12639..12824,13262..13372,
+                     13457..13598,13784..13935,14398..14507,14598..14650,
+                     14725..14974,15142..15274,15422..15516,15683..15844,
+                     16103..16240,16346..16418,16503..16607,16685..16823,
+                     16952..17072,17670..17792,18030..18237,18404..18513,
+                     18626..18716,19064..19190,19270..19510,20470..20532,
+                     24061..24175))
+                     /gene="MUC6"
+                     /gene_synonym="MUC-6"
+                     /product="mucin 6, oligomeric mucus/gel-forming"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: BestRefSeq."
+                     /transcript_id="NM_005961.3"
+                     /db_xref="GeneID:4588"
+                     /db_xref="HGNC:HGNC:7517"
+                     /db_xref="MIM:158374"
+     CDS             complement(join(913..1090,1356..1458,3219..6227,
+                     6732..6953,7547..7714,8141..8191,8672..8734,10966..11109,
+                     11404..11560,12301..12540,12639..12824,13262..13372,
+                     13457..13598,13784..13935,14398..14507,14598..14650,
+                     14725..14974,15142..15274,15422..15516,15683..15844,
+                     16103..16240,16346..16418,16503..16607,16685..16823,
+                     16952..17072,17670..17792,18030..18237,18404..18513,
+                     18626..18716,19064..19190,19270..19510,20470..20532,
+                     24061..24112))
+                     /gene="MUC6"
+                     /gene_synonym="MUC-6"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: BestRefSeq."
+                     /codon_start=1
+                     /product="mucin-6 precursor"
+                     /protein_id="NP_005952.2"
+                     /db_xref="GeneID:4588"
+                     /db_xref="HGNC:HGNC:7517"
+                     /db_xref="MIM:158374"
+                     /translation="MVQRWLLLSCCGALLSAGLANTSYTSPGLQRLKDSPQTAPDKGQ
+                     CSTWGAGHFSTFDHHVYDFSGTCNYIFAATCKDAFPTFSVQLRRGPDGSISRIIVELG
+                     ASVVTVSEAIISVKDIGVISLPYTSNGLQITPFGQSVRLVAKQLELELEVVWGPDSHL
+                     MVLVERKYMGQMCGLCGNFDGKVTNEFVSEEGKFLEPHKFAALQKLDDPGEICTFQDI
+                     PSTHVRQAQHARICTQLLTLVAPECSVSKEPFVLSCQADVAAAPQPGPQNSSCATLSE
+                     YSRQCSMVGQPVRRWRSPGLCSVGQCPANQVYQECGSACVKTCSNPQHSCSSSCTFGC
+                     FCPEGTVLNDLSNNHTCVPVTQCPCVLHGAMYAPGEVTIAACQTCRCTLGRWVCTERP
+                     CPGHCSLEGGSFVTTFDARPYRFHGTCTYILLQSPQLPEDGALMAVYDKSGVSHSETS
+                     LVAVVYLSRQDKIVISQDEVVTNNGEAKWLPYKTRNITVFRQTSTHLQMATSFGLELV
+                     VQLRPIFQAYVTVGPQFRGQTRGLCGNFNGDTTDDFTTSMGIAEGTASLFVDSWRAGN
+                     CPAALERETDPCSMSQLNKVCAETHCSMLLRTGTVFERCHATVNPAPFYKRCVYQACN
+                     YEETFPHICAALGDYVHACSLRGVLLWGWRSSVDNCTIPCTGNTTFSYNSQACERTCL
+                     SLSDRATECHHSAVPVDGCNCPDGTYLNQKGECVRKAQCPCILEGYKFILAEQSTVIN
+                     GITCHCINGRLSCPQRPQMFLASCQAPKTFKSCSQSSENKFGAACAPTCQMLATGVAC
+                     VPTKCEPGCVCAEGLYENADGQCVPPEECPCEFSGVSYPGGAELHTDCRTCSCSRGRW
+                     ACQQGTHCPSTCTLYGEGHVITFDGQRFVFDGNCEYILATDVCGVNDSQPTFKILTEN
+                     VICGNSGVTCSRAIKIFLGGLSVVLADRNYTVTGEEPHVQLGVTPGALSLVVDISIPG
+                     RYNLTLIWNRHMTILIRIARASQDPLCGLCGNFNGNMKDDFETRSRYVASSELELVNS
+                     WKESPLCGDVSFVTDPCSLNAFRRSWAERKCSVINSQTFATCHSKVYHLPYYEACVRD
+                     ACGCDSGGDCECLCDAVAAYAQACLDKGVCVDWRTPAFCPIYCGFYNTHTQDGHGEYQ
+                     YTQEANCTWHYQPCLCPSQPQSVPGSNIEGCYNCSQDEYFDHEEGVCVPCMPPTTPQP
+                     PTTPQLPTTGSRPTQVWPMTGTSTTIGLLSSTGPSPSSNHTPASPTQTPLLPATLTSS
+                     KPTASSGEPPRPTTAVTPQATSGLPPTATLRSTATKPTVTQATTRATASTASPATTST
+                     AQSTTRTTMTLPTPATSGTSPTLPKSTNQELPGTTATQTTGPRPTPASTTGPTTPQPG
+                     QPTRPTATETTQTRTTTEYTTPQTPHTTHSPPTAGSPVPSTGPVTATSFHATTTYPTP
+                     SHPETTLPTHVPPFSTSLVTPSTHTVITPTHAQMATSASNHSAPTGTIPPPTTLKATG
+                     STHTAPPITPTTSGTSQAHSSFSTNKTPTSLHSHTSSTHHPEVTPTSTTTITPNPTST
+                     RTRTPVAHTNSATSSRPPPPFTTHSPPTGSSPFSSTGPMTATSFKTTTTYPTPSHPQT
+                     TLPTHVPPFSTSLVTPSTHTVITPTHAQMATSASIHSMPTGTIPPPTTLKATGSTHTA
+                     PTMTLTTSGTSQALSSLNTAKTSTSLHSHTSSTHHAEATSTSTTNITPNPTSTGTPPM
+                     TVTTSGTSQSRSSFSTAKTSTSLHSHTSSTHHPEVTSTSTTSITPNHTSTGTRTPVAH
+                     TTSATSSRLPTPFTTHSPPTGTTPISSTGPVTATSFQTTTTYPTPSHPHTTLPTHVPS
+                     FSTSLVTPSTHTVIIPTHTQMATSASIHSMPTGTIPPPTTIKATGSTHTAPPMTPTTS
+                     GTSQSPSSFSTAKTSTSLPYHTSSTHHPEVTPTSTTNITPKHTSTGTRTPVAHTTSAS
+                     SSRLPTPFTTHSPPTGSSPFSSTGPMTATSFQTTTTYPTPSHPQTTLPTHVPPFSTSL
+                     VTPSTHTVIITTHTQMATSASIHSTPTGTVPPPTTLKATGSTHTAPPMTVTTSGTSQT
+                     HSSFSTATASSSFISSSSWLPQNSSSRPPSSPITTQLPHLSSATTPVSTTNQLSSSFS
+                     PSPSAPSTVSSYVPSSHSSPQTSSPSVGTSSSFVSAPVHSTTLSSGSHSSLSTHPTTA
+                     SVSASPLFPSSPAASTTIRATLPHTISSPFTLSALLPISTVTVSPTPSSHLASSTIAF
+                     PSTPRTTASTHTAPAFSSQSTTSRSTSLTTRVPTSGFVSLTSGVTGIPTSPVTNLTTR
+                     HPGPTLSPTTRFLTSSLTAHGSTPASAPVSSLGTPTPTSPGVCSVREQQEEITFKGCM
+                     ANVTVTRCEGACISAASFNIITQQVDARCSCCRPLHSYEQQLELPCPDPSTPGRRLVL
+                     TLQVFSHCVCSSVACGD"
+     sig_peptide     complement(join(20519..20532,24061..24112))
+                     /gene="MUC6"
+                     /gene_synonym="MUC-6"
+                     /note="/evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (Q6W4X9.3)"
+     mat_peptide     complement(join(916..1090,1356..1458,3219..6227,
+                     6732..6953,7547..7714,8141..8191,8672..8734,10966..11109,
+                     11404..11560,12301..12540,12639..12824,13262..13372,
+                     13457..13598,13784..13935,14398..14507,14598..14650,
+                     14725..14974,15142..15274,15422..15516,15683..15844,
+                     16103..16240,16346..16418,16503..16607,16685..16823,
+                     16952..17072,17670..17792,18030..18237,18404..18513,
+                     18626..18716,19064..19190,19270..19510,20470..20518))
+                     /gene="MUC6"
+                     /gene_synonym="MUC-6"
+                     /product="Mucin-6. /id=PRO_0000259496"
+                     /note="propagated from UniProtKB/Swiss-Prot (Q6W4X9.3)"
+     misc_feature    complement(18118..18120)
+                     /gene="MUC6"
+                     /gene_synonym="MUC-6"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (Q6W4X9.3); glycosylation site"
+     misc_feature    complement(16236..16238)
+                     /gene="MUC6"
+                     /gene_synonym="MUC-6"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (Q6W4X9.3); glycosylation site"
+     misc_feature    complement(15146..15148)
+                     /gene="MUC6"
+                     /gene_synonym="MUC-6"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (Q6W4X9.3); glycosylation site"
+     misc_feature    complement(12699..12701)
+                     /gene="MUC6"
+                     /gene_synonym="MUC-6"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (Q6W4X9.3); glycosylation site"
+     misc_feature    complement(8724..8726)
+                     /gene="MUC6"
+                     /gene_synonym="MUC-6"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (Q6W4X9.3); glycosylation site"
+     misc_feature    complement(join(5893..6227,6732..6953,7547..7714,
+                     8141..8177))
+                     /gene="MUC6"
+                     /gene_synonym="MUC-6"
+                     /note="propagated from UniProtKB/Swiss-Prot (Q6W4X9.3);
+                     Region: Disordered. /evidence=ECO:0000256|SAM:MobiDB-lite"
+     misc_feature    complement(5380..5847)
+                     /gene="MUC6"
+                     /gene_synonym="MUC-6"
+                     /note="propagated from UniProtKB/Swiss-Prot (Q6W4X9.3);
+                     Region: Disordered. /evidence=ECO:0000256|SAM:MobiDB-lite"
+     misc_feature    complement(5044..5577)
+                     /gene="MUC6"
+                     /gene_synonym="MUC-6"
+                     /note="propagated from UniProtKB/Swiss-Prot (Q6W4X9.3);
+                     Region: 1, truncated"
+     misc_feature    complement(4399..5439)
+                     /gene="MUC6"
+                     /gene_synonym="MUC-6"
+                     /note="propagated from UniProtKB/Swiss-Prot (Q6W4X9.3);
+                     Region: Approximate repeats"
+     misc_feature    complement(4756..5334)
+                     /gene="MUC6"
+                     /gene_synonym="MUC-6"
+                     /note="propagated from UniProtKB/Swiss-Prot (Q6W4X9.3);
+                     Region: Disordered. /evidence=ECO:0000256|SAM:MobiDB-lite"
+     misc_feature    complement(4309..4656)
+                     /gene="MUC6"
+                     /gene_synonym="MUC-6"
+                     /note="propagated from UniProtKB/Swiss-Prot (Q6W4X9.3);
+                     Region: Disordered. /evidence=ECO:0000256|SAM:MobiDB-lite"
+     misc_feature    complement(4027..4161)
+                     /gene="MUC6"
+                     /gene_synonym="MUC-6"
+                     /note="propagated from UniProtKB/Swiss-Prot (Q6W4X9.3);
+                     Region: Disordered. /evidence=ECO:0000256|SAM:MobiDB-lite"
+     misc_feature    complement(3670..3990)
+                     /gene="MUC6"
+                     /gene_synonym="MUC-6"
+                     /note="propagated from UniProtKB/Swiss-Prot (Q6W4X9.3);
+                     Region: Disordered. /evidence=ECO:0000256|SAM:MobiDB-lite"
+     misc_feature    complement(3424..3561)
+                     /gene="MUC6"
+                     /gene_synonym="MUC-6"
+                     /note="propagated from UniProtKB/Swiss-Prot (Q6W4X9.3);
+                     Region: Disordered. /evidence=ECO:0000256|SAM:MobiDB-lite"
+     misc_feature    complement(join(1454..1458,3219..3291))
+                     /gene="MUC6"
+                     /gene_synonym="MUC-6"
+                     /note="propagated from UniProtKB/Swiss-Prot (Q6W4X9.3);
+                     Region: Disordered. /evidence=ECO:0000256|SAM:MobiDB-lite"
+     misc_feature    2391..2681
+                     /note="Anchor sequence. This sequence is derived from alt
+                     loci or patch scaffold components that are also components
+                     of the primary assembly unit. It was included to ensure a
+                     robust alignment of this scaffold to the primary assembly
+                     unit. Anchor component: KC877389.1"
+     misc_feature    2682..2849
+                     /note="Anchor sequence. This sequence is derived from alt
+                     loci or patch scaffold components that are also components
+                     of the primary assembly unit. It was included to ensure a
+                     robust alignment of this scaffold to the primary assembly
+                     unit. Anchor component: AC139749.4"
+     misc_feature    2850..3111
+                     /note="Anchor sequence. This sequence is derived from alt
+                     loci or patch scaffold components that are also components
+                     of the primary assembly unit. It was included to ensure a
+                     robust alignment of this scaffold to the primary assembly
+                     unit. Anchor component: KC877387.1"
+     misc_feature    3112..24163
+                     /note="Anchor sequence. This sequence is derived from alt
+                     loci or patch scaffold components that are also components
+                     of the primary assembly unit. It was included to ensure a
+                     robust alignment of this scaffold to the primary assembly
+                     unit. Anchor component: AC139749.4"
+     gene            37333..43217
+                     /gene="LINC02688"
+                     /note="long intergenic non-protein coding RNA 2688;
+                     Derived by automated computational analysis using gene
+                     prediction method: BestRefSeq."
+                     /db_xref="GeneID:101927503"
+                     /db_xref="HGNC:HGNC:54184"
+     ncRNA           join(37333..37415,39076..39296,41692..41845,42567..43217)
+                     /ncRNA_class="lncRNA"
+                     /gene="LINC02688"
+                     /product="long intergenic non-protein coding RNA 2688"
+                     /inference="similar to RNA sequence (same
+                     species):RefSeq:NR_160890.1"
+                     /exception="annotated by transcript or proteomic data"
+                     /note="The RefSeq transcript has 1 substitution compared
+                     to this genomic sequence; Derived by automated
+                     computational analysis using gene prediction method:
+                     BestRefSeq."
+                     /transcript_id="NR_160890.1"
+                     /db_xref="GeneID:101927503"
+                     /db_xref="HGNC:HGNC:54184"
+     gene            62448..99978
+                     /gene="MUC2"
+                     /gene_synonym="MLP; MUC-2; SMUC"
+                     /note="mucin 2, oligomeric mucus/gel-forming; Derived by
+                     automated computational analysis using gene prediction
+                     method: BestRefSeq."
+                     /db_xref="GeneID:4583"
+                     /db_xref="HGNC:HGNC:7512"
+                     /db_xref="MIM:158370"
+     mRNA            join(62448..62550,63224..63494,65171..65285,65669..65759,
+                     65840..65949,66029..66239,67808..67933,68431..68548,
+                     68627..68765,69024..69134,69223..69292,69571..69708,
+                     69799..69963,70437..70531,70738..70864,71214..71469,
+                     71700..71752,71891..71991,72392..72543,72881..73019,
+                     73894..74004,74086..74265,74397..74636,75595..75751,
+                     76028..76159,76850..76997,78487..78530,78932..79135,
+                     79622..79639,80230..89499,90231..90428,90697..90920,
+                     91230..91404,91891..92138,92748..92931,93255..93483,
+                     94207..94385,94777..94846,94985..95085,95330..95361,
+                     96556..96733,97120..97224,97474..97514,97643..97765,
+                     98018..98116,98751..98879,99117..99156,99371..99497,
+                     99606..99978)
+                     /gene="MUC2"
+                     /gene_synonym="MLP; MUC-2; SMUC"
+                     /product="mucin 2, oligomeric mucus/gel-forming"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: BestRefSeq."
+                     /transcript_id="NM_002457.4"
+                     /db_xref="GeneID:4583"
+                     /db_xref="HGNC:HGNC:7512"
+                     /db_xref="MIM:158370"
+     CDS             join(62475..62550,63224..63494,65171..65285,65669..65759,
+                     65840..65949,66029..66239,67808..67933,68431..68548,
+                     68627..68765,69024..69134,69223..69292,69571..69708,
+                     69799..69963,70437..70531,70738..70864,71214..71469,
+                     71700..71752,71891..71991,72392..72543,72881..73019,
+                     73894..74004,74086..74265,74397..74636,75595..75751,
+                     76028..76159,76850..76997,78487..78530,78932..79135,
+                     79622..79639,80230..89499,90231..90428,90697..90920,
+                     91230..91404,91891..92138,92748..92931,93255..93483,
+                     94207..94385,94777..94846,94985..95085,95330..95361,
+                     96556..96733,97120..97224,97474..97514,97643..97765,
+                     98018..98116,98751..98879,99117..99156,99371..99497,
+                     99606..99825)
+                     /gene="MUC2"
+                     /gene_synonym="MLP; MUC-2; SMUC"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: BestRefSeq."
+                     /codon_start=1
+                     /product="mucin-2 precursor"
+                     /protein_id="NP_002448.4"
+                     /db_xref="GeneID:4583"
+                     /db_xref="HGNC:HGNC:7512"
+                     /db_xref="MIM:158370"
+                     /translation="MGLPLARLAAVCLALSLAGGSELQTEGRTRNHGHNVCSTWGNFH
+                     YKTFDGDVFRFPGLCDYNFASDCRGSYKEFAVHLKRGPGQAEAPAGVESILLTIKDDT
+                     IYLTRHLAVLNGAVVSTPHYSPGLLIEKSDAYTKVYSRAGLTLMWNREDALMLELDTK
+                     FRNHTCGLCGDYNGLQSYSEFLSDGVLFSPLEFGNMQKINQPDVVCEDPEEEVAPASC
+                     SEHRAECERLLTAEAFADCQDLVPLEPYLRACQQDRCRCPGGDTCVCSTVAEFSRQCS
+                     HAGGRPGNWRTATLCPKTCPGNLVYLESGSPCMDTCSHLEVSSLCEEHRMDGCFCPEG
+                     TVYDDIGDSGCVPVSQCHCRLHGHLYTPGQEITNDCEQCVCNAGRWVCKDLPCPGTCA
+                     LEGGSHITTFDGKTYTFHGDCYYVLAKGDHNDSYALLGELAPCGSTDKQTCLKTVVLL
+                     ADKKKNVVVFKSDGSVLLNELQVNLPHVTASFSVFRPSSYHIMVSMAIGVRLQVQLAP
+                     VMQLFVTLDQASQGQVQGLCGNFNGLEGDDFKTASGLVEATGAGFANTWKAQSSCHDK
+                     LDWLDDPCSLNIESANYAEHWCSLLKKTETPFGRCHSAVDPAEYYKRCKYDTCNCQNN
+                     EDCLCAALSSYARACTAKGVMLWGWREHVCNKDVGSCPNSQVFLYNLTTCQQTCRSLS
+                     EADSHCLEGFAPVDGCGCPDHTFLDEKGRCVPLAKCSCYHRGLYLEAGDVVVRQEERC
+                     VCRDGRLHCRQIRLIGQSCTAPKIHMDCSNLTALATSKPRALSCQTLAAGYYHTECVS
+                     GCVCPDGLMDDGRGGCVVEKECPCVHNNDLYSSGAKIKVDCNTCTCKRGRWVCTQAVC
+                     HGTCSIYGSGHYITFDGKYYDFDGHCSYVAVQDYCGQNSSLGSFSIITENVPCGTTGV
+                     TCSKAIKIFMGRTELKLEDKHRVVIQRDEGHHVAYTTREVGQYLVVESSTGIIVIWDK
+                     RTTVFIKLAPSYKGTVCGLCGNFDHRSNNDFTTRDHMVVSSELDFGNSWKEAPTCPDV
+                     STNPEPCSLNPHRRSWAEKQCSILKSSVFSICHSKVDPKPFYEACVHDSCSCDTGGDC
+                     ECFCSAVASYAQECTKEGACVFWRTPDLCPIFCDYYNPPHECEWHYEPCGNRSFETCR
+                     TINGIHSNISVSYLEGCYPRCPKDRPIYEEDLKKCVTADKCGCYVEDTHYPPGASVPT
+                     EETCKSCVCTNSSQVVCRPEEGKILNQTQDGAFCYWEICGPNGTVEKHFNICSITTRP
+                     STLTTFTTITLPTTPTTFTTTTTTTTPTSSTVLSTTPKLCCLWSDWINEDHPSSGSDD
+                     GDRETFDGVCGAPEDIECRSVKDPHLSLEQLGQKVQCDVSVGFICKNEDQFGNGPFGL
+                     CYDYKIRVNCCWPMDKCITTPSPPTTTPSPPPTSTTTLPPTTTPSPPTTTTTTPPPTT
+                     TPSPPITTTTTPPPTTTPSPPISTTTTPPPTTTPSPPTTTPSPPTTTPSPPTTTTTTP
+                     PPTTTPSPPTTTPITPPASTTTLPPTTTPSPPTTTTTTPPPTTTPSPPTTTPITPPTS
+                     TTTLPPTTTPSPPPTTTTTPPPTTTPSPPTTTTPSPPTITTTTPPPTTTPSPPTTTTT
+                     TPPPTTTPSPPTTTPITPPTSTTTLPPTTTPSPPPTTTTTPPPTTTPSPPTTTTPSPP
+                     ITTTTTPPPTTTPSSPITTTPSPPTTTMTTPSPTTTPSSPITTTTTPSSTTTPSPPPT
+                     TMTTPSPTTTPSPPTTTMTTLPPTTTSSPLTTTPLPPSITPPTFSPFSTTTPTTPCVP
+                     LCNWTGWLDSGKPNFHKPGGDTELIGDVCGPGWAANISCRATMYPDVPIGQLGQTVVC
+                     DVSVGLICKNEDQKPGGVIPMAFCLNYEINVQCCECVTQPTTMTTTTTENPTPTPITT
+                     TTTVTPTPTPTSTQSTTPTPITTTNTVTPTPTPTGTQTPTPTPITTTTTMVTPTPTIT
+                     STQTPTPTPITTTTVTPTPTPTSTQRTTPTSITTTTTVTPTPTPTGTQTPTTTPITTT
+                     TTVTPTPTPTGTQTPTTTPISTTTMVTPTPTPTGTQTLTPTPITTTTTVTPTPTPTGT
+                     QTPTSTPISTTTTVTPTPTPTGTQTPTLTPITTTTTVTPTPTPTGTQTPTTTPITTTT
+                     TVTPTPTPTGTKSTTPTSITTTTMVTPTPPPTGTQTPTTTPITTTTTVTPTPTPTGTQ
+                     TPTPTPITTTTTVTPTPTPTGTQTPTSTPITTNTTVTPTPTPTGTPSTTLTPITTTTM
+                     VTPTPTPTGTQTPTSTPISTTTTVTPTPTPTGTQTPTPTPISTTTTVTPTPTPTSTQT
+                     PTTTPITTTTTVTPNPTPTGTQTPTTTPITTTTTVTPTPTPTGTQTPTTTPISTTTTV
+                     TPTPTPTGTQTPTTTAITTTTTVTPTPTPTGTQTPTSTPITTTTTVTPTPTPTGTQTP
+                     TSTPISNTTTVTPTPTPTGTQTPTVTPITTTTTVTPTRTPTGTKSTTPTSITTTTMVT
+                     PTPTPTGTHTPTTTPITTTTTVTPTPTPTGTQTPTPTPITTTTTVTPTPTPTGTQTPT
+                     STPITTTTTVTPTPTPTGTQTPTTTPITTNTTVTPTPTPTGTQTPTTVLITTTTTMTP
+                     TPTPTSTKSTTVTPITTTTTVTPTPTPTGTQSTTLTPITTTTTVTPTPTPTGTQTPTT
+                     TPISTTTTVIPTPTPTGTQTPTSTPITTTTTVTPTPTPTGTQTPTSTPISTTTTVTPT
+                     ATPTGTQTPTLTPITTTTTVTSTPTPTGTQTPTPTPITTTTTVTPTPTPTSTQTPTST
+                     PITTTTTVTPTPTPTGTQTPTTTHITTTTTVTPTPTPTGTQAPTPTAITTTTTVTPTP
+                     TPTGTQTPTTTPITTTTTVTPTPTPTGTQSPTPTAITTTTTVTPTPTPTGTQTPTTTP
+                     ITTTTTVTPTPTPTGTQSTTLTPITTTTTVTPIPTPTGTQTPTSTPITTTITVTPTPT
+                     PTGTQTPTPTPISTTTTVTPTPTPTGTQTPTTTPITTTTTVTPTPTPTGTQTPTTTPI
+                     STTTTVTPTPTPTGTQTPTSTPITTTTTVTPTPTPTGTQTPTPTPITTTTTVTPTPTP
+                     TGTQTPTSTPITTTTTVTPTPTPTGTQTPTPTPITTTTTVTPTPTPTGTQTPTSTPIT
+                     TTTTVTPTPTPTGTQTPTTTPITTTTTVTPTPTPTGTQSTTLTPITTTTTVTPTPTPT
+                     GTQTPTSTPITTTTTVTPTPTGTQTPTPTPISTTTTVTPTPTPTGTQTPTMTPITTTT
+                     TVTPTPTPTGTQTPTTTPISTTTTVTPTPTPTGTQTPTSTPITTTTTVTPTPTPTGTQ
+                     TPTTTPITTTTTVTPTPTPTGTQSTTLTPITTTTTVTPTPTPTGTQTPTPTPISTTTT
+                     VTPTPTPTGTQTPTTTPITTTTTVTPTPTPTGTQTPTTTPISTTTTVTPTPTPTGTQT
+                     PTSTPITTTTTVTPTPTPTGTQTPTTTPITTTTTVTPTPTPTGTQAPTPTAITTTTTV
+                     TPTPTPTGTQTPTTTPITTTTMVTPTPTPTGTQTPTSTPITTTTTVTPTPTPTGTQTP
+                     TPTPISTTTTVTPTPTPTGTQTPTTTPITTTTTVTPTPTPTGTQTPTTTPISTTTTVT
+                     PTPTPTGTQTPTSTPITTTTTVTPTPTPTGTQTPTPTPITTTTTVTPTPTPTGTQTPT
+                     STPITTTTTVTPTPTPTGTQTPTTTPITTTTTVTPTPTPTGTQSTTLTPITTTTTVTP
+                     TPTPTGTQTPTSTPITTTTTVTPTPTPTGTQTPTPTPISTTSTVTPTPTPTGTQTPTM
+                     TPITTTTTVTPTPTPTGTQTPTSTPITTTTTVTPTPTPTGTQTPTMTPITTTTTVTPT
+                     PTPTGTQAPTPTAITTTTTVTPTPTPTGTQTPTTTPITTTTTVTPTPTPTGTQSTTLT
+                     PITTTTTVTPTPTPTGTQTPTPTPISTTTTVTPTPTPTGTQTPTMTPITTTTTVTPTP
+                     TPTGTQTPTTTPISTTTTVTPTPTPTGTQTPTTTPITTTTTVTPTPTPTGTQTPTTTP
+                     ISTTTTVTPTPTPTGTQTPTTTPITTTTTVTPTPTPTGTQTPTTTPISTTTTVTPTPT
+                     PTGTQTPTSTPITTTTTVTPTPTPTGTQTPTTTPITTTTTVTPTPTPTGTQAPTPTAI
+                     TTTSTVTPTPTPTGTQTPTTTPITTTTTVTPTPTPTGTQSPTPTAITTTTTVTPTPTP
+                     TGTQTPTLTPITTTTTVTPTPTPTGTQTPTPTPISTTTTVTPTPTPTGTQTPTTTPIT
+                     TTTTVTPTPTPTGTQTPTTVLITTTTTMTPTPTPTSTKSTTVTPITTTTTVTATPTPT
+                     GTQTPTMIPISTTTTVTPTPTPTTGSTGPPTHTSTAPIAELTTSNPPPESSTPQTSRS
+                     TSSPLTESTTLLSTLPPAIEMTSTAPPSTPTAPTTTSGGHTLSPPPSTTTSPPGTPTR
+                     GTTTGSSSAPTPSTVQTTTTSAWTPTPTPLSTPSIIRTTGLRPYPSSVLICCVLNDTY
+                     YAPGEEVYNGTYGDTCYFVNCSLSCTLEFYNWSCPSTPSPTPTPSKSTPTPSKPSSTP
+                     SKPTPGTKPPECPDFDPPRQENETWWLCDCFMATCKYNNTVEIVKVECEPPPMPTCSN
+                     GLQPVRVEDPDGCCWHWECDCYCTGWGDPHYVTFDGLYYSYQGNCTYVLVEEISPSVD
+                     NFGVYIDNYHCDPNDKVSCPRTLIVRHETQEVLIKTVHMMPMQVQVQVNRQAVALPYK
+                     KYGLEVYQSGINYVVDIPELGVLVSYNGLSFSVRLPYHRFGNNTKGQCGTCTNTTSDD
+                     CILPSGEIVSNCEAAADQWLVNDPSKPHCPHSSSTTKRPAVTVPGGGKTTPHKDCTPS
+                     PLCQLIKDSLFAQCHALVPPQHYYDACVFDSCFMPGSSLECASLQAYAALCAQQNICL
+                     DWRNHTHGACLVECPSHREYQACGPAEEPTCKSSSSQQNNTVLVEGCFCPEGTMNYAP
+                     GFDVCVKTCGCVGPDNVPREFGEHFEFDCKNCVCLEGGSGIICQPKRCSQKPVTHCVE
+                     DGTYLATEVNPADTCCNITVCKCNTSLCKEKPSVCPLGFEVKSKMVPGRCCPFYWCES
+                     KGVCVHGNAEYQPGSPVYSSKCQDCVCTDKVDNNTLLNVIACTHVPCNTSCSPGFELM
+                     EAPGECCKKCEQTHCIIKRPDNQHVILKPGDFKSDPKNNCTFFSCVKIHNQLISSVSN
+                     ITCPNFDASICIPGSITFMPNGCCKTCTPRNETRVPCSTVPVTTEVSYAGCTKTVLMN
+                     HCSGSCGTFVMYSAKAQALDHSCSCCKEEKTSQREVVLSCPNGGSLTHTYTHIESCQC
+                     QDTVCGLPTGTSRRARRSPRHLGSG"
+     sig_peptide     62475..62534
+                     /gene="MUC2"
+                     /gene_synonym="MLP; MUC-2; SMUC"
+                     /inference="COORDINATES: ab initio prediction:SignalP:4.0"
+     misc_feature    62535..62537
+                     /gene="MUC2"
+                     /gene_synonym="MLP; MUC-2; SMUC"
+                     /note="Phosphoserine.
+                     /evidence=ECO:0007744|PubMed:18669648; propagated from
+                     UniProtKB/Swiss-Prot (Q02817.2); phosphorylation site"
+     misc_feature    65693..65695
+                     /gene="MUC2"
+                     /gene_synonym="MLP; MUC-2; SMUC"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (Q02817.2); glycosylation site"
+     misc_feature    69033..69035
+                     /gene="MUC2"
+                     /gene_synonym="MLP; MUC-2; SMUC"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (Q02817.2); glycosylation site"
+     misc_feature    71258..71260
+                     /gene="MUC2"
+                     /gene_synonym="MLP; MUC-2; SMUC"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (Q02817.2); glycosylation site"
+     misc_feature    71926..71928
+                     /gene="MUC2"
+                     /gene_synonym="MLP; MUC-2; SMUC"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (Q02817.2); glycosylation site"
+     misc_feature    73909..73911
+                     /gene="MUC2"
+                     /gene_synonym="MLP; MUC-2; SMUC"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (Q02817.2); glycosylation site"
+     misc_feature    76090..76092
+                     /gene="MUC2"
+                     /gene_synonym="MLP; MUC-2; SMUC"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (Q02817.2); glycosylation site"
+     misc_feature    76135..76137
+                     /gene="MUC2"
+                     /gene_synonym="MLP; MUC-2; SMUC"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (Q02817.2); glycosylation site"
+     misc_feature    78497..78499
+                     /gene="MUC2"
+                     /gene_synonym="MLP; MUC-2; SMUC"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (Q02817.2); glycosylation site"
+     misc_feature    78943..78945
+                     /gene="MUC2"
+                     /gene_synonym="MLP; MUC-2; SMUC"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (Q02817.2); glycosylation site"
+     misc_feature    78991..78993
+                     /gene="MUC2"
+                     /gene_synonym="MLP; MUC-2; SMUC"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (Q02817.2); glycosylation site"
+     gene            147368..190563
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="mucin 5AC, oligomeric mucus/gel-forming; Derived by
+                     automated computational analysis using gene prediction
+                     method: BestRefSeq."
+                     /db_xref="GeneID:4586"
+                     /db_xref="HGNC:HGNC:7515"
+                     /db_xref="MIM:158373"
+     mRNA            join(147368..147487,150037..150114,150952..151011,
+                     151332..151593,151957..152071,152380..152470,
+                     153307..153416,153531..153744,153832..153957,
+                     154727..154844,155047..155185,157302..157412,
+                     157908..157977,158067..158204,158287..158451,
+                     161854..161948,163921..164047,164307..164562,
+                     164643..164695,165576..165676,165939..166090,
+                     166353..166491,166656..166769,166879..167058,
+                     167869..168108,168517..168673,169447..169575,
+                     169779..169941,170564..170607,170696..170884,
+                     171580..181950,182208..182407,182910..183084,
+                     183535..183785,183912..184095,184437..184704,
+                     185301..185479,185813..185900,186042..186145,
+                     186302..186333,186893..187064,187328..187429,
+                     187693..187730,188299..188421,188512..188610,
+                     188796..188915,189120..189189,189280..189394,
+                     189863..190563)
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /product="mucin 5AC, oligomeric mucus/gel-forming"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: BestRefSeq."
+                     /transcript_id="NM_001304359.2"
+                     /db_xref="GeneID:4586"
+                     /db_xref="HGNC:HGNC:7515"
+                     /db_xref="MIM:158373"
+     CDS             join(147415..147487,150037..150114,150952..151011,
+                     151332..151593,151957..152071,152380..152470,
+                     153307..153416,153531..153744,153832..153957,
+                     154727..154844,155047..155185,157302..157412,
+                     157908..157977,158067..158204,158287..158451,
+                     161854..161948,163921..164047,164307..164562,
+                     164643..164695,165576..165676,165939..166090,
+                     166353..166491,166656..166769,166879..167058,
+                     167869..168108,168517..168673,169447..169575,
+                     169779..169941,170564..170607,170696..170884,
+                     171580..181950,182208..182407,182910..183084,
+                     183535..183785,183912..184095,184437..184704,
+                     185301..185479,185813..185900,186042..186145,
+                     186302..186333,186893..187064,187328..187429,
+                     187693..187730,188299..188421,188512..188610,
+                     188796..188915,189120..189189,189280..189394,
+                     189863..190127)
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: BestRefSeq."
+                     /codon_start=1
+                     /product="mucin-5AC precursor"
+                     /protein_id="NP_001291288.1"
+                     /db_xref="GeneID:4586"
+                     /db_xref="HGNC:HGNC:7515"
+                     /db_xref="MIM:158373"
+                     /translation="MSVGRRKLALLWALALALACTRHTGHAQDGSSESSYKHHPALSP
+                     IARGPSGVPLRGATVFPSLRTIPVVRASNPAHNGRVCSTWGSFHYKTFDGDVFRFPGL
+                     CNYVFSEHCGAAYEDFNIQLRRSQESAAPTLSRVLMKVDGVVIQLTKGSVLVNGHPVL
+                     LPFSQSGVLIQQSSSYTKVEARLGLVLMWNHDDSLLLELDTKYANKTCGLCGDFNGMP
+                     VVSELLSHNTKLTPMEFGNLQKMDDPTDQCQDPVPEPPRNCSTGFGICEELLHGQLFS
+                     GCVALVDVGSYLEACRQDLCFCEDTDLLSCVCHTLAEYSRQCTHAGGLPQDWRGPDFC
+                     PQKCPNNMQYHECRSPCADTCSNQEHSRACEDHCVAGCFCPEGTVLDDIGQTGCVPVS
+                     KCACVYNGAAYAPGATYSTDCTNCTCSGGRWSCQEVPCPGTCSVLGGAHFSTFDGKQY
+                     TVHGDCSYVLTKPCDSSAFTVLAELRRCGLTDSETCLKSVTLSLDGAQTVVVIKASGE
+                     VFLNQIYTQLPISAANVTIFRPSTFFIIAQTSLGLQLNLQLVPTMQLFMQLAPKLRGQ
+                     TCGLCGNFNSIQADDFRTLSGVVEATAAAFFNTFKTQAACPNIRNSFEDPCSLSVENE
+                     KYAQHWCSQLTDADGPFGRCHAAVKPGTYYSNCMFDTCNCERSEDCLCAALSSYVHAC
+                     AAKGVQLGGWRDGVCTKPMTTCPKSMTYHYHVSTCQPTCRSLSEGDITCSVGFIPVDG
+                     CICPKGTFLDDTGKCVQASNCPCYHRGSMIPNGESVHDSGAICTCTHGKLSCIGGQAP
+                     APVCAAPMVFFDCRNATPGDTGAGCQKSCHTLDMTCYSPQCVPGCVCPDGLVADGEGG
+                     CITAEDCPCVHNEASYRAGQTIRVGCNTCTCDSRMWRCTDDPCLATCAVYGDGHYLTF
+                     DGQSYSFNGDCEYTLVQNHCGGKDSTQDSFRVVTENVPCGTTGTTCSKAIKIFLGGFE
+                     LKLSHGKVEVIGTDESQEVPYTIRQMGIYLVVDTDIGLVLLWDKKTSIFINLSPEFKG
+                     RVCGLCGNFDDIAVNDFATRSRSVVGDVLEFGNSWKLSPSCPDALAPKDPCTANPFRK
+                     SWAQKQCSILHGPTFAACHAHVEPARYYEACVNDACACDSGGDCECFCTAVAAYAQAC
+                     HEVGLCVSWRTPSICPLFCDYYNPEGQCEWHYQPCGVPCLRTCRNPRGDCLRDVRGLE
+                     GCYPKCPPEAPIFDEDKMQCVATCPTPPLPPRCHVHGKSYRPGAVVPSDKNCQSCLCT
+                     ERGVECTYKAEACVCTYNGQRFHPGDVIYHTTDGTGGCISARCGANGTIERRVYPCSP
+                     TTPVPPTTFSFSTPPLVVSSTHTPSNGPSSAHTGPPSSAWPTTAGTSPRTRLPTASAS
+                     LPPVCGEKCLWSPWMDVSRPGRGTDSGDFDTLENLRAHGYRVCESPRSVECRAEDAPG
+                     VPLRALGQRVQCSPDVGLTCRNREQASGLCYNYQIRVQCCTPLPCSTSSSPAQTTPPT
+                     TSKTTETRASGSSAPSSTPGTVSLSTARTTPAPGTATSVKKTFSTPSPPPVPATSTSS
+                     MSTTAPGTSVVSSKPTPTEPSTSSCLQELCTWTEWIDGSYPAPGINGGDFDTFQNLRD
+                     EGYTFCESPRSVQCRAESFPNTPLADLGQDVICSHTEGLICLNKNQLPPICYNYEIRI
+                     QCCETVNVCRDITRLPKTVATTRPTPHPTGAQTQTTFTTHMPSASTEQPTATSRGGPT
+                     ATSVTQGTHTTLVTRNCHPRCTWTKWFDVDFPSPGPHGGDKETYNNIIRSGEKICRRP
+                     EEITRLQCRAKSHPEVSIEHLGQVVQCSREEGLVCRNQDQQGPFKMCLNYEVRVLCCE
+                     TPRGCHMTSTPGSTSSSPAQTTPSTTSKTTETQASGSSAPSSTPGTVSLSTARTTPAP
+                     GTATSVKKTFSTPSPPPVPATSTSSMSTTAPGTSVVSSKPTPTEPSTSSCLQELCTWT
+                     EWIDGSYPAPGINGGDFDTFQNLRDEGYTFCESPRSVQCRAESFPNTPLADLGQDVIC
+                     SHTEGLICLNKNQLPPICYNYEIRIQCCETVNVCRDITRPPKTVATTRPTPHPTGAQT
+                     QTTFTTHMPSASTEQPTATSRGGPTATSVTQGTHTTPVTRNCHPRCTWTTWFDVDFPS
+                     PGPHGGDKETYNNIIRSGEKICRRPEEITRLQCRAKSHPEVSIEHLGQVVQCSREEGL
+                     VCRNQDQQGPFKMCLNYEVRVLCCETPKGCPVTSTPVTAPSTPSGRATSPTQSTSSWQ
+                     KSRTTTLVTTSTTSTPQTSTTYAHTTSTTSAPTARTTSAPTTRTTSASPASTTSGPGN
+                     TPSPVPTTSTISAPTTSITSAPTTSTTSAPTSSTTSGPGTTPSPVPTTSITSAPTTST
+                     TSAPTTSTTSARTSSTTSATTTSRISGPETTPSPVPTTSTTSATTTSTTSAPTTSTTS
+                     APTSSTTSSPQTSTTSAPTTSTTSGPGTTPSPVPTTSTTSAPTTRTTSAPKSSTTSAA
+                     TTSTTSGPETTPRPVPTTSTTSSPTTSTTSAPTTSTTSASTTSTTSGAGTTPSPVPTT
+                     STTSAPTTSTTSAPISSTTSATTTSTTSGPGTTPSPVPTTSTTSAPTTSTTSGPGTTP
+                     SAVPTTSITSAPTTSTNSAPISSTTSATTTSRISGPETTPSPVPTASTTSASTTSTTS
+                     GPGTTPSPVPTTSTISVPTTSTTSASTTSTTSASTTSTTSGPGTTPSPVPTTSTTSAP
+                     TTSTTSAPTTSTISAPTTSTTSATTTSTTSAPTPRRTSAPTTSTISASTTSTTSATTT
+                     STTSATTTSTISAPTTSTTLSPTTSTTSTTITSTTSAPISSTTSTPQTSTTSAPTTST
+                     TSGPGTTSSPVPTTSTTSAPTTSTTSAPTTRTTSVPTSSTTSTATTSTTSGPGTTPSP
+                     VPTTSTTSAPTTRTTSAPTTSTTSAPTTSTTSAPTSSTTSATTTSTISVPTTSTTSVP
+                     GTTPSPVPTTSTISVPTTSTTSASTTSTTSGPGTTPSPVPTTSTTSAPTTSTTSAPTT
+                     STISAPTTSTPSAPTTSTTLAPTTSTTSAPTTSTTSTPTSSTTSSPQTSTTSASTTSI
+                     TSGPGTTPSPVPTTSTTSAPTTSTTSAATTSTISAPTTSTTSAPTTSTTSASTASKTS
+                     GLGTTPSPIPTTSTTSPPTTSTTSASTASKTSGPGTTPSPVPTTSTIFAPRTSTTSAS
+                     TTSTTPGPGTTPSPVPTTSTASVSKTSTSHVSISKTTHSQPVTRDCHLRCTWTKWFDI
+                     DFPSPGPHGGDKETYNNIIRSGEKICRRPEEITRLQCRAESHPEVSIEHLGQVVQCSR
+                     EEGLVCRNQDQQGPFKMCLNYEVRVLCCETPKGCPVTSTPVTAPSTPSGRATSPTQST
+                     SSWQKSRTTTLVTTSTTSTPQTSTTSAPTTSTTSAPTTSTTSAPTTSTTSTPQTSISS
+                     APTSSTTSAPTSSTISARTTSIISAPTTSTTSSPTTSTTSATTTSTTSAPTSSTTSTP
+                     QTSKTSAATSSTTSGSGTTPSPVTTTSTASVSKTSTSHVSVSKTTHSQPVTRDCHPRC
+                     TWTKWFDVDFPSPGPHGGDKETYNNIIRSGEKICRRPEEITRLQCRAKSHPEVSIEHL
+                     GQVVQCSREEGLVCRNQDQQGPFKMCLNYEVRVLCCETPKGCPVTSTSVTAPSTPSGR
+                     ATSPTQSTSSWQKSRTTTLVTSSITSTTQTSTTSAPTTSTTPASIPSTTSAPTTSTTS
+                     APTTSTTSAPTTSTTSTPQTTTSSAPTSSTTSAPTTSTISAPTTSTISAPTTSTTSAP
+                     TASTTSAPTSTSSAPTTNTTSAPTTSTTSAPITSTISAPTTSTTSTPQTSTISSPTTS
+                     TTSTPQTSTTSSPTTSTTSAPTTSTTSAPTTSTTSTPQTSISSAPTSSTTSAPTASTI
+                     SAPTTSTTSFHTTSTTSPPTSSTSSTPQTSKTSAATSSTTSGSGTTPSPVPTTSTASV
+                     SKTSTSHVSVSKTTHSQPVTRDCHPRCTWTKWFDVDFPSPGPHGGDKETYNNIIRSGE
+                     KICRRPEEITRLQCRAESHPEVSIEHLGQVVQCSREEGLVCRNQDQQGPFKMCLNYEV
+                     RVLCCETPKGCPVTSTPVTAPSTPSGRATSPTQSTSSWQKSRTTTLVTTSTTSTPQTS
+                     TTSAPTTSTIPASTPSTTSAPTTSTTSAPTTSTTSAPTHRTTSGPTTSTTLAPTTSTT
+                     SAPTTSTNSAPTTSTISASTTSTISAPTTSTISSPTSSTTSTPQTSKTSAATSSTTSG
+                     SGTTPSPVPTTSTTSASTTSTTSAPTTSTTSGPGTTPSPVPSTSTTSAATTSTTSAPT
+                     TRTTSAPTSSMTSGPGTTPSPVPTTSTTSAPTTSTTSGPGTTPSPVPTTSTTSAPITS
+                     TTSGPGSTPSPVPTTSTTSAPTTSTTSASTASTTSGPGTTPSPVPTTSTTSAPTTRTT
+                     SASTASTTSGPGSTPSPVPTTSTTSAPTTRTTPASTASTTSGPGTTPSPVPTTSTTSA
+                     STTSTISLPTTSTTSAPITSMTSGPGTTPSPVPTTSTTSAPTTSTTSASTASTTSGPG
+                     TTPSPVPTTSTTSAPTTSTTSASTASTTSGPGTSLSPVPTTSTTSAPTTSTTSGPGTT
+                     PSPVPTTSTTSAPTTSTTSGPGTTPSPVPTTSTTPVSKTSTSHLSVSKTTHSQPVTSD
+                     CHPLCAWTKWFDVDFPSPGPHGGDKETYNNIIRSGEKICRRPEEITRLQCRAESHPEV
+                     NIEHLGQVVQCSREEGLVCRNQDQQGPFKMCLNYEVRVLCCETPRGCPVTSVTPYGTS
+                     PTNALYPSLSTSMVSASVASTSVASSSVASSSVAYSTQTCFCNVADRLYPAGSTIYRH
+                     RDLAGHCYYALCSQDCQVVRGVDSDCPSTTLPPAPATSPSISTSEPVTELGCPNAVPP
+                     RKKGETWATPNCSEATCEGNNVISLRPRTCPRVEKPTCANGYPAVKVADQDGCCHHYQ
+                     CQCVCSGWGDPHYITFDGTYYTFLDNCTYVLVQQIVPVYGHFRVLVDNYFCGAEDGLS
+                     CPRSIILEYHQDRVVLTRKPVHGVMTNEIIFNNKVVSPGFRKNGIVVSRIGVKMYATI
+                     PELGVQVMFSGLIFSVEVPFSKFANNTEGQCGTCTNDRKDECRTPRGTVVASCSEMSG
+                     LWNVSIPDQPACHRPHPTPTTVGPTTVGSTTVGPTTVGSTTVGPTTPPAPCLPSPICQ
+                     LILSKVFEPCHTVIPPLLFYEGCVFDRCHMTDLDVVCSSLELYAALCASHDICIDWRG
+                     RTGHMCPFTCPADKVYQPCGPSNPSYCYGNDSASLGALPEAGPITEGCFCPEGMTLFS
+                     TSAQVCVPTGCPRCLGPHGEPVKVGHTVGMDCQECTCEAATWTLTCRPKLCPLPPACP
+                     LPGFVPVPAAPQAGQCCPQYSCACNTSRCPAPVGCPEGARAIPTYQEGACCPVQNCSW
+                     TVCSINGTLYQPGAVVSSSLCETCRCELPGGPPSDAFVVSCETQICNTHCPVGFEYQE
+                     QSGQCCGTCVQVACVTNTSKSPAHLFYPGETWSDAGNHCVTHQCEKHQDGLVVVTTKK
+                     ACPPLSCSLDEARMSKDGCCRFCPPPPPPYQNQSTCAVYHRSLIIQQQGCSSSEPVRL
+                     AYCRGNCGDSSSMYSLEGNTVEHRCQCCQELRTSLRNVTLHCTDGSSRAFSYTEVEEC
+                     GCMGRRCPAPGDTQHSEEAEPEPSQEAESGSWERGVPVSPMH"
+     sig_peptide     join(147415..147487,150037..150044)
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="/evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P98088.4)"
+     misc_feature    150042..150110
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="propagated from UniProtKB/Swiss-Prot (P98088.4);
+                     Region: Disordered. /evidence=ECO:0000256|SAM:MobiDB-lite"
+     mat_peptide     join(150045..150114,150952..151011,151332..151593,
+                     151957..152071,152380..152470,153307..153416,
+                     153531..153744,153832..153957,154727..154844,
+                     155047..155185,157302..157412,157908..157977,
+                     158067..158204,158287..158451,161854..161948,
+                     163921..164047,164307..164562,164643..164695,
+                     165576..165676,165939..166090,166353..166491,
+                     166656..166769,166879..167058,167869..168108,
+                     168517..168673,169447..169575,169779..169941,
+                     170564..170607,170696..170884,171580..181950,
+                     182208..182407,182910..183084,183535..183785,
+                     183912..184095,184437..184704,185301..185479,
+                     185813..185900,186042..186145,186302..186333,
+                     186893..187064,187328..187429,187693..187730,
+                     188299..188421,188512..188610,188796..188915,
+                     189120..189189,189280..189394,189863..190124)
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /product="Mucin-5AC. /evidence=ECO:0000255.
+                     /id=PRO_0000158957"
+                     /note="propagated from UniProtKB/Swiss-Prot (P98088.4)"
+     misc_feature    152404..152406
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P98088.4); glycosylation site"
+     misc_feature    153399..153401
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P98088.4); glycosylation site"
+     misc_feature    154840..154842
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P98088.4); glycosylation site"
+     misc_feature    158069..158071
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P98088.4); glycosylation site"
+     misc_feature    170797..170799
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P98088.4); glycosylation site"
+     misc_feature    join(170881..170884,171580..171701)
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="propagated from UniProtKB/Swiss-Prot (P98088.4);
+                     Region: Disordered. /evidence=ECO:0000256|SAM:MobiDB-lite"
+     misc_feature    171717..181763
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="propagated from UniProtKB/Swiss-Prot (P98088.4);
+                     Region: 9 X Cys-rich subdomain repeats"
+     misc_feature    171735..171737
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="C-linked (Man) tryptophan. /evidence=ECO:0000305;
+                     propagated from UniProtKB/Swiss-Prot (P98088.4);
+                     glycosylation site"
+     misc_feature    172017..172295
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="propagated from UniProtKB/Swiss-Prot (P98088.4);
+                     Region: Disordered. /evidence=ECO:0000256|SAM:MobiDB-lite"
+     misc_feature    172320..172322
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="C-linked (Man) tryptophan. /evidence=ECO:0000305;
+                     propagated from UniProtKB/Swiss-Prot (P98088.4);
+                     glycosylation site"
+     misc_feature    172632..172769
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="propagated from UniProtKB/Swiss-Prot (P98088.4);
+                     Region: Disordered. /evidence=ECO:0000256|SAM:MobiDB-lite"
+     misc_feature    172815..172817
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="C-linked (Man) tryptophan. /evidence=ECO:0000305;
+                     propagated from UniProtKB/Swiss-Prot (P98088.4);
+                     glycosylation site"
+     misc_feature    173115..173414
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="propagated from UniProtKB/Swiss-Prot (P98088.4);
+                     Region: Disordered. /evidence=ECO:0000256|SAM:MobiDB-lite"
+     misc_feature    173439..173441
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="C-linked (Man) tryptophan. /evidence=ECO:0000305;
+                     propagated from UniProtKB/Swiss-Prot (P98088.4);
+                     glycosylation site"
+     misc_feature    173745..173900
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="propagated from UniProtKB/Swiss-Prot (P98088.4);
+                     Region: Disordered. /evidence=ECO:0000256|SAM:MobiDB-lite"
+     misc_feature    173934..173936
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="C-linked (Man) tryptophan.
+                     /evidence=ECO:0000269|PubMed:14718370; propagated from
+                     UniProtKB/Swiss-Prot (P98088.4); glycosylation site"
+     misc_feature    174240..177212
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="propagated from UniProtKB/Swiss-Prot (P98088.4);
+                     Region: Disordered. /evidence=ECO:0000256|SAM:MobiDB-lite"
+     misc_feature    174339..177170
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="propagated from UniProtKB/Swiss-Prot (P98088.4);
+                     Region: 107 X 8 AA approximate tandem repeats of
+                     T-T-S-T-T-S-A-P"
+     misc_feature    174753..174755
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="O-linked (GalNAc) threonine.
+                     /evidence=ECO:0000269|PubMed:25939779,
+                     ECO:0007744|PDB:5AJO; propagated from UniProtKB/Swiss-Prot
+                     (P98088.4); glycosylation site"
+     misc_feature    174783..174785
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="O-linked (GalNAc) threonine.
+                     /evidence=ECO:0000269|PubMed:25939779,
+                     ECO:0007744|PDB:5AJO, ECO:0007744|PDB:5AJP; propagated
+                     from UniProtKB/Swiss-Prot (P98088.4); glycosylation site"
+     misc_feature    174921..174923
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="O-linked (GalNAc) threonine.
+                     /evidence=ECO:0000269|PubMed:25939779,
+                     ECO:0007744|PDB:5AJO; propagated from UniProtKB/Swiss-Prot
+                     (P98088.4); glycosylation site"
+     misc_feature    174951..174953
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="O-linked (GalNAc) threonine.
+                     /evidence=ECO:0000269|PubMed:25939779,
+                     ECO:0007744|PDB:5AJO, ECO:0007744|PDB:5AJP; propagated
+                     from UniProtKB/Swiss-Prot (P98088.4); glycosylation site"
+     misc_feature    175161..175163
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="O-linked (GalNAc) threonine.
+                     /evidence=ECO:0000269|PubMed:25939779,
+                     ECO:0007744|PDB:5AJO; propagated from UniProtKB/Swiss-Prot
+                     (P98088.4); glycosylation site"
+     misc_feature    175191..175193
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="O-linked (GalNAc) threonine.
+                     /evidence=ECO:0000269|PubMed:25939779,
+                     ECO:0007744|PDB:5AJO, ECO:0007744|PDB:5AJP; propagated
+                     from UniProtKB/Swiss-Prot (P98088.4); glycosylation site"
+     misc_feature    175281..175283
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="O-linked (GalNAc) threonine.
+                     /evidence=ECO:0000269|PubMed:25939779,
+                     ECO:0007744|PDB:5AJO; propagated from UniProtKB/Swiss-Prot
+                     (P98088.4); glycosylation site"
+     misc_feature    175311..175313
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="O-linked (GalNAc) threonine.
+                     /evidence=ECO:0000269|PubMed:25939779,
+                     ECO:0007744|PDB:5AJO, ECO:0007744|PDB:5AJP; propagated
+                     from UniProtKB/Swiss-Prot (P98088.4); glycosylation site"
+     misc_feature    175665..175667
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="O-linked (GalNAc) threonine.
+                     /evidence=ECO:0000269|PubMed:25939779,
+                     ECO:0007744|PDB:5AJO; propagated from UniProtKB/Swiss-Prot
+                     (P98088.4); glycosylation site"
+     misc_feature    175695..175697
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="O-linked (GalNAc) threonine.
+                     /evidence=ECO:0000269|PubMed:25939779,
+                     ECO:0007744|PDB:5AJO, ECO:0007744|PDB:5AJP; propagated
+                     from UniProtKB/Swiss-Prot (P98088.4); glycosylation site"
+     misc_feature    176217..176219
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="O-linked (GalNAc) threonine.
+                     /evidence=ECO:0000269|PubMed:25939779,
+                     ECO:0007744|PDB:5AJO; propagated from UniProtKB/Swiss-Prot
+                     (P98088.4); glycosylation site"
+     misc_feature    176247..176249
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="O-linked (GalNAc) threonine.
+                     /evidence=ECO:0000269|PubMed:25939779,
+                     ECO:0007744|PDB:5AJO, ECO:0007744|PDB:5AJP; propagated
+                     from UniProtKB/Swiss-Prot (P98088.4); glycosylation site"
+     misc_feature    176505..176507
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="O-linked (GalNAc) threonine.
+                     /evidence=ECO:0000269|PubMed:25939779,
+                     ECO:0007744|PDB:5AJO; propagated from UniProtKB/Swiss-Prot
+                     (P98088.4); glycosylation site"
+     misc_feature    176535..176537
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="O-linked (GalNAc) threonine.
+                     /evidence=ECO:0000269|PubMed:25939779,
+                     ECO:0007744|PDB:5AJO, ECO:0007744|PDB:5AJP; propagated
+                     from UniProtKB/Swiss-Prot (P98088.4); glycosylation site"
+     misc_feature    176769..176771
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="O-linked (GalNAc) threonine.
+                     /evidence=ECO:0000269|PubMed:25939779,
+                     ECO:0007744|PDB:5AJO; propagated from UniProtKB/Swiss-Prot
+                     (P98088.4); glycosylation site"
+     misc_feature    176799..176801
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="O-linked (GalNAc) threonine.
+                     /evidence=ECO:0000269|PubMed:25939779,
+                     ECO:0007744|PDB:5AJO, ECO:0007744|PDB:5AJP; propagated
+                     from UniProtKB/Swiss-Prot (P98088.4); glycosylation site"
+     misc_feature    177252..177254
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="C-linked (Man) tryptophan. /evidence=ECO:0000305;
+                     propagated from UniProtKB/Swiss-Prot (P98088.4);
+                     glycosylation site"
+     misc_feature    177555..178115
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="propagated from UniProtKB/Swiss-Prot (P98088.4);
+                     Region: Disordered. /evidence=ECO:0000256|SAM:MobiDB-lite"
+     misc_feature    177657..178064
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="propagated from UniProtKB/Swiss-Prot (P98088.4);
+                     Region: 17 X 8 AA approximate tandem repeats of
+                     T-T-S-T-T-S-A-P"
+     misc_feature    178146..178148
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="C-linked (Man) tryptophan. /evidence=ECO:0000305;
+                     propagated from UniProtKB/Swiss-Prot (P98088.4);
+                     glycosylation site"
+     misc_feature    178452..179423
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="propagated from UniProtKB/Swiss-Prot (P98088.4);
+                     Region: Disordered. /evidence=ECO:0000256|SAM:MobiDB-lite"
+     misc_feature    178551..179363
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="propagated from UniProtKB/Swiss-Prot (P98088.4);
+                     Region: 34 X 8 AA approximate tandem repeats of
+                     T-T-S-T-T-S-A-P"
+     misc_feature    178890..178892
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P98088.4); glycosylation site"
+     misc_feature    179445..179447
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="C-linked (Man) tryptophan. /evidence=ECO:0000305;
+                     propagated from UniProtKB/Swiss-Prot (P98088.4);
+                     glycosylation site"
+     misc_feature    179748..181445
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="propagated from UniProtKB/Swiss-Prot (P98088.4);
+                     Region: Disordered. /evidence=ECO:0000256|SAM:MobiDB-lite"
+     misc_feature    179847..181355
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="propagated from UniProtKB/Swiss-Prot (P98088.4);
+                     Region: 58 X 8 AA approximate tandem repeats of
+                     T-T-S-T-T-S-A-P"
+     misc_feature    180240..180242
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="O-linked (GalNAc) threonine.
+                     /evidence=ECO:0000269|PubMed:25939779,
+                     ECO:0007744|PDB:5AJO; propagated from UniProtKB/Swiss-Prot
+                     (P98088.4); glycosylation site"
+     misc_feature    180270..180272
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="O-linked (GalNAc) threonine.
+                     /evidence=ECO:0000269|PubMed:25939779,
+                     ECO:0007744|PDB:5AJO, ECO:0007744|PDB:5AJP; propagated
+                     from UniProtKB/Swiss-Prot (P98088.4); glycosylation site"
+     misc_feature    180456..180458
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="O-linked (GalNAc) threonine.
+                     /evidence=ECO:0000269|PubMed:25939779,
+                     ECO:0007744|PDB:5AJO; propagated from UniProtKB/Swiss-Prot
+                     (P98088.4); glycosylation site"
+     misc_feature    180486..180488
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="O-linked (GalNAc) threonine.
+                     /evidence=ECO:0000269|PubMed:25939779,
+                     ECO:0007744|PDB:5AJO, ECO:0007744|PDB:5AJP; propagated
+                     from UniProtKB/Swiss-Prot (P98088.4); glycosylation site"
+     misc_feature    180528..180530
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="O-linked (GalNAc) threonine.
+                     /evidence=ECO:0000269|PubMed:25939779,
+                     ECO:0007744|PDB:5AJO; propagated from UniProtKB/Swiss-Prot
+                     (P98088.4); glycosylation site"
+     misc_feature    180558..180560
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="O-linked (GalNAc) threonine.
+                     /evidence=ECO:0000269|PubMed:25939779,
+                     ECO:0007744|PDB:5AJO, ECO:0007744|PDB:5AJP; propagated
+                     from UniProtKB/Swiss-Prot (P98088.4); glycosylation site"
+     misc_feature    180696..180698
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="O-linked (GalNAc) threonine.
+                     /evidence=ECO:0000269|PubMed:25939779,
+                     ECO:0007744|PDB:5AJO; propagated from UniProtKB/Swiss-Prot
+                     (P98088.4); glycosylation site"
+     misc_feature    180726..180728
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="O-linked (GalNAc) threonine.
+                     /evidence=ECO:0000269|PubMed:25939779,
+                     ECO:0007744|PDB:5AJO, ECO:0007744|PDB:5AJP; propagated
+                     from UniProtKB/Swiss-Prot (P98088.4); glycosylation site"
+     misc_feature    180888..180890
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="O-linked (GalNAc) threonine.
+                     /evidence=ECO:0000269|PubMed:25939779,
+                     ECO:0007744|PDB:5AJO; propagated from UniProtKB/Swiss-Prot
+                     (P98088.4); glycosylation site"
+     misc_feature    180918..180920
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="O-linked (GalNAc) threonine.
+                     /evidence=ECO:0000269|PubMed:25939779,
+                     ECO:0007744|PDB:5AJO, ECO:0007744|PDB:5AJP; propagated
+                     from UniProtKB/Swiss-Prot (P98088.4); glycosylation site"
+     misc_feature    181008..181010
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="O-linked (GalNAc) threonine.
+                     /evidence=ECO:0000269|PubMed:25939779,
+                     ECO:0007744|PDB:5AJO; propagated from UniProtKB/Swiss-Prot
+                     (P98088.4); glycosylation site"
+     misc_feature    181038..181040
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="O-linked (GalNAc) threonine.
+                     /evidence=ECO:0000269|PubMed:25939779,
+                     ECO:0007744|PDB:5AJO, ECO:0007744|PDB:5AJP; propagated
+                     from UniProtKB/Swiss-Prot (P98088.4); glycosylation site"
+     misc_feature    181104..181106
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="O-linked (GalNAc) threonine.
+                     /evidence=ECO:0000269|PubMed:25939779,
+                     ECO:0007744|PDB:5AJO; propagated from UniProtKB/Swiss-Prot
+                     (P98088.4); glycosylation site"
+     misc_feature    181134..181136
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="O-linked (GalNAc) threonine.
+                     /evidence=ECO:0000269|PubMed:25939779,
+                     ECO:0007744|PDB:5AJO, ECO:0007744|PDB:5AJP; propagated
+                     from UniProtKB/Swiss-Prot (P98088.4); glycosylation site"
+     misc_feature    181272..181274
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="O-linked (GalNAc) threonine.
+                     /evidence=ECO:0000269|PubMed:25939779,
+                     ECO:0007744|PDB:5AJO; propagated from UniProtKB/Swiss-Prot
+                     (P98088.4); glycosylation site"
+     misc_feature    181302..181304
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="O-linked (GalNAc) threonine.
+                     /evidence=ECO:0000269|PubMed:25939779,
+                     ECO:0007744|PDB:5AJO, ECO:0007744|PDB:5AJP; propagated
+                     from UniProtKB/Swiss-Prot (P98088.4); glycosylation site"
+     misc_feature    181467..181469
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="C-linked (Man) tryptophan. /evidence=ECO:0000305;
+                     propagated from UniProtKB/Swiss-Prot (P98088.4);
+                     glycosylation site"
+     misc_feature    182315..182374
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="propagated from UniProtKB/Swiss-Prot (P98088.4);
+                     Region: Disordered. /evidence=ECO:0000256|SAM:MobiDB-lite"
+     misc_feature    182934..182936
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P98088.4); glycosylation site"
+     misc_feature    183555..183560
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="Cleavage; propagated from UniProtKB/Swiss-Prot
+                     (P98088.4); cleavage site"
+     misc_feature    183603..183605
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P98088.4); glycosylation site"
+     misc_feature    184074..184076
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P98088.4); glycosylation site"
+     misc_feature    184523..184525
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P98088.4); glycosylation site"
+     misc_feature    185881..185883
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P98088.4); glycosylation site"
+     misc_feature    187333..187335
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P98088.4); glycosylation site"
+     misc_feature    187423..187425
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P98088.4); glycosylation site"
+     misc_feature    187713..187715
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P98088.4); glycosylation site"
+     misc_feature    188578..188580
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P98088.4); glycosylation site"
+     misc_feature    189186..189188
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P98088.4); glycosylation site"
+     misc_feature    189933..189935
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000255; propagated from
+                     UniProtKB/Swiss-Prot (P98088.4); glycosylation site"
+     misc_feature    190026..190124
+                     /gene="MUC5AC"
+                     /gene_synonym="leB; MUC5; mucin; TBM"
+                     /note="propagated from UniProtKB/Swiss-Prot (P98088.4);
+                     Region: Disordered. /evidence=ECO:0000256|SAM:MobiDB-lite"
+     misc_feature    153256..186593
+                     /note="Anchor sequence. This sequence is derived from alt
+                     loci or patch scaffold components that are also components
+                     of the primary assembly unit. It was included to ensure a
+                     robust alignment of this scaffold to the primary assembly
+                     unit. Anchor component: KC800812.1"
+     misc_feature    186594..196940
+                     /note="Anchor sequence. This sequence is derived from alt
+                     loci or patch scaffold components that are also components
+                     of the primary assembly unit. It was included to ensure a
+                     robust alignment of this scaffold to the primary assembly
+                     unit. Anchor component: FO680660.6"
+CONTIG      join(complement(AC139749.4:129287..131676),KC877389.1:1..291,
+            complement(AC139749.4:128828..128995),KC877387.1:1..262,
+            complement(AC139749.4:107514..128565),AC256300.1:99402..228493,
+            KC800812.1:307..33644,FO680660.6:8198..18544)
+//

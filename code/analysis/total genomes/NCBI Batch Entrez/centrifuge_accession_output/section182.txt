@@ -1,0 +1,126 @@
+
+LOCUS       NC_031131               2475 bp    RNA     linear   VRL 13-AUG-2018
+DEFINITION  Polygonum ringspot virus isolate Plg6 segment S, complete sequence.
+ACCESSION   NC_031131
+VERSION     NC_031131.1
+DBLINK      BioProject: PRJNA485481
+KEYWORDS    RefSeq.
+SOURCE      Polygonum ringspot virus
+  ORGANISM  Polygonum ringspot virus
+            Viruses; ssRNA viruses; ssRNA negative-strand viruses;
+            Bunyavirales; Tospoviridae; Orthotospovirus.
+REFERENCE   1  (bases 1 to 2475)
+  AUTHORS   Bertran,A., Ciuffo,M., Margaria,P., Rosa,C., Oliveira Resende,R.
+            and Turina,M.
+  TITLE     Host-specific accumulation and temperature effects on the
+            generation of dimeric viral RNA species derived from the S-RNA of
+            members of the Tospovirus genus
+  JOURNAL   J. Gen. Virol. (2016) In press
+   PUBMED   27600541
+  REMARK    Publication Status: Available-Online prior to print
+REFERENCE   2  (bases 1 to 2475)
+  CONSRTM   NCBI Genome Project
+  TITLE     Direct Submission
+  JOURNAL   Submitted (23-SEP-2016) National Center for Biotechnology
+            Information, NIH, Bethesda, MD 20894, USA
+REFERENCE   3  (bases 1 to 2475)
+  AUTHORS   Margaria,P., Ciuffo,M. and Turina,M.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (30-JUN-2016) Istituto per la Protezione Sostenibile
+            Delle Piante, CNR Torino, Strada delle Cacce 73, Torino, TO 10135,
+            Italy
+COMMENT     PROVISIONAL REFSEQ: This record has not yet been subject to final
+            NCBI review. The reference sequence is identical to KX468762.
+            
+            ##Assembly-Data-START##
+            Assembly Method       :: Trinity v. 2.06
+            Sequencing Technology :: Illumina
+            ##Assembly-Data-END##
+            COMPLETENESS: full length.
+FEATURES             Location/Qualifiers
+     source          1..2475
+                     /organism="Polygonum ringspot virus"
+                     /mol_type="genomic RNA"
+                     /isolate="Plg6"
+                     /db_xref="taxon:1678786"
+                     /segment="S"
+                     /geo_loc_name="Italy"
+                     /collection_date="18-Jul-2006"
+                     /collected_by="Marina Ciuffo"
+     gene            74..1405
+                     /locus_tag="BI070_sSgp1"
+                     /db_xref="GeneID:29069647"
+     CDS             74..1405
+                     /locus_tag="BI070_sSgp1"
+                     /note="nonstructural protein; silencing suppressor"
+                     /codon_start=1
+                     /product="NSs"
+                     /protein_id="YP_009293581.1"
+                     /db_xref="GeneID:29069647"
+                     /translation="MSTVKTTAVDFFLNYGISSDSRSSNDCYRIFSGIGDPIMDIFMH
+                     STIGIKPAFSISGLGKNEDIKAHEAEVIEEHHNYDVFNRFGLDINFCNHFLEITVKKP
+                     SVKNYETKFQMHNQIFQPSRRLINHGMGKISENDFFALTDIAKENIYPRDWFINEAER
+                     KTFFMADIAGFSLDYGFSVMGKTTSYWRENLEKTSLISIKQKSAGNPVVPTNRLLSAG
+                     TIKAVEIASAIASDKTTILAVKQDLDADLRTQFRISLPGEYNEAGLARTFLINQGSKG
+                     QYICIYARTSLDRPNERTTLIIKVVTQKRPGDYDMMMLPRDHANCRKLVGASFGTVER
+                     KLTDPNYNKIIAHEMLAVHTSFALKISKILSKPVIVYKVYEKELSPKAVEVDGRTFNY
+                     NEDVDGNVYFLSKTLEMLPISLSVLVYLDSAAPPCWKEHRGLGHFTVEEVQ"
+     gene            complement(1579..2403)
+                     /locus_tag="BI070_sSgp2"
+                     /db_xref="GeneID:29069646"
+     CDS             complement(1579..2403)
+                     /locus_tag="BI070_sSgp2"
+                     /note="nucleocapsid protein"
+                     /codon_start=1
+                     /product="N"
+                     /protein_id="YP_009293582.1"
+                     /db_xref="GeneID:29069646"
+                     /translation="MSTARLSKENVEKLLAGGDADVEIEAEETAGFNFKQFVTDNSKM
+                     KMTFNNGFTILRNRAAIYKMVKAGHFKFQGKSIVVPSSTSSPGQDDWTFRRLEGFIRA
+                     KMFMELINMENAVEQQKMYEKLCELPMVNAYGLKPSSKFDPTTARVMLTLGGPLPLIA
+                     SLDKFAAAAFPLAYFQNVKKEALGINKFSTYEQLCKIARVMATKEFTFTGASKAIFEE
+                     TIKILNDCTPGTAGAASLNKFNEQIKALEAVFGKIVDDNNAGSSKPRPASKKNQGF"
+ORIGIN      
+        1 agagcaatcg gagtataaac aaataaaatc aaaaacagct tgaacacagt gagcaagaaa
+       61 tactatctca gccatgtcta ccgtcaagac aacagcagtt gactttttcc tcaactacgg
+      121 catttctagt gactctcgct cgagcaatga ctgctacagg atattctcag gcataggaga
+      181 tcctatcatg gacatcttca tgcattcaac tataggcatt aaacctgcct tcagcattag
+      241 tggcctcggc aagaacgagg acattaaagc tcatgaagct gaagtcattg aagagcatca
+      301 caattatgat gtcttcaaca gatttggtct ggacataaat ttctgcaacc attttctgga
+      361 gattactgtc aagaaaccat ctgtcaaaaa ttatgaaaca aagtttcaaa tgcacaatca
+      421 gatatttcag ccttcacggc gactgatcaa ccatggcatg ggtaaaatat ctgagaatga
+      481 tttttttgcc ctcacagaca ttgctaaaga aaacatctac ccacgtgact ggttcataaa
+      541 tgaagcagaa aggaagactt tctttatggc tgacattgct ggtttcagcc tggactatgg
+      601 tttttctgtg atgggcaaga ccacatctta ttggagggag aatctggaga aaacatcctt
+      661 gatttctata aagcagaaat ctgcaggcaa tcctgtggtg cctacaaaca ggcttttgtc
+      721 tgctggcact ataaaggcag tagagatagc ttctgctatt gcaagcgata agacaaccat
+      781 ccttgcagtc aagcaggatt tggatgctga tctgagaact cagttcagga tctctctgcc
+      841 tggggagtac aatgaagctg gccttgccag aacatttttg atcaaccaag gatcaaaggg
+      901 gcagtacata tgtatctatg ccaggactag cctggataga cccaatgaaa ggaccacact
+      961 aatcattaaa gttgtgaccc agaaaaggcc aggtgattat gacatgatga tgctcccaag
+     1021 agatcatgcc aactgcagga aattggttgg agctagcttc ggcactgttg agcggaaatt
+     1081 gacagatccc aactacaaca agatcattgc tcatgagatg ctggctgtgc acaccagctt
+     1141 tgctctgaag atatcaaaga tcttgagcaa gcctgtaatt gtgtacaagg tttatgagaa
+     1201 agagctttca cccaaagcag tggaggtgga tggaagaaca ttcaactaca atgaggatgt
+     1261 tgatggaaat gtttattttc tgtcgaaaac tttggagatg ctgcccatat ctctttcagt
+     1321 tcttgtgtat ctggattcag ctgctccacc ttgctggaag gagcacagag gactcggcca
+     1381 cttcactgtg gaagaagtcc agtgattgtg tctacaactt gctgctgcaa gtttgtgtga
+     1441 gtgttagtgc tgtgctgcag ttatgttaag ttaagttatt ttagtaatta cttaaggtat
+     1501 tgttaaataa aataaataaa aacaaataaa aaccaataaa acaaaaagat aaagttaaag
+     1561 caagcattaa gaaatcattc aaaatccttg attctttttg gaggcaggcc ttggtttaga
+     1621 agatccggca ttattgtcat caacaatctt gccgaagaca gcttcaaggg ccttgatctg
+     1681 ctcattgaac ttgttcaatg aagcagcacc agcagttcca ggagtgcaat cattgaggat
+     1741 ctttatggtc tcctcaaaga tggcctttga agccccagtg aaggtgaact cctttgttgc
+     1801 cataactctg gctatcttgc acagctgttc ataagttgaa aacttattta tgcctaaagc
+     1861 ctccttctta acattctgga agtaggccaa tggaaatgca gctgctgcaa acttgtccag
+     1921 gcttgctatc agaggaagtg gaccacccaa tgtcagcatc actcttgcgg tggttgggtc
+     1981 aaattttgag ctgggcttca agccgtatgc attcaccatg ggaagctcac agagcttttc
+     2041 atacattttc tgctgctcta ctgcattctc catgttgatc agctccataa acatctttgc
+     2101 cctgatgaag ccttccagcc ttctgaaagt ccagtcatcc tgaccaggac ttgaagtgga
+     2161 actagggacc acaatagatt tcccctggaa tttgaagtgt cctgctttca ccattttgta
+     2221 gatagcagct ctgtttctca gaattgtgaa accattgttg aaggtcatct tcatcttgct
+     2281 gttgtctgtg acaaactgct tgaagttgaa tccagcagtt tcctcagcct caatttccac
+     2341 atctgcatcc ccacctgcga ggagcttctc aacgttttcc ttgctcaacc ttgcggtaga
+     2401 catggtgtat acttaggaag cagcttactg agtggaagtt gttttagttt gaatttgtta
+     2461 tacctcgatt gctct
+//

@@ -1,0 +1,116 @@
+
+LOCUS       NC_023867               1740 bp ss-DNA     circular VRL 13-AUG-2018
+DEFINITION  Dragonfly cyclovirus 4 isolate BG-NZ46-2007, complete genome.
+ACCESSION   NC_023867
+VERSION     NC_023867.1
+DBLINK      BioProject: PRJNA485481
+KEYWORDS    RefSeq.
+SOURCE      Dragonfly associated cyclovirus 4
+  ORGANISM  Dragonfly associated cyclovirus 4
+            Viruses; ssDNA viruses; Circoviridae.
+REFERENCE   1  (bases 1 to 1740)
+  AUTHORS   Rosario,K., Dayaram,A., Marinov,M., Ware,J., Kraberger,S.,
+            Stainton,D., Breitbart,M. and Varsani,A.
+  TITLE     Diverse circular ssDNA viruses discovered in dragonflies (Odonata:
+            Epiprocta)
+  JOURNAL   J. Gen. Virol. 93 (PT 12), 2668-2681 (2012)
+   PUBMED   22915694
+REFERENCE   2  (bases 1 to 1740)
+  CONSRTM   NCBI Genome Project
+  TITLE     Direct Submission
+  JOURNAL   Submitted (01-APR-2014) National Center for Biotechnology
+            Information, NIH, Bethesda, MD 20894, USA
+REFERENCE   3  (bases 1 to 1740)
+  AUTHORS   Rosario,K., Dayaram,A., Marinov,M., Ware,J., Kraberger,S.,
+            Stainton,D., Breitbart,M. and Varsani,A.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (14-JUN-2012) College of Marine Science, University of
+            South Florida, 140 7th Ave S, St. Petersburg, FL 33701, USA
+COMMENT     PROVISIONAL REFSEQ: This record has not yet been subject to final
+            NCBI review. The reference sequence is identical to JX185425.
+            
+            ##Assembly-Data-START##
+            Assembly Method       :: Sequencher (Gene Codes Corporation) v. 4.7
+            Sequencing Technology :: Sanger dideoxy sequencing
+            ##Assembly-Data-END##
+            COMPLETENESS: full length.
+FEATURES             Location/Qualifiers
+     source          1..1740
+                     /organism="Dragonfly associated cyclovirus 4"
+                     /mol_type="genomic DNA"
+                     /isolate="BG-NZ46-2007"
+                     /host="Somatochlora meridionalis"
+                     /db_xref="taxon:1234882"
+                     /geo_loc_name="Bulgaria: Eastern Rhodope Mountains"
+                     /collection_date="07-Jul-2007"
+     stem_loop       join(1729..1740,1..19)
+                     /note="contains nonanucleotide motif 'TAGTATTAC'"
+     gene            89..760
+                     /locus_tag="DH94_gp1"
+                     /old_locus_tag="DfCyV-4_gp1"
+                     /db_xref="GeneID:18983259"
+     CDS             89..760
+                     /locus_tag="DH94_gp1"
+                     /old_locus_tag="DfCyV-4_gp1"
+                     /note="similar to capsid proteins identified in
+                     circoviruses (pfam: Circo_Cap PF02443)"
+                     /codon_start=1
+                     /product="putative capsid protein"
+                     /protein_id="YP_009021844.1"
+                     /db_xref="GeneID:18983259"
+                     /translation="MALNRYRRARRVARRPLRRSGTYRRRRRGFFRRPRIGKGLFRVK
+                     LTRFVSITQNVAKTTQMGLDLRPVDFTEFGKLASNFEAFKFTRCRVRILPQQNVANNS
+                     TSLMPAYCLFPWHRPLPADSTFNDFLSIDRAKIFRGTSVGKMNFVPSIIASVGTSAGG
+                     TLTMETKWRPRLEIINDGTAYTCVFYTGAIGFQGIPDAPADSKAHYNIIIDMWCTFYN
+                     QKTIG"
+     gene            complement(761..1678)
+                     /locus_tag="DH94_gp2"
+                     /old_locus_tag="DfCyV-4_gp2"
+                     /db_xref="GeneID:18983258"
+     CDS             complement(761..1678)
+                     /locus_tag="DH94_gp2"
+                     /old_locus_tag="DfCyV-4_gp2"
+                     /note="Rep; similar to replication initiator proteins
+                     identified in circoviruses (pfam: Viral_Rep PF02407;
+                     RNA_Helicase PF00910)"
+                     /codon_start=1
+                     /product="replication-associated protein"
+                     /protein_id="YP_009021845.1"
+                     /db_xref="GeneID:18983258"
+                     /translation="MRQRCAAQCERQPATGSLREPASDSHAAMNKTVRKFCFTWNNYS
+                     EGDVIKTKEFLTNNCKYGIFGKEVAPTTGTAHLQGYANLIKPMRFSTIKKRLHHGIHI
+                     EKANGSDEDNKRYCSKAGEIFETGNPQSQGKRNDLQSVVDTIQSGTTNIKDIAREHPT
+                     TFIKYFRGIKEYIRSVVPIQPRFFKTEVYYFLGLPGTGKSKTALEEAMAHAPDSIYYK
+                     PRGLWWDGYQQQKCVIIDDFYGWIKYDEMLKIMDRYPYQVQVKGGFEEFTTEKLWITT
+                     NVDTDFLYKFEGYNTAAFERRITIKRYFE"
+ORIGIN      
+        1 tagtattacc cgcgactttg tagctgacct cgtagcgcgc cccccttcta tttgcgcgcg
+       61 cctttcactt ggcgcgccca gtaacaggat ggccttgaac cggtatagac gtgcacggcg
+      121 cgtggctcgc cgaccgttac gtcgctcagg gacgtatcgt cgtagacgcc gcgggttctt
+      181 tcggcgccct cgtattggga agggtttgtt tcgtgttaaa ttgactagat ttgtttctat
+      241 tactcagaat gttgctaaaa ctacgcaaat gggcctggat ttgcgtccag ttgattttac
+      301 tgaatttgga aagcttgctt ctaattttga ggcgtttaag tttactcgtt gtcgtgtaag
+      361 gattttgccg caacagaatg ttgccaataa tagtacgtcc cttatgccgg cttattgttt
+      421 gtttccctgg caccgtcctt tacctgctga ttcaaccttc aacgattttt tgagtatcga
+      481 ccgagctaaa atatttagag gaacttctgt tggcaaaatg aattttgttc cgagtataat
+      541 agcaagcgtt ggcacatccg ctggaggcac tttgacaatg gaaactaaat ggcgtcctcg
+      601 gttggaaata ataaatgatg gtacggctta tacatgcgtt ttttatacgg gagctatagg
+      661 atttcaagga attccggatg cccctgctga ttctaaggct cattataata ttattattga
+      721 tatgtggtgt acattttata atcaaaagac cataggttaa ttattcaaaa tatcttttta
+      781 ttgtaattct gcgttcaaat gctgctgtat tgtatccttc aaatttatat aaaaaatctg
+      841 tatcgacatt tgttgttatc cataatttct ctgttgtaaa ttcctcgaat cctcctttca
+      901 cttgaacttg gtatgggtag cggtccataa ttttgagcat ttcgtcatat tttatccatc
+      961 cgtagaagtc atcgattatt acgcattttt gttgttggta tccgtcccac catagtcctc
+     1021 tgggcttgta atatattgag tctggagcgt gtgccatggc ttcttccaat gctgttttgg
+     1081 attttcctgt tccgggaagt ccgagaaaat agtagacctc agttttgaaa aatctgggtt
+     1141 gtataggaac aacgcttctg atatattctt tgattccacg aaagtatttg ataaaagtgg
+     1201 ttggatgttc tctcgcaata tctttgatat tggttgttcc actctgtatg gtatccacga
+     1261 cggattgtaa atcatttctt ttcccctgcg attgaggatt acccgtctca aatatctcgc
+     1321 ctgccttaga acagtacctt ttgttatctt cgtcggatcc atttgccttc tcaatatgga
+     1381 ttccgtgatg caaacgcttt ttgattgtac taaagcgcat gggtttgata aggttagcgt
+     1441 atccctgtag atgagcagtt ccggttgtcg gagcgacttc ttttccaaag atgccatatt
+     1501 tgcaattatt cgttaaaaat tctttcgttt tgataacgtc cccttcactg taattattcc
+     1561 atgtgaagca aaattttcgc actgttttat tcatcgccgc atgcgagtca ctggccggct
+     1621 cgcgtagcga gccggttgcc ggttgcctct cgcattgggc ggcgcaacgt tgccgcatca
+     1681 acgttcagtg cgtgcgaggg agagtatttt tttgtgggcg caacagagaa agtcgcggta
+//

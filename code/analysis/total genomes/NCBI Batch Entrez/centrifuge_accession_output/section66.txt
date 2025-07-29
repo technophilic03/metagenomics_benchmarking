@@ -1,0 +1,330 @@
+
+LOCUS       NC_009424               5159 bp ss-RNA     linear   VRL 09-MAR-2011
+DEFINITION  Woolly monkey sarcoma virus, complete genome.
+ACCESSION   NC_009424
+VERSION     NC_009424.4
+DBLINK      BioProject: PRJNA19547
+KEYWORDS    RefSeq; coat protein; genome; integration site; overlapping genes;
+            terminal repeat.
+SOURCE      Woolly monkey sarcoma virus
+  ORGANISM  Woolly monkey sarcoma virus
+            Viruses; Retro-transcribing viruses; Retroviridae;
+            Orthoretrovirinae; Gammaretrovirus.
+REFERENCE   1  (bases 1 to 5142)
+  AUTHORS   Devare,S.G., Reddy,E.P., Law,J.D., Robbins,K.C. and Aaronson,S.A.
+  TITLE     Nucleotide sequence of the simian sarcoma virus genome:
+            demonstration that its acquired cellular sequences encode the
+            transforming gene product p28sis
+  JOURNAL   Proc. Natl. Acad. Sci. U.S.A. 80 (3), 731-735 (1983)
+   PUBMED   6298772
+REFERENCE   2  (bases 3006 to 5159)
+  AUTHORS   Devare,S.G., Reddy,E.P., Robbins,K.C., Andersen,P.R., Tronick,S.R.
+            and Aaronson,S.A.
+  TITLE     Nucleotide sequence of the transforming gene of simian sarcoma
+            virus
+  JOURNAL   Proc. Natl. Acad. Sci. U.S.A. 79 (10), 3179-3182 (1982)
+   PUBMED   6285340
+REFERENCE   3  (bases 1 to 5159)
+  CONSRTM   NCBI Genome Project
+  TITLE     Direct Submission
+  JOURNAL   Submitted (01-AUG-2000) National Center for Biotechnology
+            Information, NIH, Bethesda, MD 20894, USA
+COMMENT     PROVISIONAL REFSEQ: This record has not yet been subject to final
+            NCBI review. The reference sequence was derived from V01201.
+            
+            [WARNING] On Nov 14, 2017 this sequence was replaced by
+            NC_009424.5.
+            
+            On Aug 11, 2010 this sequence version replaced NC_009424.3.
+            COMPLETENESS: full length.
+FEATURES             Location/Qualifiers
+     source          1..5159
+                     /organism="Woolly monkey sarcoma virus"
+                     /proviral
+                     /mol_type="genomic RNA"
+                     /db_xref="taxon:11970"
+     repeat_region   1..504
+                     /rpt_type=long_terminal_repeat
+     regulatory      407..412
+                     /regulatory_class="polyA_signal_sequence"
+     primer_bind     498..523
+                     /note="prolyl tRNA primer binding site"
+     gene            <694..2499
+                     /locus_tag="WMSV_gp1"
+                     /db_xref="GeneID:5176148"
+     CDS             <694..2499
+                     /locus_tag="WMSV_gp1"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /ribosomal_slippage
+                     /note="coding sequence of p15 and p12"
+                     /codon_start=1
+                     /product="pre-gag ORF protein"
+                     /protein_id="YP_003580184.1"
+                     /db_xref="GOA:P03330"
+                     /db_xref="UniProtKB/Swiss-Prot:P03330"
+                     /db_xref="GeneID:5176148"
+                     /translation="VASRRVRGAHRPVILGDVPGSGEDQGRLVDPSAEDHCVLIPPPR
+                     LERRALPSDSFSCLYATRSRRRFWFLFVLFLISLCVGVSLFEIFEMGQNNSTPLSLTL
+                     GHWKDVRTRAHNLSVKIRKEKWQTFCSSEWPTFGVGWPPEGTFNLSVIFAVKRIVFQE
+                     TGGHPDQVPYIVVWQDLAQSPPPWVPPSAKIAVVSSPENTQGPSAGRPSAPPRPPIYP
+                     ATDDLLLLSEPPPYPAALPPPLAPPAVGPAPGQAPDSSDPEGPAAGTRSRRARSPADD
+                     SGPDSTVILPLRAIGPPAEPNGLVPLQYWPFSSADLYNWKSNHPSFSENPAGLTGLLE
+                     SLMFSHQPTWDDCQQLLQILFTTEERERILLEARKNVLGDNGAPTQLENLINEAFPLN
+                     RPQWDYNTAAGRELLLVYRRTLVAGLKGAARRPTNLAKVREVLQGPAEPPSVFLERLM
+                     EAYRRYTPFDPSEEGQQAAVATAFTGQSAPDIKKKLQRLEGLQDYSLQDLVREAEKVY
+                     HKRETEEERQEREKKEAEERERRRDRRQEKNLTRILAAVVSEGGSGDRRTGNLGNRAR
+                     KTPRDGRPPLDKDQCAYCKEKGHWDEEIAPACTGR"
+     gene            961..2499
+                     /gene="gag"
+                     /locus_tag="WSMV_gp2"
+                     /db_xref="GeneID:9538325"
+     CDS             961..2499
+                     /gene="gag"
+                     /locus_tag="WSMV_gp2"
+                     /inference="similar to AA sequence:RefSeq:NP_056789.1"
+                     /codon_start=1
+                     /product="hypothetical Gag polyprotein"
+                     /protein_id="YP_001165469.2"
+                     /db_xref="GOA:P03330"
+                     /db_xref="UniProtKB/Swiss-Prot:P03330"
+                     /db_xref="GeneID:9538325"
+                     /translation="MGQNNSTPLSLTLGHWKDVRTRAHNLSVKIRKEKWQTFCSSEWP
+                     TFGVGWPPEGTFNLSVIFAVKRIVFQETGGHPDQVPYIVVWQDLAQSPPPWVPPSAKI
+                     AVVSSPENTQGPSAGRPSAPPRPPIYPATDDLLLLSEPPPYPAALPPPLAPPAVGPAP
+                     GQAPDSSDPEGPAAGTRSRRARSPADDSGPDSTVILPLRAIGPPAEPNGLVPLQYWPF
+                     SSADLYNWKSNHPSFSENPAGLTGLLESLMFSHQPTWDDCQQLLQILFTTEERERILL
+                     EARKNVLGDNGAPTQLENLINEAFPLNRPQWDYNTAAGRELLLVYRRTLVAGLKGAAR
+                     RPTNLAKVREVLQGPAEPPSVFLERLMEAYRRYTPFDPSEEGQQAAVATAFTGQSAPD
+                     IKKKLQRLEGLQDYSLQDLVREAEKVYHKRETEEERQEREKKEAEERERRRDRRQEKN
+                     LTRILAAVVSEGGSGDRRTGNLGNRARKTPRDGRPPLDKDQCAYCKEKGHWDEEIAPA
+                     CTGR"
+     mat_peptide     961..1344
+                     /gene="gag"
+                     /locus_tag="WSMV_gp2"
+                     /product="hypothetical mature p15(MA) protein"
+                     /note="WMSV does not encode a viral protease; processing
+                     of polyprotein precursor depends on helper virus factors
+                     provided in trans;
+                     processing sites are approximated from alignment"
+                     /protein_id="YP_003580189.1"
+     mat_peptide     1345..1548
+                     /gene="gag"
+                     /locus_tag="WSMV_gp2"
+                     /product="hypothetical mature p12 protein"
+                     /note="WMSV does not encode a viral protease; processing
+                     of polyprotein precursor depends on helper virus factors
+                     provided in trans;
+                     processing sites are approximated from alignment"
+                     /protein_id="YP_003580187.1"
+     mat_peptide     1549..2325
+                     /gene="gag"
+                     /locus_tag="WSMV_gp2"
+                     /product="hypothetical mature p30(CA) protein"
+                     /note="WMSV does not encode a viral protease; processing
+                     of polyprotein precursor depends on helper virus factors
+                     provided in trans;
+                     processing sites are approximated from alignment"
+                     /protein_id="YP_003580190.1"
+     mat_peptide     2326..2496
+                     /gene="gag"
+                     /locus_tag="WSMV_gp2"
+                     /product="hypothetical mature p10 protein"
+                     /note="WMSV does not encode a viral protease; processing
+                     of polyprotein precursor depends on helper virus factors
+                     provided in trans;
+                     processing sites are approximated from alignment"
+                     /protein_id="YP_003580188.1"
+     gene            <2454..3338
+                     /gene="pol"
+                     /locus_tag="WSMV_gp3"
+                     /db_xref="GeneID:5176146"
+     CDS             <2454..3338
+                     /gene="pol"
+                     /locus_tag="WSMV_gp3"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /ribosomal_slippage
+                     /note="pol has undergone a single large deletion at its 5'
+                     end"
+                     /codon_start=1
+                     /product="hypothetical Pol polyprotein fragment"
+                     /protein_id="YP_001165470.1"
+                     /db_xref="GOA:P03359"
+                     /db_xref="InterPro:IPR001584"
+                     /db_xref="InterPro:IPR012337"
+                     /db_xref="UniProtKB/Swiss-Prot:P03359"
+                     /db_xref="GeneID:5176146"
+                     /translation="GSLGRGDRPGVYWEVDFTEVKPGRYGNRYLLVFIDTFSGWVEAF
+                     PTKTETALTVCKRNSTPLRIPKVLGSDNGPAFVAQVSQGLATQLGINWKLHCAYRPQS
+                     SGQVERMNRTIKETLTKLALETGGKDWVALLPLALLRAKNTPSRFGLTPYEILYGGPP
+                     PILESGGTLGPDDNFLPVLFTHLKALEVVRTQIWDQIKEVYKPGTVAIPHPFQVGDQV
+                     LVRRHRPGSLEPRWKGPYLVLLTTPTAVKVDGIAAWVHASHLKPAPPSAPDESWELEK
+                     ADHPLKLRIRRRRNESAK"
+     misc_feature    2466..2918
+                     /gene="pol"
+                     /locus_tag="WSMV_gp3"
+                     /inference="profile:cdd:pfam00665"
+                     /note="Region: Integrase core domain"
+     gene            3220..4035
+                     /locus_tag="WMSV_gp4"
+                     /db_xref="GeneID:9538324"
+     CDS             3220..4035
+                     /locus_tag="WMSV_gp4"
+                     /note="coding sequence of env"
+                     /codon_start=1
+                     /product="Env protein"
+                     /protein_id="YP_003580185.1"
+                     /db_xref="GOA:P01128"
+                     /db_xref="UniProtKB/Swiss-Prot:P01128"
+                     /db_xref="GeneID:9538324"
+                     /translation="MLLTSSLHHPRHQMSPGSWKKLIILLSCVFGGGGTSLQNKNPHQ
+                     PMTLTWQGDPIPEELYKMLSGHSIRSFDDLQRLLQGDSGKEDGAELDLNMTRSHSGGE
+                     LESLARGKRSLGSLSVAEPAMIAECKTRTEVFEISRRLIDRTNANFLVWPPCVEVQRC
+                     SGCCNNRNVQCRPTQVQLRPVQVRKIEIVRKKPIFKKATVTLEDHLACKCEIVAAARA
+                     VTRSPGTSQEQRAKTTQSRVTIRTVRVRRPPKGKHRKCKHTHDKTALKETLGA"
+     misc_feature    3220..3354
+                     /locus_tag="WMSV_gp4"
+                     /inference="similar to AA sequence:RefSeq:NP_056791.1"
+                     /note="5' env gene fragment; CDS in frame with v-sis, but
+                     probably not translated"
+     gene            3355..4035
+                     /gene="v-sis"
+                     /locus_tag="WSMV_gp5"
+                     /db_xref="GeneID:5176147"
+     CDS             3355..4035
+                     /gene="v-sis"
+                     /locus_tag="WSMV_gp5"
+                     /inference="profile:cdd:pfam00341"
+                     /inference="profile:cdd:pfam04692"
+                     /note="transforming factor; similar to platelet-derived
+                     growth factor (PDGF)"
+                     /codon_start=1
+                     /product="p28sis"
+                     /protein_id="YP_001165471.2"
+                     /db_xref="GOA:P01128"
+                     /db_xref="UniProtKB/Swiss-Prot:P01128"
+                     /db_xref="GeneID:5176147"
+                     /translation="MTLTWQGDPIPEELYKMLSGHSIRSFDDLQRLLQGDSGKEDGAE
+                     LDLNMTRSHSGGELESLARGKRSLGSLSVAEPAMIAECKTRTEVFEISRRLIDRTNAN
+                     FLVWPPCVEVQRCSGCCNNRNVQCRPTQVQLRPVQVRKIEIVRKKPIFKKATVTLEDH
+                     LACKCEIVAAARAVTRSPGTSQEQRAKTTQSRVTIRTVRVRRPPKGKHRKCKHTHDKT
+                     ALKETLGA"
+     misc_recomb     3373..3374
+                     /gene="v-sis"
+                     /locus_tag="WSMV_gp5"
+                     /note="helper virus junction"
+     misc_recomb     4379..4380
+                     /note="helper virus junction"
+     gene            <4380..4613
+                     /locus_tag="WMSV_gp6"
+                     /db_xref="GeneID:9538323"
+     CDS             <4380..4613
+                     /locus_tag="WMSV_gp6"
+                     /trans_splicing
+                     /note="coding sequence of p15E"
+                     /codon_start=1
+                     /product="Env polyprotein"
+                     /protein_id="YP_003580186.1"
+                     /db_xref="GOA:P03384"
+                     /db_xref="InterPro:IPR002050"
+                     /db_xref="UniProtKB/Swiss-Prot:P03384"
+                     /db_xref="GeneID:9538323"
+                     /translation="LERQKNQNWYEGWFNSSPWFTTLLSTIAGPLLLLLLLLILGPCI
+                     INRLVQFINNRVSAVKILVLRQKYQTLDNEDNL"
+     misc_feature    4380..4613
+                     /locus_tag="WMSV_gp6"
+                     /inference="similar to AA sequence:RefSeq:NC_001885.1"
+                     /note="3' env gene fragment (p15E)"
+     misc_feature    4641..4663
+                     /function="plus strong stop"
+     repeat_region   4657..5159
+                     /rpt_type=long_terminal_repeat
+ORIGIN      
+        1 tgaaggaagt gtttttcaag ctagctgcag taacgccatt ttgcaaggca cggaaaatta
+       61 ccctggtaaa aagcccaaag cataggggaa gtacagctaa aggtcaagtc gagaaaaaca
+      121 aggagaacag ggccaaacag gatatctgtg gtcatgcctg ggccggccca gggccaaaga
+      181 cagatggttc ccagaaatag atgagtcaac agcagtttct agggtgcccc tcaactgttt
+      241 caagaactcc cacatgaccg gagctcaccc ctggccttat ttgaactgac caattacctt
+      301 gcttctcgct tctgtacccg cgctttttgc tataaaatga gctcagaaac tccactcggc
+      361 gcgccagtcc tccgagagac tgagtcgccc gggtacctgt gtgttcaata aaacctcttg
+      421 ctatttgcat ccgaagccgt ggtctcgttg ttccttggga gggtctctcc taactgattg
+      481 actgcccacc tcgggggtct ctcatttggg ggctcgtccg ggatcggaga cccccaccca
+      541 gggaccaccg acccaccaac gggaggtaag ctggccagcg atcgctctgt gtctcgcttc
+      601 tgtgtctaac tccgtaactc tgactgtccc tctgagtgcg cgcattttgg tttcagtttg
+      661 ttccgggctg atcgctctgt gagcgacgtg tgagtagcga gcagacgtgt tcggggggct
+      721 caccgcccgg taatcctggg agacgtccca ggatcagggg aggaccaggg acgcctggtg
+      781 gacccctcgg cagaggatca ttgtgttctg atcccaccgc cgcgtctaga gaggcgcgct
+      841 ctgccatctg actctttctc ttgcctctac gctactcgat ctcgccgccg tttctggttt
+      901 ctttttgttt tgtttctgat aagcctctgt gtcggagttt ctctcttcga aatcttcgaa
+      961 atgggacaaa ataactctac ccctctctcc cttactctag gtcactggaa agatgtgaga
+     1021 acaagggctc acaatctgtc cgtgaaaatc agaaaggaaa aatggcagac tttctgttcc
+     1081 tccgagtggc ccacattcgg cgtggggtgg ccgccggagg gaacttttaa tctctctgtc
+     1141 atttttgcag ttaaaaggat tgtctttcag gaaaccggag gacacccgga ccaagttcca
+     1201 tacatcgtgg tgtggcagga cctcgcccag agtcccccac catgggtgcc gccctccgcc
+     1261 aagatcgctg ttgtctctag tccagagaac actcaaggac catctgcggg gaggccatcc
+     1321 gctcctcccc gaccccccat ctacccggca acagacgact tgctccttct ctctgagccc
+     1381 ccgccctatc cggcggccct gccacctcct ctggcccctc cggcggtcgg accggcgccg
+     1441 ggccaggcgc ccgatagttc cgatcctgag ggaccagccg cggggaccag gagtcgccgt
+     1501 gcccgcagtc cggcagacga ctcgggtcct gactccactg tgattttgcc cctccgagcc
+     1561 ataggacccc cggccgagcc caacggccta gtgcctctac aatattggcc tttttcctca
+     1621 gcagatcttt ataattggaa atctaaccat ccttcctttt ctgaaaatcc agcaggactc
+     1681 acggggctcc ttgagtctct tatgttttct catcagccca cttgggacga ttgccaacag
+     1741 ctcctacaga ttctcttcac cactgaggag cgggaaagga ttctcctgga ggcccgcaag
+     1801 aatgtccttg gggacaacgg ggcccctact caactcgaga acctcattaa tgaggccttc
+     1861 cccctcaatc gacctcagtg ggattacaac acggccgcag gtagggagct gctcctggtc
+     1921 taccgccgga ctctagtggc aggtctcaaa ggggcagctc ggcgccccac taatttggct
+     1981 aaggtaagag aggtcttgca gggaccggca gaaccccctt cggttttctt agaacgccta
+     2041 atggaggcct ataggagata cactccgttt gacccctcag aagaggggca gcaggctgcg
+     2101 gttgccacgg ccttcaccgg acagtcagcc ccagatatca agaaaaagtt acagaggcta
+     2161 gaggggctcc aagattattc cttacaagat ttagtgagag aggcagagaa ggtgtaccac
+     2221 aagagagaga cagaagaaga aagacaagaa agagaaaaga aagaggcaga agagagagag
+     2281 aggcggcgcg ataggcgtca agagaaaaac ttaactagga ttttggccgc agtggtaagt
+     2341 gaaggagggt ctggagatag gcggacaggg aacctaggca accgggcaag gaagacacct
+     2401 agggatggaa gacctcctct agacaaagac cagtgcgcgt actgtaaaga gaagggtcac
+     2461 tgggacgagg agatcgcccc ggcgtgtact gggaggtaga cttcacagaa gtgaagcctg
+     2521 gccggtatgg aaacaggtat ctgctggtat tcatagatac tttttccgga tgggtagaag
+     2581 cttttcctac caaaactgaa acggccctga ccgtctgcaa gagaaattct accccgcttc
+     2641 ggatccctaa ggtactcggg tcagacaatg gcccagcctt tgttgctcag gtaagtcagg
+     2701 gactggccac tcaactgggg ataaattgga agttacattg tgcgtataga ccccagagct
+     2761 caggtcaggt agagagaatg aacaggacaa tcaaggagac cttgaccaaa ttagccttag
+     2821 agaccggtgg aaaagactgg gtggccctcc ttcccttagc gctgctcaga gccaagaata
+     2881 cccctagccg gtttggtcta actccttatg aaattctcta tgggggaccg ccccccatac
+     2941 ttgagtctgg agggacattg ggtcccgatg ataattttct ccctgtctta tttactcatt
+     3001 taaaggcttt agaagttgtg aggacccaga tctgggacca gatcaaggag gtgtacaagc
+     3061 ccggtaccgt ggcaatcccc cacccgttcc aggtcgggga ccaagtgctt gtcagacgcc
+     3121 atcgacccgg cagccttgag cctcggtgga aaggcccgta cctggtgttg ctgaccaccc
+     3181 cgaccgcggt aaaagtcgac ggtatcgctg cctgggtcca tgcttctcac ctcaagcctg
+     3241 caccaccctc ggcaccagat gagtcctggg agctggaaaa agctgatcat cctcttaagc
+     3301 tgcgtattcg gcggcggcgg aacgagtctg caaaataaaa acccccacca gcctatgacc
+     3361 ctcacctggc agggggaccc cattcctgag gagctctata agatgctgag tggccactcg
+     3421 attcgctcct tcgatgacct ccagcgcctg ctgcagggag actccggaaa agaagatggg
+     3481 gctgagctgg acctgaacat gacccgctcc cattctggtg gcgagctgga gagcttggct
+     3541 cgtgggaaaa ggagcctggg ttccctgagc gttgccgagc cagccatgat tgccgagtgc
+     3601 aagacacgaa ccgaggtgtt cgagatctcc cggcgcctca tcgaccgcac caatgccaac
+     3661 ttcctggtgt ggccgccctg cgtggaggtg cagcgctgct ccggctgttg caacaaccgc
+     3721 aacgtgcagt gccggcccac ccaagtgcag ctgcggccag tccaggtgag aaagatcgag
+     3781 attgtgcgga agaagccaat ctttaagaag gccacggtga cgctggagga ccacctggca
+     3841 tgcaagtgtg agatagtggc agctgcacgg gctgtgaccc gaagcccggg gacttcccag
+     3901 gagcagcgag ccaaaacgac ccaaagtcgg gtgaccatcc ggacggtgcg agtccgccgg
+     3961 ccccccaagg gcaagcaccg gaaatgcaag cacacgcatg acaagacggc actgaaggag
+     4021 accctcggag cctaagggca tcggcaggag aatatgggca gcgggtctcc tgccagcggc
+     4081 ctccagcatc ttgcccagca gctcaagaag agaaaaaagg actgaactcc accaccatct
+     4141 tcttccctta actccaaaaa cttgaaataa gagtgtgaaa gagactgata gggtcgctgt
+     4201 ttgaaaaaaa ctggctcctt cctctgcacc tggcctgggc cacacccaag tgctgtggac
+     4261 tggcccgagg ggccctgcac gtggccctga gcacctctca gcgtagcctg cctagtccct
+     4321 agacccctag ccagctccaa ggggaggcac ctccaagcag gccaggctac ctcgggggtc
+     4381 tagagcgcca gaagaaccaa aactggtatg aagggtggtt caatagctcc ccttggttca
+     4441 ctaccctact atcaaccatc gccgggcccc tattactcct ccttctgttg ctcattctcg
+     4501 ggccctgcat catcaatagg ttagtccaat tcatcaataa tagagtaagt gcagttaaaa
+     4561 ttctggtcct tagacagaaa tatcagaccc tagataacga agataacctt tgattccgct
+     4621 ctaagattag agctatccac aagagaaatg ggggaatgaa ggaagtgttt ttcaagctag
+     4681 ctgcagtaac gccattttgc aaggcacgga aattaccctg gtaaaaagcc caaagcatag
+     4741 gggaagtaca gctaaaggtc aagtcgagaa aaacaaggag aacagggcca aacaggatat
+     4801 ctgtggtcat gcctgggccg gcccagggcc aaagacagat ggttcccaga aatagatgag
+     4861 tcaacagcag tttctagggt gcccctcaac tgtttcaaga actcccacat gaccggagct
+     4921 cacccctggc cttatttgaa ctgaccaatt accttgcttc tcgcttctgt acccgcgctt
+     4981 tttgctataa aatgagctca gaaactccac tcggcgcgcc agtcctccga gagactgagt
+     5041 cgcccgggta cctgtgtgtt caataaaacc tcttgctatt tgcatccgaa gccgtggtct
+     5101 cgttgttcct tgggagggtc tctcctaact gattgactgc ccacctcggg ggtctctca
+//
