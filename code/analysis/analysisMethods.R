@@ -4,13 +4,16 @@ real_files <- list.files(path      = "MeSS_code/ground_truth/updated/",
                          pattern   = "\\.csv$",
                          full.names = TRUE)
 
-sim_files <- list.files(path      = "profilers/Bracken/combined_files/name_update/updated/",
+sim_files <- list.files(path      = "profilers/MetaScope/combined_outputs/name_update/updated/",
                         pattern   = "\\.csv$",
                         full.names = TRUE)
 
+process_sim_temp_dir <- "profilers/MetaScope/combined_outputs/name_update/updated/analysis_results/temp/"
+analysis_res_dir <- "profilers/MetaScope/combined_outputs/name_update/updated/analysis_results/"
+
 
 process_real_data <- function(real_data_file) {
-  message("processing groud truth (real data)")
+  message("processing ground truth (real data)")
   real_data_raw <- read.csv(real_data_file)
   
   real_data <- data.frame(species = real_data_raw$species,
@@ -34,7 +37,7 @@ process_sim_data <- function(sim_data_file) {
   
   sim_data <- data.frame(species = sim_data_raw$Name, abundance_cols = sim_data_raw[, 10:ncol(sim_data_raw)])
   
-  out_dir <- "profilers/Bracken/combined_files/name_update/updated/analysis_results/temp/"
+  out_dir <- process_sim_temp_dir
   out_name <- paste0("processed_", basename(sim_data_file))
   out_path <- file.path(out_dir, out_name)
   
@@ -67,7 +70,7 @@ getR2Function <- function(real_data_file, sim_data_file) {
     output_r2[[colnames(grouped_data_r2)[i]]] <- r2
   }
   
-  out_dir <- "profilers/Bracken/combined_files/name_update/updated/analysis_results/"
+  out_dir <- analysis_res_dir
   out_name <- paste0("R2_", basename(sim_data_file))
   out_path <- file.path(out_dir, out_name)
   write.csv(output_r2, file = out_path, row.names = FALSE)
@@ -139,7 +142,7 @@ RMSFunction <- function(real_data_file, sim_data_file) {
   }
   
   
-  out_dir <- "profilers/Bracken/combined_files/name_update/updated/analysis_results/"
+  out_dir <- analysis_res_dir
   out_name <- paste0("RRMSE_", basename(sim_data_file))
   out_path <- file.path(out_dir, out_name)
   write.csv(output_rms, file = out_path, row.names = TRUE)
@@ -170,16 +173,15 @@ ROCFunction <- function(real_data_file,
   grouped_data_roc$real_abundance[is.na(grouped_data_roc$real_abundance)] <- 0
   grouped_data_roc[, 3:ncol(grouped_data_roc)][is.na(grouped_data_roc[, 3:ncol(grouped_data_roc)])] <- 0
   
-  
-  TP <- 0
-  FP <- 0
-  FN <- 0
-  TN <- as.numeric(total_genomes) - nrow(grouped_data_roc)
-  
   output_roc <- data.frame(matrix(ncol = 0, nrow = 2))
   rownames(output_roc) <- c("TPR", "FPR")
   
   for (i in 3:ncol(grouped_data_roc)) {
+    TP <- 0
+    FP <- 0
+    FN <- 0
+    TN <- as.numeric(total_genomes) - nrow(grouped_data_roc)
+    
     for (j in 1:nrow(grouped_data_roc)) {
       predicted <- grouped_data_roc$real_abundance[j] # ground_truth
       observed <- grouped_data_roc[j, i] # sim
@@ -189,26 +191,24 @@ ROCFunction <- function(real_data_file,
       } else {
         if (predicted == 0 & observed > 0){
           FP <- FP + 1
+        } else if (predicted > 0 & observed == 0){
+          FN <- FN + 1
         }
-      }
-      
-      if (predicted > 0 & observed == 0){
-        FN <- FN + 1
       }
     }
     
     get_TPR <- TP / (TP + FN)
     get_FPR <- FP / (FP + TN)
-    df_roc[[colnames(grouped_data_roc)[i]]] <- c(get_TPR, get_FPR)
+    output_roc[[colnames(grouped_data_roc)[i]]] <- c(get_TPR, get_FPR)
   }
   
   
   t_output_roc <- as.data.frame(t(output_roc))
   
-  out_dir <- "profilers/Bracken/combined_files/name_update/updated/analysis_results/"
+  out_dir <- analysis_res_dir
   out_name <- paste0("ROC_", basename(sim_data_file))
   out_path <- file.path(out_dir, out_name)
-  write.csv(output_ROC, file = out_path, row.names = TRUE)
+  write.csv(t_output_roc, file = out_path, row.names = TRUE)
   message("ROC result saved to ", out_dir, "\n")
 }
 
@@ -224,7 +224,7 @@ process_file <- function(sim_file) {
   process_sim_data(sim_file)
   
   sim_processed_path <- file.path(
-    "profilers/Bracken/combined_files/name_update/updated/analysis_results/temp/",
+    process_sim_temp_dir,
     paste0("processed_", basename(sim_file))
   )
   
@@ -238,10 +238,11 @@ process_file <- function(sim_file) {
     sim_processed_path
   )
   
-  # ROCFunction(
-  #     "MeSS_code/ground_truth/updated/temp/processed_real_data.csv",
-  #     sim_processed_path
-  # )
+  ROCFunction(
+    "MeSS_code/ground_truth/updated/temp/processed_real_data.csv",
+    sim_processed_path,
+    total_genomes = 21434
+  )
 }
 
 walk(sim_files, process_file)
