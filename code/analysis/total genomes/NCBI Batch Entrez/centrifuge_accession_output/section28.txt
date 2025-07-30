@@ -1,0 +1,74 @@
+
+LOCUS       NC_004728                335 bp    RNA     circular VRL 13-AUG-2018
+DEFINITION  Eggplant latent viroid, complete genome.
+ACCESSION   NC_004728
+VERSION     NC_004728.1
+DBLINK      BioProject: PRJNA485481
+KEYWORDS    RefSeq; complete genome; hammerhead ribozyme minus; hammerhead
+            ribozyme plus; RZ+ gene; RZ- gene.
+SOURCE      Eggplant latent viroid
+  ORGANISM  Eggplant latent viroid
+            Viroids; Avsunviroidae; Elaviroid.
+REFERENCE   1
+  AUTHORS   Fadda,Z., Daros,J.A., Fagoaga,C., Flores,R. and Duran-Vila,N.
+  TITLE     Eggplant latent viroid, the candidate type species for a new genus
+            within the family Avsunviroidae (hammerhead viroids)
+  JOURNAL   J. Virol. 77 (11), 6528-6532 (2003)
+   PUBMED   12743309
+REFERENCE   2  (bases 1 to 335)
+  CONSRTM   NCBI Genome Project
+  TITLE     Direct Submission
+  JOURNAL   Submitted (17-APR-2003) National Center for Biotechnology
+            Information, NIH, Bethesda, MD 20894, USA
+REFERENCE   3  (bases 1 to 335)
+  AUTHORS   Flores,R.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (14-JAN-2003) Flores R., Biologia del Estres, Inst.
+            Biologia Molecular Celular Plantas, UPV-CSIC, Avda. de los Naranjos
+            s/n, Universidad Politecnica de Valencia, 46022 Valencia, SPAIN
+COMMENT     PROVISIONAL REFSEQ: This record has not yet been subject to final
+            NCBI review. The reference sequence was derived from AJ536612.
+            COMPLETENESS: full length.
+FEATURES             Location/Qualifiers
+     source          1..335
+                     /organism="Eggplant latent viroid"
+                     /mol_type="genomic RNA"
+                     /isolate="1"
+                     /isolation_source="leaf tissue"
+                     /host="Solanum melongena cv. Sonja"
+                     /db_xref="taxon:219174"
+                     /geo_loc_name="Spain:Valencia"
+     gene            join(329..335,1..46)
+                     /gene="RZ+"
+                     /locus_tag="ELVd_gs1"
+                     /db_xref="GeneID:1263637"
+     misc_RNA        join(329..335,1..46)
+                     /gene="RZ+"
+                     /locus_tag="ELVd_gs1"
+                     /product="hammerhead ribozyme plus"
+                     /db_xref="GeneID:1263637"
+     misc_feature    join(335,1)
+                     /gene="RZ+"
+                     /locus_tag="ELVd_gs1"
+                     /note="RZ+ self-cleavage site"
+     gene            complement(154..204)
+                     /gene="RZ-"
+                     /locus_tag="ELVd_gs2"
+                     /db_xref="GeneID:1263638"
+     misc_RNA        complement(154..204)
+                     /gene="RZ-"
+                     /locus_tag="ELVd_gs2"
+                     /product="hammerhead ribozyme minus"
+                     /db_xref="GeneID:1263638"
+     misc_feature    complement(198..199)
+                     /gene="RZ-"
+                     /locus_tag="ELVd_gs2"
+                     /note="RZ- self-cleavage site"
+ORIGIN      
+        1 gggtggtgtg taccacccct gatgagtcca aaaggacgaa atggggttct gccatggggt
+       61 agagctttaa attcggagga ttcgacctta aatcgttcct ccaagagctc ttcccccaat
+      121 cccttacttg cgtaagtacg gatcggcgga tgtaccgttt cgccctttcg ggctcatcag
+      181 ggaaagcgca cactttccga cggtgagttc gtcgacacct ctgcccctcc caggtactat
+      241 cctctttcaa ggatgtgttc cctaggaggg tgagtgtacc tcttttcgga tttctccggt
+      301 cttccgagag agacagagga cggcctctcc ccata
+//

@@ -1,0 +1,584 @@
+
+LOCUS       NW_015148969          101037 bp    DNA     linear   CON 22-NOV-2021
+DEFINITION  Homo sapiens chromosome 22 genomic patch of type FIX, GRCh38.p13
+            PATCHES HG1311_PATCH.
+ACCESSION   NW_015148969
+VERSION     NW_015148969.1
+DBLINK      BioProject: PRJNA168
+            Assembly: GCF_000001405.39
+KEYWORDS    RefSeq; FIX_PATCH.
+SOURCE      Homo sapiens (human)
+  ORGANISM  Homo sapiens
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+            Catarrhini; Hominidae; Homo.
+REFERENCE   1  (bases 1 to 101037)
+  CONSRTM   Genome Reference Consortium
+  TITLE     Direct Submission
+  JOURNAL   Submitted (17-DEC-2015) NCBI, NIH, Bethesda, MD 20892, USA
+COMMENT     REFSEQ INFORMATION: The reference sequence is identical to
+            KQ759762.1.
+            
+            [WARNING] On Apr 6, 2022 this sequence was replaced by
+            NW_015148969.2.
+            The DNA sequence is composed of genomic sequence, primarily
+            finished clones that were sequenced as part of the Human Genome
+            Project. PCR products and WGS shotgun sequence have been added
+            where necessary to fill gaps or correct errors. All such additions
+            are manually curated by GRC staff. For more information see:
+            https://genomereference.org.
+            This sequence will be incorporated into the reference assembly in
+            the next major assembly release. At that time, the accession number
+            for this patch will be made secondary to the reference chromosome
+            accession. This scaffold adds finished components AC255361.1 and
+            FO681507.3 to the reference assembly providing correct
+            representation for the SHANK3 gene.
+            
+            ##Genome-Annotation-Data-START##
+            Annotation Provider         :: NCBI
+            Annotation Status           :: Updated annotation
+            Annotation Name             :: Homo sapiens Updated Annotation
+                                           Release 109.20211119
+            Annotation Version          :: 109.20211119
+            Annotation Pipeline         :: NCBI eukaryotic genome annotation
+                                           pipeline
+            Annotation Software Version :: 9.0
+            Annotation Method           :: Best-placed RefSeq; propagated
+                                           RefSeq model
+            Features Annotated          :: Gene; mRNA; CDS; ncRNA
+            ##Genome-Annotation-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..101037
+                     /organism="Homo sapiens"
+                     /mol_type="genomic DNA"
+                     /db_xref="taxon:9606"
+                     /chromosome="22"
+                     /map="22q13.33"
+     misc_feature    1..9350
+                     /note="Anchor sequence. This sequence is derived from alt
+                     loci or patch scaffold components that are also components
+                     of the primary assembly unit. It was included to ensure a
+                     robust alignment of this scaffold to the primary assembly
+                     unit. Anchor component: AC000050.22"
+     gene            8917..69328
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="SH3 and multiple ankyrin repeat domains 3; Derived
+                     by automated computational analysis using gene prediction
+                     method: BestRefSeq."
+                     /db_xref="GeneID:85358"
+                     /db_xref="HGNC:HGNC:14294"
+                     /db_xref="MIM:606230"
+     mRNA            join(8917..8947,10170..10793,11137..11340,12719..12790,
+                     14682..14790,14866..15017,15116..15283,15409..15525,
+                     19087..19164,20645..20711,30686..30959,33719..33912,
+                     34886..34999,40057..40132,40363..40445,40935..41059,
+                     41161..41293,42270..42350,47813..47836,51115..51245,
+                     51867..51951,56300..58553,66837..69328)
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /product="SH3 and multiple ankyrin repeat domains 3"
+                     /inference="similar to RNA sequence, mRNA (same
+                     species):RefSeq:NM_001372044.2"
+                     /exception="annotated by transcript or proteomic data"
+                     /note="The RefSeq transcript has 2 frameshifts, 1
+                     non-frameshifting indel compared to this genomic sequence;
+                     Derived by automated computational analysis using gene
+                     prediction method: BestRefSeq."
+                     /transcript_id="NM_001372044.2"
+                     /db_xref="GeneID:85358"
+                     /db_xref="HGNC:HGNC:14294"
+                     /db_xref="MIM:606230"
+     CDS             join(10508..10793,11137..11340,12719..12790,14682..14790,
+                     14866..15017,15116..15283,15409..15525,19087..19164,
+                     20645..20711,30686..30959,33719..33912,34886..34999,
+                     40057..40132,40363..40445,40935..41059,41161..41293,
+                     42270..42350,47813..47836,51115..51245,51867..51951,
+                     56300..58553,66837..67428)
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /inference="similar to AA sequence (same
+                     species):RefSeq:NP_001358973.1"
+                     /exception="annotated by transcript or proteomic data"
+                     /note="The RefSeq protein has 2 frameshifts compared to
+                     this genomic sequence; Derived by automated computational
+                     analysis using gene prediction method: BestRefSeq."
+                     /codon_start=1
+                     /product="SH3 and multiple ankyrin repeat domains protein
+                     3"
+                     /protein_id="NP_001358973.1"
+                     /db_xref="GeneID:85358"
+                     /db_xref="HGNC:HGNC:14294"
+                     /db_xref="MIM:606230"
+                     /translation="MQLSRAAAAAAAAPAEPPEPLSPAPAPAPAPPGPLPRSAADGAP
+                     AGGKGGPGRRAESPGAPFPGASGPGPGPGAGMDGPGASAVVVRVGIPDLQQTKCLRLD
+                     PAAPVWAAKQRVLCALNHSLQDALNYGLFQPPSRGRAGKFLDEERLLQEYPPNLDTPL
+                     PYLEFRYKRRVYAQNLIDDKQFAKLHTKANLKKFMDYVQLHSTDKVARLLDKGLDPNF
+                     HDPDSGECPLSLAAQLDNATDLLKVLKNGGAHLDFRTRDGLTAVHCATRQRNAAALTT
+                     LLDLGASPDYKDSRGLTPLYHSALGGGDALCCELLLHDHAQLGITDENGWQEIHQACR
+                     FGHVQHLEHLLFYGADMGAQNASGNTALHICALYNQESCARVLLFRGANRDVRNYNSQ
+                     TAFQVAIIAGNFELAEVIKTHKDSDVVPFRETPSYAKRRRLAGPSGLASPRPLQRSAS
+                     DINLKGEAQPAASPGPSLRSLPHQLLLQRLQEEKDRDRDADQESNISGPLAGRAGQSK
+                     ISPSGPGGPGPAPGPGPAPPAPPAPPPRGPKRKLYSAVPGRKFIAVKAHSPQGEGEIP
+                     LHRGEAVKVLSIGEGGFWEGTVKGRTGWFPADCVEEVQMRQHDTRPETREDRTKRLFR
+                     HYTVGSYDSLTSHSDYVIDDKVAVLQKRDHEGFGFVLRGAKAETPIEEFTPTPAFPAL
+                     QYLESVDVEGVAWRAGLRTGDFLIEVNGVNVVKVGHKQVVALIRQGGNRLVMKVVSVT
+                     RKPEEDGARRRAPPPPKRAPSTTLTLRSKSMTAELEELASIRRRKGEKLDEMLAAAAE
+                     PTLRPDIADADSRAATVKQRPTSRRITPAEISSLFERQGLPGPEKLPGSLRKGIPRTK
+                     SVGEDEKLASLLEGRFPRSTSMQDPVREGRGIPPPPQTAPPPPPAPYYFDSGPPPAFS
+                     PPPPPGRAYDTVRSSFKPGLEARLGAGAAGLYEPGAALGPLPYPERQKRARSMIILQD
+                     SAPESGDAPRPPPAATPPERPKRRPRPPGPDSPYANLGAFSASLFAPSKPQRRKSPLV
+                     KQLQVEDAQERAALAVGSPGPGGGSFAREPSPTHRGPRPGGLDYGAGDGPGLAFGGPG
+                     PAKDRRLEERRRSTVFLSVGAIEGSAPGADLPSLQPSRSIDERLLGTGPTAGRDLLLP
+                     SPVSALKPLVSGPSLGPSGSTFIHPLTGKPLDPSSPLALALAARERALASQAPSRSPT
+                     PVHSPDADRPGPLFVDVQARDPERGSLASPAFSPRSPAWIPVPARREAEKVPREERKS
+                     PEDKKSMILSVLDTSLQRPAGLIVVHATSNGQEPSRLGGAEEERPGTPELAPAPMQSA
+                     AVAEPLPSPRAQPPGGTPADAGPGQGSSEEEPELVFAVNLPPAQLSSSDEETREELAR
+                     IGLVPPPEEFANGVLLATPLAGPGPSPTTVPSPASGKPSSEPPPAPESAADSGVEEAD
+                     TRSSSDPHLETTSTISTVSSMSTLSSESGELTDTHTSFADGHTFLLEKPPVPPKPKLK
+                     SPLGKGPVTFRDPLLKQSSDSELMAQQHHAASAGLASAAGPARPRYLFQRRSKLWGDP
+                     VESRGLPGPEDDKPTVISELSSRLQQLNKDTRSLGEEPVGGLGSLLDPAKKSPIAAAR
+                     LFSSLGELSSISAQRSPGGPGGGASYSVRPSGRYPVARRAPSPVKPASLERVEGLGAG
+                     AGGAGRPFGLTPPTILKSSSLSIPHEPKEVRFVVRSVSARSRSPSPSPLPSPASGPGP
+                     GAPGPRRPFQQKPLQLWSKFDVGDWLESIHLGEHRDRFEDHEIEGAHLPALTKDDFVE
+                     LGVTRVGHRMNIERALRQLDGS"
+     misc_feature    join(10733..10793,11137..11300)
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="propagated from UniProtKB/Swiss-Prot (Q9BYB0.4);
+                     Region: Intramolecular interaction with the ANK repeats.
+                     /evidence=ECO:0000250"
+     misc_feature    14708..14710
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="Phosphotyrosine.
+                     /evidence=ECO:0000250|UniProtKB:Q4ACU6; propagated from
+                     UniProtKB/Swiss-Prot (Q9BYB0.4); phosphorylation site"
+     misc_feature    join(14786..14790,14866..14953)
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="propagated from UniProtKB/Swiss-Prot (Q9BYB0.4);
+                     Region: ANK 1"
+     misc_feature    join(14963..15017,15116..15150)
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="propagated from UniProtKB/Swiss-Prot (Q9BYB0.4);
+                     Region: ANK 2"
+     misc_feature    15160..15252
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="propagated from UniProtKB/Swiss-Prot (Q9BYB0.4);
+                     Region: ANK 3"
+     misc_feature    join(15262..15283,15409..15476)
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="propagated from UniProtKB/Swiss-Prot (Q9BYB0.4);
+                     Region: ANK 4"
+     misc_feature    join(15486..15525,19087..19136)
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="propagated from UniProtKB/Swiss-Prot (Q9BYB0.4);
+                     Region: ANK 5"
+     misc_feature    join(19146..19164,20645..20711,30686..30692)
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="propagated from UniProtKB/Swiss-Prot (Q9BYB0.4);
+                     Region: ANK 6"
+     misc_feature    join(20677..20711,30686..30833)
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="propagated from UniProtKB/Swiss-Prot (Q9BYB0.4);
+                     Region: Disordered. /evidence=ECO:0000256|SAM:MobiDB-lite"
+     misc_feature    30774..30776
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="Phosphoserine.
+                     /evidence=ECO:0000250|UniProtKB:Q4ACU6; propagated from
+                     UniProtKB/Swiss-Prot (Q9BYB0.4); phosphorylation site"
+     misc_feature    30780..30782
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="Phosphoserine.
+                     /evidence=ECO:0000250|UniProtKB:Q4ACU6; propagated from
+                     UniProtKB/Swiss-Prot (Q9BYB0.4); phosphorylation site"
+     misc_feature    30819..30821
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="Phosphoserine.
+                     /evidence=ECO:0000250|UniProtKB:Q4ACU6; propagated from
+                     UniProtKB/Swiss-Prot (Q9BYB0.4); phosphorylation site"
+     misc_feature    30840..30842
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="Phosphoserine.
+                     /evidence=ECO:0000250|UniProtKB:Q9JLU4; propagated from
+                     UniProtKB/Swiss-Prot (Q9BYB0.4); phosphorylation site"
+     misc_feature    33863..33865
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="Phosphoserine.
+                     /evidence=ECO:0000250|UniProtKB:Q4ACU6; propagated from
+                     UniProtKB/Swiss-Prot (Q9BYB0.4); phosphorylation site"
+     misc_feature    40112..40114
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="Phosphotyrosine.
+                     /evidence=ECO:0000250|UniProtKB:Q4ACU6; propagated from
+                     UniProtKB/Swiss-Prot (Q9BYB0.4); phosphorylation site"
+     misc_feature    join(40444..40445,40935..41007)
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="propagated from UniProtKB/Swiss-Prot (Q9BYB0.4);
+                     Region: Disordered. /evidence=ECO:0000256|SAM:MobiDB-lite"
+     misc_feature    42274..42297
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="propagated from UniProtKB/Swiss-Prot (Q9BYB0.4);
+                     Region: Required for interaction with ABI1.
+                     /evidence=ECO:0000250"
+     misc_feature    join(42295..42350,47813..47836,51115..51245,51867..51937)
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="propagated from UniProtKB/Swiss-Prot (Q9BYB0.4);
+                     Region: Disordered. /evidence=ECO:0000256|SAM:MobiDB-lite"
+     misc_feature    42325..42327
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="Phosphoserine.
+                     /evidence=ECO:0000250|UniProtKB:Q4ACU6; propagated from
+                     UniProtKB/Swiss-Prot (Q9BYB0.4); phosphorylation site"
+     misc_feature    51947..51949
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="Phosphoserine.
+                     /evidence=ECO:0000250|UniProtKB:Q4ACU6; propagated from
+                     UniProtKB/Swiss-Prot (Q9BYB0.4); phosphorylation site"
+     misc_feature    56322..56324
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="Phosphoserine.
+                     /evidence=ECO:0000250|UniProtKB:Q4ACU6; propagated from
+                     UniProtKB/Swiss-Prot (Q9BYB0.4); phosphorylation site"
+     misc_feature    56337..56789
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="propagated from UniProtKB/Swiss-Prot (Q9BYB0.4);
+                     Region: Disordered. /evidence=ECO:0000256|SAM:MobiDB-lite"
+     misc_feature    56355..56357
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="Phosphoserine.
+                     /evidence=ECO:0000250|UniProtKB:Q4ACU6; propagated from
+                     UniProtKB/Swiss-Prot (Q9BYB0.4); phosphorylation site"
+     misc_feature    56622..56624
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="Phosphoserine.
+                     /evidence=ECO:0000250|UniProtKB:Q4ACU6; propagated from
+                     UniProtKB/Swiss-Prot (Q9BYB0.4); phosphorylation site"
+     misc_feature    56643..56645
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="Phosphoserine.
+                     /evidence=ECO:0000250|UniProtKB:Q4ACU6; propagated from
+                     UniProtKB/Swiss-Prot (Q9BYB0.4); phosphorylation site"
+     misc_feature    56688..56690
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="Phosphothreonine.
+                     /evidence=ECO:0007744|PubMed:24275569; propagated from
+                     UniProtKB/Swiss-Prot (Q9BYB0.4); phosphorylation site"
+     misc_feature    56742..56744
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="Phosphotyrosine.
+                     /evidence=ECO:0000250|UniProtKB:Q9JLU4; propagated from
+                     UniProtKB/Swiss-Prot (Q9BYB0.4); phosphorylation site"
+     misc_feature    56847..56849
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="Asymmetric dimethylarginine.
+                     /evidence=ECO:0000250|UniProtKB:Q4ACU6; propagated from
+                     UniProtKB/Swiss-Prot (Q9BYB0.4); methylation site"
+     misc_feature    57069..58106
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="propagated from UniProtKB/Swiss-Prot (Q9BYB0.4);
+                     Region: Disordered. /evidence=ECO:0000256|SAM:MobiDB-lite"
+     misc_feature    57336..57338
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="Phosphothreonine.
+                     /evidence=ECO:0000250|UniProtKB:Q4ACU6; propagated from
+                     UniProtKB/Swiss-Prot (Q9BYB0.4); phosphorylation site"
+     misc_feature    57348..57350
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="Phosphoserine.
+                     /evidence=ECO:0000250|UniProtKB:Q4ACU6; propagated from
+                     UniProtKB/Swiss-Prot (Q9BYB0.4); phosphorylation site"
+     misc_feature    57423..57425
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="Phosphoserine.
+                     /evidence=ECO:0007744|PubMed:18088087; propagated from
+                     UniProtKB/Swiss-Prot (Q9BYB0.4); phosphorylation site"
+     misc_feature    57435..57437
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="Phosphoserine.
+                     /evidence=ECO:0007744|PubMed:18088087; propagated from
+                     UniProtKB/Swiss-Prot (Q9BYB0.4); phosphorylation site"
+     misc_feature    57444..57446
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="Phosphoserine.
+                     /evidence=ECO:0000250|UniProtKB:Q4ACU6; propagated from
+                     UniProtKB/Swiss-Prot (Q9BYB0.4); phosphorylation site"
+     misc_feature    57651..57653
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="Phosphothreonine.
+                     /evidence=ECO:0007744|PubMed:19690332,
+                     ECO:0007744|PubMed:24275569; propagated from
+                     UniProtKB/Swiss-Prot (Q9BYB0.4); phosphorylation site"
+     misc_feature    57708..57710
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="Phosphoserine.
+                     /evidence=ECO:0007744|PubMed:19690332,
+                     ECO:0007744|PubMed:24275569; propagated from
+                     UniProtKB/Swiss-Prot (Q9BYB0.4); phosphorylation site"
+     misc_feature    58149..58301
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="propagated from UniProtKB/Swiss-Prot (Q9BYB0.4);
+                     Region: Disordered. /evidence=ECO:0000256|SAM:MobiDB-lite"
+     misc_feature    58179..58199
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="propagated from UniProtKB/Swiss-Prot (Q9BYB0.4);
+                     Region: SH3-binding. /evidence=ECO:0000255"
+     misc_feature    58209..58211
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="Phosphoserine.
+                     /evidence=ECO:0000250|UniProtKB:Q9JLU4; propagated from
+                     UniProtKB/Swiss-Prot (Q9BYB0.4); phosphorylation site"
+     misc_feature    58362..58478
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="propagated from UniProtKB/Swiss-Prot (Q9BYB0.4);
+                     Region: Disordered. /evidence=ECO:0000256|SAM:MobiDB-lite"
+     misc_feature    58479..58481
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="Phosphoserine.
+                     /evidence=ECO:0000250|UniProtKB:Q4ACU6; propagated from
+                     UniProtKB/Swiss-Prot (Q9BYB0.4); phosphorylation site"
+     misc_feature    58512..58514
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="Phosphoserine.
+                     /evidence=ECO:0000250|UniProtKB:Q4ACU6; propagated from
+                     UniProtKB/Swiss-Prot (Q9BYB0.4); phosphorylation site"
+     misc_feature    58536..58538
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="Phosphoserine.
+                     /evidence=ECO:0000250|UniProtKB:Q4ACU6; propagated from
+                     UniProtKB/Swiss-Prot (Q9BYB0.4); phosphorylation site"
+     misc_feature    66849..66851
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="Phosphoserine.
+                     /evidence=ECO:0000250|UniProtKB:Q4ACU6; propagated from
+                     UniProtKB/Swiss-Prot (Q9BYB0.4); phosphorylation site"
+     misc_feature    66888..67001
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="propagated from UniProtKB/Swiss-Prot (Q9BYB0.4);
+                     Region: Disordered. /evidence=ECO:0000256|SAM:MobiDB-lite"
+     misc_feature    67134..67136
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="Phosphoserine.
+                     /evidence=ECO:0000250|UniProtKB:Q4ACU6; propagated from
+                     UniProtKB/Swiss-Prot (Q9BYB0.4); phosphorylation site"
+     misc_feature    67140..67142
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="Phosphoserine.
+                     /evidence=ECO:0007744|PubMed:24275569; propagated from
+                     UniProtKB/Swiss-Prot (Q9BYB0.4); phosphorylation site"
+     misc_feature    67146..67148
+                     /gene="SHANK3"
+                     /gene_synonym="DEL22q13.3; PROSAP2; PSAP2; SCZD15;
+                     SPANK-2"
+                     /note="Phosphoserine.
+                     /evidence=ECO:0007744|PubMed:24275569; propagated from
+                     UniProtKB/Swiss-Prot (Q9BYB0.4); phosphorylation site"
+     gene            complement(27171..27274)
+                     /gene="RNU6-409P"
+                     /note="RNA, U6 small nuclear 409, pseudogene; Derived by
+                     automated computational analysis using gene prediction
+                     method: Curated Genomic."
+                     /pseudo
+                     /db_xref="GeneID:106481307"
+                     /db_xref="HGNC:HGNC:47372"
+     gene            complement(71945..74286)
+                     /gene="LOC105373100"
+                     /note="uncharacterized LOC105373100; Derived by automated
+                     computational analysis using gene prediction method:
+                     BestRefSeq."
+                     /db_xref="GeneID:105373100"
+     ncRNA           complement(join(71945..73221,73507..74286))
+                     /ncRNA_class="lncRNA"
+                     /gene="LOC105373100"
+                     /product="uncharacterized LOC105373100"
+                     /inference="similar to RNA sequence (same
+                     species):RefSeq:NR_134637.1"
+                     /exception="annotated by transcript or proteomic data"
+                     /note="The RefSeq transcript has 2 substitutions, 1
+                     non-frameshifting indel compared to this genomic sequence;
+                     Derived by automated computational analysis using gene
+                     prediction method: BestRefSeq."
+                     /transcript_id="NR_134637.1"
+                     /db_xref="GeneID:105373100"
+     gene            74321..81450
+                     /gene="ACR"
+                     /note="acrosin; Derived by automated computational
+                     analysis using gene prediction method: BestRefSeq."
+                     /db_xref="GeneID:49"
+                     /db_xref="HGNC:HGNC:126"
+                     /db_xref="MIM:102480"
+     mRNA            join(74321..74429,75388..75591,75811..76094,80172..80317,
+                     80764..81450)
+                     /gene="ACR"
+                     /product="acrosin"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: BestRefSeq."
+                     /transcript_id="NM_001097.3"
+                     /db_xref="GeneID:49"
+                     /db_xref="HGNC:HGNC:126"
+                     /db_xref="MIM:102480"
+     CDS             join(74353..74429,75388..75591,75811..76094,80172..80317,
+                     80764..81318)
+                     /gene="ACR"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: BestRefSeq."
+                     /codon_start=1
+                     /product="acrosin precursor"
+                     /protein_id="NP_001088.2"
+                     /db_xref="GeneID:49"
+                     /db_xref="HGNC:HGNC:126"
+                     /db_xref="MIM:102480"
+                     /translation="MVEMLPTAILLVLAVSVVAKDNATCDGPCGLRFRQNPQGGVRIV
+                     GGKAAQHGAWPWMVSLQIFTYNSHRYHTCGGSLLNSRWVLTAAHCFVGKNNVHDWRLV
+                     FGAKEITYGNNKPVKAPLQERYVEKIIIHEKYNSATEGNDIALVEITPPISCGRFIGP
+                     GCLPHFKAGLPRGSQSCWVAGWGYIEEKAPRPSSILMEARVDLIDLDLCNSTQWYNGR
+                     VQPTNVCAGYPVGKIDTCQGDSGGPLMCKDSKESAYVVVGITSWGVGCARAKRPGIYT
+                     ATWPYLNWIASKIGSNALRMIQSATPPPPTTRPPPIRPPFSHPISAHLPWYFQPPPRP
+                     LPPRPPAAQPRPPPSPPPPPPPPASPLPPPPPPPPPTPSSTTKLPQGLSFAKRLQQLI
+                     EVLKGKTYSDGKNHYDMETTELPELTSTS"
+     sig_peptide     74353..74409
+                     /gene="ACR"
+                     /inference="COORDINATES: ab initio prediction:SignalP:6.0"
+     mat_peptide     join(74410..74429,75388..75591,75811..76094,80172..80317,
+                     80764..81315)
+                     /gene="ACR"
+                     /product="acrosin"
+     misc_feature    74416..74418
+                     /gene="ACR"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000250; propagated from
+                     UniProtKB/Swiss-Prot (P10323.4); glycosylation site"
+     misc_feature    80234..80236
+                     /gene="ACR"
+                     /note="N-linked (GlcNAc...) asparagine.
+                     /evidence=ECO:0000250; propagated from
+                     UniProtKB/Swiss-Prot (P10323.4); glycosylation site"
+     misc_feature    80941..81000
+                     /gene="ACR"
+                     /note="propagated from UniProtKB/Swiss-Prot (P10323.4);
+                     Region: Disordered. /evidence=ECO:0000256|SAM:MobiDB-lite"
+     misc_feature    81031..81201
+                     /gene="ACR"
+                     /note="propagated from UniProtKB/Swiss-Prot (P10323.4);
+                     Region: Disordered. /evidence=ECO:0000256|SAM:MobiDB-lite"
+     misc_feature    81241..81315
+                     /gene="ACR"
+                     /note="propagated from UniProtKB/Swiss-Prot (P10323.4);
+                     Region: Disordered. /evidence=ECO:0000256|SAM:MobiDB-lite"
+     misc_feature    85418..101037
+                     /note="Anchor sequence. This sequence is derived from alt
+                     loci or patch scaffold components that are also components
+                     of the primary assembly unit. It was included to ensure a
+                     robust alignment of this scaffold to the primary assembly
+                     unit. Anchor component: AC002056.1"
+     gene            complement(90566..91580)
+                     /gene="LOC150417"
+                     /note="small nuclear ribonucleoprotein polypeptide A'
+                     pseudogene; Derived by automated computational analysis
+                     using gene prediction method: Curated Genomic."
+                     /pseudo
+                     /db_xref="GeneID:150417"
+     exon            complement(90566..91580)
+                     /gene="LOC150417"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Curated Genomic."
+                     /pseudo
+                     /db_xref="GeneID:150417"
+CONTIG      join(AC000050.22:98..9447,AC255361.1:1..38777,
+            FO681507.3:2754..40043,AC002056.1:26126..41745)
+//

@@ -1,0 +1,117 @@
+
+LOCUS       NC_021707               1855 bp ss-DNA     linear   VRL 13-AUG-2018
+DEFINITION  Cyclovirus VN isolate hcf1, complete genome.
+ACCESSION   NC_021707
+VERSION     NC_021707.2
+DBLINK      BioProject: PRJNA485481
+KEYWORDS    RefSeq.
+SOURCE      Cyclovirus VN
+  ORGANISM  Cyclovirus VN
+            Viruses; ssDNA viruses; Circoviridae.
+REFERENCE   1  (bases 1 to 1855)
+  AUTHORS   Tan Le,V., van Doorn,H.R., Nghia,H.D., Chau,T.T., Tu Le,T.P., de
+            Vries,M., Canuti,M., Deijs,M., Jebbink,M.F., Baker,S., Bryant,J.E.,
+            Tham,N.T., Bkrong,N.T., Boni,M.F., Loi,T.Q., Phuong Le,T.,
+            Verhoeven,J.T., Crusat,M., Jeeninga,R.E., Schultsz,C., Chau,N.V.,
+            Hien,T.T., van der Hoek,L., Farrar,J. and de Jong,M.D.
+  TITLE     Identification of a new cyclovirus in cerebrospinal fluid of
+            patients with acute central nervous system infections
+  JOURNAL   MBio 4 (3), e00231-13 (2013)
+   PUBMED   23781068
+  REMARK    Publication Status: Online-Only
+REFERENCE   2  (bases 1 to 1855)
+  CONSRTM   NCBI Genome Project
+  TITLE     Direct Submission
+  JOURNAL   Submitted (09-JUL-2014) National Center for Biotechnology
+            Information, NIH, Bethesda, MD 20894, USA
+REFERENCE   3  (bases 1 to 1855)
+  AUTHORS   Tan,L.V., van Doorn,H.R., Nghia,H.D.T., Chau,T.T.H., Tu,L.T.P., de
+            Vries,M., Canuti,M., Deijs,M., Jebbink,M.F., Baker,S., Bryant,J.E.,
+            Tham,N.T., Chinh BKrong,N.T.T., Boni,M.F., Loi,T.Q., Phuong,L.T.,
+            Verhoeven,J.T.P., Crusat,M., Jeeninga,R.E., Schultsz,C.,
+            Chau,N.V.V., Hien,T.T., van der Hoek,L., Farrar,J. and de Jong,M.D.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (10-MAY-2013) Emerging Viral Infections Group, Oxford
+            University Clinical Research Unit, Wellcome Trust Major Overseas
+            Programme, 190 Ben Ham Tu, HCM, HCM P1Q5, Vietnam
+COMMENT     PROVISIONAL REFSEQ: This record has not yet been subject to final
+            NCBI review. The reference sequence is identical to KF031465.
+            
+            On Jul 10, 2014 this sequence version replaced NC_021707.1.
+            
+            ##Assembly-Data-START##
+            Sequencing Technology :: Sanger dideoxy sequencing
+            ##Assembly-Data-END##
+            COMPLETENESS: full length.
+FEATURES             Location/Qualifiers
+     source          1..1855
+                     /organism="Cyclovirus VN"
+                     /mol_type="genomic DNA"
+                     /isolate="hcf1"
+                     /isolation_source="cerebrospinal fluid"
+                     /host="Homo sapiens"
+                     /db_xref="taxon:1348500"
+                     /geo_loc_name="Viet Nam"
+                     /collection_date="2008"
+     gene            55..1099
+                     /locus_tag="M955_gp1"
+                     /db_xref="GeneID:16079218"
+     CDS             join(55..218,385..1099)
+                     /locus_tag="M955_gp1"
+                     /codon_start=1
+                     /product="replication-association protein"
+                     /protein_id="YP_009047065.1"
+                     /db_xref="GeneID:16079218"
+                     /translation="MAKNSTVRRFCWTLNNYTEEDVDVLQKDLTELCKFAIFGRETCP
+                     STGTKHLQGFCNLQRPKRFNSIRQIFGGRAHIERAKGTDLENKEYCSKGGDVWECGTP
+                     CAQGTRTDLEKVVSVIEGGERSLKNLAIQFPIAYIKYYKGIEQYIRIAHGNSERDFKT
+                     EVFYFWGPTGTGKSRKAREESLALGDTYYKPRGEWWDGYTGQPCVVIDDFYGWIKYDE
+                     LLKICDRYPYRVPVKGGYENFVSKYIWITSERCLEEVYRFIGYDCSSLRRRLNKEIFF
+                     GYIMSHLLTSKILLII"
+     gene            complement(1070..1738)
+                     /locus_tag="M955_gp2"
+                     /db_xref="GeneID:19816471"
+     CDS             complement(1070..1738)
+                     /locus_tag="M955_gp2"
+                     /codon_start=1
+                     /product="capsid protein"
+                     /protein_id="YP_009047066.1"
+                     /db_xref="GeneID:19816471"
+                     /translation="MAARRRYVRRRAPLRRYRRAVRKTRRLRKKFSRRRRTGNFTLLC
+                     RKVSVIAVPGAEGYSYQVAPTLNDYAEVQPFLNNFEAYRIWNVKVKITPLFNVAESGN
+                     PVPKYYSAPWHRPGPVAIASNSILSLDRAKSHNGTTTTFRRYAPCILTNIGIAGDTSV
+                     HIGKTEWKPKIAIQTSSTTIPHYAALYHWSQDQIPGPQAVTRQYELEISSVVTLYNQK
+                     NFAG"
+ORIGIN      
+        1 ataccgccac ttcgttggtt atatattggg tcacaaagtt cggtcctcgt cattatggct
+       61 aaaaacagca ccgtgcgtag attctgctgg acgctgaata actataccga agaggatgtc
+      121 gatgtgctgc agaaggacct cactgagcta tgtaaatttg ctatatttgg tagagagaca
+      181 tgtcctagta ctggaacaaa acatctccag ggattttggt aaatataact cccttgtgca
+      241 agtggacaat atcagttgga cctaaccgcc cgatcccgcg ccgaggagga ccaccccctg
+      301 gcgcgcctgc ggcgcgccgg ggccccgtcc tcctctctgc gggacgggct ccgagcataa
+      361 tgttaatttg aggttatgtt acagcaattt gcagcgacct aaaagattta acagcatacg
+      421 acagatattt ggcggacgag cgcacattga aagagctaaa ggaactgatc tcgaaaataa
+      481 ggaatactgc tctaaaggtg gcgatgtatg ggaatgcgga acaccctgtg ctcaaggaac
+      541 tagaacagac ctcgaaaagg ttgtttctgt cattgaagga ggagagagaa gccttaaaaa
+      601 cctggccatt cagttcccaa tcgcgtatat caagtattac aagggaattg aacaatacat
+      661 tagaatcgct catggaaatt cagaacgaga ctttaaaacg gaagtctttt acttttgggg
+      721 accgactgga actggaaagt cccgtaaagc gcgcgaggag agcctcgctc ttggtgacac
+      781 ctactacaag ccgcgtggag aatggtggga tggatacacc ggacaaccgt gcgttgttat
+      841 cgatgacttc tacggatgga tcaaatacga tgagcttctc aagatctgcg acagatatcc
+      901 ttacagagtc cctgtcaaag gaggatatga aaacttcgta tctaaatata tatggatcac
+      961 aagcgaacga tgtttagaag aggtgtatag atttataggt tatgattgta gtagtttgag
+     1021 gagaagattg aataaagaaa tattctttgg gtacataatg tctcatttat taaccagcaa
+     1081 aattcttttg attatataaa gttacaacag aacttatttc taattcatat tggcgggtaa
+     1141 cagcttgcgg tcctgggatt tgatcttgcg accagtggta gagcgctgcg taatgcggaa
+     1201 ttgtcgttga acttgtttgt atagcgatct taggtttcca ttcagttttt ccgatgtgga
+     1261 ctgaggtatc accagcgata ccaatattag taagaatgca aggagcgtac cgacggaaag
+     1321 tagtcgtcgt gccattgtga gactttgcgc ggtccaaaga taatatagaa ttggaggcaa
+     1381 tagcaactgg accaggccga tgccaggggg cagaataata ctttggtaca ggattaccag
+     1441 actcagcaac gttaaataat ggcgtaattt taactttgac gttccatatg cgataagcct
+     1501 cgaagttatt gaggaaaggc tggacttcag cgtaatcatt aagtgttgga gcaacctgat
+     1561 aagagtagcc ttcggcacca ggcactgcga taacgctgac cttgcggcac agtaacgtga
+     1621 aatttcctgt ccgtcgacgg cgggagaatt tcttacgtaa gcgtctggtt ttgcgcacgg
+     1681 cacgacgata tcgtcggagt ggggcgcgcc tgcgcacgta acgacgtctg gcagccatct
+     1741 ctggctgttg ctaggcgccc cctcttatat actaggacat ggagggggaa aaaagaggtg
+     1801 gggacccaat aggaaactgt tacgatgtta cagtttcgaa gtggcgggta atact
+//
