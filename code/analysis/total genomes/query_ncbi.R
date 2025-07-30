@@ -1,8 +1,8 @@
 library(rentrez)
 
-na_accession <- "code/analysis/total genomes/centrifuge/centrifuge_na_accession.txt"
-success_file <- "code/analysis/total genomes/centrifuge/results/centrifuge_success.txt"
-failed_file <- "code/analysis/total genomes/centrifuge/results/centrifuge_failed_1.txt"
+na_accession <- "code/analysis/total genomes/centrifuge/results/processed_centrifuge_cv_fails.txt"
+success_file <- "code/analysis/total genomes/centrifuge/results/centrifuge_cv_success_v2.txt"
+failed_file <- "code/analysis/total genomes/centrifuge/results/centrifuge_cv_fails_v2.txt"
 
 accession <- readLines(na_accession)
 
