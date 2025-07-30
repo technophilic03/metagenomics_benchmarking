@@ -20,8 +20,10 @@ fig_stem <-  file.path(stem, "results/figures")
 ## `read_in_file()` 
 ```{R}
 read_in_file <- function(this_csv) {
-  in_file <- read.csv(file.path(prof_stem, this_csv))
-  this_metric <- stringr::str_split_i(this_csv, "_", 1)
+  print(this_csv)
+  in_file <- read.csv(this_csv)
+  this_metric <- stringr::str_split_i(basename(this_csv), 
+                                      "_", 1)
   
   if (this_metric == "RRMSE") {
     in_file <- in_file |>
@@ -32,9 +34,10 @@ read_in_file <- function(this_csv) {
   metric_rownames <- rownames(in_file)
   
   # additional run information
-  addl_run_info <- this_csv |>
+  addl_run_info <- basename(this_csv) |>
     stringr::str_split_i("sample_", 2) |>
-    stringr::str_remove_all("_final_summary.csv") |>
+    stringr::str_remove_all("_final_summary") |>
+    stringr::str_remove_all(".csv") |>
     stringr::str_split("_") |>
     magrittr::extract2(1)
 
@@ -58,10 +61,12 @@ read_in_file <- function(this_csv) {
 
 ## Loop through
 ```{R}
-all_profilers <- c("PathoScope2", "Bracken", "MetaScope", "MetaScope_priors", "Kraken2")
+all_profilers <- c("PathoScope2", "Bracken", "MetaScope", "MetaScope_priors")
 prof_stem <- file.path(stem, "profilers", all_profilers, "combined_files/name_update/updated/analysis_results")
-all_files <- list.files(prof_stem, pattern = ".csv$")
-files_combined <- do.call(rbind, lapply(all_files, read_in_file))
+all_files <- list.files(prof_stem, pattern = ".csv$",
+                        full.names = TRUE)
+files_combined <- do.call(rbind, lapply(all_files, 
+                                        read_in_file))
 ```
 
 # Visualizations
