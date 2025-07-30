@@ -1,16 +1,16 @@
 suppressPackageStartupMessages(library(tidyverse))
 
-real_files <- list.files(path      = "MeSS_code/ground_truth/",
+real_files <- list.files(path      = "MeSS_code/ground_truth/updated/",
                          pattern   = "\\.csv$",
                          full.names = TRUE)
 
-sim_files <- list.files(path      = "profilers/MetaScope_priors/combined_outputs/",
+sim_files <- list.files(path      = "profilers/PathoScope2/combined_outputs/name_update/updated/",
                         pattern   = "\\.csv$",
                         full.names = TRUE)
 
-process_real_temp_dir <- "MeSS_code/ground_truth/temp/"
-process_sim_temp_dir <- "profilers/MetaScope_priors/combined_outputs/analysis_results/temp/"
-analysis_res_dir <- "profilers/MetaScope_priors/combined_outputs/analysis_results/"
+process_real_temp_dir <- "MeSS_code/ground_truth/updated/temp/"
+process_sim_temp_dir <- "profilers/PathoScope2/combined_outputs/name_update/updated/temp/"
+analysis_res_dir <- "profilers/PathoScope2/combined_outputs/name_update/updated/analysis_results/"
 
 
 process_real_data <- function(real_data_file) {
@@ -224,7 +224,7 @@ ROCFunction <- function(real_data_file,
 
 # process_real_data(real_files[1]) # only need to run once
 
-real_data_dir <- "MeSS_code/ground_truth/temp/processed_real_data.csv"
+real_data_dir <- "MeSS_code/ground_truth/updated/temp/processed_real_data.csv"
 
 process_file <- function(sim_file) {
    message("Processing: ", basename(sim_file))
