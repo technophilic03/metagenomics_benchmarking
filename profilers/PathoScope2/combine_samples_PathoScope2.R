@@ -15,7 +15,7 @@ suppressPackageStartupMessages({
 stem <- "/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark"
 test_dir <- file.path(stem, "test_data")
 dat_path <- file.path(stem, "profilers/PathoScope2/outputs")
-out_path <- file.path(stem, "profilers/PathoScope2/combined_outputs")
+out_path <- file.path(stem, "profilers/PathoScope2/combined_files")
 taxa_db <- "/restricted/projectnb/pathoscope/data/blastdb/2024_accession_taxa/accessionTaxa.sql"
 
 all_batches <- list.dirs(path = dat_path, full.names = FALSE, recursive = FALSE)

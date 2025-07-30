@@ -1,0 +1,110 @@
+---
+title: "Analyzing Results"
+author: "Aubrey Odom"
+date: "2025-07-21"
+output: html_document
+---
+
+# Setup
+```{R}
+suppressPackageStartupMessages({
+  library(tidyverse)
+})
+
+stem <- "/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark"
+fig_stem <-  file.path(stem, "results/figures")
+```
+
+# Read in all metrics
+
+## `read_in_file()` 
+```{R}
+read_in_file <- function(this_csv) {
+  in_file <- read.csv(file.path(prof_stem, this_csv))
+  this_metric <- stringr::str_split_i(this_csv, "_", 1)
+  
+  if (this_metric == "RRMSE") {
+    in_file <- in_file |>
+      column_to_rownames("X")
+  } else if (this_metric == "R2") {
+    rownames(in_file) <- "R2"
+  }
+  metric_rownames <- rownames(in_file)
+  
+  # additional run information
+  addl_run_info <- this_csv |>
+    stringr::str_split_i("sample_", 2) |>
+    stringr::str_remove_all("_final_summary.csv") |>
+    stringr::str_split("_") |>
+    magrittr::extract2(1)
+
+  out_df <- in_file |>
+    t() |>
+    as.data.frame() |>
+    rownames_to_column("sample") |>
+    mutate(sample = stringr::str_split_i(sample, "\\.", 2),
+           sample = stringr::str_remove(sample, "Healthy_stool_"),
+           across(where(is.numeric), function(x) round(x, 3))) |>
+    separate("sample", c("num_species_present", "species_dominance_score"),
+             sep = "_", convert = TRUE) |>
+    mutate("total_bases" = addl_run_info[1],
+           "error_status" = addl_run_info[2],
+           "profiler" = stringr::str_to_sentence(addl_run_info[3])) |>
+    pivot_longer(cols = all_of(metric_rownames),
+               names_to = "metric", values_to = "metric_val")
+  return(out_df)
+}
+```
+
+## Loop through
+```{R}
+all_profilers <- c("PathoScope2", "Bracken", "MetaScope", "MetaScope_priors", "Kraken2")
+prof_stem <- file.path(stem, "profilers", all_profilers, "combined_files/name_update/updated/analysis_results")
+all_files <- list.files(prof_stem, pattern = ".csv$")
+files_combined <- do.call(rbind, lapply(all_files, read_in_file))
+```
+
+# Visualizations
+```{R}
+for (this_metric in unique(files_combined$metric)) {
+  p <- files_combined |>
+    filter(metric == this_metric) |>
+    mutate("Species Dominance Score" = as.factor(species_dominance_score)) |>
+    ggplot(aes(x = `Species Dominance Score`, y = metric_val,
+               color = `Species Dominance Score`,
+               fill = `Species Dominance Score`)) +
+    geom_boxplot(alpha = 0.3) +
+    facet_grid(profiler~total_bases) +
+    ylab(this_metric) +
+    labs(title = paste("Boxplot of", this_metric)) +
+    theme_classic()
+  
+  ggsave(file.path(fig_stem, paste0("boxplot_", this_metric, ".png")),
+         p,
+         units = "in", width = 7, height = 5)
+  print(p)
+}
+
+
+```
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
