@@ -78,15 +78,13 @@ length(unique_names)
 ```
 
 ## Kraken2/Bracken
-
+19987
 ```{r}
-kraken <- "kracken_raw.txt"
-line_kraken <- readLines(kraken)
-
-split_kraken <- strsplit(line_kraken, split = "\t")
-
-
-
+kraken <- "../../../../../aubrey/newMB_02_25_meta_benchmark/db/StandardKrakenDB/seqid2taxid.map"
+read_kraken <- readLines(kraken)
+split_kraken <- str_extract(read_kraken, "(?<=\t)\\d+")
+unique_taxid <- unique(split_kraken)
+length(unique_taxid)
 ```
 
 # Centrifuge
