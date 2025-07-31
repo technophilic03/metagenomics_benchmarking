@@ -6,31 +6,32 @@ if (RUN_SCRIPT) {
   )
   
   original_files <- list.files(
-    path      = "MeSS_code/ground_truth/",
+    path      = "profilers/MetaScope_priors/combined_files/",
     pattern   = "\\.csv$",
     full.names= TRUE
   )
   
   ref_files <- list.files(
-    path      = "MeSS_code/ground_truth/diff/",
+    path      = "profilers/MetaScope_priors/combined_files/updated_species_names/diff/",
     pattern   = "\\.csv$",
     full.names= TRUE
   )
   
   update <- function(original_df, reference_df) {
-    # updated_df <- left_join(original_df, reference_df, by = join_by(Name == old_name))
-    updated_df <- left_join(original_df, reference_df, by = join_by(species == old_name))
+    updated_df <- left_join(original_df, reference_df, by = join_by(Name == old_name)) # for profilers
+    # updated_df <- left_join(original_df, reference_df, by = join_by(species == old_name)) # for ground truth
     
-    # updated_df$Name <- ifelse(
-    #   is.na(updated_df$current_name), 
-    #   updated_df$Name, 
-    #   updated_df$current_name
-    # )
-    updated_df$species <- ifelse(
-      is.na(updated_df$current_name), 
-      updated_df$species, 
+    updated_df$Name <- ifelse(
+      is.na(updated_df$current_name),
+      updated_df$Name,
       updated_df$current_name
-    )
+    ) # for profilers
+    
+    # updated_df$species <- ifelse(
+    #   is.na(updated_df$current_name), 
+    #   updated_df$species, 
+    #   updated_df$current_name
+    # ) # for ground truth
     
     updated_df <- updated_df |> 
       select(-current_name)
@@ -41,13 +42,18 @@ if (RUN_SCRIPT) {
     message("Processing ", basename(original))
     
     df <- read.csv(original)
-    # ref_df <- read.csv(reference)
-    ref_df <- read.csv(reference) |> 
-      distinct(old_name, .keep_all = TRUE)
+    ref_df <- read.csv(reference)
+    # ref_df <- read.csv(reference) |> 
+    #   distinct(old_name, .keep_all = TRUE)
     
     result_df <- update(df, ref_df)
     
-    out_dir  <- "MeSS_code/ground_truth/updated/"
+    out_dir  <- "profilers/MetaScope_priors/combined_files/updated_species_names/updated"
+    
+    # create folder if not exist
+    dirs_to_create <- c(out_dir)
+    sapply(dirs_to_create, function(x) dir.create(x, recursive = TRUE, showWarnings = FALSE))
+    
     out_name <- paste0("updated_", basename(original))
     out_path <- file.path(out_dir, out_name)
     

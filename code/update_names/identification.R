@@ -1,4 +1,4 @@
-RUN_SCRIPT <- FALSE
+RUN_SCRIPT <- TRUE
 
 if (RUN_SCRIPT) {
   suppressPackageStartupMessages({
@@ -13,7 +13,7 @@ if (RUN_SCRIPT) {
   plan(multisession, workers = 4)
   
   csv_files <- list.files(
-    path      = "profilers/Centrifuge/combined_outputs/",
+    path      = "profilers/MetaScope_priors/combined_files/",
     pattern   = "\\.csv$",
     full.names= TRUE
   )
@@ -74,7 +74,12 @@ if (RUN_SCRIPT) {
     diff <- result_df |> 
       filter(old_name != current_name)
     
-    out_dir  <- "profilers/Centrifuge/combined_outputs/name_update/"
+    out_dir  <- "profilers/MetaScope_priors/combined_files/updated_species_names/"
+    
+    # create folder if not exist
+    dirs_to_create <- c(out_dir)
+    sapply(dirs_to_create, function(x) dir.create(x, recursive = TRUE, showWarnings = FALSE))
+    
     out_name <- paste0("diff_", basename(input_path))
     out_path <- file.path(out_dir, out_name)
     
