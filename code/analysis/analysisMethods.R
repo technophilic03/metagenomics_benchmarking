@@ -4,13 +4,13 @@ real_files <- list.files(path      = "MeSS_code/ground_truth/updated/",
                          pattern   = "\\.csv$",
                          full.names = TRUE)
 
-sim_files <- list.files(path      = "profilers/Bracken/combined_files/updated_species_names/updated/",
+sim_files <- list.files(path      = "profilers/Kraken2/combined_files/updated_species_names/updated/",
                         pattern   = "\\.csv$",
                         full.names = TRUE)
 
 process_real_temp_dir <- "MeSS_code/ground_truth/updated/temp/"
-process_sim_temp_dir <- "profilers/Bracken/combined_files/updated_species_names/analysis_results/temp/"
-analysis_res_dir <- "profilers/Bracken/combined_files/updated_species_names/analysis_results/"
+process_sim_temp_dir <- "profilers/Kraken2/combined_files/updated_species_names/analysis_results/temp/"
+analysis_res_dir <- "profilers/Kraken2/combined_files/updated_species_names/analysis_results/"
 
 # create folder if not exist
 dirs_to_create <- c(process_real_temp_dir, process_sim_temp_dir, analysis_res_dir)
@@ -160,7 +160,7 @@ ROCFunction <- function(real_data_file,
                         sim_data_file,
                         total_genomes) {
   
-  # total_genomes = 21418 for Metascope Pathoscope
+  # total_genomes = 21418 for Metascope/Pathoscope2
   # total_genomes = 19987 for Bracken/Kraken
   
   
