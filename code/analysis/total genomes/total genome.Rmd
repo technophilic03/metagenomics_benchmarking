@@ -1,9 +1,5 @@
----
-output:
-  html_document: default
-  pdf_document: default
----
-
+# Calculating total genome numbers for each profiler
+## Set up
 ```{r}
 suppressPackageStartupMessages(
   {
@@ -18,9 +14,8 @@ suppressPackageStartupMessages(
 ```
 
 ## Metascope/Pathoscope
-
 ### Method 1 (use accession numbers)
-
+#### Read files
 ```{r}
 ## zgrep '^>' bacteria.fasta.gz >> "metascope_bacteria_raw.txt"
 
@@ -35,7 +30,7 @@ line_viral <- readLines(viral)
 all_lines <- c(line_bacteria, line_fungi, line_viral)
 
 ```
-
+#### Convert to taxid using taxonomizr
 ```{r}
 accession_numbers <- as.vector(str_extract(all_lines, "(?<=^>)[^ ]+"))
 
@@ -45,149 +40,153 @@ taxid <- taxonomizr::accessionToTaxa(accession_numbers, sqlFile = "../../../../t
 ```{r}
 length(taxid)
 ```
-
+#### Process NA from taxonomizr using rentrez (NCBI eutils)
 ```{r}
 sum(is.na(taxid))
 ```
 
-### use batch entrez NCBI
 ```{r}
 line_retry_taxid <- readLines("metascope/batch_process_na/results/metascope_na_NCBI.txt")
 ```
-### total genomes for metascope
+#### Total genomes for metascope
 ```{r}
 total_taxid_metascope <- c(taxid, line_retry_taxid)
 unique_taxid_metascope <- unique(total_genomes_metascope)
-length(unique_taxid_metascope)
+total_genome_metascope_pathoscope2 <- length(unique_taxid_metascope)
+total_genome_metascope_pathoscope2
 ```
 
+<!-- ### Method 2 (column extraction) -->
 
+<!-- ```{r} -->
+<!-- split_words <- strsplit(all_lines, " ") -->
+<!-- names <- sapply(split_words, function(x) paste(x[2], x[3])) -->
+<!-- unique_names <- unique(names) -->
+<!-- ``` -->
 
-
-
-### Method 2 (column extraction)
-
-```{r}
-split_words <- strsplit(all_lines, " ")
-names <- sapply(split_words, function(x) paste(x[2], x[3]))
-unique_names <- unique(names)
-```
-
-```{r}
-length(unique_names)
-```
+<!-- ```{r} -->
+<!-- length(unique_names) -->
+<!-- ``` -->
 
 ## Kraken2/Bracken
-
+### Calculate total genomes directly from the map file
 ```{r}
-kraken <- "kracken_raw.txt"
-line_kraken <- readLines(kraken)
-
-split_kraken <- strsplit(line_kraken, split = "\t")
-
-
-
+kraken <- "../../../../../aubrey/newMB_02_25_meta_benchmark/db/StandardKrakenDB/seqid2taxid.map"
+read_kraken <- readLines(kraken)
+split_kraken <- str_extract(read_kraken, "(?<=\t)\\d+")
+unique_taxid <- unique(split_kraken)
+total_genome_kraken_bracken <- length(unique_taxid)
+total_genome_kraken_bracken
 ```
 
 ## Centrifuge
-
+### Read files from conversion table
+### Remove synthetic constructs (taxid 32630)
 ```{r}
-centrifuge <- "centrifuge/centrifuge_raw.txt"
-all_lines_centrifuge <- readLines(centrifuge)
-line_with_accessions_centrifuge <- all_lines_centrifuge[1:8243]
-split_centrifuge_accessions <- strsplit(line_with_accessions_centrifuge, split = " ")
-centrifuge_accessions <- sapply(split_centrifuge_accessions, function(x) x[[1]])
-```
+centrifuge <- "centrifuge/centrifuge_conversion.txt"
+read_centrifuge <- readLines(centrifuge)
+split_centrifuge <- str_extract(read_centrifuge, "(?<=\t)\\d+")
+unique_taxid_without_32630 <- unique(split_centrifuge[split_centrifuge != "32630"])
+total_genome_centrifuge <- length(unique_taxid_without_32630)
+total_genome_centrifuge
 
-```{r}
-accessions_taxid_centrifuge_taxonomizr <- taxonomizr::accessionToTaxa(centrifuge_accessions, sqlFile = "../../../../taxonomizr_db/accessionTaxa.sql")
-length(unique(accessions_taxid_centrifuge_taxonomizr))
-```
-
-```{r}
-sum(is.na(accessions_taxid_centrifuge))
-```
-
-```{r}
-na_position_accession <- which(is.na(accessions_taxid_centrifuge))
-na_accession_centrifuge <- centrifuge_accession[na_position_accession]
-```
-### use batch entrez NCBI
-```{r}
-write.table(na_accession_centrifuge, file = "centrifuge/centrifuge_na_accession.txt", row.names = FALSE, col.names = FALSE, quote = FALSE)
-```
-
-```{r}
-lines_na_accession_centrifuge_ncbi <- readLines("centrifuge/results/centrifuge_success.txt")
-```
-
-```{r}
-accession_taxid_centrifuge <- c(lines_na_accession_centrifuge_ncbi, accessions_taxid_centrifuge_taxonomizr)
-unique_accession_taxid_centrifuge <- unique(accession_taxid_centrifuge)
-length(unique_accession_taxid_centrifuge)
-```
-
-
-```{r}
-result <- c()
-for (i in seq_along(na_accession_centrifuge)) {
-  current_accession <- na_accession_centrifuge[i]
-  message("Processing ", current_accession, " (", i, " out of ", length(na_accession_centrifuge), " )")
-  ncbi_id <- tryCatch(
-    entrez_search(db = "nucleotide", term = current_accession)$ids, 
-    error = function(e) 
-      message(as.character(e$message), " for ", current_accession)
-  )
-  Sys.sleep(1)
-  our_id <- entrez_link(dbfrom = "nuccore", id = ncbi_id, db = "all")$link$nuccore_nuccore_rsgb
-  
-  if (length(our_id) == 0 || is.null(our_id)) {
-    message("No links found for ", current_accession)
-    next
-  }
-  Sys.sleep(1)
-  extract_taxid <- entrez_summary(db="nuccore", id=our_id) %>% extract_from_esummary("taxid")
-  if (length(extract_taxid) == 0 || is.null(extract_taxid)) {
-    message("No taxID found for ", current_accession)
-    next
-  } else {
-    message("Found taxID for ", current_accession)
-  }
-  result <- c(result, extract_taxid)
-  Sys.sleep(1)
-}
 ```
 
 
 
-```{r}
-entrez_search(db="nucleotide", term="NC_005261.2") %>% str
-```
 
-```{r}
-ncbi_id <- entrez_search(db="nuccore", term="NC_005261.2")$ids
-```
 
-```{r}
-our_id <- entrez_link(dbfrom = "nuccore", id = ncbi_id, db="all")
-entrez_summary(db="nuccore", id=our_id$links$nuccore_nuccore_rsgb) %>% str
-```
 
-```{r}
-line_vec_accession_centrifuge <- line_centrifuge[14719:length(line_centrifuge)]
-split_centrifuge_vec <- as.vector(str_extract(line_vec_accession_centrifuge, "(?<=\\|)[^|:]+(?=:)"))
+<!-- ### accession numbers -->
+<!-- ```{r} -->
+<!-- centrifuge <- "centrifuge/centrifuge_con.txt" -->
+<!-- all_lines_centrifuge <- readLines(centrifuge) -->
+<!-- line_with_accessions_centrifuge <- all_lines_centrifuge[1:8243] -->
+<!-- split_centrifuge_accessions <- strsplit(line_with_accessions_centrifuge, split = " ") -->
+<!-- centrifuge_accessions <- sapply(split_centrifuge_accessions, function(x) x[[1]]) -->
+<!-- ``` -->
+<!-- #### 1 -->
+<!-- ```{r} -->
+<!-- accessions_taxid_centrifuge_taxonomizr <- taxonomizr::accessionToTaxa(centrifuge_accessions, sqlFile = "../../../../taxonomizr_db/accessionTaxa.sql") -->
+<!-- length(unique(accessions_taxid_centrifuge_taxonomizr)) -->
+<!-- ``` -->
 
-```
+<!-- ```{r} -->
+<!-- sum(is.na(accessions_taxid_centrifuge)) -->
+<!-- ``` -->
 
-```{r}
-taxid_centrifuge_vec <- taxonomizr::accessionToTaxa(split_centrifuge_vec, sqlFile = "../../../../taxonomizr_db/accessionTaxa.sql")
-```
+<!-- ```{r} -->
+<!-- na_position_accession <- which(is.na(accessions_taxid_centrifuge)) -->
+<!-- na_accession_centrifuge <- centrifuge_accession[na_position_accession] -->
+<!-- ``` -->
+<!-- ### use batch entrez NCBI for centrifuge accession -->
+<!-- ```{r} -->
+<!-- write.table(na_accession_centrifuge, file = "centrifuge/centrifuge_na_accession.txt", row.names = FALSE, col.names = FALSE, quote = FALSE) -->
+<!-- ``` -->
 
-```{r}
-sum(is.na(taxid_centrifuge_vec))
-```
+<!-- #### 2 -->
+<!-- ```{r} -->
+<!-- lines_na_accession_centrifuge_ncbi <- readLines("centrifuge/results/centrifuge_success.txt") -->
+<!-- ``` -->
 
-```{r}
-na_position_vec <- which(is.na(taxid_centrifuge_vec))
-na_vec_accession_centrifuge <- split_centrifuge_vec[na_position_vec]
-```
+<!-- ```{r} -->
+<!-- accession_taxid_centrifuge <- c(lines_na_accession_centrifuge_ncbi, accessions_taxid_centrifuge_taxonomizr) -->
+<!-- unique_accession_taxid_centrifuge <- unique(accession_taxid_centrifuge) -->
+<!-- length(unique_accession_taxid_centrifuge) -->
+<!-- ``` -->
+<!-- ## accession lines + cid lines -->
+<!-- # actual 1 -->
+<!-- ```{r} -->
+<!-- line_accession_cid <- readLines("centrifuge/centrifuge_conversion.txt") -->
+<!-- line_accession_cid <- line_accession_cid[1:10692] -->
+<!-- split_accession_cid_taxid <- str_extract(line_accession_cid, "(?<=\t)\\d+") -->
+
+<!-- ``` -->
+
+
+<!-- ## Clone vector lines -->
+<!-- ```{r} -->
+<!-- line_cv_centrifuge <- line_centrifuge[10693:14718] -->
+<!-- write.table(line_cv_centrifuge, file = "centrifuge/centrifuge_cv.txt", row.names = FALSE, col.names = FALSE, quote = FALSE) -->
+<!-- ``` -->
+<!-- ### NCBI for cv -->
+<!-- ```{r} -->
+
+<!-- ``` -->
+
+<!-- ## UniVec lines -->
+<!-- ```{r} -->
+<!-- line_UniVec_accession_centrifuge <- line_centrifuge[14719:length(line_centrifuge)] -->
+<!-- split_centrifuge_UniVec <- as.vector(str_extract(line_UniVec_accession_centrifuge, "(?<=\\|)[^|:]+(?=:)")) -->
+
+<!-- ``` -->
+
+<!-- ```{r} -->
+<!-- length(split_centrifuge_UniVec) -->
+<!-- ``` -->
+
+<!-- ```{r} -->
+<!-- taxid_centrifuge_UniVec <- taxonomizr::accessionToTaxa(split_centrifuge_UniVec, sqlFile = "../../../../taxonomizr_db/accessionTaxa.sql") -->
+<!-- ``` -->
+
+<!-- ```{r} -->
+<!-- sum(is.na(taxid_centrifuge_UniVec)) -->
+<!-- ``` -->
+
+<!-- ```{r} -->
+<!-- na_position_UniVec <- which(is.na(taxid_centrifuge_UniVec)) -->
+<!-- na_UniVec_accession_centrifuge <- split_centrifuge_gnl[na_position_UniVec] -->
+<!-- ``` -->
+
+
+<!-- ### Use NCBI for uv accession centrifuge -->
+<!-- ```{r} -->
+<!-- write.table(na_UniVec_accession_centrifuge, file = "centrifuge/centrifuge_na_UniVec.txt", row.names = FALSE, col.names = FALSE, quote = FALSE) -->
+<!-- ``` -->
+
+<!-- #### 3 -->
+<!-- ```{r} -->
+<!-- taxid_centrifuge_na_uv <- readLines("centrifuge/results/centrifuge_combined_uv_success.txt") -->
+
+<!-- ``` -->
+

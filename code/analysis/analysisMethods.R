@@ -1,17 +1,20 @@
 suppressPackageStartupMessages(library(tidyverse))
 
-real_files <- list.files(path      = "MeSS_code/ground_truth/",
+real_files <- list.files(path      = "MeSS_code/ground_truth/updated/",
                          pattern   = "\\.csv$",
                          full.names = TRUE)
 
-sim_files <- list.files(path      = "profilers/MetaScope_priors/combined_outputs/",
+sim_files <- list.files(path      = "profilers/Centrifuge/combined_files/updated_species_names/updated/",
                         pattern   = "\\.csv$",
                         full.names = TRUE)
 
-process_real_temp_dir <- "MeSS_code/ground_truth/temp/"
-process_sim_temp_dir <- "profilers/MetaScope_priors/combined_outputs/analysis_results/temp/"
-analysis_res_dir <- "profilers/MetaScope_priors/combined_outputs/analysis_results/"
+process_real_temp_dir <- "MeSS_code/ground_truth/updated/temp/"
+process_sim_temp_dir <- "profilers/Centrifuge/combined_files/updated_species_names/analysis_results/temp/"
+analysis_res_dir <- "profilers/Centrifuge/combined_files/updated_species_names/analysis_results/"
 
+# create folder if not exist
+dirs_to_create <- c(process_real_temp_dir, process_sim_temp_dir, analysis_res_dir)
+sapply(dirs_to_create, function(x) dir.create(x, recursive = TRUE, showWarnings = FALSE))
 
 process_real_data <- function(real_data_file) {
   message("processing ground truth (real data)")
@@ -157,7 +160,9 @@ ROCFunction <- function(real_data_file,
                         sim_data_file,
                         total_genomes) {
   
-  # total_genomes = 21418 for Metascope Pathoscope
+  # total_genomes = 21418 for Metascope/Pathoscope2
+  # total_genomes = 19987 for Bracken/Kraken
+  # total_genomes = 8425 for Centrifuge (removed synthetic construct)
   
   
   # real_data_file = processed_real_data.csv
@@ -223,8 +228,8 @@ ROCFunction <- function(real_data_file,
 ### Run Function
 
 # process_real_data(real_files[1]) # only need to run once
-
-real_data_dir <- "MeSS_code/ground_truth/temp/processed_real_data.csv"
+# 
+real_data_dir <- "MeSS_code/ground_truth/updated/temp/processed_real_data.csv"
 
 process_file <- function(sim_file) {
    message("Processing: ", basename(sim_file))
@@ -249,8 +254,14 @@ process_file <- function(sim_file) {
    ROCFunction(
      real_data_dir,
      sim_processed_path,
-     total_genomes = 21418
+     total_genomes = 8425
    )
  }
 
- walk(sim_files, process_file)
+walk(sim_files, process_file)
+ 
+ # cleanup temp files at the end
+ 
+ 
+ 
+ 
