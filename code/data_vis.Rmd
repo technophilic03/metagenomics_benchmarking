@@ -20,17 +20,22 @@ fig_stem <-  file.path(stem, "results/figures")
 ## `read_in_file()` 
 ```{R}
 read_in_file <- function(this_csv) {
-  print(this_csv)
+  # print(this_csv)
   in_file <- read.csv(this_csv)
   this_metric <- stringr::str_split_i(basename(this_csv), 
                                       "_", 1)
+  
+  this_profiler <- stringr::str_split_i(this_csv,
+                       pattern = "profilers/", i = 2) |>
+    stringr::str_split_i(pattern = "/", i = 1) |>
+    stringr::str_to_sentence()
   
   if (this_metric == "RRMSE") {
     in_file <- in_file |>
       column_to_rownames("X")
   } else if (this_metric == "R2") {
     rownames(in_file) <- "R2"
-  }
+  } else if (this_metric == "ROC") return(NULL)
   metric_rownames <- rownames(in_file)
   
   # additional run information
@@ -46,13 +51,14 @@ read_in_file <- function(this_csv) {
     as.data.frame() |>
     rownames_to_column("sample") |>
     mutate(sample = stringr::str_split_i(sample, "\\.", 2),
-           sample = stringr::str_remove(sample, "Healthy_stool_"),
+           sample = stringr::str_split_i(sample,
+                                         pattern = "stool_", i = 2),
            across(where(is.numeric), function(x) round(x, 3))) |>
     separate("sample", c("num_species_present", "species_dominance_score"),
              sep = "_", convert = TRUE) |>
     mutate("total_bases" = addl_run_info[1],
            "error_status" = addl_run_info[2],
-           "profiler" = stringr::str_to_sentence(addl_run_info[3])) |>
+           "profiler" = this_profiler) |>
     pivot_longer(cols = all_of(metric_rownames),
                names_to = "metric", values_to = "metric_val")
   return(out_df)
@@ -62,7 +68,7 @@ read_in_file <- function(this_csv) {
 ## Loop through
 ```{R}
 all_profilers <- c("PathoScope2", "Bracken", "MetaScope", "MetaScope_priors")
-prof_stem <- file.path(stem, "profilers", all_profilers, "combined_files/name_update/updated/analysis_results")
+prof_stem <- file.path(stem, "profilers", all_profilers, "combined_files/updated_species_names/analysis_results")
 all_files <- list.files(prof_stem, pattern = ".csv$",
                         full.names = TRUE)
 files_combined <- do.call(rbind, lapply(all_files, 
