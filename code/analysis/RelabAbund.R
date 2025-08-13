@@ -55,7 +55,8 @@ generate_ground_truth_categories <- function(df) {
 
   
 summary_df <- lapply(c(brk_res,ctf_res,krk2_res, ms_res, msp_res,ps2_res), generate_ground_truth_categories) |> 
-  bind_rows()
+  bind_rows() |>
+  filter(rel_read_count > 0)
 
 replicated_ground_truth <- map_dfr(c("100k_err", "100k_noerr", "10mil_err",
                                      "10mil_noerr", "1mil_err", "1mill_noerr"),
@@ -75,7 +76,7 @@ summary_df_ground_truth$pipeline <- factor(summary_df_ground_truth$pipeline,
                                                       "Centrifuge",
                                                       "Kraken2",
                                                       "Bracken",
-                                                      "PathoScope",
+                                                      "PathoScope2",
                                                       "MetaScope",
                                                       "MetaScope Priors"))
 
