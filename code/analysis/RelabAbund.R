@@ -1,4 +1,5 @@
 library(tidyverse)
+library(paletteer)
 
 # Read in Ground Truth
 ground_truth <- read.csv("MeSS_code/ground_truth/updated/updated_ground_truth.csv") |>
@@ -88,7 +89,7 @@ p1 <- ggplot(data = summary_df_ground_truth,
   ylab("Relative Abundance") + 
   xlab("") +
   #scale_y_continuous(breaks = seq(0,1, by = 0.1)) +
-  facet_grid(~pipeline) + 
+  facet_grid(~pipeline, full_sample_name) + 
   theme(axis.text.x=element_blank(),
         axis.ticks.x = element_blank(),
         panel.grid.major = element_blank(), 
@@ -97,5 +98,6 @@ p1 <- ggplot(data = summary_df_ground_truth,
         legend.position = "none")
 
 p1
+
 
          
