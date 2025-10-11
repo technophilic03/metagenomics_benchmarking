@@ -12,7 +12,7 @@
 #$ -m a
 
 # Give job a name
-#$ -N metascope_bench
+#$ -N metascope_bench_new
 
 # Request cores
 #$ -pe omp 8
@@ -24,10 +24,10 @@
 #$ -l mem_per_core=16G
 
 # Combine output and error files into a single file
-#$ -j y
+#$ -j y 
 
 # Specify the output file name
-#$ -o run_metascope_metag.qlog
+#$ -o run_metascope_metag_new_${SGE_TASK_ID}.qlog 
 
 # Submit an array job with N tasks 
 #$ -t 1 #-48
@@ -46,7 +46,7 @@ echo "Job ID : $SGE_TASK_ID"
 echo "=========================================================="
 start_time=$(date +%s)
 
-stem=/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark
+stem=/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking
 mapfile -t inputFastqFiles < ${stem}/MeSS_code/mess_manifest_TEMP.txt
 index=$(($SGE_TASK_ID-1))
 dataDir="${inputFastqFiles[$index]%/*}"
@@ -65,7 +65,7 @@ readPath2=$dataDir/${sampleName}_R2.fq.gz
 ### Run MetaScope
 indexDir="/restricted/projectnb/pathoscope/reflib/2020_index_bowtie/"
 expTag=$sampleName
-outDir="${stem}/profilers/MetaScope/outputs/${sampleType}"
+outDir="${stem}/profilers/MetaScope/outputs_new/${sampleType}"
 mkdir -p "$outDir"
 tmpDir="$TMPDIR/$workingDir/"
 
