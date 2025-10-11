@@ -12,7 +12,7 @@
 #$ -m a
 
 # Give job a name
-#$ -N m_priors
+#$ -N m_priors_new
 
 # Request cores
 #$ -pe omp 8
@@ -27,10 +27,10 @@
 #$ -j y
 
 # Specify the output file name
-#$ -o run_metascope_p.qlog
+#$ -o run_metascope_p_new_$TASK_ID.qlog
 
 # Submit an array job with N tasks 
-#$ -t 1-48
+#$ -t 1-24
 
 #   ask for scratch space
 #$ -l scratch=100G
@@ -46,27 +46,37 @@ echo "Job ID : $SGE_TASK_ID"
 echo "=========================================================="
 start_time=$(date +%s)
 
-stem=/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark
-mapfile -t inputFastqFiles < ${stem}/MeSS_code/mess_manifest.txt
+stem=/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/
 index=$(($SGE_TASK_ID-1))
-dataDir="${inputFastqFiles[$index]%/*}"
-sampleType=$(basename "$(dirname "$dataDir")")
-sampleName=($(echo ${inputFastqFiles[$index]##*/} | sed 's/_R1.*//'))
+# Create a flat array of ALL R1 files across all directories
+baseDir="$stem"/MeSS_out_noerr/fastq
+all_r1_files=($(find "$baseDir" -name "*_R1.fq.gz" | sort))
+# Select the specific file for this task
+readPath1="${all_r1_files[$index]}"
+readPath2="${readPath1%_R1.fq.gz}_R2.fq.gz"
+sampleName=$(basename "$readPath1" _R1.fq.gz)
+# Get the sample type from the parent directory
+sampleType=$(basename "$(dirname "$readPath1")")
+# Strip "_noerr" suffix for matching priors_df files
+sampleNameForPriors="${sampleName%_noerr}"
+
+echo "Task ID: $SGE_TASK_ID"
+echo "Data Directory: $dataDir"
+echo "Sample Name: $sampleName"
+echo "Sample Type: $sampleType"
+echo "R1 Read Path: $readPath1"
+echo "R2 Read Path: $readPath2"
+
 
 ### MAKE WORKING DIR
-workingDir="${sampleType}_${sampleName}_tmp"
+workingDir="${sampleName}_tmp"
 rm -rf $TMPDIR/$workingDir
 mkdir $TMPDIR/$workingDir
-
-### get read files
-readPath1=$dataDir/${sampleName}_R1.fq.gz
-readPath2=$dataDir/${sampleName}_R2.fq.gz
 
 ### Run MetaScope
 indexDir="/restricted/projectnb/pathoscope/reflib/2020_index_bowtie/"
 expTag=$sampleName
-stem_profiler=${stem}/profilers/MetaScope_priors
-outDir="${stem_profiler}/outputs/${sampleType}"
+outDir="${stem}/profilers/MetaScope_priors/outputs_new_noerr/${sampleType}"
 mkdir -p "$outDir"
 tmpDir="$TMPDIR/$workingDir/"
 
@@ -78,12 +88,17 @@ target="bacteria,fungi,viral"
 filter="human_mouse,phix174"
 
 ## Select which priors_df
+stem_profiler=${stem}/profilers/MetaScope_priors
 priors_df_path=${stem_profiler}/priors_df
-priors_df=${priors_df_path}/${sampleName}.csv
+priors_df=${priors_df_path}/${sampleNameForPriors}.csv
 
 # Run MetaScope
 module load samtools
 module load R/4.4.3
+
+
+export R_LIBS_USER="/restricted/projectnb/pathoscope/work/Yaoan/R"
+
 Rscript --vanilla --max-ppsize=500000 ${stem_profiler}/run_metascope_p.R \
 ${readPath1} ${readPath2} ${indexDir} ${expTag} ${outDir} ${tmpDir} ${NSLOTS} \
 ${target} ${filter} \

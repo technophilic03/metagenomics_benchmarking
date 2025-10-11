@@ -9,24 +9,24 @@
 #$ -l h_rt=50:00:00
 
 # Send an email when the job is aborted
-#$ -m e
+#$ -m a
 
 # Request cores
 #$ -pe omp 8
 
 # Give job a name
-#$ -N std_kraken
+#$ -N std_kraken_new
 
 # Specify the output file name
 #$ -j y
-#$ -o run_kraken2.qlog
+#$ -o run_kraken_new_$TASK_ID.qlog
 
 # Ask for scratch space
 #$ -l scratch=100G
 
 # Use the SGE_TASK_ID environment variable to select the appropriate input file from bash array
 # Bash array index starts from 0, so we need to subtract one from SGE_TASK_ID value
-#$ -t 1-96
+#$ -t 1-24
 
 # Keep track of information related to the current job
 echo "=========================================================="
@@ -37,20 +37,28 @@ echo "=========================================================="
 start_time=$(date +%s)
 
 # Define samples
-stem=/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark
-mapfile -t inputFastqFiles < ${stem}/MeSS_code/mess_manifest.txt
+stem=/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/
+# mapfile -t inputFastqFiles < ${stem}/MeSS_code/mess_manifest.txt
 index=$(($SGE_TASK_ID-1))
-dataDir="${inputFastqFiles[$index]%/*}"
-sampleType=$(basename "$(dirname "$dataDir")")
-sampleName=($(echo ${inputFastqFiles[$index]##*/} | sed 's/_R1.*//'))
+# Create a flat array of ALL R1 files across all directories
+baseDir="$stem"/MeSS_out_noerr/fastq
+all_r1_files=($(find "$baseDir" -name "*_R1.fq.gz" | sort))
+# Select the specific file for this task
+readPath1="${all_r1_files[$index]}"
+readPath2="${readPath1%_R1.fq.gz}_R2.fq.gz"
+sampleName=$(basename "$readPath1" _R1.fq.gz)
+# Get the sample type from the parent directory
+sampleType=$(basename "$(dirname "$readPath1")")
+# Strip "_noerr" suffix for matching priors_df files
+sampleNameForPriors="${sampleName%_noerr}" 
 
 # Obtain read files
-ForwardRead=$dataDir/${sampleName}_R1.fq.gz
-ReverseRead=$dataDir/${sampleName}_R2.fq.gz
+ForwardRead=$readPath1
+ReverseRead=$readPath2
 
 # Load software
 module load kraken2/2.1.2
-inputDB=${stem}/db/StandardKrakenDB
+inputDB=/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/db/StandardKrakenDB
 outDir="${stem}/profilers/Kraken2/outputs/${sampleType}"
 mkdir -p "$outDir"
 OUTREPORT="${outDir}/${sampleName}"

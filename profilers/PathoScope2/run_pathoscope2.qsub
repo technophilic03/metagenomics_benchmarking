@@ -27,10 +27,10 @@
 #$ -j y
 
 # Specify the output file name
-#$ -o run_pathoscope2.qlog
+#$ -o run_pathoscope_new_$TASK_ID.qlog
 
 # Submit an array job with N tasks 
-#$ -t 1-96
+#$ -t 1-24
 
 #   ask for scratch space
 #$ -l scratch=100G
@@ -47,28 +47,40 @@ echo "=========================================================="
 
 start_time=$(date +%s)
 
-stem=/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark
-mapfile -t inputFastqFiles < ${stem}/MeSS_code/mess_manifest.txt
+stem=/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking
 index=$(($SGE_TASK_ID-1))
-dataDir="${inputFastqFiles[$index]%/*}"
-sampleType=$(basename "$(dirname "$dataDir")")
-sampleName=($(echo ${inputFastqFiles[$index]##*/} | sed 's/_R1.*//'))
+
+# Create a flat array of ALL R1 files across all directories
+baseDir="$stem"/MeSS_out_noerr/fastq
+all_r1_files=($(find "$baseDir" -name "*_R1.fq.gz" | sort))
+
+# Select the specific file for this task
+readPath1="${all_r1_files[$index]}"
+readPath2="${readPath1%_R1.fq.gz}_R2.fq.gz"
+sampleName=$(basename "$readPath1" _R1.fq.gz)
+
+# Get the sample type from the parent directory
+sampleType=$(basename "$(dirname "$readPath1")")
+
+
+echo "Task ID: $SGE_TASK_ID"
+echo "Data Directory: $dataDir"
+echo "Sample Name: $sampleName"
+echo "Sample Type: $sampleType"
+echo "R1 Read Path: $readPath1"
+echo "R2 Read Path: $readPath2"
 
 ### MAKE WORKING DIR
 workingDir="${sampleType}_${sampleName}_tmp"
 rm -rf $TMPDIR/$workingDir
 mkdir $TMPDIR/$workingDir
 
-### get read files
-readPath1=$dataDir/${sampleName}_R1.fq.gz
-readPath2=$dataDir/${sampleName}_R2.fq.gz
-
 # Set filepaths; indices
 pathoscope="/restricted/projectnb/pathoscope/code/PathoScope/pathoscope/pathoscope2.py"
 indDir="/restricted/projectnb/pathoscope/reflib/2020_index_bowtie"
 targLibs="bacteria,viral,fungi"
 filterLibs="human_mouse,phix174"
-outDir="${stem}/profilers/PathoScope2/outputs/${sampleType}"
+outDir="${stem}/profilers/PathoScope2/outputs_new/${sampleType}"
 mkdir -p "$outDir"
 
 # Run Pathoscope
