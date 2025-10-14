@@ -13,7 +13,7 @@ suppressPackageStartupMessages({
   library(purrr)
 })
 
-stem <- "/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/Centrifuge"
+stem <- "/home/sl1729/RProjects/metagenomics_benchmarking/profilers/Centrifuge"
 Sys.setenv(ENTREZ_KEY = "01d22876be34df5c28f4aedc479a2674c809")
 num_tries <- 5
 all_batches <- list.dirs(path = file.path(stem, "outputs"), full.names = FALSE, recursive = FALSE)
@@ -127,7 +127,10 @@ for (this_batch in all_batches) {
   
   # Write output table ----
   write.csv(table_final,
-            file.path(stem, "combined_outputs" ,
+            file.path(stem, "combined_files" ,
                       paste0(this_batch, "centrifuge_summary.csv")),
             quote = FALSE, row.names = FALSE)
 }
+
+
+
