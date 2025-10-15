@@ -19,7 +19,7 @@ suppressPackageStartupMessages({
 })
 
 # Set file paths ----
-stem <- "/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark"
+stem <- "/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking"
 out_path <- file.path(stem, "profilers/Kraken2/combined_files")
 all_batches <- list.dirs(path = file.path(stem, "profilers/Kraken2/outputs"),
                          full.names = FALSE, recursive = FALSE)

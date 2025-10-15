@@ -2,9 +2,9 @@
 
 module load python3
 
-stem=/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark
+stem=/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking
 
-for this_batch in ${stem}/profilers/Kraken2/outputs/*/; do
+for this_batch in ${stem}/profilers/Kraken2/noerr_rerun/*/; do
 
     batch_name=$(basename "$this_batch")
 
