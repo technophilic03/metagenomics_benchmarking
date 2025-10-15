@@ -1,6 +1,6 @@
 library(tidyverse)
 
-paths <- list.files(path="profilers/mOTUs/outputs", pattern = ".motus", full.names = TRUE)
+paths <- list.files(path="profilers/mOTUs/outputs", pattern = ".motus", full.names = TRUE, recursive = TRUE)
 
 read_and_format <- function(file) {
   # sample name from file name (without extension)

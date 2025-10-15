@@ -16,8 +16,8 @@ suppressPackageStartupMessages({
 })
 
 # Set file paths ----
-stem <- "/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark"
-batch_name <- "Mock_lluch"
+stem <- "/home/sl1729/RProjects/metagenomics_benchmarking"
+batch_name <- "motus"
 dat_path <- file.path(stem, "profilers/mOTUs/outputs")
 out_path <- file.path(stem, "profilers/mOTUs/combined_files")
 
@@ -43,12 +43,12 @@ motus_data <- read.table(
 
 # replace with mock data ----
 ## Low read counts for test data....
-motus_data[, 4:ncol(motus_data)] <- floor(runif(nrow(motus_data), 0, 2000))
+##motus_data[, 4:ncol(motus_data)] <- floor(runif(nrow(motus_data), 0, 2000))
 
 # Separate out taxonomy ----
 new_taxa_cols <- c("Superkingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species")
 new_output <- motus_data |>
-  tidyr::separate(col = "consensus_taxonomy",
+  tidyr::separate(col = "#consensus_taxonomy",
                   into = new_taxa_cols,
                   sep =  "\\|") |>
   mutate(across(all_of(new_taxa_cols), ~ sub(".__+", "", .))) |>
