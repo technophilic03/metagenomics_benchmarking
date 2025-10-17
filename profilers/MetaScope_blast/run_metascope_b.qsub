@@ -18,7 +18,7 @@
 #$ -pe omp 8
 
 # Memory overall
-$ -l mem_total=150G
+$ -l mem_total=128G
 
 # Memory per core
 #$ -l mem_per_core=16G
@@ -27,10 +27,10 @@ $ -l mem_total=150G
 #$ -j y
 
 # Specify the output file name
-#$ -o run_metascope_b_new_$TASK_ID.qlog
+#$ -o run_metascope_b_new_one.qlog
 
 # Submit an array job with N tasks 
-#$ -t 1-24
+#$ -t 1
 
 #   ask for scratch space
 #$ -l scratch=100G

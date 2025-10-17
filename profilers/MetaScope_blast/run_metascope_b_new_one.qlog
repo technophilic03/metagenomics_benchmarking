@@ -1,0 +1,1475 @@
+/var/spool/sge/scc-cb2/job_scripts/905538: line 21: $: command not found
+==========================================================
+Start date : Thu Oct 16 12:06:09 EDT 2025
+Job name : m_blast_new
+Job ID : 1
+==========================================================
+Task ID: 1
+Data Directory: 
+Sample Name: healthy_stool_100_100_noerr
+Sample Type: mess_sample_100k_noerr
+R1 Read Path: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/MeSS_out_noerr/fastq/mess_sample_100k_noerr/healthy_stool_100_100_noerr_R1.fq.gz
+R2 Read Path: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/MeSS_out_noerr/fastq/mess_sample_100k_noerr/healthy_stool_100_100_noerr_R2.fq.gz
+Rows: 840 Columns: 2
+-- Column specification --------------------------------------------------------
+Delimiter: ","
+chr (1): species
+dbl (1): tax_abundance
+
+i Use `spec()` to retrieve the full column specification for this data.
+i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Attempting to perform Bowtie2 alignment on bacteria index
+[1] "Samtools found on system. Using samtools to create bam file"
+arguments 'show.output.on.console', 'minimized' and 'invisible' are for Windows only
+99804 reads; of these:
+  99804 (100.00%) were paired; of these:
+    32385 (32.45%) aligned concordantly 0 times
+    61196 (61.32%) aligned concordantly exactly 1 time
+    6223 (6.24%) aligned concordantly >1 times
+    ----
+    32385 pairs aligned concordantly 0 times; of these:
+      899 (2.78%) aligned discordantly 1 time
+    ----
+    31486 pairs aligned 0 times concordantly or discordantly; of these:
+      62972 mates make up the pairs; of these:
+        60258 (95.69%) aligned 0 times
+        2266 (3.60%) aligned exactly 1 time
+        448 (0.71%) aligned >1 times
+69.81% overall alignment rate
+Filtering unmapped reads
+Attempting to perform Bowtie2 alignment on fungi index
+[1] "Samtools found on system. Using samtools to create bam file"
+arguments 'show.output.on.console', 'minimized' and 'invisible' are for Windows only
+99804 reads; of these:
+  99804 (100.00%) were paired; of these:
+    99794 (99.99%) aligned concordantly 0 times
+    10 (0.01%) aligned concordantly exactly 1 time
+    0 (0.00%) aligned concordantly >1 times
+    ----
+    99794 pairs aligned concordantly 0 times; of these:
+      0 (0.00%) aligned discordantly 1 time
+    ----
+    99794 pairs aligned 0 times concordantly or discordantly; of these:
+      199588 mates make up the pairs; of these:
+        199583 (100.00%) aligned 0 times
+        5 (0.00%) aligned exactly 1 time
+        0 (0.00%) aligned >1 times
+0.01% overall alignment rate
+Filtering unmapped reads
+Attempting to perform Bowtie2 alignment on viral index
+[1] "Samtools found on system. Using samtools to create bam file"
+arguments 'show.output.on.console', 'minimized' and 'invisible' are for Windows only
+99804 reads; of these:
+  99804 (100.00%) were paired; of these:
+    99713 (99.91%) aligned concordantly 0 times
+    35 (0.04%) aligned concordantly exactly 1 time
+    56 (0.06%) aligned concordantly >1 times
+    ----
+    99713 pairs aligned concordantly 0 times; of these:
+      0 (0.00%) aligned discordantly 1 time
+    ----
+    99713 pairs aligned 0 times concordantly or discordantly; of these:
+      199426 mates make up the pairs; of these:
+        199409 (99.99%) aligned 0 times
+        10 (0.01%) aligned exactly 1 time
+        7 (0.00%) aligned >1 times
+0.10% overall alignment rate
+Filtering unmapped reads
+Library alignment complete
+Merging the bam files into healthy_stool_100_100_noerr.bam
+Merging .bam files
+samtools found on system. Merging with samtools.
+[E::sam_hrecs_error] Malformed key:value pair at line 1: "@HD	VN:1.0	SO:coordinate	"
+[E::sam_hrecs_error] Malformed key:value pair at line 1: "@HD	VN:1.0	SO:coordinate	"
+[E::sam_hrecs_error] Malformed key:value pair at line 1: "@HD	VN:1.0	SO:coordinate	"
+Sorting merged bam file
+DONE! Alignments written to /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/healthy_stool_100_100_noerr.bam
+TARGET STEP COMPLETE
+Writing Intermediate FASTQ file to /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/intermediate.fastq.gz
+  |                                                                              |                                                                      |   0%  |                                                                              |======================================================================| 100%
+Intermediate FASTQ file written to/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/intermediate.fastq.gz
+Attempting to perform Bowtie2 alignment on human_mouse index
+[1] "Samtools found on system. Using samtools to create bam file"
+arguments 'show.output.on.console', 'minimized' and 'invisible' are for Windows only
+1 reads; of these:
+  1 (100.00%) were unpaired; of these:
+    1 (100.00%) aligned 0 times
+    0 (0.00%) aligned exactly 1 time
+    0 (0.00%) aligned >1 times
+0.00% overall alignment rate
+Attempting to perform Bowtie2 alignment on phix174 index
+[1] "Samtools found on system. Using samtools to create bam file"
+arguments 'show.output.on.console', 'minimized' and 'invisible' are for Windows only
+1 reads; of these:
+  1 (100.00%) were unpaired; of these:
+    1 (100.00%) aligned 0 times
+    0 (0.00%) aligned exactly 1 time
+    0 (0.00%) aligned >1 times
+0.00% overall alignment rate
+Removing reads mapped to host indices
+DONE! Alignments written to /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/healthy_stool_100_100_noerr.filtered.bam
+FILTER STEP COMPLETE
+running id step
+Reading .bam file: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/healthy_stool_100_100_noerr.filtered.bam
+Setting up the EM algorithm
+	Found 3446 unique taxa
+Starting EM iterations
+1 118.816249570723
+2 5.25312433538494
+3 0.485599673326828
+4 0.279377661308461
+5 0.187954562042425
+6 0.185770268466717
+7 0.134253033184521
+8 0.0797448789457766
+9 0.0400691313116822
+10 0.0365047236323493
+11 0.0366081661532293
+12 0.0372650851103997
+13 0.0397296388201426
+14 0.0416469016397873
+15 0.0425026892449624
+16 0.0418189989268248
+17 0.0393385431858914
+18 0.0351837288928521
+19 0.029868935474492
+20 0.0241261328165081
+21 0.0186461658994698
+22 0.013891724555114
+23 0.0100547961243354
+24 0.00758634733035778
+25 0.00725734592281496
+26 0.00693675850883685
+27 0.00662494013371088
+28 0.00646317171252811
+29 0.0063732723509993
+30 0.00628559683007477
+31 0.00620010170515774
+32 0.00611673819995916
+33 0.00603545310680122
+34 0.00595618960755452
+35 0.00587888801871152
+36 0.00580348646441566
+37 0.00572992148148578
+38 0.00565812856059105
+39 0.00558804262778128
+40 0.00551959847055385
+41 0.00545273111257833
+42 0.00538737614107753
+43 0.00532346999073693
+44 0.00526095018783966
+45 0.00519975555814648
+46 0.00513982640185154
+47 0.00508110463874164
+48 0.00502353392649009
+49 0.00496705975481305
+50 0.00491688700358366
+51 0.00489919513113044
+52 0.00488088891099003
+53 0.0048619777835887
+54 0.00484247145241453
+55 0.00482237987418794
+56 0.00480171324884294
+57 0.00478048200933411
+58 0.00475869681128663
+59 0.00473636852250541
+60 0.00471350821235895
+61 0.00469012714105444
+62 0.00466623674882162
+63 0.00464184864501836
+64 0.00461697459718062
+65 0.00459162652002387
+66 0.00456581646442139
+67 0.00453955660636783
+68 0.00451285923594842
+69 0.00448573674632665
+70 0.00445820162276637
+71 0.00443026643170513
+72 0.00440194380988774
+73 0.00437324645358181
+74 0.00434418710788316
+75 0.00431477855612729
+76 0.00428503360941912
+77 0.00425496509629491
+78 0.00422458585252525
+79 0.00419390871107664
+80 0.00416294649223524
+81 0.00413171199391184
+82 0.00410021798212985
+83 0.0040684771817144
+84 0.00403650226718373
+85 0.00400430585385831
+86 0.00397190048919095
+87 0.00393929864432777
+88 0.0039065127059061
+89 0.00387355496809704
+90 0.00384043762489598
+91 0.00380717276266918
+92 0.00377377235295905
+93 0.00374024824555273
+94 0.00370661216181933
+95 0.00367287568831611
+96 0.00363905027066753
+97 0.00360514720771968
+98 0.00357117764597083
+99 0.0035371525742787
+100 0.00350308281884629
+DONE! Converged in 100 iterations.
+Found reads for 406 genomes
+Results written to /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/healthy_stool_100_100_noerr.metascope_id.csv
+Updated bam file written to /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/healthy_stool_100_100_noerr.updated.bam
+No coverage plots created
+There were 50 or more warnings (use warnings() to see the first 50)
+running MetaBlast
+Sorting bam file to /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/healthy_stool_100_100_noerr_sorted.bam
+Generating fasta sequences from bam file
+Running BLASTN on all sequences
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+`x` must be a vector, not `NULL`.
+
+Running BLAST metrics on all blast results
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Errori In argument: `!grepl("sp.", species, fixed = TRUE)`.
+Caused by error:
+! object 'species' not found/n
+Results written to /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/healthy_stool_100_100_noerr.metascope_blast.csv
+  TaxonomyID                       Genome read_count Proportion readsEM
+1      28116           Bacteroides ovatus       2445 0.03444438  2479.1
+2     226186 Bacteroides thetaiotaomicron       2357 0.03320467  2194.4
+3     435590         Phocaeicola vulgatus       2229 0.03140144  2290.3
+4     246787 Bacteroides cellulosilyticus       1940 0.02733010  1953.4
+5      40520                Blautia obeum       1809 0.02548462  1850.7
+6     536231       Roseburia intestinalis       1495 0.02106108  1386.7
+  EMProportion domain       phylum       class          order          family
+1   0.03492487   <NA> Bacteroidota Bacteroidia  Bacteroidales  Bacteroidaceae
+2   0.03091366   <NA> Bacteroidota Bacteroidia  Bacteroidales  Bacteroidaceae
+3   0.03226517   <NA> Bacteroidota Bacteroidia  Bacteroidales  Bacteroidaceae
+4   0.02751926   <NA> Bacteroidota Bacteroidia  Bacteroidales  Bacteroidaceae
+5   0.02607161   <NA>    Bacillota  Clostridia Lachnospirales Lachnospiraceae
+6   0.01953469   <NA>    Bacillota  Clostridia Lachnospirales Lachnospiraceae
+        genus                      species uniqueness_score
+1 Bacteroides           Bacteroides ovatus                0
+2 Bacteroides Bacteroides thetaiotaomicron                0
+3 Phocaeicola         Phocaeicola vulgatus                0
+4 Bacteroides Bacteroides cellulosilyticus                0
+5     Blautia                Blautia obeum                0
+6   Roseburia       Roseburia intestinalis                0
+  species_percentage_hit genus_percentage_hit species_contaminant_score
+1                      0                    0                         0
+2                      0                    0                         0
+3                      0                    0                         0
+4                      0                    0                         0
+5                      0                    0                         0
+6                      0                    0                         0
+  genus_contaminant_score best_hit_genus best_hit_species
+1                       0             NA               NA
+2                       0             NA               NA
+3                       0             NA               NA
+4                       0             NA               NA
+5                       0             NA               NA
+6                       0             NA               NA
+MetaBlast COMPLETE
+Running blast reassignment
+Problem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00001_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00002_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00003_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00004_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00005_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00006_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00007_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00008_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00009_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00010_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00011_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00012_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00013_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00014_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00015_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00016_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00017_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00018_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00019_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00020_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00021_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00022_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00023_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00024_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00025_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00026_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00027_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00028_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00029_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00030_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00031_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00032_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00033_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00034_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00035_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00036_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00037_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00038_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00039_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00040_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00041_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00042_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00043_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00044_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00045_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00046_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00047_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00048_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00049_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00050_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00051_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00052_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00053_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00054_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00055_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00056_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00057_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00058_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00059_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00060_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00061_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00062_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00063_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00064_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00065_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00066_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00067_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00068_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00069_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00070_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00071_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00072_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00073_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00074_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00075_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00076_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00077_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00078_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00079_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00080_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00081_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00082_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00083_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00084_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00085_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00086_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00087_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00088_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00089_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00090_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00091_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00092_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00093_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00094_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00095_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00096_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00097_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00098_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00099_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundProblem with blast summary for current file: 
+/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/blast/00100_healthy_stool_100_100_noerr.csv
+i In argument: `species = paste0(genus, " ", species)`.
+Caused by error:
+! object 'genus' not foundError in -drop_indices : invalid argument to unary operator
+Calls: blast_reassignment -> <Anonymous> -> [ -> [.tbl_df
+Execution halted
+/var/spool/sge/scc-cb4/job_scripts/908940: line 21: $: command not found
+==========================================================
+Start date : Thu Oct 16 15:02:13 EDT 2025
+Job name : m_blast_new
+Job ID : 1
+==========================================================
+Task ID: 1
+Data Directory: 
+Sample Name: healthy_stool_100_100_noerr
+Sample Type: mess_sample_100k_noerr
+R1 Read Path: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/MeSS_out_noerr/fastq/mess_sample_100k_noerr/healthy_stool_100_100_noerr_R1.fq.gz
+R2 Read Path: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/MeSS_out_noerr/fastq/mess_sample_100k_noerr/healthy_stool_100_100_noerr_R2.fq.gz
+Rows: 840 Columns: 2
+-- Column specification --------------------------------------------------------
+Delimiter: ","
+chr (1): species
+dbl (1): tax_abundance
+
+i Use `spec()` to retrieve the full column specification for this data.
+i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Attempting to perform Bowtie2 alignment on bacteria index
+[1] "Samtools found on system. Using samtools to create bam file"
+arguments 'show.output.on.console', 'minimized' and 'invisible' are for Windows only
+99804 reads; of these:
+  99804 (100.00%) were paired; of these:
+    32385 (32.45%) aligned concordantly 0 times
+    61196 (61.32%) aligned concordantly exactly 1 time
+    6223 (6.24%) aligned concordantly >1 times
+    ----
+    32385 pairs aligned concordantly 0 times; of these:
+      899 (2.78%) aligned discordantly 1 time
+    ----
+    31486 pairs aligned 0 times concordantly or discordantly; of these:
+      62972 mates make up the pairs; of these:
+        60258 (95.69%) aligned 0 times
+        2266 (3.60%) aligned exactly 1 time
+        448 (0.71%) aligned >1 times
+69.81% overall alignment rate
+Filtering unmapped reads
+Attempting to perform Bowtie2 alignment on fungi index
+[1] "Samtools found on system. Using samtools to create bam file"
+arguments 'show.output.on.console', 'minimized' and 'invisible' are for Windows only
+99804 reads; of these:
+  99804 (100.00%) were paired; of these:
+    99794 (99.99%) aligned concordantly 0 times
+    10 (0.01%) aligned concordantly exactly 1 time
+    0 (0.00%) aligned concordantly >1 times
+    ----
+    99794 pairs aligned concordantly 0 times; of these:
+      0 (0.00%) aligned discordantly 1 time
+    ----
+    99794 pairs aligned 0 times concordantly or discordantly; of these:
+      199588 mates make up the pairs; of these:
+        199583 (100.00%) aligned 0 times
+        5 (0.00%) aligned exactly 1 time
+        0 (0.00%) aligned >1 times
+0.01% overall alignment rate
+Filtering unmapped reads
+Attempting to perform Bowtie2 alignment on viral index
+[1] "Samtools found on system. Using samtools to create bam file"
+arguments 'show.output.on.console', 'minimized' and 'invisible' are for Windows only
+99804 reads; of these:
+  99804 (100.00%) were paired; of these:
+    99713 (99.91%) aligned concordantly 0 times
+    35 (0.04%) aligned concordantly exactly 1 time
+    56 (0.06%) aligned concordantly >1 times
+    ----
+    99713 pairs aligned concordantly 0 times; of these:
+      0 (0.00%) aligned discordantly 1 time
+    ----
+    99713 pairs aligned 0 times concordantly or discordantly; of these:
+      199426 mates make up the pairs; of these:
+        199409 (99.99%) aligned 0 times
+        10 (0.01%) aligned exactly 1 time
+        7 (0.00%) aligned >1 times
+0.10% overall alignment rate
+Filtering unmapped reads
+Library alignment complete
+Merging the bam files into healthy_stool_100_100_noerr.bam
+Merging .bam files
+samtools found on system. Merging with samtools.
+[E::sam_hrecs_error] Malformed key:value pair at line 1: "@HD	VN:1.0	SO:coordinate	"
+[E::sam_hrecs_error] Malformed key:value pair at line 1: "@HD	VN:1.0	SO:coordinate	"
+[E::sam_hrecs_error] Malformed key:value pair at line 1: "@HD	VN:1.0	SO:coordinate	"
+Sorting merged bam file
+DONE! Alignments written to /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/healthy_stool_100_100_noerr.bam
+TARGET STEP COMPLETE
+Writing Intermediate FASTQ file to /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/intermediate.fastq.gz
+  |                                                                              |                                                                      |   0%  |                                                                              |======================================================================| 100%
+Intermediate FASTQ file written to/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/intermediate.fastq.gz
+Attempting to perform Bowtie2 alignment on human_mouse index
+[1] "Samtools found on system. Using samtools to create bam file"
+arguments 'show.output.on.console', 'minimized' and 'invisible' are for Windows only
+1 reads; of these:
+  1 (100.00%) were unpaired; of these:
+    1 (100.00%) aligned 0 times
+    0 (0.00%) aligned exactly 1 time
+    0 (0.00%) aligned >1 times
+0.00% overall alignment rate
+Attempting to perform Bowtie2 alignment on phix174 index
+[1] "Samtools found on system. Using samtools to create bam file"
+arguments 'show.output.on.console', 'minimized' and 'invisible' are for Windows only
+1 reads; of these:
+  1 (100.00%) were unpaired; of these:
+    1 (100.00%) aligned 0 times
+    0 (0.00%) aligned exactly 1 time
+    0 (0.00%) aligned >1 times
+0.00% overall alignment rate
+Removing reads mapped to host indices
+DONE! Alignments written to /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/healthy_stool_100_100_noerr.filtered.bam
+FILTER STEP COMPLETE
+running id step
+Reading .bam file: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/healthy_stool_100_100_noerr.filtered.bam
+Setting up the EM algorithm
+	Found 3446 unique taxa
+Starting EM iterations
+1 118.816249570723
+2 5.25312433538494
+3 0.485599673326828
+4 0.279377661308461
+5 0.187954562042425
+6 0.185770268466717
+7 0.134253033184521
+8 0.0797448789457766
+9 0.0400691313116822
+10 0.0365047236323493
+11 0.0366081661532293
+12 0.0372650851103997
+13 0.0397296388201426
+14 0.0416469016397873
+15 0.0425026892449624
+16 0.0418189989268248
+17 0.0393385431858914
+18 0.0351837288928521
+19 0.029868935474492
+20 0.0241261328165081
+21 0.0186461658994698
+22 0.013891724555114
+23 0.0100547961243354
+24 0.00758634733035778
+25 0.00725734592281496
+26 0.00693675850883685
+27 0.00662494013371088
+28 0.00646317171252811
+29 0.0063732723509993
+30 0.00628559683007477
+31 0.00620010170515774
+32 0.00611673819995916
+33 0.00603545310680122
+34 0.00595618960755452
+35 0.00587888801871152
+36 0.00580348646441566
+37 0.00572992148148578
+38 0.00565812856059105
+39 0.00558804262778128
+40 0.00551959847055385
+41 0.00545273111257833
+42 0.00538737614107753
+43 0.00532346999073693
+44 0.00526095018783966
+45 0.00519975555814648
+46 0.00513982640185154
+47 0.00508110463874164
+48 0.00502353392649009
+49 0.00496705975481305
+50 0.00491688700358366
+51 0.00489919513113044
+52 0.00488088891099003
+53 0.0048619777835887
+54 0.00484247145241453
+55 0.00482237987418794
+56 0.00480171324884294
+57 0.00478048200933411
+58 0.00475869681128663
+59 0.00473636852250541
+60 0.00471350821235895
+61 0.00469012714105444
+62 0.00466623674882162
+63 0.00464184864501836
+64 0.00461697459718062
+65 0.00459162652002387
+66 0.00456581646442139
+67 0.00453955660636783
+68 0.00451285923594842
+69 0.00448573674632665
+70 0.00445820162276637
+71 0.00443026643170513
+72 0.00440194380988774
+73 0.00437324645358181
+74 0.00434418710788316
+75 0.00431477855612729
+76 0.00428503360941912
+77 0.00425496509629491
+78 0.00422458585252525
+79 0.00419390871107664
+80 0.00416294649223524
+81 0.00413171199391184
+82 0.00410021798212985
+83 0.0040684771817144
+84 0.00403650226718373
+85 0.00400430585385831
+86 0.00397190048919095
+87 0.00393929864432777
+88 0.0039065127059061
+89 0.00387355496809704
+90 0.00384043762489598
+91 0.00380717276266918
+92 0.00377377235295905
+93 0.00374024824555273
+94 0.00370661216181933
+95 0.00367287568831611
+96 0.00363905027066753
+97 0.00360514720771968
+98 0.00357117764597083
+99 0.0035371525742787
+100 0.00350308281884629
+DONE! Converged in 100 iterations.
+Found reads for 406 genomes
+Results written to /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/healthy_stool_100_100_noerr.metascope_id.csv
+Updated bam file written to /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/healthy_stool_100_100_noerr.updated.bam
+No coverage plots created
+There were 50 or more warnings (use warnings() to see the first 50)
+running MetaBlast
+Sorting bam file to /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/healthy_stool_100_100_noerr_sorted.bam
+Generating fasta sequences from bam file
+Running BLASTN on all sequences
+Running BLAST metrics on all blast results
+Error'names' attribute [7] must be the same length as the vector [5]/n
+Error'names' attribute [7] must be the same length as the vector [5]/n
+Error'names' attribute [7] must be the same length as the vector [5]/n
+Error'names' attribute [7] must be the same length as the vector [5]/n
+Error'names' attribute [7] must be the same length as the vector [5]/n
+Error'names' attribute [7] must be the same length as the vector [5]/n
+Error'names' attribute [7] must be the same length as the vector [5]/n
+Error'names' attribute [7] must be the same length as the vector [5]/n
+Error'names' attribute [7] must be the same length as the vector [5]/n
+Error'names' attribute [7] must be the same length as the vector [5]/n
+Error'names' attribute [7] must be the same length as the vector [5]/n
+Results written to /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot/healthy_stool_100_100_noerr/healthy_stool_100_100_noerr.metascope_blast.csv
+  TaxonomyID                       Genome read_count Proportion readsEM
+1      28116           Bacteroides ovatus       2445 0.03444438  2479.1
+2     226186 Bacteroides thetaiotaomicron       2357 0.03320467  2194.4
+3     435590         Phocaeicola vulgatus       2229 0.03140144  2290.3
+4     246787 Bacteroides cellulosilyticus       1940 0.02733010  1953.4
+5      40520                Blautia obeum       1809 0.02548462  1850.7
+6     536231       Roseburia intestinalis       1495 0.02106108  1386.7
+  EMProportion domain       phylum       class          order          family
+1   0.03492487   <NA> Bacteroidota Bacteroidia  Bacteroidales  Bacteroidaceae
+2   0.03091366   <NA> Bacteroidota Bacteroidia  Bacteroidales  Bacteroidaceae
+3   0.03226517   <NA> Bacteroidota Bacteroidia  Bacteroidales  Bacteroidaceae
+4   0.02751926   <NA> Bacteroidota Bacteroidia  Bacteroidales  Bacteroidaceae
+5   0.02607161   <NA>    Bacillota  Clostridia Lachnospirales Lachnospiraceae
+6   0.01953469   <NA>    Bacillota  Clostridia Lachnospirales Lachnospiraceae
+        genus                      species uniqueness_score
+1 Bacteroides           Bacteroides ovatus                5
+2 Bacteroides Bacteroides thetaiotaomicron               16
+3 Phocaeicola         Phocaeicola vulgatus                4
+4 Bacteroides Bacteroides cellulosilyticus               13
+5     Blautia                Blautia obeum                4
+6   Roseburia       Roseburia intestinalis               19
+  species_percentage_hit genus_percentage_hit species_contaminant_score
+1                      1                    1                         1
+2                      1                    1                         1
+3                      1                    1                         1
+4                      1                    1                         1
+5                0.59375              0.96875                    0.4375
+6      0.966666666666667    0.966666666666667                       0.3
+  genus_contaminant_score  best_hit_genus best_hit_species
+1                       1     Bacteroides       caecimuris
+2                       1     Bacteroides           caccae
+3                       1 Parabacteroides       distasonis
+4                       1     Bacteroides cellulosilyticus
+5                 0.03125         Blautia            obeum
+6                     0.2       Roseburia     intestinalis
+There were 11 warnings (use warnings() to see them)
+MetaBlast COMPLETE
+Running blast reassignment
+Error in `dplyr::select()` at Metascope/R/metascope_blast.R:905:3:
+! Can't select columns that don't exist.
+x Column `IDs` doesn't exist.
+Backtrace:
+     x
+  1. +-MetaScope::blast_reassignment(...)
+  2. | +-dplyr::rename(...) at Metascope/R/metascope_blast.R:905:3
+  3. | +-dplyr::select(...) at Metascope/R/metascope_blast.R:905:3
+  4. | \-dplyr:::select.data.frame(...)
+  5. |   \-tidyselect::eval_select(expr(c(...)), data = .data, error_call = error_call)
+  6. |     \-tidyselect:::eval_select_impl(...)
+  7. |       +-tidyselect:::with_subscript_errors(...)
+  8. |       | \-base::withCallingHandlers(...)
+  9. |       \-tidyselect:::vars_select_eval(...)
+ 10. |         \-tidyselect:::walk_data_tree(expr, data_mask, context_mask)
+ 11. |           \-tidyselect:::eval_c(expr, data_mask, context_mask)
+ 12. |             \-tidyselect:::reduce_sels(node, data_mask, context_mask, init = init)
+ 13. |               \-tidyselect:::walk_data_tree(new, data_mask, context_mask)
+ 14. |                 \-tidyselect:::eval_c(expr, data_mask, context_mask)
+ 15. |                   \-tidyselect:::reduce_sels(node, data_mask, context_mask, init = init)
+ 16. |                     \-tidyselect:::walk_data_tree(new, data_mask, context_mask)
+ 17. |                       \-tidyselect:::as_indices_sel_impl(...)
+ 18. |                         \-tidyselect:::as_indices_impl(...)
+ 19. |                           \-tidyselect:::chr_as_locations(x, vars, call = call, arg = arg)
+ 20. |                             \-vctrs::vec_as_location(...)
+ 21. \-vctrs (local) `<fn>`()
+ 22.   \-vctrs:::stop_subscript_oob(...)
+ 23.     \-vctrs:::stop_subscript(...)
+ 24.       \-rlang::abort(...)
+Execution halted

@@ -23,7 +23,12 @@ priors_df <- args[11] |> read_csv()
 blast_db <- args[12]
 
 ## TEMPORARY OVERWRITE
-outDir <- tmpDir <- "/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/profilers/MetaScope_blast/troubleshoot"
+# outDir <- tmpDir <- "/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot"
+
+outDir <- tmpDir <- file.path("/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot", expTag)
+dir.create(tmpDir, showWarnings = FALSE)
+dir.create(outDir, showWarnings = FALSE)
+
 
 # Using bt2 params
 bt2_params <- "--local -R 2 -N 0 -L 25 -i S,1,0.75 -k 9 --score-min L,0,1.7"
