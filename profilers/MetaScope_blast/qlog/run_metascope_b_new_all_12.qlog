@@ -1,0 +1,2856 @@
+==========================================================
+Start date : Tue Oct 21 01:28:37 EDT 2025
+Job name : m_blast_new
+Job ID : 12
+==========================================================
+Task ID: 12
+Data Directory: 
+Sample Name: healthy_stool_100_50_noerr
+Sample Type: mess_sample_100k_noerr
+R1 Read Path: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/MeSS_out_noerr/fastq/mess_sample_100k_noerr/healthy_stool_100_50_noerr_R1.fq.gz
+R2 Read Path: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/MeSS_out_noerr/fastq/mess_sample_100k_noerr/healthy_stool_100_50_noerr_R2.fq.gz
+Rows: 840 Columns: 2
+-- Column specification --------------------------------------------------------
+Delimiter: ","
+chr (1): species
+dbl (1): tax_abundance
+
+i Use `spec()` to retrieve the full column specification for this data.
+i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Attempting to perform Bowtie2 alignment on bacteria index
+[1] "Samtools found on system. Using samtools to create bam file"
+arguments 'show.output.on.console', 'minimized' and 'invisible' are for Windows only
+99867 reads; of these:
+  99867 (100.00%) were paired; of these:
+    27601 (27.64%) aligned concordantly 0 times
+    65067 (65.15%) aligned concordantly exactly 1 time
+    7199 (7.21%) aligned concordantly >1 times
+    ----
+    27601 pairs aligned concordantly 0 times; of these:
+      2592 (9.39%) aligned discordantly 1 time
+    ----
+    25009 pairs aligned 0 times concordantly or discordantly; of these:
+      50018 mates make up the pairs; of these:
+        47477 (94.92%) aligned 0 times
+        1813 (3.62%) aligned exactly 1 time
+        728 (1.46%) aligned >1 times
+76.23% overall alignment rate
+Filtering unmapped reads
+Attempting to perform Bowtie2 alignment on fungi index
+[1] "Samtools found on system. Using samtools to create bam file"
+arguments 'show.output.on.console', 'minimized' and 'invisible' are for Windows only
+99867 reads; of these:
+  99867 (100.00%) were paired; of these:
+    99862 (99.99%) aligned concordantly 0 times
+    3 (0.00%) aligned concordantly exactly 1 time
+    2 (0.00%) aligned concordantly >1 times
+    ----
+    99862 pairs aligned concordantly 0 times; of these:
+      0 (0.00%) aligned discordantly 1 time
+    ----
+    99862 pairs aligned 0 times concordantly or discordantly; of these:
+      199724 mates make up the pairs; of these:
+        199719 (100.00%) aligned 0 times
+        5 (0.00%) aligned exactly 1 time
+        0 (0.00%) aligned >1 times
+0.01% overall alignment rate
+Filtering unmapped reads
+Attempting to perform Bowtie2 alignment on viral index
+[1] "Samtools found on system. Using samtools to create bam file"
+arguments 'show.output.on.console', 'minimized' and 'invisible' are for Windows only
+99867 reads; of these:
+  99867 (100.00%) were paired; of these:
+    99736 (99.87%) aligned concordantly 0 times
+    42 (0.04%) aligned concordantly exactly 1 time
+    89 (0.09%) aligned concordantly >1 times
+    ----
+    99736 pairs aligned concordantly 0 times; of these:
+      1 (0.00%) aligned discordantly 1 time
+    ----
+    99735 pairs aligned 0 times concordantly or discordantly; of these:
+      199470 mates make up the pairs; of these:
+        199461 (100.00%) aligned 0 times
+        5 (0.00%) aligned exactly 1 time
+        4 (0.00%) aligned >1 times
+0.14% overall alignment rate
+Filtering unmapped reads
+Library alignment complete
+Merging the bam files into healthy_stool_100_50_noerr.bam
+Merging .bam files
+samtools found on system. Merging with samtools.
+[E::sam_hrecs_error] Malformed key:value pair at line 1: "@HD	VN:1.0	SO:coordinate	"
+[E::sam_hrecs_error] Malformed key:value pair at line 1: "@HD	VN:1.0	SO:coordinate	"
+[E::sam_hrecs_error] Malformed key:value pair at line 1: "@HD	VN:1.0	SO:coordinate	"
+Sorting merged bam file
+DONE! Alignments written to /scratch/966874.12.linga/mess_sample_100k_noerr_tmp/healthy_stool_100_50_noerr.bam
+TARGET STEP COMPLETE
+Writing Intermediate FASTQ file to /scratch/966874.12.linga/mess_sample_100k_noerr_tmp/intermediate.fastq.gz
+  |                                                                              |                                                                      |   0%  |                                                                              |======================================================================| 100%
+Intermediate FASTQ file written to/scratch/966874.12.linga/mess_sample_100k_noerr_tmp/intermediate.fastq.gz
+Attempting to perform Bowtie2 alignment on human_mouse index
+[1] "Samtools found on system. Using samtools to create bam file"
+arguments 'show.output.on.console', 'minimized' and 'invisible' are for Windows only
+1 reads; of these:
+  1 (100.00%) were unpaired; of these:
+    1 (100.00%) aligned 0 times
+    0 (0.00%) aligned exactly 1 time
+    0 (0.00%) aligned >1 times
+0.00% overall alignment rate
+Attempting to perform Bowtie2 alignment on phix174 index
+[1] "Samtools found on system. Using samtools to create bam file"
+arguments 'show.output.on.console', 'minimized' and 'invisible' are for Windows only
+1 reads; of these:
+  1 (100.00%) were unpaired; of these:
+    1 (100.00%) aligned 0 times
+    0 (0.00%) aligned exactly 1 time
+    0 (0.00%) aligned >1 times
+0.00% overall alignment rate
+Removing reads mapped to host indices
+DONE! Alignments written to /scratch/966874.12.linga/mess_sample_100k_noerr_tmp//healthy_stool_100_50_noerr.filtered.bam
+FILTER STEP COMPLETE
+running id step
+Reading .bam file: /scratch/966874.12.linga/mess_sample_100k_noerr_tmp//healthy_stool_100_50_noerr.filtered.bam
+Setting up the EM algorithm
+	Found 2949 unique taxa
+Starting EM iterations
+1 901.322617869146
+2 7.35904149368444
+3 0.441747825232171
+4 0.343417039695146
+5 0.317257438505049
+6 0.322322183544482
+7 0.263342959702785
+8 0.167564882788649
+9 0.133195325255946
+10 0.113956380559899
+11 0.077381002807238
+12 0.0428960495368604
+13 0.0207453051967323
+14 0.00978998929903685
+15 0.00853824548789808
+16 0.00859930010117365
+17 0.00865581947421267
+18 0.0087076797798337
+19 0.00875476640926132
+20 0.008796974484824
+21 0.00883420933391864
+22 0.00886638692073864
+23 0.00889343423255017
+24 0.00891528961760849
+25 0.00893190307214944
+26 0.00894323647426807
+27 0.00894926376288094
+28 0.00894997106040006
+29 0.00894535673816146
+30 0.00893543142410786
+31 0.00892021795265992
+32 0.00889975125716991
+33 0.00887407820578743
+34 0.00884325738200485
+35 0.00880735881157109
+36 0.00876646363786284
+37 0.00872066374818018
+38 0.00867006135378577
+39 0.00861476852682765
+40 0.00855490669757268
+41 0.00849060611561992
+42 0.00842200527899281
+43 0.00841365171464668
+44 0.00847723016629061
+45 0.00853644828118445
+46 0.00859117890016439
+47 0.00864130342297235
+48 0.00868671232482467
+49 0.00872730563857652
+50 0.00876299339904266
+51 0.00879369604627081
+52 0.0088193447848355
+53 0.00883988189651127
+54 0.00885526100401416
+55 0.00886544728385013
+56 0.00887041762667582
+57 0.00887016074397054
+58 0.00886467722021732
+59 0.00885397951019479
+60 0.0088380918814074
+61 0.00881705030208102
+62 0.00879090227557251
+63 0.00875970662243243
+64 0.00872353321175
+65 0.0086824626437802
+66 0.00863658588619799
+67 0.00858600386664585
+68 0.00853082702454181
+69 0.00847117482537199
+70 0.00840717524092643
+71 0.0083389641991321
+72 0.00826668500729433
+73 0.00819048775267973
+74 0.00811052868445647
+75 0.00802696958105212
+76 0.007939977106998
+77 0.00784972216329317
+78 0.00775637923526615
+79 0.00766012574180083
+80 0.00756114138967322
+81 0.00745960753657874
+82 0.00735570656624656
+83 0.00724962127882822
+84 0.00714153429951552
+85 0.00703162750809845
+86 0.00692008149191247
+87 0.00680707502435264
+88 0.00669278457085578
+89 0.00657738382397192
+90 0.00646104326885925
+91 0.00634392978026608
+92 0.00622620625177898
+93 0.00610803125786028
+94 0.00598955874893523
+95 0.00587093777954687
+96 0.00575231226937097
+97 0.0056338207966621
+98 0.00551559642351205
+99 0.00539776655211569
+100 0.00528045281108221
+DONE! Converged in 100 iterations.
+Found reads for 371 genomes
+Results written to /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/outputs_new_all/mess_sample_100k_noerr/healthy_stool_100_50_noerr.metascope_id.csv
+No coverage plots created
+There were 50 or more warnings (use warnings() to see the first 50)
+running MetaBlast
+Sorting bam file to /scratch/966874.12.linga/mess_sample_100k_noerr_tmp//healthy_stool_100_50_noerr_sorted.bam
+Generating fasta sequences from bam file
+BLASTN executable found on system.
+Running BLASTN on all sequences
+Running BLAST metrics on all blast results
+Results written to /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/outputs_new_all/mess_sample_100k_noerr/healthy_stool_100_50_noerr.metascope_blast.csv
+    TaxonomyID                                           Genome read_count
+1       435590                             Phocaeicola vulgatus       9690
+2       537011                                  Segatella copri       8450
+3       411479                            Bacteroides uniformis       6039
+4       515619                            Agathobacter rectalis       3287
+5       411903                          Collinsella aerofaciens       2060
+6       445970                             Alistipes putredinis       2037
+7       367928                     Bifidobacterium adolescentis       1934
+8        28116                               Bacteroides ovatus       1889
+9      1150298                  Fusicatenibacter saccharivorans       1653
+10      449673                            Bacteroides stercoris       1586
+11      301302                                 Roseburia faecis       1537
+12      622312                          Roseburia inulinivorans       1418
+13      226186                     Bacteroides thetaiotaomicron       1389
+14      484018                             Phocaeicola plebeius       1369
+15      300267                             Shigella dysenteriae       1281
+16       40520                                    Blautia obeum       1258
+17      411462                                Dorea longicatena       1145
+18      349741                          Akkermansia muciniphila       1119
+19      206672                           Bifidobacterium longum       1026
+20       47678                               Bacteroides caccae       1025
+21      435591                       Parabacteroides distasonis       1024
+22      411469                           Anaerobutyricum hallii        999
+23      246787                     Bacteroides cellulosilyticus        974
+24      515620                              Lachnospira eligens        940
+25      649756                              Anaerostipes hadrus        922
+26      411474                             Coprococcus eutactus        907
+27      536231                           Roseburia intestinalis        889
+28      742726                     Barnesiella intestinihominis        830
+29      411460                           [Ruminococcus] torques        823
+30      295405                             Bacteroides fragilis        793
+31      585394                                Roseburia hominis        746
+32     1550024                  Ruthenibacterium lactatiformans        654
+33      511680                            Eshraghiella crossota        585
+34     1002367                                Leyella stercorea        559
+35      868129                                 Prevotella bivia        512
+36      745368                              Gemmiger formicilis        510
+37      709991                         Odoribacter splanchnicus        508
+38      679935                             Alistipes finegoldii        502
+39      717959                                 Alistipes shahii        498
+40     1384063                        Mediterraneibacter gnavus        428
+41     1501391                                  Alistipes inops        428
+42      411483                       Faecalibacterium duncaniae        422
+43      470145                            Phocaeicola coprocola        406
+44      411461                            Dorea formicigenerans        383
+45      266264                        Cupriavidus metallidurans        376
+46     1121101                           Bacteroides salyersiae        376
+47     1051074                       Streptococcus thermophilus        369
+48     1282887                            Lachnospira multipara        352
+49      471875                          [Ruminococcus] lactaris        352
+50     1384484                      Adlercreutzia equolifaciens        351
+51      292800                           Flavonifractor plautii        330
+52      518637                            Holdemanella biformis        305
+53      626939              Phascolarctobacterium succinatutens        293
+54        1304                         Streptococcus salivarius        285
+55      762966                 Parasutterella excrementihominis        284
+56     1256908                              Eubacterium ramulus        282
+57      198214                                Shigella flexneri        261
+58      702459                          Bifidobacterium bifidum        255
+59      762982                       Paraprevotella xylaniphila        255
+60      445973                       Intestinibacter bartlettii        247
+61      518635                        Bifidobacterium angulatum        234
+62           0     unknown genome; accession ID isNZ_GG662014.1        204
+63      411463                           Eubacterium ventriosum        201
+64           0     unknown genome; accession ID isNZ_GG662007.1        198
+65     1069534                        Ligilactobacillus ruminis        192
+66      657308                          Gordonibacter pamelaeae        192
+67      568816                        Acidaminococcus intestini        181
+68     1122992                            Hoylesella timonensis        178
+69      999419                        Parabacteroides johnsonii        177
+70      592028                                Dialister invisus        172
+71     1122981                              Prevotella corporis        169
+72      479437                                Eggerthella lenta        164
+73      760570                      Streptococcus parasanguinis        158
+74      333849                             Enterococcus faecium        146
+75      679190                              Hoylesella buccalis        143
+76     1235811                               Prevotella disiens        131
+77      479436                              Veillonella parvula        113
+78     1458465                             Megasphaera elsdenii         90
+79      537007                                 Blautia hansenii         87
+80         901                              Desulfovibrio piger         80
+81           0     unknown genome; accession ID isNZ_GG662012.1         75
+82      742740                          [Clostridium] symbiosum         72
+83           0 unknown genome; accession ID isNZ_BBDW01000003.1         71
+84           0     unknown genome; accession ID isNZ_GG662006.1         70
+85           0     unknown genome; accession ID isNZ_GG662013.1         61
+86           0     unknown genome; accession ID isNZ_GG662010.1         58
+87           0     unknown genome; accession ID isNZ_GG662008.1         53
+88      196242                           Marienburgvirus BP4795         42
+89       39482                           Faecalicatena contorta         40
+90      997884                               Bacteroides nordii         35
+91      334413                                 Finegoldia magna         33
+92           0     unknown genome; accession ID isNZ_GG662011.1         28
+93      763034                               Bacteroides fluxus         21
+94     2681611                               Lambdavirus lambda         19
+95           0 unknown genome; accession ID isNZ_ACCK01000411.1         17
+96      411467                  Pseudoflavonifractor capillosus         17
+97      585502                               Hallella bergensis         17
+98       97081                                  Traversvirus II         17
+99      547042                          Phocaeicola coprophilus         16
+100     564886                              Pankowvirus YYZ2008         16
+101     518634                            Bifidobacterium breve         15
+102     566550                             Hungatella hathewayi         15
+103    1121094                            Phocaeicola barnesiae         13
+104    1776384                            Emergencia timonensis         13
+105      68895                           Cupriavidus basilensis         12
+106          0 unknown genome; accession ID isNZ_ACCK01000024.1         12
+107     667015                         Phocaeicola salanitronis         12
+108          0 unknown genome; accession ID isNZ_ACCK01000438.1         11
+109          0 unknown genome; accession ID isNZ_ACCK01000043.1         10
+110          0 unknown genome; accession ID isNZ_ACCK01000410.1          9
+111          0 unknown genome; accession ID isNZ_ACCK01000080.1          9
+112          0 unknown genome; accession ID isNZ_ACCK01000033.1          9
+113          0 unknown genome; accession ID isNZ_ACCK01000021.1          9
+114    1121323                   Anaerotignum lactatifermentans          9
+115     445972                        Anaerotruncus colihominis          9
+116    1236513                     Bacteroides faecichinchillae          9
+117    1841857                         Culturomica massiliensis          9
+118    1841865                        Mediterranea massiliensis          9
+119    1150423                          Bifidobacterium dentium          8
+120    1211819                          Holdemania massiliensis          8
+121    1650661                           Clostridium phoceensis          8
+122    1123313                        Faecalicoccus pleomorphus          7
+123          0 unknown genome; accession ID isNZ_ACCK01000460.1          7
+124          0 unknown genome; accession ID isNZ_ACCK01000418.1          7
+125          0 unknown genome; accession ID isNZ_ACCK01000409.1          7
+126          0 unknown genome; accession ID isNZ_ACCK01000069.1          7
+127          0 unknown genome; accession ID isNZ_ACCK01000066.1          7
+128          0 unknown genome; accession ID isNZ_ACCK01000065.1          7
+129          0 unknown genome; accession ID isNZ_ACCK01000034.1          7
+130          0 unknown genome; accession ID isNZ_ACCK01000006.1          7
+131     888743                           Prevotella multiformis          7
+132     742733                          Enterocloster citroniae          7
+133    1437610                          Bifidobacterium reuteri          7
+134     214092                                  Yersinia pestis          6
+135     428127                           Amedibacillus dolichus          6
+136          0 unknown genome; accession ID isNZ_ACCK01000447.1          6
+137          0 unknown genome; accession ID isNZ_ACCK01000407.1          6
+138          0 unknown genome; accession ID isNZ_ACCK01000075.1          6
+139          0 unknown genome; accession ID isNZ_ACCK01000073.1          6
+140     478749                     Marvinbryantia formatexigens          6
+141          0 unknown genome; accession ID isNZ_JNKJ01000020.1          6
+142          0     unknown genome; accession ID isNZ_GG662009.1          6
+143    1445607                     Bacteroides reticulotermitis          6
+144    1033732                           Alistipes senegalensis          6
+145    1041607                         Wickerhamomyces ciferrii          6
+146    1567486                                  Xuanwuvirus P88          6
+147    1218112                            Kluyvera cryocrescens          5
+148     272563                         Clostridioides difficile          5
+149      28141                            Cronobacter sakazakii          5
+150     476272                        Blautia hydrogenotrophica          5
+151          0 unknown genome; accession ID isNZ_ACCK01000471.1          5
+152          0 unknown genome; accession ID isNZ_ACCK01000444.1          5
+153          0 unknown genome; accession ID isNZ_ACCK01000408.1          5
+154          0 unknown genome; accession ID isNZ_ACCK01000079.1          5
+155          0 unknown genome; accession ID isNZ_ACCK01000037.1          5
+156          0 unknown genome; accession ID isNZ_ACCK01000020.1          5
+157          0 unknown genome; accession ID isNZ_ACCK01000012.1          5
+158          0 unknown genome; accession ID isNZ_ACCK01000007.1          5
+159    1158614                              Enterococcus gilvus          5
+160    1841868                    Provencibacterium massiliense          5
+161      36847                      Anaerotignum neopropionicum          4
+162    1044999                             Erwinia tracheiphila          4
+163          0 unknown genome; accession ID isNZ_ACCK01000449.1          4
+164          0 unknown genome; accession ID isNZ_ACCK01000440.1          4
+165          0 unknown genome; accession ID isNZ_ACCK01000421.1          4
+166          0 unknown genome; accession ID isNZ_ACCK01000076.1          4
+167          0 unknown genome; accession ID isNZ_ACCK01000038.1          4
+168          0 unknown genome; accession ID isNZ_ACCK01000036.1          4
+169     299766                          Enterobacter hormaechei          4
+170    1437607                          Bifidobacterium saguini          4
+171    1547597                     Sanguibacteroides justesenii          4
+172    1917878                                Prevotella ihumii          4
+173     414970                        Enterobacteria phage cdtI          4
+174          0     unknown genome; accession ID isNZ_DS480350.1          3
+175    1410657                               Kandleria vitulina          3
+176     411468                           [Clostridium] scindens          3
+177    1121114                                 Blautia producta          3
+178    1006000                               Kluyvera ascorbata          3
+179      82983                          Obesumbacterium proteus          3
+180          0 unknown genome; accession ID isNZ_ACCK01000459.1          3
+181          0 unknown genome; accession ID isNZ_ACCK01000451.1          3
+182          0 unknown genome; accession ID isNZ_ACCK01000443.1          3
+183          0 unknown genome; accession ID isNZ_ACCK01000442.1          3
+184          0 unknown genome; accession ID isNZ_ACCK01000441.1          3
+185          0 unknown genome; accession ID isNZ_ACCK01000406.1          3
+186          0 unknown genome; accession ID isNZ_ACCK01000400.1          3
+187          0 unknown genome; accession ID isNZ_ACCK01000308.1          3
+188          0 unknown genome; accession ID isNZ_ACCK01000072.1          3
+189          0 unknown genome; accession ID isNZ_ACCK01000071.1          3
+190          0 unknown genome; accession ID isNZ_ACCK01000059.1          3
+191          0 unknown genome; accession ID isNZ_ACCK01000057.1          3
+192          0 unknown genome; accession ID isNZ_ACCK01000055.1          3
+193          0 unknown genome; accession ID isNZ_ACCK01000054.1          3
+194          0 unknown genome; accession ID isNZ_ACCK01000039.1          3
+195          0 unknown genome; accession ID isNZ_ACCK01000027.1          3
+196          0 unknown genome; accession ID isNZ_ACCK01000015.1          3
+197    1122987                                Prevotella micans          3
+198    1300165                                Kosakonia cowanii          3
+199     997894                            Enterocloster bolteae          3
+200     411471                        Subdoligranulum variabile          3
+201    1122991                                Hoylesella shahii          3
+202     888832                                Segatella salivae          3
+203     290052                       Acetivibrio ethanolgignens          3
+204     927665                      Parabacteroides goldsteinii          3
+205    1427517                         Xenorhabdus cabanillasii          3
+206     880074                          Barnesiella viscericola          3
+207    1122988                           Hoylesella nanceiensis          3
+208          0 unknown genome; accession ID isNZ_BBDW01000018.1          3
+209     626937                           Christensenella minuta          3
+210    1650663                    Allofournierella massiliensis          3
+211    1852370                    Prevotellamassilia timonensis          3
+212    1871021                     Lachnoclostridium phocaeense          3
+213    1227346                            Fusarium proliferatum          3
+214     194948                Escherichia Stx1 converting phage          3
+215    1590550                                  Punavirus RCS47          3
+216     431947                         Porphyromonas gingivalis          2
+217    1035196                    Peptostreptococcus anaerobius          2
+218    1291050                          Ruminiclostridium josui          2
+219          0     unknown genome; accession ID isNZ_KB850943.1          2
+220      99287                              Salmonella enterica          2
+221     525254                        Anaerococcus lactolyticus          2
+222      78344                         Bifidobacterium pullorum          2
+223          0 unknown genome; accession ID isNZ_ACCK01000469.1          2
+224          0 unknown genome; accession ID isNZ_ACCK01000461.1          2
+225          0 unknown genome; accession ID isNZ_ACCK01000416.1          2
+226          0 unknown genome; accession ID isNZ_ACCK01000403.1          2
+227          0 unknown genome; accession ID isNZ_ACCK01000402.1          2
+228          0 unknown genome; accession ID isNZ_ACCK01000078.1          2
+229          0 unknown genome; accession ID isNZ_ACCK01000074.1          2
+230          0 unknown genome; accession ID isNZ_ACCK01000064.1          2
+231          0 unknown genome; accession ID isNZ_ACCK01000058.1          2
+232          0 unknown genome; accession ID isNZ_ACCK01000052.1          2
+233          0 unknown genome; accession ID isNZ_ACCK01000047.1          2
+234          0 unknown genome; accession ID isNZ_ACCK01000029.1          2
+235          0 unknown genome; accession ID isNZ_ACCK01000016.1          2
+236          0 unknown genome; accession ID isNZ_ACCK01000010.1          2
+237          0 unknown genome; accession ID isNZ_ACCK01000002.1          2
+238    1122131                                  Kaistia adipata          2
+239          0 unknown genome; accession ID isNZ_JNKJ01000044.1          2
+240     208224                               Enterobacter kobei          2
+241     871963             Desulfitobacterium dichloroeliminans          2
+242     319939                         Metapseudomonas otitidis          2
+243     334735                           Sporosarcina koreensis          2
+244     379893                      Trabulsiella odontotermitis          2
+245     742743                        Dialister succinatiphilus          2
+246          0 unknown genome; accession ID isNZ_BBDW01000006.1          2
+247          0 unknown genome; accession ID isNZ_BBDW01000012.1          2
+248          0 unknown genome; accession ID isNZ_BBDW01000019.1          2
+249     742817                               Odoribacter laneus          2
+250    1160721 Ruminococcus bicirculans (ex Wegman et al. 2014)          2
+251          0 unknown genome; accession ID isNZ_JTDA01000005.1          2
+252    1745713                         Bariatricus massiliensis          2
+253    1907654                   Collinsella bouchesdurhonensis          2
+254     563769                               Pankowvirus pv1717          2
+255     553178                        Capnocytophaga gingivalis          1
+256       1377                              Aerococcus viridans          1
+257    1121296                        [Clostridium] aminophilum          1
+258       1601                         Ligilactobacillus agilis          1
+259    1447715                     Bifidobacterium pseudolongum          1
+260    1122973                              Porphyromonas levii          1
+261     997352                            Prevotella nigrescens          1
+262     873533                                Hoylesella oralis          1
+263          0 unknown genome; accession ID isNZ_BAJQ01000018.1          1
+264          0 unknown genome; accession ID isNZ_BAJQ01000009.1          1
+265    1122993                             Prevotella veroralis          1
+266     880526                             Rikenella microfusus          1
+267     428126                       Thomasclavelia spiroformis          1
+268    1408428                            Bilophila wadsworthia          1
+269     565655                       Enterococcus casseliflavus          1
+270    1408437                          Agathobaculum desmolans          1
+271    1242245                          Acinetobacter johnsonii          1
+272    3158780                           Ruminococcus sp. YE282          1
+273     411473                            Ruminococcus callidus          1
+274     641143                         Capnocytophaga granulosa          1
+275    1302863                          Streptococcus cristatus          1
+276          0 unknown genome; accession ID isNZ_LSLJ01000002.1          1
+277    1171377                           Bibersteinia trehalosi          1
+278     908937                              Prevotella dentalis          1
+279    1300150                             Enterococcus mundtii          1
+280    1245471                     Metapseudomonas resinovorans          1
+281     997353                               Prevotella pallens          1
+282      61647                          Pluralibacter gergoviae          1
+283    1125702                              Treponema vincentii          1
+284     626522                          Alloprevotella tannerae          1
+285      79604                    Denitrobacterium detoxificans          1
+286      82633                             Cupriavidus pauculus          1
+287          0     unknown genome; accession ID isNZ_EQ973339.1          1
+288          0     unknown genome; accession ID isNZ_KB822493.1          1
+289          0 unknown genome; accession ID isNZ_ACCK01000475.1          1
+290          0 unknown genome; accession ID isNZ_ACCK01000467.1          1
+291          0 unknown genome; accession ID isNZ_ACCK01000446.1          1
+292          0 unknown genome; accession ID isNZ_ACCK01000445.1          1
+293          0 unknown genome; accession ID isNZ_ACCK01000433.1          1
+294          0 unknown genome; accession ID isNZ_ACCK01000427.1          1
+295          0 unknown genome; accession ID isNZ_ACCK01000425.1          1
+296          0 unknown genome; accession ID isNZ_ACCK01000424.1          1
+297          0 unknown genome; accession ID isNZ_ACCK01000423.1          1
+298          0 unknown genome; accession ID isNZ_ACCK01000419.1          1
+299          0 unknown genome; accession ID isNZ_ACCK01000415.1          1
+300          0 unknown genome; accession ID isNZ_ACCK01000401.1          1
+301          0 unknown genome; accession ID isNZ_ACCK01000398.1          1
+302          0 unknown genome; accession ID isNZ_ACCK01000068.1          1
+303          0 unknown genome; accession ID isNZ_ACCK01000062.1          1
+304          0 unknown genome; accession ID isNZ_ACCK01000061.1          1
+305          0 unknown genome; accession ID isNZ_ACCK01000051.1          1
+306          0 unknown genome; accession ID isNZ_ACCK01000045.1          1
+307          0 unknown genome; accession ID isNZ_ACCK01000044.1          1
+308          0 unknown genome; accession ID isNZ_ACCK01000032.1          1
+309          0 unknown genome; accession ID isNZ_ACCK01000019.1          1
+310          0 unknown genome; accession ID isNZ_ACCK01000014.1          1
+311          0 unknown genome; accession ID isNZ_ACCK01000013.1          1
+312          0 unknown genome; accession ID isNZ_ACCK01000009.1          1
+313          0 unknown genome; accession ID isNZ_ACCK01000003.1          1
+314          0 unknown genome; accession ID isNZ_ACCK01000001.1          1
+315     411490                              Anaerostipes caccae          1
+316          0     unknown genome; accession ID isNZ_CM001167.1          1
+317     911023                           Yokenella regensburgei          1
+318     525263                  Corynebacterium lipophiloflavum          1
+319          0 unknown genome; accession ID isNZ_JNKJ01000018.1          1
+320          0 unknown genome; accession ID isNZ_JNKJ01000045.1          1
+321    1121950                           Hespellia stercorisuis          1
+322     862515                               Hoylesella marshii          1
+323     225992                             Comamonas kerstersii          1
+324     258723                Marinilactibacillus piezotolerans          1
+325    1121024                               Atopococcus tabaci          1
+326     322095                            Porphyromonas somerae          1
+327    1410674                               Sharpea azabuensis          1
+328     327277                      Bifidobacterium crudilactis          1
+329     518636                     Enterocloster asparagiformis          1
+330          0 unknown genome; accession ID isNZ_BBAB01000016.1          1
+331          0 unknown genome; accession ID isNZ_BBAB01000036.1          1
+332          0 unknown genome; accession ID isNZ_BBAB01000038.1          1
+333          0 unknown genome; accession ID isNZ_BBAB01000055.1          1
+334    1122228                            Alloscardovia criceti          1
+335    1388748                           Siccibacter turicensis          1
+336     875093                     Streptococcus pseudoporcinus          1
+337    1121275                          Chitinilyticum aquatile          1
+338          0     unknown genome; accession ID isNZ_GG662015.1          1
+339     467210                    Lachnoanaerobaculum saburreum          1
+340          0 unknown genome; accession ID isNZ_BAJX01000031.1          1
+341          0 unknown genome; accession ID isNZ_BAJX01000028.1          1
+342    1121129                       Butyricimonas synergistica          1
+343    1121866                         Adlercreutzia mucosicola          1
+344          0 unknown genome; accession ID isNZ_BBDW01000002.1          1
+345          0 unknown genome; accession ID isNZ_BBDW01000024.1          1
+346     604330                         Parafannyhessea umbonata          1
+347     742818                               Slackia piriformis          1
+348     796334                                    Erwinia oleae          1
+349     796942                            Stomatobaculum longum          1
+350    1349822                          Coprobacter fastidiosus          1
+351    2585118                               Alistipes communis          1
+352    1129897                           Nitrolancea hollandica          1
+353     701347                      [Enterobacter] lignolyticus          1
+354    1348253                          Microbacterium mangrovi          1
+355          0 unknown genome; accession ID isNZ_JTDA01000001.1          1
+356    1653435                                Merdimonas faecis          1
+357    1723382                         Urinicoccus massiliensis          1
+358     667120                         Edwardsiella anguillarum          1
+359    2897707                            Merdimmobilis hominis          1
+360    1852362                                Bacteroides ihuae          1
+361    1870997                   Alterileibacterium massiliense          1
+362    1944646                       Phoenicibacter congonensis          1
+363          0    unknown genome; accession ID isNW_002479145.1          1
+364    2681618                            Shamshuipovirus HK022          1
+365    2681626                             Brussowvirus bvO1205          1
+366     379329                                Traversvirus tv86          1
+367     929814                              Felsduovirus RE2010          1
+368    1150869                                  Oslovirus ov191          1
+369    1660368                                Traversvirus PA28          1
+370     432201                             Kwaitsingvirus HK544          1
+371    1815968                                   Punavirus SJ46          1
+      Proportion readsEM EMProportion domain                  phylum
+1   1.254889e-01  9503.6 1.230762e-01      0            Bacteroidota
+2   1.094304e-01  8448.3 1.094099e-01      0            Bacteroidota
+3   7.820715e-02  6143.5 7.956107e-02      0            Bacteroidota
+4   4.256780e-02  3270.0 4.234760e-02      0               Bacillota
+5   2.667772e-02  2058.7 2.666059e-02      0          Actinomycetota
+6   2.637986e-02  2025.4 2.622995e-02      0            Bacteroidota
+7   2.504597e-02  1941.2 2.513930e-02      0          Actinomycetota
+8   2.446321e-02  1889.5 2.447053e-02      0            Bacteroidota
+9   2.140693e-02  1649.9 2.136707e-02      0               Bacillota
+10  2.053925e-02  1585.4 2.053143e-02      0            Bacteroidota
+11  1.990469e-02  1552.8 2.010906e-02      0               Bacillota
+12  1.836359e-02  1303.7 1.688311e-02      0               Bacillota
+13  1.798803e-02  1408.3 1.823850e-02      0            Bacteroidota
+14  1.772903e-02  1365.7 1.768698e-02      0            Bacteroidota
+15  1.658940e-02  1225.9 1.587557e-02      0          Pseudomonadota
+16  1.629154e-02  1265.9 1.639351e-02      0               Bacillota
+17  1.482815e-02  1137.3 1.472857e-02      0               Bacillota
+18  1.449144e-02  1119.0 1.449163e-02      0       Verrucomicrobiota
+19  1.328706e-02  1015.9 1.315585e-02      0          Actinomycetota
+20  1.327411e-02  1036.2 1.341989e-02      0            Bacteroidota
+21  1.326116e-02  1033.6 1.338509e-02      0            Bacteroidota
+22  1.293740e-02  1017.7 1.318008e-02      0               Bacillota
+23  1.261364e-02   981.0 1.270490e-02      0            Bacteroidota
+24  1.217333e-02   932.9 1.208093e-02      0               Bacillota
+25  1.194022e-02   923.3 1.195685e-02      0               Bacillota
+26  1.174597e-02   906.3 1.173654e-02      0               Bacillota
+27  1.151286e-02   905.5 1.172650e-02      0               Bacillota
+28  1.074879e-02   803.8 1.040911e-02      0            Bacteroidota
+29  1.065814e-02   825.1 1.068572e-02      0               Bacillota
+30  1.026963e-02   799.5 1.035371e-02      0            Bacteroidota
+31  9.660960e-03   753.0 9.751662e-03      0               Bacillota
+32  8.469528e-03   655.4 8.488123e-03      0               Bacillota
+33  7.575954e-03   596.4 7.723250e-03      0               Bacillota
+34  7.239245e-03   536.3 6.945467e-03      0            Bacteroidota
+35  6.630578e-03   510.1 6.606146e-03      0            Bacteroidota
+36  6.604678e-03   516.9 6.693964e-03      0               Bacillota
+37  6.578777e-03   508.3 6.583209e-03      0            Bacteroidota
+38  6.501075e-03   522.0 6.760740e-03      0            Bacteroidota
+39  6.449273e-03   486.3 6.298233e-03      0            Bacteroidota
+40  5.542749e-03   429.7 5.564932e-03      0               Bacillota
+41  5.542749e-03   428.0 5.542821e-03      0            Bacteroidota
+42  5.465047e-03   413.0 5.348787e-03      0               Bacillota
+43  5.257841e-03   428.6 5.550969e-03      0            Bacteroidota
+44  4.959983e-03   399.6 5.175129e-03      0               Bacillota
+45  4.869331e-03   375.8 4.867154e-03      0          Pseudomonadota
+46  4.869331e-03   372.3 4.821234e-03      0            Bacteroidota
+47  4.778679e-03   367.0 4.753165e-03      0               Bacillota
+48  4.558523e-03   352.2 4.560899e-03      0               Bacillota
+49  4.558523e-03   363.7 4.710662e-03      0               Bacillota
+50  4.545572e-03   351.0 4.545630e-03      0          Actinomycetota
+51  4.273615e-03   331.0 4.286799e-03      0               Bacillota
+52  3.949856e-03   308.9 4.000169e-03      0               Bacillota
+53  3.794452e-03   293.3 3.798616e-03      0               Bacillota
+54  3.690849e-03   287.0 3.716399e-03      0               Bacillota
+55  3.677899e-03   284.1 3.679545e-03      0          Pseudomonadota
+56  3.651998e-03   285.4 3.696275e-03      0               Bacillota
+57  3.380041e-03   309.1 4.003301e-03      0          Pseudomonadota
+58  3.302339e-03   255.0 3.302422e-03      0          Actinomycetota
+59  3.302339e-03   256.1 3.316098e-03      0            Bacteroidota
+60  3.198736e-03   247.1 3.200140e-03      0               Bacillota
+61  3.030382e-03   219.3 2.840377e-03      0          Actinomycetota
+62  2.641871e-03   203.8 2.639319e-03      0                       0
+63  2.603020e-03   200.1 2.590991e-03      0               Bacillota
+64  2.564169e-03   197.8 2.561633e-03      0                       0
+65  2.486467e-03   192.5 2.493085e-03      0               Bacillota
+66  2.486467e-03   191.3 2.477017e-03      0          Actinomycetota
+67  2.344013e-03   180.4 2.336319e-03      0               Bacillota
+68  2.305162e-03   185.9 2.407524e-03      0            Bacteroidota
+69  2.292212e-03   179.3 2.322312e-03      0            Bacteroidota
+70  2.227460e-03   172.0 2.227489e-03      0               Bacillota
+71  2.188609e-03   168.3 2.179710e-03      0            Bacteroidota
+72  2.123857e-03   164.0 2.123913e-03      0          Actinomycetota
+73  2.046155e-03   157.7 2.042727e-03      0               Bacillota
+74  1.890751e-03   145.1 1.878982e-03      0               Bacillota
+75  1.851900e-03   142.6 1.846104e-03      0            Bacteroidota
+76  1.696496e-03   135.5 1.755257e-03      0            Bacteroidota
+77  1.463389e-03   113.0 1.463408e-03      0               Bacillota
+78  1.165531e-03    90.5 1.171765e-03      0               Bacillota
+79  1.126680e-03    83.0 1.075494e-03      0               Bacillota
+80  1.036028e-03    80.0 1.036041e-03      0 Thermodesulfobacteriota
+81  9.712761e-04    75.3 9.748106e-04      0                       0
+82  9.324251e-04    74.3 9.619982e-04      0               Bacillota
+83  9.194747e-04    60.7 7.862613e-04      0                       0
+84  9.065244e-04    69.9 9.050309e-04      0                       0
+85  7.899713e-04    61.0 7.900166e-04      0                       0
+86  7.511202e-04    58.0 7.512897e-04      0                       0
+87  6.863685e-04    53.0 6.865020e-04      0                       0
+88  5.439146e-04    33.0 4.268752e-04      0             Uroviricota
+89  5.180139e-04    48.3 6.249362e-04      0               Bacillota
+90  4.532622e-04    37.0 4.792490e-04      0            Bacteroidota
+91  4.273615e-04    32.9 4.260245e-04      0               Bacillota
+92  3.626098e-04    28.0 3.631319e-04      0                       0
+93  2.719573e-04    21.1 2.726087e-04      0            Bacteroidota
+94  2.460566e-04    16.3 2.114269e-04      0             Uroviricota
+95  2.201559e-04    17.0 2.201588e-04      0                       0
+96  2.201559e-04    23.0 2.978141e-04      0               Bacillota
+97  2.201559e-04    14.8 1.915074e-04      0            Bacteroidota
+98  2.201559e-04    17.4 2.257086e-04      0             Uroviricota
+99  2.072056e-04    39.9 5.166233e-04      0            Bacteroidota
+100 2.072056e-04    13.1 1.690687e-04      0             Uroviricota
+101 1.942552e-04    21.0 2.716528e-04      0          Actinomycetota
+102 1.942552e-04    15.4 1.998180e-04      0               Bacillota
+103 1.683545e-04    11.3 1.467674e-04      0            Bacteroidota
+104 1.683545e-04    14.0 1.819543e-04      0               Bacillota
+105 1.554042e-04    12.0 1.554062e-04      0          Pseudomonadota
+106 1.554042e-04    12.0 1.554062e-04      0                       0
+107 1.554042e-04     9.6 1.244184e-04      0            Bacteroidota
+108 1.424538e-04    11.0 1.424557e-04      0                       0
+109 1.295035e-04    10.0 1.295052e-04      0                       0
+110 1.165531e-04     9.0 1.165546e-04      0                       0
+111 1.165531e-04     9.0 1.165546e-04      0                       0
+112 1.165531e-04     9.0 1.165546e-04      0                       0
+113 1.165531e-04     9.0 1.165546e-04      0                       0
+114 1.165531e-04     8.6 1.119973e-04      0               Bacillota
+115 1.165531e-04    13.7 1.776553e-04      0               Bacillota
+116 1.165531e-04     9.0 1.161212e-04      0            Bacteroidota
+117 1.165531e-04    30.7 3.974732e-04      0            Bacteroidota
+118 1.165531e-04     8.4 1.089305e-04      0            Bacteroidota
+119 1.036028e-04    17.0 2.200666e-04      0          Actinomycetota
+120 1.036028e-04     7.9 1.022730e-04      0               Bacillota
+121 1.036028e-04     8.0 1.036175e-04      0               Bacillota
+122 9.065244e-05     5.3 6.862769e-05      0               Bacillota
+123 9.065244e-05     7.0 9.065361e-05      0                       0
+124 9.065244e-05     7.0 9.065361e-05      0                       0
+125 9.065244e-05     7.0 9.065370e-05      0                       0
+126 9.065244e-05     7.0 9.065361e-05      0                       0
+127 9.065244e-05     7.0 9.065361e-05      0                       0
+128 9.065244e-05     7.0 9.065361e-05      0                       0
+129 9.065244e-05     7.0 9.065471e-05      0                       0
+130 9.065244e-05     7.0 9.065361e-05      0                       0
+131 9.065244e-05     9.2 1.195645e-04      0            Bacteroidota
+132 9.065244e-05     9.0 1.159993e-04      0               Bacillota
+133 9.065244e-05     7.0 9.068901e-05      0          Actinomycetota
+134 7.770209e-05     6.0 7.771183e-05      0          Pseudomonadota
+135 7.770209e-05     7.4 9.548959e-05      0               Bacillota
+136 7.770209e-05     6.0 7.770310e-05      0                       0
+137 7.770209e-05     6.0 7.770310e-05      0                       0
+138 7.770209e-05     6.0 7.770310e-05      0                       0
+139 7.770209e-05     6.0 7.770310e-05      0                       0
+140 7.770209e-05     5.7 7.430624e-05      0               Bacillota
+141 7.770209e-05     3.9 5.107948e-05      0                       0
+142 7.770209e-05     6.2 7.987394e-05      0                       0
+143 7.770209e-05     6.0 7.770579e-05      0            Bacteroidota
+144 7.770209e-05     6.0 7.775477e-05      0            Bacteroidota
+145 7.770209e-05     5.3 6.804594e-05      0              Ascomycota
+146 7.770209e-05     6.0 7.770310e-05      0             Uroviricota
+147 6.475174e-05     4.9 6.362883e-05      0          Pseudomonadota
+148 6.475174e-05     6.8 8.830890e-05      0               Bacillota
+149 6.475174e-05     6.4 8.352672e-05      0          Pseudomonadota
+150 6.475174e-05     4.3 5.626176e-05      0               Bacillota
+151 6.475174e-05     5.0 6.475258e-05      0                       0
+152 6.475174e-05     5.0 6.475258e-05      0                       0
+153 6.475174e-05     5.0 6.475258e-05      0                       0
+154 6.475174e-05     5.0 6.475258e-05      0                       0
+155 6.475174e-05     5.0 6.475258e-05      0                       0
+156 6.475174e-05     5.0 6.475258e-05      0                       0
+157 6.475174e-05     5.0 6.475520e-05      0                       0
+158 6.475174e-05     5.0 6.475258e-05      0                       0
+159 6.475174e-05     5.0 6.475258e-05      0               Bacillota
+160 6.475174e-05     6.5 8.386268e-05      0               Bacillota
+161 5.180139e-05     3.7 4.845634e-05      0               Bacillota
+162 5.180139e-05     4.0 5.180206e-05      0          Pseudomonadota
+163 5.180139e-05     4.0 5.180206e-05      0                       0
+164 5.180139e-05     4.0 5.180206e-05      0                       0
+165 5.180139e-05     4.0 5.180206e-05      0                       0
+166 5.180139e-05     4.0 5.180206e-05      0                       0
+167 5.180139e-05     4.0 5.180206e-05      0                       0
+168 5.180139e-05     4.0 5.180206e-05      0                       0
+169 5.180139e-05     3.6 4.617218e-05      0          Pseudomonadota
+170 5.180139e-05     4.0 5.180493e-05      0          Actinomycetota
+171 5.180139e-05     4.0 5.180609e-05      0            Bacteroidota
+172 5.180139e-05     4.0 5.183854e-05      0            Bacteroidota
+173 5.180139e-05     3.6 4.602430e-05      0             Uroviricota
+174 3.885105e-05     3.5 4.552843e-05      0                       0
+175 3.885105e-05     3.0 3.885158e-05      0               Bacillota
+176 3.885105e-05     2.7 3.475407e-05      0               Bacillota
+177 3.885105e-05     3.0 3.885450e-05      0               Bacillota
+178 3.885105e-05     4.7 6.151134e-05      0          Pseudomonadota
+179 3.885105e-05     3.1 4.044331e-05      0          Pseudomonadota
+180 3.885105e-05     3.0 3.885155e-05      0                       0
+181 3.885105e-05     3.0 3.885155e-05      0                       0
+182 3.885105e-05     3.0 3.885155e-05      0                       0
+183 3.885105e-05     3.0 3.885155e-05      0                       0
+184 3.885105e-05     3.0 3.885155e-05      0                       0
+185 3.885105e-05     3.0 3.884893e-05      0                       0
+186 3.885105e-05     3.0 3.885155e-05      0                       0
+187 3.885105e-05     3.0 3.885155e-05      0                       0
+188 3.885105e-05     3.0 3.885155e-05      0                       0
+189 3.885105e-05     3.0 3.885155e-05      0                       0
+190 3.885105e-05     3.0 3.885155e-05      0                       0
+191 3.885105e-05     3.0 3.885155e-05      0                       0
+192 3.885105e-05     3.0 3.885155e-05      0                       0
+193 3.885105e-05     3.0 3.885155e-05      0                       0
+194 3.885105e-05     3.0 3.885155e-05      0                       0
+195 3.885105e-05     3.0 3.885155e-05      0                       0
+196 3.885105e-05     3.0 3.885155e-05      0                       0
+197 3.885105e-05     1.9 2.414430e-05      0            Bacteroidota
+198 3.885105e-05     3.6 4.603724e-05      0          Pseudomonadota
+199 3.885105e-05     3.9 5.104824e-05      0               Bacillota
+200 3.885105e-05     3.0 3.891856e-05      0               Bacillota
+201 3.885105e-05     2.6 3.378778e-05      0            Bacteroidota
+202 3.885105e-05     4.0 5.169496e-05      0            Bacteroidota
+203 3.885105e-05     4.2 5.450672e-05      0               Bacillota
+204 3.885105e-05     3.0 3.937456e-05      0            Bacteroidota
+205 3.885105e-05     3.0 3.885155e-05      0          Pseudomonadota
+206 3.885105e-05     4.3 5.614804e-05      0            Bacteroidota
+207 3.885105e-05     3.0 3.885179e-05      0            Bacteroidota
+208 3.885105e-05     2.8 3.669741e-05      0                       0
+209 3.885105e-05     3.0 3.885360e-05      0               Bacillota
+210 3.885105e-05     3.0 3.885546e-05      0               Bacillota
+211 3.885105e-05     4.3 5.619105e-05      0            Bacteroidota
+212 3.885105e-05     3.0 3.885422e-05      0               Bacillota
+213 3.885105e-05     2.1 2.741678e-05      0              Ascomycota
+214 3.885105e-05    10.8 1.404350e-04      0             Uroviricota
+215 3.885105e-05     3.0 3.935618e-05      0             Uroviricota
+216 2.590070e-05     2.0 2.612139e-05      0            Bacteroidota
+217 2.590070e-05     2.2 2.894879e-05      0               Bacillota
+218 2.590070e-05     1.9 2.478744e-05      0               Bacillota
+219 2.590070e-05     4.2 5.425657e-05      0                       0
+220 2.590070e-05     2.5 3.266421e-05      0          Pseudomonadota
+221 2.590070e-05     1.8 2.267310e-05      0               Bacillota
+222 2.590070e-05     2.8 3.620174e-05      0          Actinomycetota
+223 2.590070e-05     2.0 2.590103e-05      0                       0
+224 2.590070e-05     2.0 2.590103e-05      0                       0
+225 2.590070e-05     2.0 2.590103e-05      0                       0
+226 2.590070e-05     2.0 2.590103e-05      0                       0
+227 2.590070e-05     2.0 2.590103e-05      0                       0
+228 2.590070e-05     2.0 2.590103e-05      0                       0
+229 2.590070e-05     2.0 2.590103e-05      0                       0
+230 2.590070e-05     2.0 2.590103e-05      0                       0
+231 2.590070e-05     2.0 2.590103e-05      0                       0
+232 2.590070e-05     2.0 2.590103e-05      0                       0
+233 2.590070e-05     2.0 2.590103e-05      0                       0
+234 2.590070e-05     2.0 2.590103e-05      0                       0
+235 2.590070e-05     2.0 2.590103e-05      0                       0
+236 2.590070e-05     2.0 2.590103e-05      0                       0
+237 2.590070e-05     2.0 2.590103e-05      0                       0
+238 2.590070e-05     1.3 1.705591e-05      0          Pseudomonadota
+239 2.590070e-05     2.0 2.590103e-05      0                       0
+240 2.590070e-05     1.7 2.146937e-05      0          Pseudomonadota
+241 2.590070e-05     1.5 1.881045e-05      0               Bacillota
+242 2.590070e-05     1.6 2.059235e-05      0          Pseudomonadota
+243 2.590070e-05     2.0 2.590103e-05      0               Bacillota
+244 2.590070e-05     3.6 4.608533e-05      0          Pseudomonadota
+245 2.590070e-05     2.0 2.590145e-05      0               Bacillota
+246 2.590070e-05     2.6 3.364018e-05      0                       0
+247 2.590070e-05     2.0 2.584873e-05      0                       0
+248 2.590070e-05     2.0 2.590068e-05      0                       0
+249 2.590070e-05     2.0 2.590148e-05      0            Bacteroidota
+250 2.590070e-05     2.0 2.590202e-05      0               Bacillota
+251 2.590070e-05     2.0 2.590103e-05      0                       0
+252 2.590070e-05     2.0 2.590213e-05      0               Bacillota
+253 2.590070e-05     2.0 2.590122e-05      0          Actinomycetota
+254 2.590070e-05     5.8 7.556810e-05      0             Uroviricota
+255 1.295035e-05     1.1 1.439095e-05      0            Bacteroidota
+256 1.295035e-05     0.6 7.194004e-06      0               Bacillota
+257 1.295035e-05     1.5 1.940619e-05      0               Bacillota
+258 1.295035e-05     1.0 1.273924e-05      0               Bacillota
+259 1.295035e-05     1.0 1.295077e-05      0          Actinomycetota
+260 1.295035e-05     1.0 1.295052e-05      0            Bacteroidota
+261 1.295035e-05     0.9 1.151002e-05      0            Bacteroidota
+262 1.295035e-05     0.3 4.319808e-06      0            Bacteroidota
+263 1.295035e-05     0.6 7.720763e-06      0                       0
+264 1.295035e-05     0.3 4.319808e-06      0                       0
+265 1.295035e-05     1.9 2.472639e-05      0            Bacteroidota
+266 1.295035e-05     2.8 3.618248e-05      0            Bacteroidota
+267 1.295035e-05     0.6 8.085129e-06      0               Bacillota
+268 1.295035e-05     1.0 1.295052e-05      0 Thermodesulfobacteriota
+269 1.295035e-05     1.1 1.374051e-05      0               Bacillota
+270 1.295035e-05     1.2 1.497741e-05      0               Bacillota
+271 1.295035e-05     1.0 1.295052e-05      0          Pseudomonadota
+272 1.295035e-05     1.0 1.295054e-05      0               Bacillota
+273 1.295035e-05     1.3 1.629752e-05      0               Bacillota
+274 1.295035e-05     1.1 1.489056e-05      0            Bacteroidota
+275 1.295035e-05     1.0 1.296936e-05      0               Bacillota
+276 1.295035e-05     0.4 4.673234e-06      0                       0
+277 1.295035e-05     0.5 5.852285e-06      0          Pseudomonadota
+278 1.295035e-05     1.2 1.501169e-05      0            Bacteroidota
+279 1.295035e-05     1.0 1.248948e-05      0               Bacillota
+280 1.295035e-05     0.8 1.084349e-05      0          Pseudomonadota
+281 1.295035e-05     0.9 1.149740e-05      0            Bacteroidota
+282 1.295035e-05     1.9 2.492772e-05      0          Pseudomonadota
+283 1.295035e-05     1.0 1.295921e-05      0           Spirochaetota
+284 1.295035e-05     1.0 1.295078e-05      0            Bacteroidota
+285 1.295035e-05     1.0 1.349353e-05      0          Actinomycetota
+286 1.295035e-05     0.6 7.270556e-06      0          Pseudomonadota
+287 1.295035e-05     1.1 1.428240e-05      0                       0
+288 1.295035e-05     1.1 1.446283e-05      0                       0
+289 1.295035e-05     1.0 1.295052e-05      0                       0
+290 1.295035e-05     1.0 1.295052e-05      0                       0
+291 1.295035e-05     1.0 1.295052e-05      0                       0
+292 1.295035e-05     1.0 1.295052e-05      0                       0
+293 1.295035e-05     1.0 1.295052e-05      0                       0
+294 1.295035e-05     1.0 1.295052e-05      0                       0
+295 1.295035e-05     1.0 1.295052e-05      0                       0
+296 1.295035e-05     1.0 1.295052e-05      0                       0
+297 1.295035e-05     1.0 1.295052e-05      0                       0
+298 1.295035e-05     1.0 1.295052e-05      0                       0
+299 1.295035e-05     1.0 1.295052e-05      0                       0
+300 1.295035e-05     1.0 1.295052e-05      0                       0
+301 1.295035e-05     1.0 1.295052e-05      0                       0
+302 1.295035e-05     1.0 1.295052e-05      0                       0
+303 1.295035e-05     1.0 1.295052e-05      0                       0
+304 1.295035e-05     1.0 1.295052e-05      0                       0
+305 1.295035e-05     1.0 1.295052e-05      0                       0
+306 1.295035e-05     1.0 1.295052e-05      0                       0
+307 1.295035e-05     1.0 1.295052e-05      0                       0
+308 1.295035e-05     1.0 1.295052e-05      0                       0
+309 1.295035e-05     1.0 1.295052e-05      0                       0
+310 1.295035e-05     1.0 1.295052e-05      0                       0
+311 1.295035e-05     1.0 1.295052e-05      0                       0
+312 1.295035e-05     1.0 1.295052e-05      0                       0
+313 1.295035e-05     1.0 1.295052e-05      0                       0
+314 1.295035e-05     1.0 1.295052e-05      0                       0
+315 1.295035e-05     2.1 2.774915e-05      0               Bacillota
+316 1.295035e-05     1.0 1.295052e-05      0                       0
+317 1.295035e-05     1.0 1.295065e-05      0          Pseudomonadota
+318 1.295035e-05     1.0 1.295052e-05      0          Actinomycetota
+319 1.295035e-05     0.9 1.206058e-05      0                       0
+320 1.295035e-05     1.0 1.346680e-05      0                       0
+321 1.295035e-05     1.7 2.205111e-05      0               Bacillota
+322 1.295035e-05     2.3 2.960531e-05      0            Bacteroidota
+323 1.295035e-05     0.6 7.591820e-06      0          Pseudomonadota
+324 1.295035e-05     1.0 1.295052e-05      0               Bacillota
+325 1.295035e-05     1.0 1.295052e-05      0               Bacillota
+326 1.295035e-05     1.9 2.519396e-05      0            Bacteroidota
+327 1.295035e-05     1.2 1.497605e-05      0               Bacillota
+328 1.295035e-05     0.4 5.455593e-06      0          Actinomycetota
+329 1.295035e-05     1.1 1.386806e-05      0               Bacillota
+330 1.295035e-05     1.7 2.161792e-05      0                       0
+331 1.295035e-05     0.6 7.403001e-06      0                       0
+332 1.295035e-05     3.2 4.120632e-05      0                       0
+333 1.295035e-05     0.6 7.923468e-06      0                       0
+334 1.295035e-05     1.2 1.557810e-05      0          Actinomycetota
+335 1.295035e-05     1.2 1.502302e-05      0          Pseudomonadota
+336 1.295035e-05     1.1 1.385914e-05      0               Bacillota
+337 1.295035e-05     1.1 1.441848e-05      0          Pseudomonadota
+338 1.295035e-05     1.0 1.295052e-05      0                       0
+339 1.295035e-05     1.0 1.295059e-05      0               Bacillota
+340 1.295035e-05     0.6 7.324199e-06      0                       0
+341 1.295035e-05     0.6 8.042655e-06      0                       0
+342 1.295035e-05     1.0 1.295100e-05      0            Bacteroidota
+343 1.295035e-05     1.0 1.295103e-05      0          Actinomycetota
+344 1.295035e-05     1.0 1.295052e-05      0                       0
+345 1.295035e-05     1.0 1.328686e-05      0                       0
+346 1.295035e-05     1.0 1.295079e-05      0          Actinomycetota
+347 1.295035e-05     1.0 1.295188e-05      0          Actinomycetota
+348 1.295035e-05     1.0 1.295052e-05      0          Pseudomonadota
+349 1.295035e-05     1.0 1.295124e-05      0               Bacillota
+350 1.295035e-05     1.0 1.295072e-05      0            Bacteroidota
+351 1.295035e-05     1.0 1.295663e-05      0            Bacteroidota
+352 1.295035e-05     1.0 1.295052e-05      0        Thermomicrobiota
+353 1.295035e-05     1.0 1.295127e-05      0          Pseudomonadota
+354 1.295035e-05     1.0 1.295052e-05      0          Actinomycetota
+355 1.295035e-05     1.0 1.295059e-05      0                       0
+356 1.295035e-05     1.0 1.295197e-05      0               Bacillota
+357 1.295035e-05     0.7 8.933255e-06      0               Bacillota
+358 1.295035e-05     1.7 2.247775e-05      0          Pseudomonadota
+359 1.295035e-05     1.2 1.491487e-05      0               Bacillota
+360 1.295035e-05     1.0 1.296600e-05      0            Bacteroidota
+361 1.295035e-05     1.1 1.391733e-05      0               Bacillota
+362 1.295035e-05     1.0 1.295052e-05      0          Actinomycetota
+363 1.295035e-05     1.0 1.295052e-05      0                       0
+364 1.295035e-05     0.7 9.536988e-06      0             Uroviricota
+365 1.295035e-05     1.0 1.295052e-05      0             Uroviricota
+366 1.295035e-05     1.6 2.118529e-05      0             Uroviricota
+367 1.295035e-05     1.0 1.294976e-05      0             Uroviricota
+368 1.295035e-05     1.0 1.295053e-05      0             Uroviricota
+369 1.295035e-05     1.0 1.295079e-05      0             Uroviricota
+370 1.295035e-05     1.0 1.295052e-05      0             Uroviricota
+371 1.295035e-05     1.2 1.501359e-05      0             Uroviricota
+                  class                order                family
+1           Bacteroidia        Bacteroidales        Bacteroidaceae
+2           Bacteroidia        Bacteroidales        Prevotellaceae
+3           Bacteroidia        Bacteroidales        Bacteroidaceae
+4            Clostridia       Lachnospirales       Lachnospiraceae
+5        Coriobacteriia     Coriobacteriales     Coriobacteriaceae
+6           Bacteroidia        Bacteroidales         Rikenellaceae
+7         Actinomycetes    Bifidobacteriales    Bifidobacteriaceae
+8           Bacteroidia        Bacteroidales        Bacteroidaceae
+9            Clostridia       Lachnospirales       Lachnospiraceae
+10          Bacteroidia        Bacteroidales        Bacteroidaceae
+11           Clostridia       Lachnospirales       Lachnospiraceae
+12           Clostridia       Lachnospirales       Lachnospiraceae
+13          Bacteroidia        Bacteroidales        Bacteroidaceae
+14          Bacteroidia        Bacteroidales        Bacteroidaceae
+15  Gammaproteobacteria     Enterobacterales    Enterobacteriaceae
+16           Clostridia       Lachnospirales       Lachnospiraceae
+17           Clostridia       Lachnospirales       Lachnospiraceae
+18     Verrucomicrobiia   Verrucomicrobiales       Akkermansiaceae
+19        Actinomycetes    Bifidobacteriales    Bifidobacteriaceae
+20          Bacteroidia        Bacteroidales        Bacteroidaceae
+21          Bacteroidia        Bacteroidales        Tannerellaceae
+22           Clostridia       Lachnospirales       Lachnospiraceae
+23          Bacteroidia        Bacteroidales        Bacteroidaceae
+24           Clostridia       Lachnospirales       Lachnospiraceae
+25           Clostridia       Lachnospirales       Lachnospiraceae
+26           Clostridia       Lachnospirales       Lachnospiraceae
+27           Clostridia       Lachnospirales       Lachnospiraceae
+28          Bacteroidia        Bacteroidales       Barnesiellaceae
+29           Clostridia       Lachnospirales       Lachnospiraceae
+30          Bacteroidia        Bacteroidales        Bacteroidaceae
+31           Clostridia       Lachnospirales       Lachnospiraceae
+32           Clostridia        Eubacteriales      Oscillospiraceae
+33           Clostridia       Lachnospirales       Lachnospiraceae
+34          Bacteroidia        Bacteroidales        Prevotellaceae
+35          Bacteroidia        Bacteroidales        Prevotellaceae
+36           Clostridia        Eubacteriales                     0
+37          Bacteroidia        Bacteroidales      Odoribacteraceae
+38          Bacteroidia        Bacteroidales         Rikenellaceae
+39          Bacteroidia        Bacteroidales         Rikenellaceae
+40           Clostridia       Lachnospirales       Lachnospiraceae
+41          Bacteroidia        Bacteroidales         Rikenellaceae
+42           Clostridia        Eubacteriales      Oscillospiraceae
+43          Bacteroidia        Bacteroidales        Bacteroidaceae
+44           Clostridia       Lachnospirales       Lachnospiraceae
+45   Betaproteobacteria      Burkholderiales      Burkholderiaceae
+46          Bacteroidia        Bacteroidales        Bacteroidaceae
+47              Bacilli      Lactobacillales      Streptococcaceae
+48           Clostridia       Lachnospirales       Lachnospiraceae
+49           Clostridia       Lachnospirales       Lachnospiraceae
+50       Coriobacteriia       Eggerthellales       Eggerthellaceae
+51           Clostridia        Eubacteriales      Oscillospiraceae
+52     Erysipelotrichia   Erysipelotrichales   Erysipelotrichaceae
+53        Negativicutes    Acidaminococcales    Acidaminococcaceae
+54              Bacilli      Lactobacillales      Streptococcaceae
+55   Betaproteobacteria      Burkholderiales        Sutterellaceae
+56           Clostridia        Eubacteriales        Eubacteriaceae
+57  Gammaproteobacteria     Enterobacterales    Enterobacteriaceae
+58        Actinomycetes    Bifidobacteriales    Bifidobacteriaceae
+59          Bacteroidia        Bacteroidales        Prevotellaceae
+60           Clostridia Peptostreptococcales Peptostreptococcaceae
+61        Actinomycetes    Bifidobacteriales    Bifidobacteriaceae
+62                    0                    0                     0
+63           Clostridia        Eubacteriales        Eubacteriaceae
+64                    0                    0                     0
+65              Bacilli      Lactobacillales      Lactobacillaceae
+66       Coriobacteriia       Eggerthellales       Eggerthellaceae
+67        Negativicutes    Acidaminococcales    Acidaminococcaceae
+68          Bacteroidia        Bacteroidales        Prevotellaceae
+69          Bacteroidia        Bacteroidales        Tannerellaceae
+70        Negativicutes       Veillonellales       Veillonellaceae
+71          Bacteroidia        Bacteroidales        Prevotellaceae
+72       Coriobacteriia       Eggerthellales       Eggerthellaceae
+73              Bacilli      Lactobacillales      Streptococcaceae
+74              Bacilli      Lactobacillales       Enterococcaceae
+75          Bacteroidia        Bacteroidales        Prevotellaceae
+76          Bacteroidia        Bacteroidales        Prevotellaceae
+77        Negativicutes       Veillonellales       Veillonellaceae
+78        Negativicutes       Veillonellales       Veillonellaceae
+79           Clostridia       Lachnospirales       Lachnospiraceae
+80     Desulfovibrionia   Desulfovibrionales   Desulfovibrionaceae
+81                    0                    0                     0
+82           Clostridia       Lachnospirales       Lachnospiraceae
+83                    0                    0                     0
+84                    0                    0                     0
+85                    0                    0                     0
+86                    0                    0                     0
+87                    0                    0                     0
+88       Caudoviricetes                    0                     0
+89           Clostridia       Lachnospirales       Lachnospiraceae
+90          Bacteroidia        Bacteroidales        Bacteroidaceae
+91         Tissierellia       Tissierellales      Peptoniphilaceae
+92                    0                    0                     0
+93          Bacteroidia        Bacteroidales        Bacteroidaceae
+94       Caudoviricetes                    0                     0
+95                    0                    0                     0
+96           Clostridia        Eubacteriales      Oscillospiraceae
+97          Bacteroidia        Bacteroidales        Prevotellaceae
+98       Caudoviricetes                    0                     0
+99          Bacteroidia        Bacteroidales        Bacteroidaceae
+100      Caudoviricetes                    0                     0
+101       Actinomycetes    Bifidobacteriales    Bifidobacteriaceae
+102          Clostridia       Lachnospirales       Lachnospiraceae
+103         Bacteroidia        Bacteroidales        Bacteroidaceae
+104          Clostridia Peptostreptococcales      Anaerovoracaceae
+105  Betaproteobacteria      Burkholderiales      Burkholderiaceae
+106                   0                    0                     0
+107         Bacteroidia        Bacteroidales        Bacteroidaceae
+108                   0                    0                     0
+109                   0                    0                     0
+110                   0                    0                     0
+111                   0                    0                     0
+112                   0                    0                     0
+113                   0                    0                     0
+114          Clostridia       Lachnospirales       Anaerotignaceae
+115          Clostridia        Eubacteriales      Oscillospiraceae
+116         Bacteroidia        Bacteroidales        Bacteroidaceae
+117         Bacteroidia        Bacteroidales      Odoribacteraceae
+118         Bacteroidia        Bacteroidales        Bacteroidaceae
+119       Actinomycetes    Bifidobacteriales    Bifidobacteriaceae
+120    Erysipelotrichia   Erysipelotrichales   Erysipelotrichaceae
+121          Clostridia        Eubacteriales        Clostridiaceae
+122    Erysipelotrichia   Erysipelotrichales   Erysipelotrichaceae
+123                   0                    0                     0
+124                   0                    0                     0
+125                   0                    0                     0
+126                   0                    0                     0
+127                   0                    0                     0
+128                   0                    0                     0
+129                   0                    0                     0
+130                   0                    0                     0
+131         Bacteroidia        Bacteroidales        Prevotellaceae
+132          Clostridia       Lachnospirales       Lachnospiraceae
+133       Actinomycetes    Bifidobacteriales    Bifidobacteriaceae
+134 Gammaproteobacteria     Enterobacterales          Yersiniaceae
+135    Erysipelotrichia   Erysipelotrichales   Erysipelotrichaceae
+136                   0                    0                     0
+137                   0                    0                     0
+138                   0                    0                     0
+139                   0                    0                     0
+140          Clostridia       Lachnospirales       Lachnospiraceae
+141                   0                    0                     0
+142                   0                    0                     0
+143         Bacteroidia        Bacteroidales        Bacteroidaceae
+144         Bacteroidia        Bacteroidales         Rikenellaceae
+145     Saccharomycetes      Phaffomycetales  Wickerhamomycetaceae
+146      Caudoviricetes                    0          Peduoviridae
+147 Gammaproteobacteria     Enterobacterales    Enterobacteriaceae
+148          Clostridia Peptostreptococcales Peptostreptococcaceae
+149 Gammaproteobacteria     Enterobacterales    Enterobacteriaceae
+150          Clostridia       Lachnospirales       Lachnospiraceae
+151                   0                    0                     0
+152                   0                    0                     0
+153                   0                    0                     0
+154                   0                    0                     0
+155                   0                    0                     0
+156                   0                    0                     0
+157                   0                    0                     0
+158                   0                    0                     0
+159             Bacilli      Lactobacillales       Enterococcaceae
+160          Clostridia        Eubacteriales      Oscillospiraceae
+161          Clostridia       Lachnospirales       Anaerotignaceae
+162 Gammaproteobacteria     Enterobacterales           Erwiniaceae
+163                   0                    0                     0
+164                   0                    0                     0
+165                   0                    0                     0
+166                   0                    0                     0
+167                   0                    0                     0
+168                   0                    0                     0
+169 Gammaproteobacteria     Enterobacterales    Enterobacteriaceae
+170       Actinomycetes    Bifidobacteriales    Bifidobacteriaceae
+171         Bacteroidia        Bacteroidales    Porphyromonadaceae
+172         Bacteroidia        Bacteroidales        Prevotellaceae
+173      Caudoviricetes                    0                     0
+174                   0                    0                     0
+175    Erysipelotrichia   Erysipelotrichales      Coprobacillaceae
+176          Clostridia       Lachnospirales       Lachnospiraceae
+177          Clostridia       Lachnospirales       Lachnospiraceae
+178 Gammaproteobacteria     Enterobacterales    Enterobacteriaceae
+179 Gammaproteobacteria     Enterobacterales            Hafniaceae
+180                   0                    0                     0
+181                   0                    0                     0
+182                   0                    0                     0
+183                   0                    0                     0
+184                   0                    0                     0
+185                   0                    0                     0
+186                   0                    0                     0
+187                   0                    0                     0
+188                   0                    0                     0
+189                   0                    0                     0
+190                   0                    0                     0
+191                   0                    0                     0
+192                   0                    0                     0
+193                   0                    0                     0
+194                   0                    0                     0
+195                   0                    0                     0
+196                   0                    0                     0
+197         Bacteroidia        Bacteroidales        Prevotellaceae
+198 Gammaproteobacteria     Enterobacterales    Enterobacteriaceae
+199          Clostridia       Lachnospirales       Lachnospiraceae
+200          Clostridia        Eubacteriales      Oscillospiraceae
+201         Bacteroidia        Bacteroidales        Prevotellaceae
+202         Bacteroidia        Bacteroidales        Prevotellaceae
+203          Clostridia        Eubacteriales      Oscillospiraceae
+204         Bacteroidia        Bacteroidales        Tannerellaceae
+205 Gammaproteobacteria     Enterobacterales        Morganellaceae
+206         Bacteroidia        Bacteroidales       Barnesiellaceae
+207         Bacteroidia        Bacteroidales        Prevotellaceae
+208                   0                    0                     0
+209          Clostridia   Christensenellales   Christensenellaceae
+210          Clostridia        Eubacteriales      Oscillospiraceae
+211         Bacteroidia        Bacteroidales        Prevotellaceae
+212          Clostridia       Lachnospirales       Lachnospiraceae
+213     Sordariomycetes          Hypocreales           Nectriaceae
+214      Caudoviricetes                    0                     0
+215      Caudoviricetes                    0                     0
+216         Bacteroidia        Bacteroidales    Porphyromonadaceae
+217          Clostridia Peptostreptococcales Peptostreptococcaceae
+218          Clostridia        Eubacteriales      Oscillospiraceae
+219                   0                    0                     0
+220 Gammaproteobacteria     Enterobacterales    Enterobacteriaceae
+221        Tissierellia       Tissierellales      Peptoniphilaceae
+222       Actinomycetes    Bifidobacteriales    Bifidobacteriaceae
+223                   0                    0                     0
+224                   0                    0                     0
+225                   0                    0                     0
+226                   0                    0                     0
+227                   0                    0                     0
+228                   0                    0                     0
+229                   0                    0                     0
+230                   0                    0                     0
+231                   0                    0                     0
+232                   0                    0                     0
+233                   0                    0                     0
+234                   0                    0                     0
+235                   0                    0                     0
+236                   0                    0                     0
+237                   0                    0                     0
+238 Alphaproteobacteria     Hyphomicrobiales           Kaistiaceae
+239                   0                    0                     0
+240 Gammaproteobacteria     Enterobacterales    Enterobacteriaceae
+241          Clostridia        Eubacteriales Desulfitobacteriaceae
+242 Gammaproteobacteria      Pseudomonadales      Pseudomonadaceae
+243             Bacilli           Bacillales        Planococcaceae
+244 Gammaproteobacteria     Enterobacterales    Enterobacteriaceae
+245       Negativicutes       Veillonellales       Veillonellaceae
+246                   0                    0                     0
+247                   0                    0                     0
+248                   0                    0                     0
+249         Bacteroidia        Bacteroidales      Odoribacteraceae
+250          Clostridia        Eubacteriales      Oscillospiraceae
+251                   0                    0                     0
+252          Clostridia       Lachnospirales       Lachnospiraceae
+253      Coriobacteriia     Coriobacteriales     Coriobacteriaceae
+254      Caudoviricetes                    0                     0
+255      Flavobacteriia     Flavobacteriales     Flavobacteriaceae
+256             Bacilli      Lactobacillales         Aerococcaceae
+257          Clostridia       Lachnospirales       Lachnospiraceae
+258             Bacilli      Lactobacillales      Lactobacillaceae
+259       Actinomycetes    Bifidobacteriales    Bifidobacteriaceae
+260         Bacteroidia        Bacteroidales    Porphyromonadaceae
+261         Bacteroidia        Bacteroidales        Prevotellaceae
+262         Bacteroidia        Bacteroidales        Prevotellaceae
+263                   0                    0                     0
+264                   0                    0                     0
+265         Bacteroidia        Bacteroidales        Prevotellaceae
+266         Bacteroidia        Bacteroidales         Rikenellaceae
+267    Erysipelotrichia   Erysipelotrichales      Coprobacillaceae
+268    Desulfovibrionia   Desulfovibrionales   Desulfovibrionaceae
+269             Bacilli      Lactobacillales       Enterococcaceae
+270          Clostridia        Eubacteriales     Butyricicoccaceae
+271 Gammaproteobacteria         Moraxellales         Moraxellaceae
+272          Clostridia        Eubacteriales      Oscillospiraceae
+273          Clostridia        Eubacteriales      Oscillospiraceae
+274      Flavobacteriia     Flavobacteriales     Flavobacteriaceae
+275             Bacilli      Lactobacillales      Streptococcaceae
+276                   0                    0                     0
+277 Gammaproteobacteria       Pasteurellales       Pasteurellaceae
+278         Bacteroidia        Bacteroidales        Prevotellaceae
+279             Bacilli      Lactobacillales       Enterococcaceae
+280 Gammaproteobacteria      Pseudomonadales      Pseudomonadaceae
+281         Bacteroidia        Bacteroidales        Prevotellaceae
+282 Gammaproteobacteria     Enterobacterales    Enterobacteriaceae
+283        Spirochaetia       Spirochaetales       Treponemataceae
+284         Bacteroidia        Bacteroidales        Prevotellaceae
+285      Coriobacteriia       Eggerthellales       Eggerthellaceae
+286  Betaproteobacteria      Burkholderiales      Burkholderiaceae
+287                   0                    0                     0
+288                   0                    0                     0
+289                   0                    0                     0
+290                   0                    0                     0
+291                   0                    0                     0
+292                   0                    0                     0
+293                   0                    0                     0
+294                   0                    0                     0
+295                   0                    0                     0
+296                   0                    0                     0
+297                   0                    0                     0
+298                   0                    0                     0
+299                   0                    0                     0
+300                   0                    0                     0
+301                   0                    0                     0
+302                   0                    0                     0
+303                   0                    0                     0
+304                   0                    0                     0
+305                   0                    0                     0
+306                   0                    0                     0
+307                   0                    0                     0
+308                   0                    0                     0
+309                   0                    0                     0
+310                   0                    0                     0
+311                   0                    0                     0
+312                   0                    0                     0
+313                   0                    0                     0
+314                   0                    0                     0
+315          Clostridia       Lachnospirales       Lachnospiraceae
+316                   0                    0                     0
+317 Gammaproteobacteria     Enterobacterales    Enterobacteriaceae
+318       Actinomycetes      Mycobacteriales    Corynebacteriaceae
+319                   0                    0                     0
+320                   0                    0                     0
+321          Clostridia       Lachnospirales       Lachnospiraceae
+322         Bacteroidia        Bacteroidales        Prevotellaceae
+323  Betaproteobacteria      Burkholderiales        Comamonadaceae
+324             Bacilli      Lactobacillales     Carnobacteriaceae
+325             Bacilli      Lactobacillales     Carnobacteriaceae
+326         Bacteroidia        Bacteroidales    Porphyromonadaceae
+327    Erysipelotrichia   Erysipelotrichales      Coprobacillaceae
+328       Actinomycetes    Bifidobacteriales    Bifidobacteriaceae
+329          Clostridia       Lachnospirales       Lachnospiraceae
+330                   0                    0                     0
+331                   0                    0                     0
+332                   0                    0                     0
+333                   0                    0                     0
+334       Actinomycetes    Bifidobacteriales    Bifidobacteriaceae
+335 Gammaproteobacteria     Enterobacterales    Enterobacteriaceae
+336             Bacilli      Lactobacillales      Streptococcaceae
+337  Betaproteobacteria         Neisseriales    Chitinibacteraceae
+338                   0                    0                     0
+339          Clostridia       Lachnospirales       Lachnospiraceae
+340                   0                    0                     0
+341                   0                    0                     0
+342         Bacteroidia        Bacteroidales      Odoribacteraceae
+343      Coriobacteriia       Eggerthellales       Eggerthellaceae
+344                   0                    0                     0
+345                   0                    0                     0
+346      Coriobacteriia     Coriobacteriales          Atopobiaceae
+347      Coriobacteriia       Eggerthellales       Eggerthellaceae
+348 Gammaproteobacteria     Enterobacterales           Erwiniaceae
+349          Clostridia       Lachnospirales       Lachnospiraceae
+350         Bacteroidia        Bacteroidales       Barnesiellaceae
+351         Bacteroidia        Bacteroidales         Rikenellaceae
+352      Thermomicrobia    Sphaerobacterales    Sphaerobacteraceae
+353 Gammaproteobacteria     Enterobacterales    Enterobacteriaceae
+354       Actinomycetes        Micrococcales     Microbacteriaceae
+355                   0                    0                     0
+356          Clostridia       Lachnospirales       Lachnospiraceae
+357        Tissierellia       Tissierellales      Peptoniphilaceae
+358 Gammaproteobacteria     Enterobacterales            Hafniaceae
+359          Clostridia        Eubacteriales      Oscillospiraceae
+360         Bacteroidia        Bacteroidales        Bacteroidaceae
+361          Clostridia Peptostreptococcales      Anaerovoracaceae
+362      Coriobacteriia       Eggerthellales       Eggerthellaceae
+363                   0                    0                     0
+364      Caudoviricetes                    0                     0
+365      Caudoviricetes                    0     Aliceevansviridae
+366      Caudoviricetes                    0                     0
+367      Caudoviricetes                    0          Peduoviridae
+368      Caudoviricetes                    0                     0
+369      Caudoviricetes                    0                     0
+370      Caudoviricetes                    0                     0
+371      Caudoviricetes                    0                     0
+                    genus                                          species
+1             Phocaeicola                             Phocaeicola vulgatus
+2               Segatella                                  Segatella copri
+3             Bacteroides                            Bacteroides uniformis
+4            Agathobacter                            Agathobacter rectalis
+5             Collinsella                          Collinsella aerofaciens
+6               Alistipes                             Alistipes putredinis
+7         Bifidobacterium                     Bifidobacterium adolescentis
+8             Bacteroides                               Bacteroides ovatus
+9        Fusicatenibacter                  Fusicatenibacter saccharivorans
+10            Bacteroides                            Bacteroides stercoris
+11              Roseburia                                 Roseburia faecis
+12              Roseburia                          Roseburia inulinivorans
+13            Bacteroides                     Bacteroides thetaiotaomicron
+14            Phocaeicola                             Phocaeicola plebeius
+15               Shigella                             Shigella dysenteriae
+16                Blautia                                    Blautia obeum
+17                  Dorea                                Dorea longicatena
+18            Akkermansia                          Akkermansia muciniphila
+19        Bifidobacterium                           Bifidobacterium longum
+20            Bacteroides                               Bacteroides caccae
+21        Parabacteroides                       Parabacteroides distasonis
+22        Anaerobutyricum                           Anaerobutyricum hallii
+23            Bacteroides                     Bacteroides cellulosilyticus
+24            Lachnospira                              Lachnospira eligens
+25           Anaerostipes                              Anaerostipes hadrus
+26            Coprococcus                             Coprococcus eutactus
+27              Roseburia                           Roseburia intestinalis
+28            Barnesiella                     Barnesiella intestinihominis
+29     Mediterraneibacter                           [Ruminococcus] torques
+30            Bacteroides                             Bacteroides fragilis
+31              Roseburia                                Roseburia hominis
+32       Ruthenibacterium                  Ruthenibacterium lactatiformans
+33           Eshraghiella                            Eshraghiella crossota
+34                Leyella                                Leyella stercorea
+35             Prevotella                                 Prevotella bivia
+36               Gemmiger                              Gemmiger formicilis
+37            Odoribacter                         Odoribacter splanchnicus
+38              Alistipes                             Alistipes finegoldii
+39              Alistipes                                 Alistipes shahii
+40     Mediterraneibacter                        Mediterraneibacter gnavus
+41              Alistipes                                  Alistipes inops
+42       Faecalibacterium                       Faecalibacterium duncaniae
+43            Phocaeicola                            Phocaeicola coprocola
+44                  Dorea                            Dorea formicigenerans
+45            Cupriavidus                        Cupriavidus metallidurans
+46            Bacteroides                           Bacteroides salyersiae
+47          Streptococcus                       Streptococcus thermophilus
+48            Lachnospira                            Lachnospira multipara
+49     Mediterraneibacter                          [Ruminococcus] lactaris
+50          Adlercreutzia                      Adlercreutzia equolifaciens
+51         Flavonifractor                           Flavonifractor plautii
+52           Holdemanella                            Holdemanella biformis
+53  Phascolarctobacterium              Phascolarctobacterium succinatutens
+54          Streptococcus                         Streptococcus salivarius
+55         Parasutterella                 Parasutterella excrementihominis
+56            Eubacterium                              Eubacterium ramulus
+57               Shigella                                Shigella flexneri
+58        Bifidobacterium                          Bifidobacterium bifidum
+59         Paraprevotella                       Paraprevotella xylaniphila
+60        Intestinibacter                       Intestinibacter bartlettii
+61        Bifidobacterium                        Bifidobacterium angulatum
+62                      0                                                0
+63            Eubacterium                           Eubacterium ventriosum
+64                      0                                                0
+65      Ligilactobacillus                        Ligilactobacillus ruminis
+66          Gordonibacter                          Gordonibacter pamelaeae
+67        Acidaminococcus                        Acidaminococcus intestini
+68             Hoylesella                            Hoylesella timonensis
+69        Parabacteroides                        Parabacteroides johnsonii
+70              Dialister                                Dialister invisus
+71             Prevotella                              Prevotella corporis
+72            Eggerthella                                Eggerthella lenta
+73          Streptococcus                      Streptococcus parasanguinis
+74           Enterococcus                             Enterococcus faecium
+75             Hoylesella                              Hoylesella buccalis
+76             Prevotella                               Prevotella disiens
+77            Veillonella                              Veillonella parvula
+78            Megasphaera                             Megasphaera elsdenii
+79                Blautia                                 Blautia hansenii
+80          Desulfovibrio                              Desulfovibrio piger
+81                      0                                                0
+82      Lachnoclostridium                          [Clostridium] symbiosum
+83                      0                                                0
+84                      0                                                0
+85                      0                                                0
+86                      0                                                0
+87                      0                                                0
+88        Marienburgvirus                           Marienburgvirus BP4795
+89          Faecalicatena                           Faecalicatena contorta
+90            Bacteroides                               Bacteroides nordii
+91             Finegoldia                                 Finegoldia magna
+92                      0                                                0
+93            Bacteroides                               Bacteroides fluxus
+94            Lambdavirus                               Lambdavirus lambda
+95                      0                                                0
+96   Pseudoflavonifractor                  Pseudoflavonifractor capillosus
+97               Hallella                               Hallella bergensis
+98           Traversvirus                                  Traversvirus II
+99            Phocaeicola                          Phocaeicola coprophilus
+100           Pankowvirus                              Pankowvirus YYZ2008
+101       Bifidobacterium                            Bifidobacterium breve
+102            Hungatella                             Hungatella hathewayi
+103           Phocaeicola                            Phocaeicola barnesiae
+104            Emergencia                            Emergencia timonensis
+105           Cupriavidus                           Cupriavidus basilensis
+106                     0                                                0
+107           Phocaeicola                         Phocaeicola salanitronis
+108                     0                                                0
+109                     0                                                0
+110                     0                                                0
+111                     0                                                0
+112                     0                                                0
+113                     0                                                0
+114          Anaerotignum                   Anaerotignum lactatifermentans
+115         Anaerotruncus                        Anaerotruncus colihominis
+116           Bacteroides                     Bacteroides faecichinchillae
+117           Culturomica                         Culturomica massiliensis
+118          Mediterranea                        Mediterranea massiliensis
+119       Bifidobacterium                          Bifidobacterium dentium
+120            Holdemania                          Holdemania massiliensis
+121           Clostridium                           Clostridium phoceensis
+122         Faecalicoccus                        Faecalicoccus pleomorphus
+123                     0                                                0
+124                     0                                                0
+125                     0                                                0
+126                     0                                                0
+127                     0                                                0
+128                     0                                                0
+129                     0                                                0
+130                     0                                                0
+131            Prevotella                           Prevotella multiformis
+132         Enterocloster                          Enterocloster citroniae
+133       Bifidobacterium                          Bifidobacterium reuteri
+134              Yersinia                                  Yersinia pestis
+135         Amedibacillus                           Amedibacillus dolichus
+136                     0                                                0
+137                     0                                                0
+138                     0                                                0
+139                     0                                                0
+140        Marvinbryantia                     Marvinbryantia formatexigens
+141                     0                                                0
+142                     0                                                0
+143           Bacteroides                     Bacteroides reticulotermitis
+144             Alistipes                           Alistipes senegalensis
+145       Wickerhamomyces                         Wickerhamomyces ciferrii
+146           Xuanwuvirus                                  Xuanwuvirus P88
+147              Kluyvera                            Kluyvera cryocrescens
+148        Clostridioides                         Clostridioides difficile
+149           Cronobacter                            Cronobacter sakazakii
+150               Blautia                        Blautia hydrogenotrophica
+151                     0                                                0
+152                     0                                                0
+153                     0                                                0
+154                     0                                                0
+155                     0                                                0
+156                     0                                                0
+157                     0                                                0
+158                     0                                                0
+159          Enterococcus                              Enterococcus gilvus
+160     Provencibacterium                    Provencibacterium massiliense
+161          Anaerotignum                      Anaerotignum neopropionicum
+162               Erwinia                             Erwinia tracheiphila
+163                     0                                                0
+164                     0                                                0
+165                     0                                                0
+166                     0                                                0
+167                     0                                                0
+168                     0                                                0
+169          Enterobacter                          Enterobacter hormaechei
+170       Bifidobacterium                          Bifidobacterium saguini
+171     Sanguibacteroides                     Sanguibacteroides justesenii
+172            Prevotella                                Prevotella ihumii
+173                     0                        Enterobacteria phage cdtI
+174                     0                                                0
+175             Kandleria                               Kandleria vitulina
+176     Lachnoclostridium                           [Clostridium] scindens
+177               Blautia                                 Blautia producta
+178              Kluyvera                               Kluyvera ascorbata
+179       Obesumbacterium                          Obesumbacterium proteus
+180                     0                                                0
+181                     0                                                0
+182                     0                                                0
+183                     0                                                0
+184                     0                                                0
+185                     0                                                0
+186                     0                                                0
+187                     0                                                0
+188                     0                                                0
+189                     0                                                0
+190                     0                                                0
+191                     0                                                0
+192                     0                                                0
+193                     0                                                0
+194                     0                                                0
+195                     0                                                0
+196                     0                                                0
+197            Prevotella                                Prevotella micans
+198             Kosakonia                                Kosakonia cowanii
+199         Enterocloster                            Enterocloster bolteae
+200       Subdoligranulum                        Subdoligranulum variabile
+201            Hoylesella                                Hoylesella shahii
+202             Segatella                                Segatella salivae
+203           Acetivibrio                       Acetivibrio ethanolgignens
+204       Parabacteroides                      Parabacteroides goldsteinii
+205           Xenorhabdus                         Xenorhabdus cabanillasii
+206           Barnesiella                          Barnesiella viscericola
+207            Hoylesella                           Hoylesella nanceiensis
+208                     0                                                0
+209       Christensenella                           Christensenella minuta
+210      Allofournierella                    Allofournierella massiliensis
+211    Prevotellamassilia                    Prevotellamassilia timonensis
+212     Lachnoclostridium                     Lachnoclostridium phocaeense
+213              Fusarium                            Fusarium proliferatum
+214          Traversvirus                Escherichia Stx1 converting phage
+215             Punavirus                                  Punavirus RCS47
+216         Porphyromonas                         Porphyromonas gingivalis
+217    Peptostreptococcus                    Peptostreptococcus anaerobius
+218     Ruminiclostridium                          Ruminiclostridium josui
+219                     0                                                0
+220            Salmonella                              Salmonella enterica
+221          Anaerococcus                        Anaerococcus lactolyticus
+222       Bifidobacterium                         Bifidobacterium pullorum
+223                     0                                                0
+224                     0                                                0
+225                     0                                                0
+226                     0                                                0
+227                     0                                                0
+228                     0                                                0
+229                     0                                                0
+230                     0                                                0
+231                     0                                                0
+232                     0                                                0
+233                     0                                                0
+234                     0                                                0
+235                     0                                                0
+236                     0                                                0
+237                     0                                                0
+238               Kaistia                                  Kaistia adipata
+239                     0                                                0
+240          Enterobacter                               Enterobacter kobei
+241    Desulfitobacterium             Desulfitobacterium dichloroeliminans
+242       Metapseudomonas                         Metapseudomonas otitidis
+243          Sporosarcina                           Sporosarcina koreensis
+244          Trabulsiella                      Trabulsiella odontotermitis
+245             Dialister                        Dialister succinatiphilus
+246                     0                                                0
+247                     0                                                0
+248                     0                                                0
+249           Odoribacter                               Odoribacter laneus
+250          Ruminococcus Ruminococcus bicirculans (ex Wegman et al. 2014)
+251                     0                                                0
+252           Bariatricus                         Bariatricus massiliensis
+253           Collinsella                   Collinsella bouchesdurhonensis
+254           Pankowvirus                               Pankowvirus pv1717
+255        Capnocytophaga                        Capnocytophaga gingivalis
+256            Aerococcus                              Aerococcus viridans
+257     Lachnoclostridium                        [Clostridium] aminophilum
+258     Ligilactobacillus                         Ligilactobacillus agilis
+259       Bifidobacterium                     Bifidobacterium pseudolongum
+260         Porphyromonas                              Porphyromonas levii
+261            Prevotella                            Prevotella nigrescens
+262            Hoylesella                                Hoylesella oralis
+263                     0                                                0
+264                     0                                                0
+265            Prevotella                             Prevotella veroralis
+266             Rikenella                             Rikenella microfusus
+267        Thomasclavelia                       Thomasclavelia spiroformis
+268             Bilophila                            Bilophila wadsworthia
+269          Enterococcus                       Enterococcus casseliflavus
+270         Agathobaculum                          Agathobaculum desmolans
+271         Acinetobacter                          Acinetobacter johnsonii
+272          Ruminococcus                           Ruminococcus sp. YE282
+273          Ruminococcus                            Ruminococcus callidus
+274        Capnocytophaga                         Capnocytophaga granulosa
+275         Streptococcus                          Streptococcus cristatus
+276                     0                                                0
+277          Bibersteinia                           Bibersteinia trehalosi
+278            Prevotella                              Prevotella dentalis
+279          Enterococcus                             Enterococcus mundtii
+280       Metapseudomonas                     Metapseudomonas resinovorans
+281            Prevotella                               Prevotella pallens
+282         Pluralibacter                          Pluralibacter gergoviae
+283             Treponema                              Treponema vincentii
+284        Alloprevotella                          Alloprevotella tannerae
+285      Denitrobacterium                    Denitrobacterium detoxificans
+286           Cupriavidus                             Cupriavidus pauculus
+287                     0                                                0
+288                     0                                                0
+289                     0                                                0
+290                     0                                                0
+291                     0                                                0
+292                     0                                                0
+293                     0                                                0
+294                     0                                                0
+295                     0                                                0
+296                     0                                                0
+297                     0                                                0
+298                     0                                                0
+299                     0                                                0
+300                     0                                                0
+301                     0                                                0
+302                     0                                                0
+303                     0                                                0
+304                     0                                                0
+305                     0                                                0
+306                     0                                                0
+307                     0                                                0
+308                     0                                                0
+309                     0                                                0
+310                     0                                                0
+311                     0                                                0
+312                     0                                                0
+313                     0                                                0
+314                     0                                                0
+315          Anaerostipes                              Anaerostipes caccae
+316                     0                                                0
+317             Yokenella                           Yokenella regensburgei
+318       Corynebacterium                  Corynebacterium lipophiloflavum
+319                     0                                                0
+320                     0                                                0
+321             Hespellia                           Hespellia stercorisuis
+322            Hoylesella                               Hoylesella marshii
+323             Comamonas                             Comamonas kerstersii
+324   Marinilactibacillus                Marinilactibacillus piezotolerans
+325           Atopococcus                               Atopococcus tabaci
+326         Porphyromonas                            Porphyromonas somerae
+327               Sharpea                               Sharpea azabuensis
+328       Bifidobacterium                      Bifidobacterium crudilactis
+329         Enterocloster                     Enterocloster asparagiformis
+330                     0                                                0
+331                     0                                                0
+332                     0                                                0
+333                     0                                                0
+334         Alloscardovia                            Alloscardovia criceti
+335           Siccibacter                           Siccibacter turicensis
+336         Streptococcus                     Streptococcus pseudoporcinus
+337        Chitinilyticum                          Chitinilyticum aquatile
+338                     0                                                0
+339   Lachnoanaerobaculum                    Lachnoanaerobaculum saburreum
+340                     0                                                0
+341                     0                                                0
+342         Butyricimonas                       Butyricimonas synergistica
+343         Adlercreutzia                         Adlercreutzia mucosicola
+344                     0                                                0
+345                     0                                                0
+346       Parafannyhessea                         Parafannyhessea umbonata
+347               Slackia                               Slackia piriformis
+348               Erwinia                                    Erwinia oleae
+349        Stomatobaculum                            Stomatobaculum longum
+350           Coprobacter                          Coprobacter fastidiosus
+351             Alistipes                               Alistipes communis
+352           Nitrolancea                           Nitrolancea hollandica
+353         Pluralibacter                      [Enterobacter] lignolyticus
+354        Microbacterium                          Microbacterium mangrovi
+355                     0                                                0
+356            Merdimonas                                Merdimonas faecis
+357           Urinicoccus                         Urinicoccus massiliensis
+358          Edwardsiella                         Edwardsiella anguillarum
+359         Merdimmobilis                            Merdimmobilis hominis
+360           Bacteroides                                Bacteroides ihuae
+361    Alterileibacterium                   Alterileibacterium massiliense
+362        Phoenicibacter                       Phoenicibacter congonensis
+363                     0                                                0
+364       Shamshuipovirus                            Shamshuipovirus HK022
+365          Brussowvirus                             Brussowvirus bvO1205
+366          Traversvirus                                Traversvirus tv86
+367          Felsduovirus                              Felsduovirus RE2010
+368             Oslovirus                                  Oslovirus ov191
+369          Traversvirus                                Traversvirus PA28
+370        Kwaitsingvirus                             Kwaitsingvirus HK544
+371             Punavirus                                   Punavirus SJ46
+           best_hit_genus genus_counts                    best_hit_species
+1             Phocaeicola           45                Phocaeicola vulgatus
+2               Segatella           49                     Segatella copri
+3             Bacteroides           50               Bacteroides uniformis
+4            Agathobacter           46               Agathobacter rectalis
+5             Collinsella           49             Collinsella aerofaciens
+6               Alistipes            7                 uncultured organism
+7         Bifidobacterium           50        Bifidobacterium adolescentis
+8             Bacteroides           50                  Bacteroides ovatus
+9                 Blautia            5                       Blautia obeum
+10            Bacteroides           47               Bacteroides stercoris
+11                Blautia            2                   Bacteriophage sp.
+12              Roseburia            9              Roseburia intestinalis
+13            Bacteroides           49        Bacteroides thetaiotaomicron
+14            Bacteroides           11                Bacteroides fragilis
+15            Escherichia           45                    Escherichia coli
+16                Blautia           47                       Blautia obeum
+17                  Dorea           42                   Dorea longicatena
+18            Akkermansia           50             Akkermansia muciniphila
+19        Bifidobacterium           50              Bifidobacterium longum
+20            Bacteroides           50                  Bacteroides caccae
+21        Parabacteroides           50          Parabacteroides distasonis
+22        Anaerobutyricum           47              Anaerobutyricum hallii
+23            Bacteroides           50        Bacteroides cellulosilyticus
+24            Lachnospira           43                 Lachnospira eligens
+25           Anaerostipes           48                 Anaerostipes hadrus
+26            Coprococcus           47                Coprococcus eutactus
+27              Roseburia           47              Roseburia intestinalis
+28            Bacteroides            6                  Bacteroides caccae
+29     Mediterraneibacter           46              [Ruminococcus] torques
+30            Bacteroides           42                Bacteroides fragilis
+31              Roseburia           44                   Roseburia hominis
+32       Ruthenibacterium           41     Ruthenibacterium lactatiformans
+33           Eshraghiella           44               Eshraghiella crossota
+34            Bacteroides           13        Bacteroides thetaiotaomicron
+35             Prevotella            6               Prevotella intermedia
+36       Faecalibacterium            9        Faecalibacterium prausnitzii
+37            Odoribacter           50            Odoribacter splanchnicus
+38              Alistipes           48                Alistipes finegoldii
+39              Alistipes           49                    Alistipes shahii
+40     Mediterraneibacter           50           Mediterraneibacter gnavus
+41              Alistipes            5                  Alistipes communis
+42       Faecalibacterium           50        Faecalibacterium prausnitzii
+43            Bacteroides           13                Bacteroides fragilis
+44                  Dorea           39               Dorea formicigenerans
+45            Cupriavidus           50           Cupriavidus metallidurans
+46            Bacteroides           45              Bacteroides salyersiae
+47          Streptococcus           50          Streptococcus thermophilus
+48           Agathobacter            2               Agathobacter rectalis
+49     Mediterraneibacter           43             [Ruminococcus] lactaris
+50          Adlercreutzia           43         Adlercreutzia equolifaciens
+51         Flavonifractor           50              Flavonifractor plautii
+52        Catenibacterium            1           Catenibacterium mitsuokai
+53  Phascolarctobacterium           48 Phascolarctobacterium succinatutens
+54          Streptococcus           50            Streptococcus salivarius
+55              Aeromonas            1                Aeromonas hydrophila
+56                Blautia            4                       Blautia obeum
+57            Escherichia           45                    Escherichia coli
+58        Bifidobacterium           50             Bifidobacterium bifidum
+59         Paraprevotella           43          Paraprevotella xylaniphila
+60        Intestinibacter           44          Intestinibacter bartlettii
+61        Bifidobacterium           49           Bifidobacterium angulatum
+62            Coprococcus           45                   Coprococcus comes
+63            Eubacterium           40              Eubacterium ventriosum
+64            Coprococcus           45                   Coprococcus comes
+65      Ligilactobacillus           47           Ligilactobacillus ruminis
+66          Gordonibacter           35             Gordonibacter pamelaeae
+67        Acidaminococcus           49           Acidaminococcus intestini
+68             Hoylesella            8                 Hoylesella buccalis
+69        Parabacteroides           44              Parabacteroides merdae
+70              Dialister            1                   Bacteriophage sp.
+71             Prevotella           12               Prevotella intermedia
+72            Eggerthella           50                   Eggerthella lenta
+73          Streptococcus           50         Streptococcus parasanguinis
+74           Enterococcus           50                Enterococcus faecium
+75             Hoylesella           41                 Hoylesella buccalis
+76             Prevotella           14               Prevotella intermedia
+77            Veillonella           50                 Veillonella parvula
+78            Megasphaera           46                Megasphaera elsdenii
+79                Blautia           29                    Blautia hansenii
+80          Desulfovibrio           41                 Desulfovibrio piger
+81            Coprococcus           43                   Coprococcus comes
+82       Faecalibacterium           14               Agathobacter rectalis
+83                  Dorea           45                   Coprococcus comes
+84            Coprococcus           44                   Coprococcus comes
+85            Coprococcus           44                   Coprococcus comes
+86            Coprococcus           44                   Coprococcus comes
+87            Coprococcus           47                   Coprococcus comes
+88            Escherichia           42                    Escherichia coli
+89         Flavonifractor           13              Flavonifractor plautii
+90            Bacteroides           33              Bacteroides caecimuris
+91             Finegoldia           32                    Finegoldia magna
+92            Coprococcus           26                   Coprococcus comes
+93            Bacteroides           12        Bacteroides thetaiotaomicron
+94            Escherichia           19                    Escherichia coli
+95        Catenibacterium           13           Catenibacterium mitsuokai
+96       Faecalibacterium            6              Flavonifractor plautii
+97             Hoylesella            5                 Hoylesella buccalis
+98            Escherichia           17                    Escherichia coli
+99            Bacteroides            8                Bacteroides fragilis
+100           Escherichia           16                    Escherichia coli
+101                     0            0                                   0
+102                     0            0                                   0
+103                     0            0                                   0
+104                     0            0                                   0
+105                     0            0                                   0
+106                     0            0                                   0
+107                     0            0                                   0
+108                     0            0                                   0
+109                     0            0                                   0
+110                     0            0                                   0
+111                     0            0                                   0
+112                     0            0                                   0
+113                     0            0                                   0
+114                     0            0                                   0
+115                     0            0                                   0
+116                     0            0                                   0
+117                     0            0                                   0
+118                     0            0                                   0
+119                     0            0                                   0
+120                     0            0                                   0
+121                     0            0                                   0
+122                     0            0                                   0
+123                     0            0                                   0
+124                     0            0                                   0
+125                     0            0                                   0
+126                     0            0                                   0
+127                     0            0                                   0
+128                     0            0                                   0
+129                     0            0                                   0
+130                     0            0                                   0
+131                     0            0                                   0
+132                     0            0                                   0
+133                     0            0                                   0
+134                     0            0                                   0
+135                     0            0                                   0
+136                     0            0                                   0
+137                     0            0                                   0
+138                     0            0                                   0
+139                     0            0                                   0
+140                     0            0                                   0
+141                     0            0                                   0
+142                     0            0                                   0
+143                     0            0                                   0
+144                     0            0                                   0
+145                     0            0                                   0
+146                     0            0                                   0
+147                     0            0                                   0
+148                     0            0                                   0
+149                     0            0                                   0
+150                     0            0                                   0
+151                     0            0                                   0
+152                     0            0                                   0
+153                     0            0                                   0
+154                     0            0                                   0
+155                     0            0                                   0
+156                     0            0                                   0
+157                     0            0                                   0
+158                     0            0                                   0
+159                     0            0                                   0
+160                     0            0                                   0
+161                     0            0                                   0
+162                     0            0                                   0
+163                     0            0                                   0
+164                     0            0                                   0
+165                     0            0                                   0
+166                     0            0                                   0
+167                     0            0                                   0
+168                     0            0                                   0
+169                     0            0                                   0
+170                     0            0                                   0
+171                     0            0                                   0
+172                     0            0                                   0
+173                     0            0                                   0
+174                     0            0                                   0
+175                     0            0                                   0
+176                     0            0                                   0
+177                     0            0                                   0
+178                     0            0                                   0
+179                     0            0                                   0
+180                     0            0                                   0
+181                     0            0                                   0
+182                     0            0                                   0
+183                     0            0                                   0
+184                     0            0                                   0
+185                     0            0                                   0
+186                     0            0                                   0
+187                     0            0                                   0
+188                     0            0                                   0
+189                     0            0                                   0
+190                     0            0                                   0
+191                     0            0                                   0
+192                     0            0                                   0
+193                     0            0                                   0
+194                     0            0                                   0
+195                     0            0                                   0
+196                     0            0                                   0
+197                     0            0                                   0
+198                     0            0                                   0
+199                     0            0                                   0
+200                     0            0                                   0
+201                     0            0                                   0
+202                     0            0                                   0
+203                     0            0                                   0
+204                     0            0                                   0
+205                     0            0                                   0
+206                     0            0                                   0
+207                     0            0                                   0
+208                     0            0                                   0
+209                     0            0                                   0
+210                     0            0                                   0
+211                     0            0                                   0
+212                     0            0                                   0
+213                     0            0                                   0
+214                     0            0                                   0
+215                     0            0                                   0
+216                     0            0                                   0
+217                     0            0                                   0
+218                     0            0                                   0
+219                     0            0                                   0
+220                     0            0                                   0
+221                     0            0                                   0
+222                     0            0                                   0
+223                     0            0                                   0
+224                     0            0                                   0
+225                     0            0                                   0
+226                     0            0                                   0
+227                     0            0                                   0
+228                     0            0                                   0
+229                     0            0                                   0
+230                     0            0                                   0
+231                     0            0                                   0
+232                     0            0                                   0
+233                     0            0                                   0
+234                     0            0                                   0
+235                     0            0                                   0
+236                     0            0                                   0
+237                     0            0                                   0
+238                     0            0                                   0
+239                     0            0                                   0
+240                     0            0                                   0
+241                     0            0                                   0
+242                     0            0                                   0
+243                     0            0                                   0
+244                     0            0                                   0
+245                     0            0                                   0
+246                     0            0                                   0
+247                     0            0                                   0
+248                     0            0                                   0
+249                     0            0                                   0
+250                     0            0                                   0
+251                     0            0                                   0
+252                     0            0                                   0
+253                     0            0                                   0
+254                     0            0                                   0
+255                     0            0                                   0
+256                     0            0                                   0
+257                     0            0                                   0
+258                     0            0                                   0
+259                     0            0                                   0
+260                     0            0                                   0
+261                     0            0                                   0
+262                     0            0                                   0
+263                     0            0                                   0
+264                     0            0                                   0
+265                     0            0                                   0
+266                     0            0                                   0
+267                     0            0                                   0
+268                     0            0                                   0
+269                     0            0                                   0
+270                     0            0                                   0
+271                     0            0                                   0
+272                     0            0                                   0
+273                     0            0                                   0
+274                     0            0                                   0
+275                     0            0                                   0
+276                     0            0                                   0
+277                     0            0                                   0
+278                     0            0                                   0
+279                     0            0                                   0
+280                     0            0                                   0
+281                     0            0                                   0
+282                     0            0                                   0
+283                     0            0                                   0
+284                     0            0                                   0
+285                     0            0                                   0
+286                     0            0                                   0
+287                     0            0                                   0
+288                     0            0                                   0
+289                     0            0                                   0
+290                     0            0                                   0
+291                     0            0                                   0
+292                     0            0                                   0
+293                     0            0                                   0
+294                     0            0                                   0
+295                     0            0                                   0
+296                     0            0                                   0
+297                     0            0                                   0
+298                     0            0                                   0
+299                     0            0                                   0
+300                     0            0                                   0
+301                     0            0                                   0
+302                     0            0                                   0
+303                     0            0                                   0
+304                     0            0                                   0
+305                     0            0                                   0
+306                     0            0                                   0
+307                     0            0                                   0
+308                     0            0                                   0
+309                     0            0                                   0
+310                     0            0                                   0
+311                     0            0                                   0
+312                     0            0                                   0
+313                     0            0                                   0
+314                     0            0                                   0
+315                     0            0                                   0
+316                     0            0                                   0
+317                     0            0                                   0
+318                     0            0                                   0
+319                     0            0                                   0
+320                     0            0                                   0
+321                     0            0                                   0
+322                     0            0                                   0
+323                     0            0                                   0
+324                     0            0                                   0
+325                     0            0                                   0
+326                     0            0                                   0
+327                     0            0                                   0
+328                     0            0                                   0
+329                     0            0                                   0
+330                     0            0                                   0
+331                     0            0                                   0
+332                     0            0                                   0
+333                     0            0                                   0
+334                     0            0                                   0
+335                     0            0                                   0
+336                     0            0                                   0
+337                     0            0                                   0
+338                     0            0                                   0
+339                     0            0                                   0
+340                     0            0                                   0
+341                     0            0                                   0
+342                     0            0                                   0
+343                     0            0                                   0
+344                     0            0                                   0
+345                     0            0                                   0
+346                     0            0                                   0
+347                     0            0                                   0
+348                     0            0                                   0
+349                     0            0                                   0
+350                     0            0                                   0
+351                     0            0                                   0
+352                     0            0                                   0
+353                     0            0                                   0
+354                     0            0                                   0
+355                     0            0                                   0
+356                     0            0                                   0
+357                     0            0                                   0
+358                     0            0                                   0
+359                     0            0                                   0
+360                     0            0                                   0
+361                     0            0                                   0
+362                     0            0                                   0
+363                     0            0                                   0
+364                     0            0                                   0
+365                     0            0                                   0
+366                     0            0                                   0
+367                     0            0                                   0
+368                     0            0                                   0
+369                     0            0                                   0
+370                     0            0                                   0
+371                     0            0                                   0
+    species_counts uniqueness_score species_percentage_hit genus_percentage_hit
+1               37                4             0.78000000           1.00000000
+2               49                2             1.00000000           1.00000000
+3               49                2             1.00000000           1.00000000
+4               47               18             1.00000000           1.00000000
+5               46                4             1.00000000           1.00000000
+6                5               10             0.06666667           1.00000000
+7               48                5             1.00000000           1.00000000
+8               48                2             1.00000000           1.00000000
+9                3               10             0.00000000           0.00000000
+10              29               12             1.00000000           1.00000000
+11               2               21             0.00000000           0.22222222
+12               6               16             0.00000000           0.65217391
+13              42                8             0.96000000           1.00000000
+14               4               16             0.00000000           0.40000000
+15              45                2             0.00000000           0.42000000
+16              27               17             0.66000000           1.00000000
+17              42                8             1.00000000           1.00000000
+18              50                1             1.00000000           1.00000000
+19              50                3             1.00000000           1.00000000
+20              50                1             1.00000000           1.00000000
+21              50                1             1.00000000           1.00000000
+22              47                9             1.00000000           1.00000000
+23              43                8             0.92000000           1.00000000
+24              42                9             0.94000000           0.94000000
+25              46                8             1.00000000           1.00000000
+26              46               10             0.96000000           0.96000000
+27              49                9             0.98000000           0.98000000
+28               5                6             0.00000000           0.36363636
+29              45               19             1.00000000           1.00000000
+30              42                2             1.00000000           1.00000000
+31              40               24             1.00000000           1.00000000
+32              39               11             0.95652174           0.95652174
+33              45               28             1.00000000           1.00000000
+34               8               10             0.00000000           0.00000000
+35               5                8             0.00000000           0.70000000
+36               8               16             0.00000000           0.00000000
+37              50                3             1.00000000           1.00000000
+38              27                8             1.00000000           1.00000000
+39              42                7             1.00000000           1.00000000
+40              50                1             1.00000000           1.00000000
+41               2               20             0.00000000           0.54545455
+42              47               14             0.98000000           1.00000000
+43               6               27             0.00000000           0.47368421
+44              36               28             1.00000000           1.00000000
+45              50                1             1.00000000           1.00000000
+46              37                9             0.85416667           0.95833333
+47              47                2             0.96000000           1.00000000
+48               2                9             0.00000000           0.25000000
+49              39               29             0.98000000           1.00000000
+50              43                8             1.00000000           1.00000000
+51              50                1             1.00000000           1.00000000
+52               1                9             0.00000000           0.00000000
+53              45               20             0.98000000           0.98000000
+54              49                2             0.98000000           1.00000000
+55               1                9             0.00000000           0.00000000
+56               2               15             0.00000000           0.00000000
+57              45                2             0.22000000           0.26000000
+58              50                1             1.00000000           1.00000000
+59              43               10             0.96000000           0.96000000
+60              45               11             1.00000000           1.00000000
+61              30               14             0.96000000           1.00000000
+62              44                7             1.00000000           1.00000000
+63              40               18             0.98000000           0.98000000
+64              46                6             1.00000000           1.00000000
+65              48                4             1.00000000           1.00000000
+66              32               24             1.00000000           1.00000000
+67              50                1             1.00000000           1.00000000
+68               7               11             0.00000000           0.73333333
+69              44                6             0.88000000           0.88000000
+70               3                7             0.00000000           0.50000000
+71               6               11             0.00000000           0.85714286
+72              50                1             1.00000000           1.00000000
+73              38               16             0.96000000           1.00000000
+74              50                1             1.00000000           1.00000000
+75              42               10             0.94000000           0.94000000
+76               7                9             0.00000000           0.87500000
+77              50                1             1.00000000           1.00000000
+78              47               15             0.94000000           0.94000000
+79              21               26             0.70000000           0.78000000
+80              41               59             1.00000000           1.00000000
+81              45                8             1.00000000           1.00000000
+82               9               49             0.08000000           0.16000000
+83              45                8             0.00000000           0.02000000
+84              42               14             1.00000000           1.00000000
+85              44               10             1.00000000           1.00000000
+86              46               11             1.00000000           1.00000000
+87              49                9             1.00000000           1.00000000
+88              42                1             0.00000000           0.00000000
+89              14               44             0.00000000           0.10000000
+90               9               13             0.17142857           0.97142857
+91              32                4             1.00000000           1.00000000
+92              26                8             1.00000000           1.00000000
+93               5               10             0.00000000           0.93750000
+94              19                1             0.00000000           0.00000000
+95              14               13             1.00000000           1.00000000
+96               6               18             0.00000000           0.05882353
+97               6                7             0.00000000           0.00000000
+98              17                1             0.00000000           0.00000000
+99               6               16             0.81250000           0.87500000
+100             16                1             0.00000000           0.00000000
+101              0                0             0.00000000           0.00000000
+102              0                0             0.00000000           0.00000000
+103              0                0             0.00000000           0.00000000
+104              0                0             0.00000000           0.00000000
+105              0                0             0.00000000           0.00000000
+106              0                0             0.00000000           0.00000000
+107              0                0             0.00000000           0.00000000
+108              0                0             0.00000000           0.00000000
+109              0                0             0.00000000           0.00000000
+110              0                0             0.00000000           0.00000000
+111              0                0             0.00000000           0.00000000
+112              0                0             0.00000000           0.00000000
+113              0                0             0.00000000           0.00000000
+114              0                0             0.00000000           0.00000000
+115              0                0             0.00000000           0.00000000
+116              0                0             0.00000000           0.00000000
+117              0                0             0.00000000           0.00000000
+118              0                0             0.00000000           0.00000000
+119              0                0             0.00000000           0.00000000
+120              0                0             0.00000000           0.00000000
+121              0                0             0.00000000           0.00000000
+122              0                0             0.00000000           0.00000000
+123              0                0             0.00000000           0.00000000
+124              0                0             0.00000000           0.00000000
+125              0                0             0.00000000           0.00000000
+126              0                0             0.00000000           0.00000000
+127              0                0             0.00000000           0.00000000
+128              0                0             0.00000000           0.00000000
+129              0                0             0.00000000           0.00000000
+130              0                0             0.00000000           0.00000000
+131              0                0             0.00000000           0.00000000
+132              0                0             0.00000000           0.00000000
+133              0                0             0.00000000           0.00000000
+134              0                0             0.00000000           0.00000000
+135              0                0             0.00000000           0.00000000
+136              0                0             0.00000000           0.00000000
+137              0                0             0.00000000           0.00000000
+138              0                0             0.00000000           0.00000000
+139              0                0             0.00000000           0.00000000
+140              0                0             0.00000000           0.00000000
+141              0                0             0.00000000           0.00000000
+142              0                0             0.00000000           0.00000000
+143              0                0             0.00000000           0.00000000
+144              0                0             0.00000000           0.00000000
+145              0                0             0.00000000           0.00000000
+146              0                0             0.00000000           0.00000000
+147              0                0             0.00000000           0.00000000
+148              0                0             0.00000000           0.00000000
+149              0                0             0.00000000           0.00000000
+150              0                0             0.00000000           0.00000000
+151              0                0             0.00000000           0.00000000
+152              0                0             0.00000000           0.00000000
+153              0                0             0.00000000           0.00000000
+154              0                0             0.00000000           0.00000000
+155              0                0             0.00000000           0.00000000
+156              0                0             0.00000000           0.00000000
+157              0                0             0.00000000           0.00000000
+158              0                0             0.00000000           0.00000000
+159              0                0             0.00000000           0.00000000
+160              0                0             0.00000000           0.00000000
+161              0                0             0.00000000           0.00000000
+162              0                0             0.00000000           0.00000000
+163              0                0             0.00000000           0.00000000
+164              0                0             0.00000000           0.00000000
+165              0                0             0.00000000           0.00000000
+166              0                0             0.00000000           0.00000000
+167              0                0             0.00000000           0.00000000
+168              0                0             0.00000000           0.00000000
+169              0                0             0.00000000           0.00000000
+170              0                0             0.00000000           0.00000000
+171              0                0             0.00000000           0.00000000
+172              0                0             0.00000000           0.00000000
+173              0                0             0.00000000           0.00000000
+174              0                0             0.00000000           0.00000000
+175              0                0             0.00000000           0.00000000
+176              0                0             0.00000000           0.00000000
+177              0                0             0.00000000           0.00000000
+178              0                0             0.00000000           0.00000000
+179              0                0             0.00000000           0.00000000
+180              0                0             0.00000000           0.00000000
+181              0                0             0.00000000           0.00000000
+182              0                0             0.00000000           0.00000000
+183              0                0             0.00000000           0.00000000
+184              0                0             0.00000000           0.00000000
+185              0                0             0.00000000           0.00000000
+186              0                0             0.00000000           0.00000000
+187              0                0             0.00000000           0.00000000
+188              0                0             0.00000000           0.00000000
+189              0                0             0.00000000           0.00000000
+190              0                0             0.00000000           0.00000000
+191              0                0             0.00000000           0.00000000
+192              0                0             0.00000000           0.00000000
+193              0                0             0.00000000           0.00000000
+194              0                0             0.00000000           0.00000000
+195              0                0             0.00000000           0.00000000
+196              0                0             0.00000000           0.00000000
+197              0                0             0.00000000           0.00000000
+198              0                0             0.00000000           0.00000000
+199              0                0             0.00000000           0.00000000
+200              0                0             0.00000000           0.00000000
+201              0                0             0.00000000           0.00000000
+202              0                0             0.00000000           0.00000000
+203              0                0             0.00000000           0.00000000
+204              0                0             0.00000000           0.00000000
+205              0                0             0.00000000           0.00000000
+206              0                0             0.00000000           0.00000000
+207              0                0             0.00000000           0.00000000
+208              0                0             0.00000000           0.00000000
+209              0                0             0.00000000           0.00000000
+210              0                0             0.00000000           0.00000000
+211              0                0             0.00000000           0.00000000
+212              0                0             0.00000000           0.00000000
+213              0                0             0.00000000           0.00000000
+214              0                0             0.00000000           0.00000000
+215              0                0             0.00000000           0.00000000
+216              0                0             0.00000000           0.00000000
+217              0                0             0.00000000           0.00000000
+218              0                0             0.00000000           0.00000000
+219              0                0             0.00000000           0.00000000
+220              0                0             0.00000000           0.00000000
+221              0                0             0.00000000           0.00000000
+222              0                0             0.00000000           0.00000000
+223              0                0             0.00000000           0.00000000
+224              0                0             0.00000000           0.00000000
+225              0                0             0.00000000           0.00000000
+226              0                0             0.00000000           0.00000000
+227              0                0             0.00000000           0.00000000
+228              0                0             0.00000000           0.00000000
+229              0                0             0.00000000           0.00000000
+230              0                0             0.00000000           0.00000000
+231              0                0             0.00000000           0.00000000
+232              0                0             0.00000000           0.00000000
+233              0                0             0.00000000           0.00000000
+234              0                0             0.00000000           0.00000000
+235              0                0             0.00000000           0.00000000
+236              0                0             0.00000000           0.00000000
+237              0                0             0.00000000           0.00000000
+238              0                0             0.00000000           0.00000000
+239              0                0             0.00000000           0.00000000
+240              0                0             0.00000000           0.00000000
+241              0                0             0.00000000           0.00000000
+242              0                0             0.00000000           0.00000000
+243              0                0             0.00000000           0.00000000
+244              0                0             0.00000000           0.00000000
+245              0                0             0.00000000           0.00000000
+246              0                0             0.00000000           0.00000000
+247              0                0             0.00000000           0.00000000
+248              0                0             0.00000000           0.00000000
+249              0                0             0.00000000           0.00000000
+250              0                0             0.00000000           0.00000000
+251              0                0             0.00000000           0.00000000
+252              0                0             0.00000000           0.00000000
+253              0                0             0.00000000           0.00000000
+254              0                0             0.00000000           0.00000000
+255              0                0             0.00000000           0.00000000
+256              0                0             0.00000000           0.00000000
+257              0                0             0.00000000           0.00000000
+258              0                0             0.00000000           0.00000000
+259              0                0             0.00000000           0.00000000
+260              0                0             0.00000000           0.00000000
+261              0                0             0.00000000           0.00000000
+262              0                0             0.00000000           0.00000000
+263              0                0             0.00000000           0.00000000
+264              0                0             0.00000000           0.00000000
+265              0                0             0.00000000           0.00000000
+266              0                0             0.00000000           0.00000000
+267              0                0             0.00000000           0.00000000
+268              0                0             0.00000000           0.00000000
+269              0                0             0.00000000           0.00000000
+270              0                0             0.00000000           0.00000000
+271              0                0             0.00000000           0.00000000
+272              0                0             0.00000000           0.00000000
+273              0                0             0.00000000           0.00000000
+274              0                0             0.00000000           0.00000000
+275              0                0             0.00000000           0.00000000
+276              0                0             0.00000000           0.00000000
+277              0                0             0.00000000           0.00000000
+278              0                0             0.00000000           0.00000000
+279              0                0             0.00000000           0.00000000
+280              0                0             0.00000000           0.00000000
+281              0                0             0.00000000           0.00000000
+282              0                0             0.00000000           0.00000000
+283              0                0             0.00000000           0.00000000
+284              0                0             0.00000000           0.00000000
+285              0                0             0.00000000           0.00000000
+286              0                0             0.00000000           0.00000000
+287              0                0             0.00000000           0.00000000
+288              0                0             0.00000000           0.00000000
+289              0                0             0.00000000           0.00000000
+290              0                0             0.00000000           0.00000000
+291              0                0             0.00000000           0.00000000
+292              0                0             0.00000000           0.00000000
+293              0                0             0.00000000           0.00000000
+294              0                0             0.00000000           0.00000000
+295              0                0             0.00000000           0.00000000
+296              0                0             0.00000000           0.00000000
+297              0                0             0.00000000           0.00000000
+298              0                0             0.00000000           0.00000000
+299              0                0             0.00000000           0.00000000
+300              0                0             0.00000000           0.00000000
+301              0                0             0.00000000           0.00000000
+302              0                0             0.00000000           0.00000000
+303              0                0             0.00000000           0.00000000
+304              0                0             0.00000000           0.00000000
+305              0                0             0.00000000           0.00000000
+306              0                0             0.00000000           0.00000000
+307              0                0             0.00000000           0.00000000
+308              0                0             0.00000000           0.00000000
+309              0                0             0.00000000           0.00000000
+310              0                0             0.00000000           0.00000000
+311              0                0             0.00000000           0.00000000
+312              0                0             0.00000000           0.00000000
+313              0                0             0.00000000           0.00000000
+314              0                0             0.00000000           0.00000000
+315              0                0             0.00000000           0.00000000
+316              0                0             0.00000000           0.00000000
+317              0                0             0.00000000           0.00000000
+318              0                0             0.00000000           0.00000000
+319              0                0             0.00000000           0.00000000
+320              0                0             0.00000000           0.00000000
+321              0                0             0.00000000           0.00000000
+322              0                0             0.00000000           0.00000000
+323              0                0             0.00000000           0.00000000
+324              0                0             0.00000000           0.00000000
+325              0                0             0.00000000           0.00000000
+326              0                0             0.00000000           0.00000000
+327              0                0             0.00000000           0.00000000
+328              0                0             0.00000000           0.00000000
+329              0                0             0.00000000           0.00000000
+330              0                0             0.00000000           0.00000000
+331              0                0             0.00000000           0.00000000
+332              0                0             0.00000000           0.00000000
+333              0                0             0.00000000           0.00000000
+334              0                0             0.00000000           0.00000000
+335              0                0             0.00000000           0.00000000
+336              0                0             0.00000000           0.00000000
+337              0                0             0.00000000           0.00000000
+338              0                0             0.00000000           0.00000000
+339              0                0             0.00000000           0.00000000
+340              0                0             0.00000000           0.00000000
+341              0                0             0.00000000           0.00000000
+342              0                0             0.00000000           0.00000000
+343              0                0             0.00000000           0.00000000
+344              0                0             0.00000000           0.00000000
+345              0                0             0.00000000           0.00000000
+346              0                0             0.00000000           0.00000000
+347              0                0             0.00000000           0.00000000
+348              0                0             0.00000000           0.00000000
+349              0                0             0.00000000           0.00000000
+350              0                0             0.00000000           0.00000000
+351              0                0             0.00000000           0.00000000
+352              0                0             0.00000000           0.00000000
+353              0                0             0.00000000           0.00000000
+354              0                0             0.00000000           0.00000000
+355              0                0             0.00000000           0.00000000
+356              0                0             0.00000000           0.00000000
+357              0                0             0.00000000           0.00000000
+358              0                0             0.00000000           0.00000000
+359              0                0             0.00000000           0.00000000
+360              0                0             0.00000000           0.00000000
+361              0                0             0.00000000           0.00000000
+362              0                0             0.00000000           0.00000000
+363              0                0             0.00000000           0.00000000
+364              0                0             0.00000000           0.00000000
+365              0                0             0.00000000           0.00000000
+366              0                0             0.00000000           0.00000000
+367              0                0             0.00000000           0.00000000
+368              0                0             0.00000000           0.00000000
+369              0                0             0.00000000           0.00000000
+370              0                0             0.00000000           0.00000000
+371              0                0             0.00000000           0.00000000
+    species_contaminant_score genus_contaminant_score
+1                   0.6400000               0.2000000
+2                   0.2400000               0.1400000
+3                   0.8800000               0.0200000
+4                   1.0000000               0.2200000
+5                   0.3400000               0.1400000
+6                   1.0000000               0.2222222
+7                   0.4000000               0.0000000
+8                   0.8400000               0.0200000
+9                   1.0000000               1.0000000
+10                  0.6800000               0.1400000
+11                  1.0000000               1.0000000
+12                  1.0000000               0.8695652
+13                  0.3600000               0.1000000
+14                  1.0000000               0.8000000
+15                  1.0000000               1.0000000
+16                  0.6400000               0.3200000
+17                  0.3800000               0.3400000
+18                  0.0000000               0.0000000
+19                  0.1400000               0.0000000
+20                  0.4600000               0.0200000
+21                  0.5600000               0.0200000
+22                  0.1600000               0.1000000
+23                  0.9200000               0.1200000
+24                  0.4000000               0.2400000
+25                  0.2000000               0.1000000
+26                  0.4200000               0.1600000
+27                  0.7600000               0.4000000
+28                  1.0000000               0.7272727
+29                  0.2400000               0.2200000
+30                  0.2800000               0.2200000
+31                  0.3200000               0.3000000
+32                  0.1739130               0.1086957
+33                  0.2200000               0.2000000
+34                  1.0000000               1.0000000
+35                  1.0000000               0.6000000
+36                  1.0000000               1.0000000
+37                  0.1600000               0.1600000
+38                  0.6734694               0.1224490
+39                  0.5400000               0.0400000
+40                  0.2600000               0.2000000
+41                  1.0000000               0.7272727
+42                  1.0000000               0.1600000
+43                  1.0000000               0.8421053
+44                  0.4200000               0.4000000
+45                  0.6400000               0.2200000
+46                  0.3333333               0.1666667
+47                  0.1200000               0.0000000
+48                  1.0000000               0.8750000
+49                  0.4400000               0.3400000
+50                  0.7000000               0.3200000
+51                  0.2800000               0.1400000
+52                  1.0000000               1.0000000
+53                  0.9000000               0.1600000
+54                  0.7000000               0.0000000
+55                  1.0000000               1.0000000
+56                  1.0000000               1.0000000
+57                  1.0000000               1.0000000
+58                  0.0400000               0.0000000
+59                  0.1800000               0.1600000
+60                  0.1600000               0.1600000
+61                  0.4800000               0.0400000
+62                  0.2800000               0.2600000
+63                  0.3000000               0.3000000
+64                  0.2800000               0.2200000
+65                  0.1400000               0.1200000
+66                  0.9000000               0.5400000
+67                  0.0600000               0.0400000
+68                  1.0000000               0.6000000
+69                  1.0000000               0.1800000
+70                  1.0000000               0.5000000
+71                  1.0000000               0.5714286
+72                  0.1200000               0.0200000
+73                  0.9600000               0.0400000
+74                  0.0600000               0.0200000
+75                  0.2800000               0.2400000
+76                  1.0000000               0.3750000
+77                  0.6000000               0.0800000
+78                  0.3600000               0.2000000
+79                  1.0000000               0.9800000
+80                  0.5200000               0.3800000
+81                  0.3600000               0.3400000
+82                  1.0000000               1.0000000
+83                  1.0000000               1.0000000
+84                  0.3600000               0.3200000
+85                  0.3000000               0.2800000
+86                  0.2400000               0.2400000
+87                  0.4000000               0.3200000
+88                  1.0000000               1.0000000
+89                  1.0000000               1.0000000
+90                  1.0000000               0.6857143
+91                  0.1818182               0.1818182
+92                  0.3928571               0.3928571
+93                  1.0000000               0.9375000
+94                  1.0000000               1.0000000
+95                  0.5882353               0.4705882
+96                  1.0000000               1.0000000
+97                  1.0000000               1.0000000
+98                  1.0000000               1.0000000
+99                  0.9375000               0.8750000
+100                 1.0000000               1.0000000
+101                 0.0000000               0.0000000
+102                 0.0000000               0.0000000
+103                 0.0000000               0.0000000
+104                 0.0000000               0.0000000
+105                 0.0000000               0.0000000
+106                 0.0000000               0.0000000
+107                 0.0000000               0.0000000
+108                 0.0000000               0.0000000
+109                 0.0000000               0.0000000
+110                 0.0000000               0.0000000
+111                 0.0000000               0.0000000
+112                 0.0000000               0.0000000
+113                 0.0000000               0.0000000
+114                 0.0000000               0.0000000
+115                 0.0000000               0.0000000
+116                 0.0000000               0.0000000
+117                 0.0000000               0.0000000
+118                 0.0000000               0.0000000
+119                 0.0000000               0.0000000
+120                 0.0000000               0.0000000
+121                 0.0000000               0.0000000
+122                 0.0000000               0.0000000
+123                 0.0000000               0.0000000
+124                 0.0000000               0.0000000
+125                 0.0000000               0.0000000
+126                 0.0000000               0.0000000
+127                 0.0000000               0.0000000
+128                 0.0000000               0.0000000
+129                 0.0000000               0.0000000
+130                 0.0000000               0.0000000
+131                 0.0000000               0.0000000
+132                 0.0000000               0.0000000
+133                 0.0000000               0.0000000
+134                 0.0000000               0.0000000
+135                 0.0000000               0.0000000
+136                 0.0000000               0.0000000
+137                 0.0000000               0.0000000
+138                 0.0000000               0.0000000
+139                 0.0000000               0.0000000
+140                 0.0000000               0.0000000
+141                 0.0000000               0.0000000
+142                 0.0000000               0.0000000
+143                 0.0000000               0.0000000
+144                 0.0000000               0.0000000
+145                 0.0000000               0.0000000
+146                 0.0000000               0.0000000
+147                 0.0000000               0.0000000
+148                 0.0000000               0.0000000
+149                 0.0000000               0.0000000
+150                 0.0000000               0.0000000
+151                 0.0000000               0.0000000
+152                 0.0000000               0.0000000
+153                 0.0000000               0.0000000
+154                 0.0000000               0.0000000
+155                 0.0000000               0.0000000
+156                 0.0000000               0.0000000
+157                 0.0000000               0.0000000
+158                 0.0000000               0.0000000
+159                 0.0000000               0.0000000
+160                 0.0000000               0.0000000
+161                 0.0000000               0.0000000
+162                 0.0000000               0.0000000
+163                 0.0000000               0.0000000
+164                 0.0000000               0.0000000
+165                 0.0000000               0.0000000
+166                 0.0000000               0.0000000
+167                 0.0000000               0.0000000
+168                 0.0000000               0.0000000
+169                 0.0000000               0.0000000
+170                 0.0000000               0.0000000
+171                 0.0000000               0.0000000
+172                 0.0000000               0.0000000
+173                 0.0000000               0.0000000
+174                 0.0000000               0.0000000
+175                 0.0000000               0.0000000
+176                 0.0000000               0.0000000
+177                 0.0000000               0.0000000
+178                 0.0000000               0.0000000
+179                 0.0000000               0.0000000
+180                 0.0000000               0.0000000
+181                 0.0000000               0.0000000
+182                 0.0000000               0.0000000
+183                 0.0000000               0.0000000
+184                 0.0000000               0.0000000
+185                 0.0000000               0.0000000
+186                 0.0000000               0.0000000
+187                 0.0000000               0.0000000
+188                 0.0000000               0.0000000
+189                 0.0000000               0.0000000
+190                 0.0000000               0.0000000
+191                 0.0000000               0.0000000
+192                 0.0000000               0.0000000
+193                 0.0000000               0.0000000
+194                 0.0000000               0.0000000
+195                 0.0000000               0.0000000
+196                 0.0000000               0.0000000
+197                 0.0000000               0.0000000
+198                 0.0000000               0.0000000
+199                 0.0000000               0.0000000
+200                 0.0000000               0.0000000
+201                 0.0000000               0.0000000
+202                 0.0000000               0.0000000
+203                 0.0000000               0.0000000
+204                 0.0000000               0.0000000
+205                 0.0000000               0.0000000
+206                 0.0000000               0.0000000
+207                 0.0000000               0.0000000
+208                 0.0000000               0.0000000
+209                 0.0000000               0.0000000
+210                 0.0000000               0.0000000
+211                 0.0000000               0.0000000
+212                 0.0000000               0.0000000
+213                 0.0000000               0.0000000
+214                 0.0000000               0.0000000
+215                 0.0000000               0.0000000
+216                 0.0000000               0.0000000
+217                 0.0000000               0.0000000
+218                 0.0000000               0.0000000
+219                 0.0000000               0.0000000
+220                 0.0000000               0.0000000
+221                 0.0000000               0.0000000
+222                 0.0000000               0.0000000
+223                 0.0000000               0.0000000
+224                 0.0000000               0.0000000
+225                 0.0000000               0.0000000
+226                 0.0000000               0.0000000
+227                 0.0000000               0.0000000
+228                 0.0000000               0.0000000
+229                 0.0000000               0.0000000
+230                 0.0000000               0.0000000
+231                 0.0000000               0.0000000
+232                 0.0000000               0.0000000
+233                 0.0000000               0.0000000
+234                 0.0000000               0.0000000
+235                 0.0000000               0.0000000
+236                 0.0000000               0.0000000
+237                 0.0000000               0.0000000
+238                 0.0000000               0.0000000
+239                 0.0000000               0.0000000
+240                 0.0000000               0.0000000
+241                 0.0000000               0.0000000
+242                 0.0000000               0.0000000
+243                 0.0000000               0.0000000
+244                 0.0000000               0.0000000
+245                 0.0000000               0.0000000
+246                 0.0000000               0.0000000
+247                 0.0000000               0.0000000
+248                 0.0000000               0.0000000
+249                 0.0000000               0.0000000
+250                 0.0000000               0.0000000
+251                 0.0000000               0.0000000
+252                 0.0000000               0.0000000
+253                 0.0000000               0.0000000
+254                 0.0000000               0.0000000
+255                 0.0000000               0.0000000
+256                 0.0000000               0.0000000
+257                 0.0000000               0.0000000
+258                 0.0000000               0.0000000
+259                 0.0000000               0.0000000
+260                 0.0000000               0.0000000
+261                 0.0000000               0.0000000
+262                 0.0000000               0.0000000
+263                 0.0000000               0.0000000
+264                 0.0000000               0.0000000
+265                 0.0000000               0.0000000
+266                 0.0000000               0.0000000
+267                 0.0000000               0.0000000
+268                 0.0000000               0.0000000
+269                 0.0000000               0.0000000
+270                 0.0000000               0.0000000
+271                 0.0000000               0.0000000
+272                 0.0000000               0.0000000
+273                 0.0000000               0.0000000
+274                 0.0000000               0.0000000
+275                 0.0000000               0.0000000
+276                 0.0000000               0.0000000
+277                 0.0000000               0.0000000
+278                 0.0000000               0.0000000
+279                 0.0000000               0.0000000
+280                 0.0000000               0.0000000
+281                 0.0000000               0.0000000
+282                 0.0000000               0.0000000
+283                 0.0000000               0.0000000
+284                 0.0000000               0.0000000
+285                 0.0000000               0.0000000
+286                 0.0000000               0.0000000
+287                 0.0000000               0.0000000
+288                 0.0000000               0.0000000
+289                 0.0000000               0.0000000
+290                 0.0000000               0.0000000
+291                 0.0000000               0.0000000
+292                 0.0000000               0.0000000
+293                 0.0000000               0.0000000
+294                 0.0000000               0.0000000
+295                 0.0000000               0.0000000
+296                 0.0000000               0.0000000
+297                 0.0000000               0.0000000
+298                 0.0000000               0.0000000
+299                 0.0000000               0.0000000
+300                 0.0000000               0.0000000
+301                 0.0000000               0.0000000
+302                 0.0000000               0.0000000
+303                 0.0000000               0.0000000
+304                 0.0000000               0.0000000
+305                 0.0000000               0.0000000
+306                 0.0000000               0.0000000
+307                 0.0000000               0.0000000
+308                 0.0000000               0.0000000
+309                 0.0000000               0.0000000
+310                 0.0000000               0.0000000
+311                 0.0000000               0.0000000
+312                 0.0000000               0.0000000
+313                 0.0000000               0.0000000
+314                 0.0000000               0.0000000
+315                 0.0000000               0.0000000
+316                 0.0000000               0.0000000
+317                 0.0000000               0.0000000
+318                 0.0000000               0.0000000
+319                 0.0000000               0.0000000
+320                 0.0000000               0.0000000
+321                 0.0000000               0.0000000
+322                 0.0000000               0.0000000
+323                 0.0000000               0.0000000
+324                 0.0000000               0.0000000
+325                 0.0000000               0.0000000
+326                 0.0000000               0.0000000
+327                 0.0000000               0.0000000
+328                 0.0000000               0.0000000
+329                 0.0000000               0.0000000
+330                 0.0000000               0.0000000
+331                 0.0000000               0.0000000
+332                 0.0000000               0.0000000
+333                 0.0000000               0.0000000
+334                 0.0000000               0.0000000
+335                 0.0000000               0.0000000
+336                 0.0000000               0.0000000
+337                 0.0000000               0.0000000
+338                 0.0000000               0.0000000
+339                 0.0000000               0.0000000
+340                 0.0000000               0.0000000
+341                 0.0000000               0.0000000
+342                 0.0000000               0.0000000
+343                 0.0000000               0.0000000
+344                 0.0000000               0.0000000
+345                 0.0000000               0.0000000
+346                 0.0000000               0.0000000
+347                 0.0000000               0.0000000
+348                 0.0000000               0.0000000
+349                 0.0000000               0.0000000
+350                 0.0000000               0.0000000
+351                 0.0000000               0.0000000
+352                 0.0000000               0.0000000
+353                 0.0000000               0.0000000
+354                 0.0000000               0.0000000
+355                 0.0000000               0.0000000
+356                 0.0000000               0.0000000
+357                 0.0000000               0.0000000
+358                 0.0000000               0.0000000
+359                 0.0000000               0.0000000
+360                 0.0000000               0.0000000
+361                 0.0000000               0.0000000
+362                 0.0000000               0.0000000
+363                 0.0000000               0.0000000
+364                 0.0000000               0.0000000
+365                 0.0000000               0.0000000
+366                 0.0000000               0.0000000
+367                 0.0000000               0.0000000
+368                 0.0000000               0.0000000
+369                 0.0000000               0.0000000
+370                 0.0000000               0.0000000
+371                 0.0000000               0.0000000
+MetaBlast COMPLETE
+Running blast reassignment
+Results written to /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/outputs_new_all/mess_sample_100k_noerr/healthy_stool_100_50_noerr.metascope_blast_reassigned.csv
+# A tibble: 351 x 23
+   TaxonomyID Genome    read_count Proportion readsEM EMProportion domain phylum
+        <int> <chr>          <dbl>      <dbl>   <dbl>        <dbl>  <int> <chr> 
+ 1     435590 Phocaeic~     10076.     0.130    9890.       0.128       0 Bacte~
+ 2     537011 Segatell~      8461.     0.110    8459.       0.110       0 Bacte~
+ 3     411479 Bacteroi~      6683.     0.0865   6783.       0.0878      0 Bacte~
+ 4     515619 Agathoba~      7927.     0.103    7811.       0.101       0 Bacil~
+ 5     411903 Collinse~      2063.     0.0267   2061.       0.0267      0 Actin~
+ 6     445970 Alistipe~      2037      0.0264   2025.       0.0262      0 Bacte~
+ 7     367928 Bifidoba~      1934      0.0250   1941.       0.0251      0 Actin~
+ 8      28116 Bacteroi~      3008.     0.0390   2997.       0.0388      0 Bacte~
+ 9     449673 Bacteroi~      1644.     0.0213   1641.       0.0213      0 Bacte~
+10     226186 Bacteroi~      1911.     0.0248   1928.       0.0250      0 Bacte~
+# i 341 more rows
+# i 15 more variables: class <chr>, order <chr>, family <chr>, genus <chr>,
+#   species <chr>, best_hit_genus <chr>, genus_counts <int>,
+#   best_hit_species <chr>, species_counts <int>, uniqueness_score <int>,
+#   species_percentage_hit <dbl>, genus_percentage_hit <dbl>,
+#   species_contaminant_score <dbl>, genus_contaminant_score <dbl>,
+#   blast_validated <lgl>
+BLAST REASSIGNMENT COMPLETE
+Time difference of 37.26721 mins
