@@ -25,9 +25,9 @@ blast_db <- args[12]
 ## TEMPORARY OVERWRITE
 # outDir <- tmpDir <- "/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot"
 
-outDir <- tmpDir <- file.path("/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/troubleshoot", expTag)
-dir.create(tmpDir, showWarnings = FALSE)
-dir.create(outDir, showWarnings = FALSE)
+# outDir <- tmpDir <- file.path("/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/toubleshoot", expTag)
+# dir.create(tmpDir, showWarnings = FALSE)
+# dir.create(outDir, showWarnings = FALSE)
 
 
 # Using bt2 params

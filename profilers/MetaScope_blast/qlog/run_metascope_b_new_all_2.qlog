@@ -1,0 +1,43 @@
+==========================================================
+Start date : Tue Oct 21 01:28:28 EDT 2025
+Job name : m_blast_new
+Job ID : 2
+==========================================================
+Task ID: 2
+Data Directory: 
+Sample Name: healthy_stool_100_10
+Sample Type: mess_sample_100k_err
+R1 Read Path: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/MeSS_out_noerr/fastq/mess_sample_100k_err/healthy_stool_100_10_R1.fq.gz
+R2 Read Path: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/MeSS_out_noerr/fastq/mess_sample_100k_err/healthy_stool_100_10_R2.fq.gz
+Rows: 840 Columns: 2
+-- Column specification --------------------------------------------------------
+Delimiter: ","
+chr (1): species
+dbl (1): tax_abundance
+
+i Use `spec()` to retrieve the full column specification for this data.
+i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Attempting to perform Bowtie2 alignment on bacteria index
+[1] "Samtools found on system. Using samtools to create bam file"
+arguments 'show.output.on.console', 'minimized' and 'invisible' are for Windows only
+99854 reads; of these:
+  99854 (100.00%) were paired; of these:
+    60401 (60.49%) aligned concordantly 0 times
+    36051 (36.10%) aligned concordantly exactly 1 time
+    3402 (3.41%) aligned concordantly >1 times
+    ----
+    60401 pairs aligned concordantly 0 times; of these:
+      26021 (43.08%) aligned discordantly 1 time
+    ----
+    34380 pairs aligned 0 times concordantly or discordantly; of these:
+      68760 mates make up the pairs; of these:
+        45338 (65.94%) aligned 0 times
+        13272 (19.30%) aligned exactly 1 time
+        10150 (14.76%) aligned >1 times
+77.30% overall alignment rate
+Error in file(con, "r") : cannot open the connection
+Calls: align_target_bowtie -> <Anonymous> -> readLines -> file
+In addition: Warning message:
+In file(con, "r") :
+  cannot open file '.bowtie2.cerr.txt': No such file or directory
+Execution halted

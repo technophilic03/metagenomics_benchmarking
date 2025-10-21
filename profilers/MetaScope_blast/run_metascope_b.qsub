@@ -15,25 +15,25 @@
 #$ -N m_blast_new
 
 # Request cores
-#$ -pe omp 8
+#$ -pe omp 18
 
 # Memory overall
-$ -l mem_total=128G
+#$ -l mem_total=216G
 
 # Memory per core
-#$ -l mem_per_core=16G
+#$ -l mem_per_core=12G
 
 # Combine output and error files into a single file
 #$ -j y
 
 # Specify the output file name
-#$ -o run_metascope_b_new_one.qlog
+#$ -o run_metascope_b_new_all_$TASK_ID_rerun.qlog
 
 # Submit an array job with N tasks 
-#$ -t 1
+#$ -t 2
 
 #   ask for scratch space
-#$ -l scratch=100G
+#$ -l scratch=500G
 
 # Use SGE_TASK_ID env variable to select appropriate input file from bash array
 # Bash array index starts from 0, so need to subtract one from SGE_TASK_ID value
@@ -63,7 +63,7 @@ sampleName=$(basename "$readPath1" _R1.fq.gz)
 sampleType=$(basename "$(dirname "$readPath1")")
 
 # Strip "_noerr" suffix for matching priors_df files
-sampleNameForPriors="${sampleName%_noerr}"
+sampleNameForPriors="${sampleName%_*err}"
 
 
 echo "Task ID: $SGE_TASK_ID"
@@ -74,7 +74,7 @@ echo "R1 Read Path: $readPath1"
 echo "R2 Read Path: $readPath2"
 
 ### MAKE WORKING DIR
-workingDir="${sampleName}_tmp"
+workingDir="${sampleType}_tmp"
 rm -rf $TMPDIR/$workingDir
 mkdir $TMPDIR/$workingDir
 
@@ -82,7 +82,7 @@ mkdir $TMPDIR/$workingDir
 stem_profiler=${stem}/profilers/MetaScope_blast
 indexDir="/restricted/projectnb/pathoscope/reflib/2020_index_bowtie/"
 expTag=$sampleName
-outDir="${stem_profiler}/outputs_new/${sampleType}"
+outDir="${stem_profiler}/outputs_new_all/${sampleType}/${sampleName}"
 mkdir -p "$outDir"
 tmpDir="$TMPDIR/$workingDir/"
 
