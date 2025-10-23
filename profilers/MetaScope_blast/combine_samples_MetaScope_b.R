@@ -5,12 +5,12 @@ suppressPackageStartupMessages({
 })
 
 # Set file paths ----
-stem <- "/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/"
+stem <- "~/RProjects/metagenomics_benchmarking/profilers/MetaScope_blast"
 test_dir <- file.path(stem, "test_data")
 temp_dir <- file.path(stem, "outputs/temp")
 dat_path <- file.path(stem, "outputs")
 out_path <- file.path(stem, "combined_files")
-taxa_db <- "/restricted/projectnb/pathoscope/data/blastdb/2024_accession_taxa/accessionTaxa.sql"
+taxa_db <- "/projects/f_wj183_1/reflib/2024_accession_taxa/accessionTaxa.sql"
 
 # Create temp_dir if it doesn't exist
 if (!dir.exists(temp_dir)) {
@@ -38,7 +38,10 @@ for (this_batch in all_batches) {
     tmp <- read.csv(blast_output)
     
     # Select columns and save
-    tmp_filtered <- tmp |> select(TaxonomyID, read_count)
+    tmp_filtered <- tmp |> select(TaxonomyID, readsEM) |>
+      rename(read_count = readsEM) |>
+      dplyr::mutate(TaxonomyID = ifelse(TaxonomyID == 0, NA, TaxonomyID))
+      
     write.csv(tmp_filtered, 
               file = file.path(temp_dir_folder, name),
               row.names = FALSE)
