@@ -54,7 +54,7 @@ generate_ground_truth_categories <- function(df) {
   return(res)
 }
 
-profiler_res <- c(ms_res, msp_res,ps2_res, ctf_res)
+profiler_res <- c(ms_res, msp_res,ps2_res, ctf_res, krk2_res, brk_res)
 summary_df <- lapply(profiler_res, generate_ground_truth_categories) |> 
   bind_rows() |>
   filter(rel_read_count > 0)
@@ -75,8 +75,8 @@ summary_df_ground_truth$is_ground_truth <- factor(summary_df_ground_truth$is_gro
 summary_df_ground_truth$pipeline <- factor(summary_df_ground_truth$pipeline,
                                            levels = c("Ground Truth",
                                                       "Centrifuge",
-                                                      #"Kraken2",
-                                                      #"Bracken",
+                                                      "Kraken2",
+                                                      "Bracken",
                                                       "PathoScope2",
                                                       "MetaScope",
                                                       "MetaScope Priors"
