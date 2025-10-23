@@ -1,0 +1,1476 @@
+==========================================================
+Start date : Tue Oct 21 01:51:04 EDT 2025
+Job name : m_blast_new
+Job ID : 23
+==========================================================
+Task ID: 23
+Data Directory: 
+Sample Name: healthy_stool_10_1
+Sample Type: mess_sample_10mil_err
+R1 Read Path: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/MeSS_out_noerr/fastq/mess_sample_10mil_err/healthy_stool_10_1_R1.fq.gz
+R2 Read Path: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/MeSS_out_noerr/fastq/mess_sample_10mil_err/healthy_stool_10_1_R2.fq.gz
+Rows: 120 Columns: 2
+-- Column specification --------------------------------------------------------
+Delimiter: ","
+chr (1): species
+dbl (1): tax_abundance
+
+i Use `spec()` to retrieve the full column specification for this data.
+i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Attempting to perform Bowtie2 alignment on bacteria index
+[1] "Samtools found on system. Using samtools to create bam file"
+arguments 'show.output.on.console', 'minimized' and 'invisible' are for Windows only
+9998107 reads; of these:
+  9998107 (100.00%) were paired; of these:
+    6609013 (66.10%) aligned concordantly 0 times
+    3063898 (30.64%) aligned concordantly exactly 1 time
+    325196 (3.25%) aligned concordantly >1 times
+    ----
+    6609013 pairs aligned concordantly 0 times; of these:
+      4611898 (69.78%) aligned discordantly 1 time
+    ----
+    1997115 pairs aligned 0 times concordantly or discordantly; of these:
+      3994230 mates make up the pairs; of these:
+        2534573 (63.46%) aligned 0 times
+        742631 (18.59%) aligned exactly 1 time
+        717026 (17.95%) aligned >1 times
+87.32% overall alignment rate
+Filtering unmapped reads
+[bam_sort_core] merging from 17 files and 1 in-memory blocks...
+Attempting to perform Bowtie2 alignment on fungi index
+[1] "Samtools found on system. Using samtools to create bam file"
+arguments 'show.output.on.console', 'minimized' and 'invisible' are for Windows only
+9998107 reads; of these:
+  9998107 (100.00%) were paired; of these:
+    9998107 (100.00%) aligned concordantly 0 times
+    0 (0.00%) aligned concordantly exactly 1 time
+    0 (0.00%) aligned concordantly >1 times
+    ----
+    9998107 pairs aligned concordantly 0 times; of these:
+      0 (0.00%) aligned discordantly 1 time
+    ----
+    9998107 pairs aligned 0 times concordantly or discordantly; of these:
+      19996214 mates make up the pairs; of these:
+        19996179 (100.00%) aligned 0 times
+        35 (0.00%) aligned exactly 1 time
+        0 (0.00%) aligned >1 times
+0.00% overall alignment rate
+Filtering unmapped reads
+[bam_sort_core] merging from 12 files and 1 in-memory blocks...
+Attempting to perform Bowtie2 alignment on viral index
+[1] "Samtools found on system. Using samtools to create bam file"
+arguments 'show.output.on.console', 'minimized' and 'invisible' are for Windows only
+9998107 reads; of these:
+  9998107 (100.00%) were paired; of these:
+    9998107 (100.00%) aligned concordantly 0 times
+    0 (0.00%) aligned concordantly exactly 1 time
+    0 (0.00%) aligned concordantly >1 times
+    ----
+    9998107 pairs aligned concordantly 0 times; of these:
+      0 (0.00%) aligned discordantly 1 time
+    ----
+    9998107 pairs aligned 0 times concordantly or discordantly; of these:
+      19996214 mates make up the pairs; of these:
+        19996214 (100.00%) aligned 0 times
+        0 (0.00%) aligned exactly 1 time
+        0 (0.00%) aligned >1 times
+0.00% overall alignment rate
+Filtering unmapped reads
+[bam_sort_core] merging from 12 files and 1 in-memory blocks...
+Library alignment complete
+Merging the bam files into healthy_stool_10_1.bam
+Merging .bam files
+samtools found on system. Merging with samtools.
+[E::sam_hrecs_error] Malformed key:value pair at line 1: "@HD	VN:1.0	SO:coordinate	"
+[E::sam_hrecs_error] Malformed key:value pair at line 1: "@HD	VN:1.0	SO:coordinate	"
+[E::sam_hrecs_error] Malformed key:value pair at line 1: "@HD	VN:1.0	SO:coordinate	"
+Sorting merged bam file
+[bam_sort_core] merging from 10 files and 1 in-memory blocks...
+DONE! Alignments written to /scratch/966874.23.linga/mess_sample_10mil_err_tmp/healthy_stool_10_1.bam
+TARGET STEP COMPLETE
+Writing Intermediate FASTQ file to /scratch/966874.23.linga/mess_sample_10mil_err_tmp/intermediate.fastq.gz
+  |                                                                              |                                                                      |   0%  |                                                                              |======================================================================| 100%
+Intermediate FASTQ file written to/scratch/966874.23.linga/mess_sample_10mil_err_tmp/intermediate.fastq.gz
+Attempting to perform Bowtie2 alignment on human_mouse index
+[1] "Samtools found on system. Using samtools to create bam file"
+arguments 'show.output.on.console', 'minimized' and 'invisible' are for Windows only
+1 reads; of these:
+  1 (100.00%) were unpaired; of these:
+    1 (100.00%) aligned 0 times
+    0 (0.00%) aligned exactly 1 time
+    0 (0.00%) aligned >1 times
+0.00% overall alignment rate
+Attempting to perform Bowtie2 alignment on phix174 index
+[1] "Samtools found on system. Using samtools to create bam file"
+arguments 'show.output.on.console', 'minimized' and 'invisible' are for Windows only
+1 reads; of these:
+  1 (100.00%) were unpaired; of these:
+    1 (100.00%) aligned 0 times
+    0 (0.00%) aligned exactly 1 time
+    0 (0.00%) aligned >1 times
+0.00% overall alignment rate
+Removing reads mapped to host indices
+DONE! Alignments written to /scratch/966874.23.linga/mess_sample_10mil_err_tmp//healthy_stool_10_1.filtered.bam
+FILTER STEP COMPLETE
+running id step
+Reading .bam file: /scratch/966874.23.linga/mess_sample_10mil_err_tmp//healthy_stool_10_1.filtered.bam
+Setting up the EM algorithm
+	Found 1628 unique taxa
+Starting EM iterations
+1 409540.526805113
+2 1.48684034434528
+3 0.593331617124781
+4 0.334912869360597
+5 0.339324256528359
+6 0.352721291410324
+7 0.313483975866946
+8 0.278684078248685
+9 0.111167528465971
+10 0.0434835356221031
+11 0.0338298448927553
+12 0.0287426505038778
+13 0.0211307528837297
+14 0.0134328108901427
+15 0.00755737475028692
+16 0.0045186917049385
+17 0.00300829721188146
+18 0.00200990016547911
+19 0.00137206626222467
+20 0.00108558800535284
+21 0.000857674537889422
+22 0.000841741954693233
+23 0.000985294378322424
+24 0.00116848167037211
+25 0.00140595221849609
+26 0.0017194893917554
+27 0.00214216396016405
+28 0.00272515049271202
+29 0.00354860181333148
+30 0.00473711330105682
+31 0.00647278828103378
+32 0.00896434568431838
+33 0.012221273843326
+34 0.0153741476735521
+35 0.0161585022818034
+36 0.0131655952823564
+37 0.00851193181064641
+38 0.00479482475146273
+39 0.00255101142868374
+40 0.00133372245861931
+41 0.000694911126975548
+42 0.000362259083193055
+43 0.000189084891450434
+44 0.000103271630968904
+45 0.000102006422585269
+46 0.000100734929780359
+47 9.94580522249978e-05
+DONE! Converged in 47 iterations.
+Found reads for 158 genomes
+Results written to /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/outputs_new_all/mess_sample_10mil_err/healthy_stool_10_1.metascope_id.csv
+No coverage plots created
+There were 50 or more warnings (use warnings() to see the first 50)
+running MetaBlast
+Sorting bam file to /scratch/966874.23.linga/mess_sample_10mil_err_tmp//healthy_stool_10_1_sorted.bam
+[bam_sort_core] merging from 6 files and 1 in-memory blocks...
+Generating fasta sequences from bam file
+BLASTN executable found on system.
+Running BLASTN on all sequences
+Running BLAST metrics on all blast results
+Results written to /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/outputs_new_all/mess_sample_10mil_err/healthy_stool_10_1.metascope_blast.csv
+    TaxonomyID                                           Genome read_count
+1       537011                                  Segatella copri    5030654
+2       435590                             Phocaeicola vulgatus    1395723
+3       411479                            Bacteroides uniformis     858421
+4       515619                            Agathobacter rectalis     489529
+5       411903                          Collinsella aerofaciens     303020
+6       445970                             Alistipes putredinis     292403
+7       367928                     Bifidobacterium adolescentis     282218
+8       411483                       Faecalibacterium duncaniae      94311
+9        39482                           Faecalicatena contorta      14446
+10      763034                               Bacteroides fluxus       8074
+11      745368                              Gemmiger formicilis       6320
+12     1122155                      Lactonifactor longoviformis       4516
+13      411461                            Dorea formicigenerans       3974
+14     1121333                     Thomasclavelia saccharogumia       2874
+15      999419                        Parabacteroides johnsonii       2260
+16      622312                          Roseburia inulinivorans       2172
+17      435591                       Parabacteroides distasonis       2120
+18       40520                                    Blautia obeum       2082
+19     1650663                    Allofournierella massiliensis       2006
+20     1122981                              Prevotella corporis       1959
+21      226186                     Bacteroides thetaiotaomicron       1943
+22      295405                             Bacteroides fragilis       1540
+23     1121323                   Anaerotignum lactatifermentans       1521
+24      536231                           Roseburia intestinalis       1303
+25           0     unknown genome; accession ID isNZ_EQ973339.1       1299
+26      709991                         Odoribacter splanchnicus       1246
+27     1121094                            Phocaeicola barnesiae       1231
+28      868129                                 Prevotella bivia       1173
+29      445972                        Anaerotruncus colihominis       1082
+30     1002367                                Leyella stercorea       1043
+31           0 unknown genome; accession ID isNZ_BBAB01000041.1        930
+32       36847                      Anaerotignum neopropionicum        882
+33      246787                     Bacteroides cellulosilyticus        704
+34     1871018                       Angelakisella massiliensis        704
+35     1550024                  Ruthenibacterium lactatiformans        661
+36      585394                                Roseburia hominis        654
+37     1123313                        Faecalicoccus pleomorphus        625
+38           0     unknown genome; accession ID isNZ_DS480350.1        612
+39      411474                             Coprococcus eutactus        598
+40     1121101                           Bacteroides salyersiae        506
+41     1254439                     Bifidobacterium thermophilum        490
+42      796942                            Stomatobaculum longum        456
+43     1150298                  Fusicatenibacter saccharivorans        443
+44      476272                        Blautia hydrogenotrophica        435
+45     1211819                          Holdemania massiliensis        432
+46     1650661                           Clostridium phoceensis        429
+47      537007                                 Blautia hansenii        351
+48     1236513                     Bacteroides faecichinchillae        315
+49     1122984                            Prevotella intermedia        310
+50      301302                                 Roseburia faecis        291
+51      411467                  Pseudoflavonifractor capillosus        286
+52      155865                       Eubacterium pyruvativorans        266
+53     3158780                           Ruminococcus sp. YE282        254
+54      515620                              Lachnospira eligens        217
+55      511680                            Eshraghiella crossota        189
+56      679190                              Hoylesella buccalis        178
+57      742740                          [Clostridium] symbiosum        157
+58      411471                        Subdoligranulum variabile        137
+59     1871021                     Lachnoclostridium phocaeense        131
+60      649756                              Anaerostipes hadrus        130
+61      547042                          Phocaeicola coprophilus        129
+62      478749                     Marvinbryantia formatexigens        126
+63       28116                               Bacteroides ovatus        124
+64       84024                           Clostridium disporicum        120
+65           0     unknown genome; accession ID isNZ_CP022054.2        108
+66      428127                           Amedibacillus dolichus        107
+67      556268                       Oxalobacter paraformigenes        105
+68           0 unknown genome; accession ID isNZ_CCFE01000031.1        100
+69     1235811                               Prevotella disiens         96
+70     1408437                          Agathobaculum desmolans         89
+71      566550                             Hungatella hathewayi         77
+72           0     unknown genome; accession ID isNZ_EQ973344.1         74
+73      997884                               Bacteroides nordii         71
+74      411473                            Ruminococcus callidus         70
+75           0     unknown genome; accession ID isNZ_KB850945.1         67
+76     1121129                       Butyricimonas synergistica         67
+77     1903263                           Traorella massiliensis         67
+78     1871030                         Merdibacter massiliensis         66
+79      717959                                 Alistipes shahii         64
+80     1852370                    Prevotellamassilia timonensis         51
+81     1852362                                Bacteroides ihuae         50
+82           0     unknown genome; accession ID isNZ_GG662007.1         48
+83      411462                                Dorea longicatena         44
+84     1796620                              Acutalibacter muris         42
+85     1125702                              Treponema vincentii         39
+86      449673                            Bacteroides stercoris         38
+87           0       unknown genome; accession ID isNC_021019.1         33
+88     1297617                 Intestinimonas butyriciproducens         33
+89           0 unknown genome; accession ID isNZ_JNKJ01000020.1         31
+90     1745713                         Bariatricus massiliensis         31
+91      947969                            Cellulomonas carbonis         28
+92      698758                            Amphibacillus xylanus         26
+93     1050201                        Allobaculum stercoricanis         26
+94     1349822                          Coprobacter fastidiosus         25
+95     1035196                    Peptostreptococcus anaerobius         24
+96     1150461                        Bifidobacterium scardovii         24
+97     1720313  Bittarella massiliensis (ex Durand et al. 2017)         24
+98           0 unknown genome; accession ID isNZ_JNKJ01000018.1         23
+99      411463                           Eubacterium ventriosum         22
+100     484018                             Phocaeicola plebeius         22
+101     431947                         Porphyromonas gingivalis         20
+102     411469                           Anaerobutyricum hallii         18
+103      44008                             Enterococcus cecorum         18
+104    1410653                             Clostridium lundense         18
+105    1123263                             Solobacterium moorei         17
+106     290054                    Eubacterium coprostanoligenes         15
+107     796943                              Oribacterium parvum         15
+108    1841868                    Provencibacterium massiliense         14
+109     604330                         Parafannyhessea umbonata         13
+110    2897707                            Merdimmobilis hominis         13
+111     679200                               Johnsonella ignava         12
+112     679935                             Alistipes finegoldii         12
+113    1816678                       Christensenella timonensis         12
+114          0     unknown genome; accession ID isNZ_KB822499.1         11
+115    1720204                               Collinsella ihumii         11
+116    1653435                                Merdimonas faecis         10
+117    1871035                    Negativibacillus massiliensis         10
+118          0 unknown genome; accession ID isNZ_BBAB01000032.1          9
+119     518635                        Bifidobacterium angulatum          8
+120    1841865                        Mediterranea massiliensis          7
+121     290052                       Acetivibrio ethanolgignens          6
+122    1203606                     Butyricicoccus pullicaecorum          6
+123    1256908                              Eubacterium ramulus          5
+124          0     unknown genome; accession ID isNZ_EQ973341.1          5
+125    1033732                           Alistipes senegalensis          5
+126    1336236                        Ruminococcus flavefaciens          4
+127    1384063                        Mediterraneibacter gnavus          4
+128          0     unknown genome; accession ID isNZ_KB907513.1          4
+129     292800                           Flavonifractor plautii          4
+130     518636                     Enterocloster asparagiformis          4
+131     869209                         Treponema succinifaciens          3
+132    1130798                      Limosilactobacillus mucosae          3
+133     888832                                Segatella salivae          3
+134     667015                         Phocaeicola salanitronis          3
+135    1776382                        Neglectibacter timonensis          3
+136     264731                          Xylanibacter ruminicola          2
+137     697329                               Ruminococcus albus          2
+138    1121865                            Enterococcus columbae          2
+139     767031                             Prevotella denticola          2
+140     997352                            Prevotella nigrescens          2
+141          0     unknown genome; accession ID isNZ_KB907524.1          2
+142     206672                           Bifidobacterium longum          2
+143     663278                        Ethanoligenens harbinense          2
+144     322095                            Porphyromonas somerae          2
+145     742733                          Enterocloster citroniae          2
+146          0 unknown genome; accession ID isNZ_BBDW01000005.1          2
+147    1122985                             Hoylesella loescheii          1
+148    1458465                             Megasphaera elsdenii          1
+149     759913                       Streptococcus dysgalactiae          1
+150    1147128                       Bifidobacterium asteroides          1
+151     873513                                 Segatella buccae          1
+152      35760                        Bifidobacterium choerinum          1
+153          0     unknown genome; accession ID isNZ_KB822482.1          1
+154     626523                        Shuttleworthella satelles          1
+155     221027                                Treponema putidum          1
+156     470145                            Phocaeicola coprocola          1
+157     762982                       Paraprevotella xylaniphila          1
+158    1445607                     Bacteroides reticulotermitis          1
+      Proportion   readsEM EMProportion domain         phylum
+1   5.698517e-01 5030578.9 5.698432e-01      0   Bacteroidota
+2   1.581017e-01 1378568.8 1.561586e-01      0   Bacteroidota
+3   9.723838e-02  875624.1 9.918707e-02      0   Bacteroidota
+4   5.545182e-02  490930.8 5.561062e-02      0      Bacillota
+5   3.432485e-02  303047.8 3.432800e-02      0 Actinomycetota
+6   3.312220e-02  293006.5 3.319056e-02      0   Bacteroidota
+7   3.196849e-02  282315.3 3.197951e-02      0 Actinomycetota
+8   1.068316e-02   93902.8 1.063692e-02      0      Bacillota
+9   1.636383e-03   11026.8 1.249067e-03      0      Bacillota
+10  9.145893e-04    8005.8 9.068620e-04      0   Bacteroidota
+11  7.159035e-04    6206.5 7.030466e-04      0      Bacillota
+12  5.115538e-04    4226.8 4.787969e-04      0      Bacillota
+13  4.501583e-04    4526.1 5.126964e-04      0      Bacillota
+14  3.255548e-04    2144.7 2.429395e-04      0      Bacillota
+15  2.560035e-04    2205.7 2.498533e-04      0   Bacteroidota
+16  2.460352e-04    2119.0 2.400277e-04      0      Bacillota
+17  2.401448e-04    1945.2 2.203430e-04      0   Bacteroidota
+18  2.358403e-04    2092.8 2.370609e-04      0      Bacillota
+19  2.272314e-04    1962.3 2.222829e-04      0      Bacillota
+20  2.219074e-04    1926.7 2.182540e-04      0   Bacteroidota
+21  2.200950e-04    1934.8 2.191633e-04      0   Bacteroidota
+22  1.744448e-04    1524.4 1.726826e-04      0   Bacteroidota
+23  1.722926e-04    1472.8 1.668311e-04      0      Bacillota
+24  1.475984e-04    3166.3 3.586682e-04      0      Bacillota
+25  1.471453e-04    1282.2 1.452420e-04      0              0
+26  1.411417e-04     827.8 9.376732e-05      0   Bacteroidota
+27  1.394426e-04    1236.1 1.400166e-04      0   Bacteroidota
+28  1.328726e-04    1149.8 1.302478e-04      0   Bacteroidota
+29  1.225645e-04    1246.2 1.411636e-04      0      Bacillota
+30  1.181467e-04    1019.1 1.154350e-04      0   Bacteroidota
+31  1.053466e-04     539.0 6.106058e-05      0              0
+32  9.990931e-05    1115.2 1.263244e-04      0      Bacillota
+33  7.974621e-05     705.0 7.986178e-05      0   Bacteroidota
+34  7.974621e-05     704.6 7.981804e-05      0      Bacillota
+35  7.487535e-05     753.3 8.532676e-05      0      Bacillota
+36  7.408241e-05     661.9 7.497784e-05      0      Bacillota
+37  7.079741e-05     805.9 9.128623e-05      0      Bacillota
+38  6.932483e-05     596.8 6.760322e-05      0              0
+39  6.773897e-05     604.7 6.849956e-05      0      Bacillota
+40  5.731759e-05     575.4 6.517924e-05      0   Bacteroidota
+41  5.550517e-05     387.4 4.387949e-05      0 Actinomycetota
+42  5.165379e-05     457.3 5.180181e-05      0      Bacillota
+43  5.018121e-05     462.8 5.242648e-05      0      Bacillota
+44  4.927500e-05     438.5 4.967624e-05      0      Bacillota
+45  4.893517e-05     439.4 4.976919e-05      0      Bacillota
+46  4.859535e-05     430.4 4.875155e-05      0      Bacillota
+47  3.975983e-05     618.2 7.002673e-05      0      Bacillota
+48  3.568190e-05     315.3 3.571381e-05      0   Bacteroidota
+49  3.511552e-05     306.3 3.469113e-05      0   Bacteroidota
+50  3.296328e-05     326.0 3.692443e-05      0      Bacillota
+51  3.239690e-05     258.1 2.923435e-05      0      Bacillota
+52  3.013138e-05     287.1 3.252374e-05      0      Bacillota
+53  2.877207e-05     254.0 2.877154e-05      0      Bacillota
+54  2.458086e-05     538.8 6.102905e-05      0      Bacillota
+55  2.140914e-05     190.3 2.155777e-05      0      Bacillota
+56  2.016310e-05     202.3 2.291806e-05      0   Bacteroidota
+57  1.778431e-05     148.3 1.679515e-05      0      Bacillota
+58  1.551879e-05     138.0 1.563146e-05      0      Bacillota
+59  1.483914e-05     136.1 1.541308e-05      0      Bacillota
+60  1.472586e-05     147.5 1.671262e-05      0      Bacillota
+61  1.461259e-05     197.5 2.237594e-05      0   Bacteroidota
+62  1.427276e-05     126.2 1.429824e-05      0      Bacillota
+63  1.404621e-05     124.0 1.404729e-05      0   Bacteroidota
+64  1.359310e-05     118.1 1.337741e-05      0      Bacillota
+65  1.223379e-05     160.3 1.816017e-05      0              0
+66  1.212052e-05     105.8 1.198161e-05      0      Bacillota
+67  1.189397e-05     119.1 1.349416e-05      0 Pseudomonadota
+68  1.132759e-05      97.8 1.107709e-05      0              0
+69  1.087448e-05     135.1 1.530216e-05      0   Bacteroidota
+70  1.008155e-05     100.0 1.132855e-05      0      Bacillota
+71  8.722241e-06      73.2 8.292247e-06      0      Bacillota
+72  8.382414e-06      85.4 9.677204e-06      0              0
+73  8.042586e-06      77.4 8.761930e-06      0   Bacteroidota
+74  7.929310e-06      73.9 8.375372e-06      0      Bacillota
+75  7.589483e-06      64.4 7.291407e-06      0              0
+76  7.589483e-06      67.0 7.589483e-06      0   Bacteroidota
+77  7.589483e-06      79.6 9.015783e-06      0      Bacillota
+78  7.476207e-06      60.6 6.859564e-06      0      Bacillota
+79  7.249655e-06      71.7 8.116654e-06      0   Bacteroidota
+80  5.777069e-06      45.6 5.166896e-06      0   Bacteroidota
+81  5.663793e-06      50.1 5.676230e-06      0   Bacteroidota
+82  5.437241e-06      42.0 4.755588e-06      0              0
+83  4.984138e-06     181.3 2.053267e-05      0      Bacillota
+84  4.757586e-06      39.6 4.490935e-06      0      Bacillota
+85  4.417759e-06      38.0 4.302807e-06      0  Spirochaetota
+86  4.304483e-06      39.6 4.484989e-06      0   Bacteroidota
+87  3.738103e-06      35.0 3.969048e-06      0              0
+88  3.738103e-06      38.6 4.376315e-06      0      Bacillota
+89  3.511552e-06      27.3 3.092799e-06      0              0
+90  3.511552e-06      35.0 3.965338e-06      0      Bacillota
+91  3.171724e-06      28.4 3.222099e-06      0 Actinomycetota
+92  2.945172e-06      28.0 3.168025e-06      0      Bacillota
+93  2.945172e-06      37.0 4.192250e-06      0      Bacillota
+94  2.831897e-06      25.1 2.838852e-06      0   Bacteroidota
+95  2.718621e-06      24.0 2.714552e-06      0      Bacillota
+96  2.718621e-06      31.8 3.607097e-06      0 Actinomycetota
+97  2.718621e-06      50.7 5.744149e-06      0      Bacillota
+98  2.605345e-06      23.9 2.707516e-06      0              0
+99  2.492069e-06      28.9 3.274288e-06      0      Bacillota
+100 2.492069e-06      35.5 4.020836e-06      0   Bacteroidota
+101 2.265517e-06      25.1 2.843996e-06      0   Bacteroidota
+102 2.038966e-06      21.3 2.416832e-06      0      Bacillota
+103 2.038966e-06      16.6 1.879284e-06      0      Bacillota
+104 2.038966e-06      19.4 2.193782e-06      0      Bacillota
+105 1.925690e-06      18.4 2.085434e-06      0      Bacillota
+106 1.699138e-06      15.0 1.699517e-06      0      Bacillota
+107 1.699138e-06      15.5 1.750507e-06      0      Bacillota
+108 1.585862e-06      16.5 1.869523e-06      0      Bacillota
+109 1.472586e-06      11.0 1.246853e-06      0 Actinomycetota
+110 1.472586e-06      13.4 1.514008e-06      0      Bacillota
+111 1.359310e-06      14.1 1.595994e-06      0      Bacillota
+112 1.359310e-06      12.0 1.362899e-06      0   Bacteroidota
+113 1.359310e-06      16.7 1.896923e-06      0      Bacillota
+114 1.246034e-06      11.0 1.249137e-06      0              0
+115 1.246034e-06      11.0 1.246082e-06      0 Actinomycetota
+116 1.132759e-06      11.1 1.252947e-06      0      Bacillota
+117 1.132759e-06      10.5 1.192858e-06      0      Bacillota
+118 1.019483e-06      13.5 1.527380e-06      0              0
+119 9.062069e-07       4.6 5.224574e-07      0 Actinomycetota
+120 7.929310e-07       8.0 9.062189e-07      0   Bacteroidota
+121 6.796552e-07       6.3 7.107027e-07      0      Bacillota
+122 6.796552e-07       6.2 7.075484e-07      0      Bacillota
+123 5.663793e-07       5.5 6.269165e-07      0      Bacillota
+124 5.663793e-07       4.8 5.457285e-07      0              0
+125 5.663793e-07       8.5 9.573568e-07      0   Bacteroidota
+126 4.531035e-07       3.7 4.217153e-07      0      Bacillota
+127 4.531035e-07       4.1 4.600597e-07      0      Bacillota
+128 4.531035e-07       4.2 4.701064e-07      0              0
+129 4.531035e-07       4.3 4.825344e-07      0      Bacillota
+130 4.531035e-07       5.1 5.795250e-07      0      Bacillota
+131 3.398276e-07       3.0 3.398449e-07      0  Spirochaetota
+132 3.398276e-07       3.3 3.690039e-07      0      Bacillota
+133 3.398276e-07       3.1 3.552555e-07      0   Bacteroidota
+134 3.398276e-07       3.5 3.943688e-07      0   Bacteroidota
+135 3.398276e-07       5.9 6.731894e-07      0      Bacillota
+136 2.265517e-07       1.9 2.161844e-07      0   Bacteroidota
+137 2.265517e-07       2.0 2.317160e-07      0      Bacillota
+138 2.265517e-07       2.5 2.775708e-07      0      Bacillota
+139 2.265517e-07       2.0 2.290471e-07      0   Bacteroidota
+140 2.265517e-07       1.5 1.729200e-07      0   Bacteroidota
+141 2.265517e-07       2.0 2.290694e-07      0              0
+142 2.265517e-07       2.8 3.202352e-07      0 Actinomycetota
+143 2.265517e-07       1.5 1.738435e-07      0      Bacillota
+144 2.265517e-07       2.1 2.432226e-07      0   Bacteroidota
+145 2.265517e-07       2.2 2.492285e-07      0      Bacillota
+146 2.265517e-07       2.0 2.269218e-07      0              0
+147 1.132759e-07       1.0 1.136402e-07      0   Bacteroidota
+148 1.132759e-07       1.3 1.481070e-07      0      Bacillota
+149 1.132759e-07       1.0 1.132754e-07      0      Bacillota
+150 1.132759e-07       1.6 1.814142e-07      0 Actinomycetota
+151 1.132759e-07       1.1 1.191552e-07      0   Bacteroidota
+152 1.132759e-07       2.6 2.972628e-07      0 Actinomycetota
+153 1.132759e-07       1.0 1.103352e-07      0              0
+154 1.132759e-07       1.3 1.468478e-07      0      Bacillota
+155 1.132759e-07       1.0 1.143050e-07      0  Spirochaetota
+156 1.132759e-07       1.4 1.601998e-07      0   Bacteroidota
+157 1.132759e-07       1.1 1.215927e-07      0   Bacteroidota
+158 1.132759e-07       1.2 1.410004e-07      0   Bacteroidota
+                 class                order                family
+1          Bacteroidia        Bacteroidales        Prevotellaceae
+2          Bacteroidia        Bacteroidales        Bacteroidaceae
+3          Bacteroidia        Bacteroidales        Bacteroidaceae
+4           Clostridia       Lachnospirales       Lachnospiraceae
+5       Coriobacteriia     Coriobacteriales     Coriobacteriaceae
+6          Bacteroidia        Bacteroidales         Rikenellaceae
+7        Actinomycetes    Bifidobacteriales    Bifidobacteriaceae
+8           Clostridia        Eubacteriales      Oscillospiraceae
+9           Clostridia       Lachnospirales       Lachnospiraceae
+10         Bacteroidia        Bacteroidales        Bacteroidaceae
+11          Clostridia        Eubacteriales                     0
+12          Clostridia        Eubacteriales        Clostridiaceae
+13          Clostridia       Lachnospirales       Lachnospiraceae
+14    Erysipelotrichia   Erysipelotrichales      Coprobacillaceae
+15         Bacteroidia        Bacteroidales        Tannerellaceae
+16          Clostridia       Lachnospirales       Lachnospiraceae
+17         Bacteroidia        Bacteroidales        Tannerellaceae
+18          Clostridia       Lachnospirales       Lachnospiraceae
+19          Clostridia        Eubacteriales      Oscillospiraceae
+20         Bacteroidia        Bacteroidales        Prevotellaceae
+21         Bacteroidia        Bacteroidales        Bacteroidaceae
+22         Bacteroidia        Bacteroidales        Bacteroidaceae
+23          Clostridia       Lachnospirales       Anaerotignaceae
+24          Clostridia       Lachnospirales       Lachnospiraceae
+25                   0                    0                     0
+26         Bacteroidia        Bacteroidales      Odoribacteraceae
+27         Bacteroidia        Bacteroidales        Bacteroidaceae
+28         Bacteroidia        Bacteroidales        Prevotellaceae
+29          Clostridia        Eubacteriales      Oscillospiraceae
+30         Bacteroidia        Bacteroidales        Prevotellaceae
+31                   0                    0                     0
+32          Clostridia       Lachnospirales       Anaerotignaceae
+33         Bacteroidia        Bacteroidales        Bacteroidaceae
+34          Clostridia        Eubacteriales      Oscillospiraceae
+35          Clostridia        Eubacteriales      Oscillospiraceae
+36          Clostridia       Lachnospirales       Lachnospiraceae
+37    Erysipelotrichia   Erysipelotrichales   Erysipelotrichaceae
+38                   0                    0                     0
+39          Clostridia       Lachnospirales       Lachnospiraceae
+40         Bacteroidia        Bacteroidales        Bacteroidaceae
+41       Actinomycetes    Bifidobacteriales    Bifidobacteriaceae
+42          Clostridia       Lachnospirales       Lachnospiraceae
+43          Clostridia       Lachnospirales       Lachnospiraceae
+44          Clostridia       Lachnospirales       Lachnospiraceae
+45    Erysipelotrichia   Erysipelotrichales   Erysipelotrichaceae
+46          Clostridia        Eubacteriales        Clostridiaceae
+47          Clostridia       Lachnospirales       Lachnospiraceae
+48         Bacteroidia        Bacteroidales        Bacteroidaceae
+49         Bacteroidia        Bacteroidales        Prevotellaceae
+50          Clostridia       Lachnospirales       Lachnospiraceae
+51          Clostridia        Eubacteriales      Oscillospiraceae
+52          Clostridia        Eubacteriales        Eubacteriaceae
+53          Clostridia        Eubacteriales      Oscillospiraceae
+54          Clostridia       Lachnospirales       Lachnospiraceae
+55          Clostridia       Lachnospirales       Lachnospiraceae
+56         Bacteroidia        Bacteroidales        Prevotellaceae
+57          Clostridia       Lachnospirales       Lachnospiraceae
+58          Clostridia        Eubacteriales      Oscillospiraceae
+59          Clostridia       Lachnospirales       Lachnospiraceae
+60          Clostridia       Lachnospirales       Lachnospiraceae
+61         Bacteroidia        Bacteroidales        Bacteroidaceae
+62          Clostridia       Lachnospirales       Lachnospiraceae
+63         Bacteroidia        Bacteroidales        Bacteroidaceae
+64          Clostridia        Eubacteriales        Clostridiaceae
+65                   0                    0                     0
+66    Erysipelotrichia   Erysipelotrichales   Erysipelotrichaceae
+67  Betaproteobacteria      Burkholderiales      Oxalobacteraceae
+68                   0                    0                     0
+69         Bacteroidia        Bacteroidales        Prevotellaceae
+70          Clostridia        Eubacteriales     Butyricicoccaceae
+71          Clostridia       Lachnospirales       Lachnospiraceae
+72                   0                    0                     0
+73         Bacteroidia        Bacteroidales        Bacteroidaceae
+74          Clostridia        Eubacteriales      Oscillospiraceae
+75                   0                    0                     0
+76         Bacteroidia        Bacteroidales      Odoribacteraceae
+77    Erysipelotrichia   Erysipelotrichales   Erysipelotrichaceae
+78    Erysipelotrichia   Erysipelotrichales   Erysipelotrichaceae
+79         Bacteroidia        Bacteroidales         Rikenellaceae
+80         Bacteroidia        Bacteroidales        Prevotellaceae
+81         Bacteroidia        Bacteroidales        Bacteroidaceae
+82                   0                    0                     0
+83          Clostridia       Lachnospirales       Lachnospiraceae
+84          Clostridia        Eubacteriales    Acutalibacteraceae
+85        Spirochaetia       Spirochaetales       Treponemataceae
+86         Bacteroidia        Bacteroidales        Bacteroidaceae
+87                   0                    0                     0
+88          Clostridia        Eubacteriales                     0
+89                   0                    0                     0
+90          Clostridia       Lachnospirales       Lachnospiraceae
+91       Actinomycetes        Micrococcales     Cellulomonadaceae
+92             Bacilli           Bacillales           Bacillaceae
+93    Erysipelotrichia   Erysipelotrichales   Erysipelotrichaceae
+94         Bacteroidia        Bacteroidales       Barnesiellaceae
+95          Clostridia Peptostreptococcales Peptostreptococcaceae
+96       Actinomycetes    Bifidobacteriales    Bifidobacteriaceae
+97          Clostridia        Eubacteriales      Oscillospiraceae
+98                   0                    0                     0
+99          Clostridia        Eubacteriales        Eubacteriaceae
+100        Bacteroidia        Bacteroidales        Bacteroidaceae
+101        Bacteroidia        Bacteroidales    Porphyromonadaceae
+102         Clostridia       Lachnospirales       Lachnospiraceae
+103            Bacilli      Lactobacillales       Enterococcaceae
+104         Clostridia        Eubacteriales        Clostridiaceae
+105   Erysipelotrichia   Erysipelotrichales   Erysipelotrichaceae
+106         Clostridia        Eubacteriales        Eubacteriaceae
+107         Clostridia       Lachnospirales       Lachnospiraceae
+108         Clostridia        Eubacteriales      Oscillospiraceae
+109     Coriobacteriia     Coriobacteriales          Atopobiaceae
+110         Clostridia        Eubacteriales      Oscillospiraceae
+111         Clostridia       Lachnospirales       Lachnospiraceae
+112        Bacteroidia        Bacteroidales         Rikenellaceae
+113         Clostridia   Christensenellales   Christensenellaceae
+114                  0                    0                     0
+115     Coriobacteriia     Coriobacteriales     Coriobacteriaceae
+116         Clostridia       Lachnospirales       Lachnospiraceae
+117                  0                    0                     0
+118                  0                    0                     0
+119      Actinomycetes    Bifidobacteriales    Bifidobacteriaceae
+120        Bacteroidia        Bacteroidales        Bacteroidaceae
+121         Clostridia        Eubacteriales      Oscillospiraceae
+122         Clostridia        Eubacteriales     Butyricicoccaceae
+123         Clostridia        Eubacteriales        Eubacteriaceae
+124                  0                    0                     0
+125        Bacteroidia        Bacteroidales         Rikenellaceae
+126         Clostridia        Eubacteriales      Oscillospiraceae
+127         Clostridia       Lachnospirales       Lachnospiraceae
+128                  0                    0                     0
+129         Clostridia        Eubacteriales      Oscillospiraceae
+130         Clostridia       Lachnospirales       Lachnospiraceae
+131       Spirochaetia       Spirochaetales       Treponemataceae
+132            Bacilli      Lactobacillales      Lactobacillaceae
+133        Bacteroidia        Bacteroidales        Prevotellaceae
+134        Bacteroidia        Bacteroidales        Bacteroidaceae
+135         Clostridia        Eubacteriales      Oscillospiraceae
+136        Bacteroidia        Bacteroidales        Prevotellaceae
+137         Clostridia        Eubacteriales      Oscillospiraceae
+138            Bacilli      Lactobacillales       Enterococcaceae
+139        Bacteroidia        Bacteroidales        Prevotellaceae
+140        Bacteroidia        Bacteroidales        Prevotellaceae
+141                  0                    0                     0
+142      Actinomycetes    Bifidobacteriales    Bifidobacteriaceae
+143         Clostridia        Eubacteriales      Oscillospiraceae
+144        Bacteroidia        Bacteroidales    Porphyromonadaceae
+145         Clostridia       Lachnospirales       Lachnospiraceae
+146                  0                    0                     0
+147        Bacteroidia        Bacteroidales        Prevotellaceae
+148      Negativicutes       Veillonellales       Veillonellaceae
+149            Bacilli      Lactobacillales      Streptococcaceae
+150      Actinomycetes    Bifidobacteriales    Bifidobacteriaceae
+151        Bacteroidia        Bacteroidales        Prevotellaceae
+152      Actinomycetes    Bifidobacteriales    Bifidobacteriaceae
+153                  0                    0                     0
+154         Clostridia       Lachnospirales       Lachnospiraceae
+155       Spirochaetia       Spirochaetales       Treponemataceae
+156        Bacteroidia        Bacteroidales        Bacteroidaceae
+157        Bacteroidia        Bacteroidales        Prevotellaceae
+158        Bacteroidia        Bacteroidales        Bacteroidaceae
+                                 genus
+1                            Segatella
+2                          Phocaeicola
+3                          Bacteroides
+4                         Agathobacter
+5                          Collinsella
+6                            Alistipes
+7                      Bifidobacterium
+8                     Faecalibacterium
+9                        Faecalicatena
+10                         Bacteroides
+11                            Gemmiger
+12                       Lactonifactor
+13                               Dorea
+14                      Thomasclavelia
+15                     Parabacteroides
+16                           Roseburia
+17                     Parabacteroides
+18                             Blautia
+19                    Allofournierella
+20                          Prevotella
+21                         Bacteroides
+22                         Bacteroides
+23                        Anaerotignum
+24                           Roseburia
+25                                   0
+26                         Odoribacter
+27                         Phocaeicola
+28                          Prevotella
+29                       Anaerotruncus
+30                             Leyella
+31                                   0
+32                        Anaerotignum
+33                         Bacteroides
+34                       Angelakisella
+35                    Ruthenibacterium
+36                           Roseburia
+37                       Faecalicoccus
+38                                   0
+39                         Coprococcus
+40                         Bacteroides
+41                     Bifidobacterium
+42                      Stomatobaculum
+43                    Fusicatenibacter
+44                             Blautia
+45                          Holdemania
+46                         Clostridium
+47                             Blautia
+48                         Bacteroides
+49                          Prevotella
+50                           Roseburia
+51                Pseudoflavonifractor
+52                         Eubacterium
+53                        Ruminococcus
+54                         Lachnospira
+55                        Eshraghiella
+56                          Hoylesella
+57                   Lachnoclostridium
+58                     Subdoligranulum
+59                   Lachnoclostridium
+60                        Anaerostipes
+61                         Phocaeicola
+62                      Marvinbryantia
+63                         Bacteroides
+64                         Clostridium
+65                                   0
+66                       Amedibacillus
+67                         Oxalobacter
+68                                   0
+69                          Prevotella
+70                       Agathobaculum
+71                          Hungatella
+72                                   0
+73                         Bacteroides
+74                        Ruminococcus
+75                                   0
+76                       Butyricimonas
+77                           Traorella
+78                         Merdibacter
+79                           Alistipes
+80                  Prevotellamassilia
+81                         Bacteroides
+82                                   0
+83                               Dorea
+84                       Acutalibacter
+85                           Treponema
+86                         Bacteroides
+87                                   0
+88                      Intestinimonas
+89                                   0
+90                         Bariatricus
+91                        Cellulomonas
+92                       Amphibacillus
+93                         Allobaculum
+94                         Coprobacter
+95                  Peptostreptococcus
+96                     Bifidobacterium
+97  Bittarella (ex Durand et al. 2017)
+98                                   0
+99                         Eubacterium
+100                        Phocaeicola
+101                      Porphyromonas
+102                    Anaerobutyricum
+103                       Enterococcus
+104                        Clostridium
+105                      Solobacterium
+106                        Eubacterium
+107                       Oribacterium
+108                  Provencibacterium
+109                    Parafannyhessea
+110                      Merdimmobilis
+111                        Johnsonella
+112                          Alistipes
+113                    Christensenella
+114                                  0
+115                        Collinsella
+116                         Merdimonas
+117                   Negativibacillus
+118                                  0
+119                    Bifidobacterium
+120                       Mediterranea
+121                        Acetivibrio
+122                     Butyricicoccus
+123                        Eubacterium
+124                                  0
+125                          Alistipes
+126                       Ruminococcus
+127                 Mediterraneibacter
+128                                  0
+129                     Flavonifractor
+130                      Enterocloster
+131                          Treponema
+132                Limosilactobacillus
+133                          Segatella
+134                        Phocaeicola
+135                     Neglectibacter
+136                       Xylanibacter
+137                       Ruminococcus
+138                       Enterococcus
+139                         Prevotella
+140                         Prevotella
+141                                  0
+142                    Bifidobacterium
+143                     Ethanoligenens
+144                      Porphyromonas
+145                      Enterocloster
+146                                  0
+147                         Hoylesella
+148                        Megasphaera
+149                      Streptococcus
+150                    Bifidobacterium
+151                          Segatella
+152                    Bifidobacterium
+153                                  0
+154                   Shuttleworthella
+155                          Treponema
+156                        Phocaeicola
+157                     Paraprevotella
+158                        Bacteroides
+                                            species     best_hit_genus
+1                                   Segatella copri          Segatella
+2                              Phocaeicola vulgatus        Phocaeicola
+3                             Bacteroides uniformis        Bacteroides
+4                             Agathobacter rectalis       Agathobacter
+5                           Collinsella aerofaciens        Collinsella
+6                              Alistipes putredinis          Alistipes
+7                      Bifidobacterium adolescentis    Bifidobacterium
+8                        Faecalibacterium duncaniae   Faecalibacterium
+9                            Faecalicatena contorta   Faecalibacterium
+10                               Bacteroides fluxus        Bacteroides
+11                              Gemmiger formicilis   Faecalibacterium
+12                      Lactonifactor longoviformis   Faecalibacterium
+13                            Dorea formicigenerans   Faecalibacterium
+14                     Thomasclavelia saccharogumia        Coprococcus
+15                        Parabacteroides johnsonii        Bacteroides
+16                          Roseburia inulinivorans   Faecalibacterium
+17                       Parabacteroides distasonis          Alistipes
+18                                    Blautia obeum   Faecalibacterium
+19                    Allofournierella massiliensis   Faecalibacterium
+20                              Prevotella corporis        Phocaeicola
+21                     Bacteroides thetaiotaomicron        Phocaeicola
+22                             Bacteroides fragilis        Phocaeicola
+23                   Anaerotignum lactatifermentans      Lactobacillus
+24                           Roseburia intestinalis   Faecalibacterium
+25                                                0   Faecalibacterium
+26                         Odoribacter splanchnicus        Bacteroides
+27                            Phocaeicola barnesiae        Bacteroides
+28                                 Prevotella bivia        Phocaeicola
+29                        Anaerotruncus colihominis   Faecalibacterium
+30                                Leyella stercorea        Bacteroides
+31                                                0            Blautia
+32                      Anaerotignum neopropionicum   Faecalibacterium
+33                     Bacteroides cellulosilyticus        Bacteroides
+34                       Angelakisella massiliensis   Faecalibacterium
+35                  Ruthenibacterium lactatiformans   Faecalibacterium
+36                                Roseburia hominis            Blautia
+37                        Faecalicoccus pleomorphus      Lactobacillus
+38                                                0   Faecalibacterium
+39                             Coprococcus eutactus        Coprococcus
+40                           Bacteroides salyersiae        Phocaeicola
+41                     Bifidobacterium thermophilum    Bifidobacterium
+42                            Stomatobaculum longum   Faecalibacterium
+43                  Fusicatenibacter saccharivorans     Clostridioides
+44                        Blautia hydrogenotrophica   Faecalibacterium
+45                          Holdemania massiliensis   Faecalibacterium
+46                           Clostridium phoceensis   Faecalibacterium
+47                                 Blautia hansenii            Blautia
+48                     Bacteroides faecichinchillae        Phocaeicola
+49                            Prevotella intermedia        Bacteroides
+50                                 Roseburia faecis   Faecalibacterium
+51                  Pseudoflavonifractor capillosus   Faecalibacterium
+52                       Eubacterium pyruvativorans   Faecalibacterium
+53                           Ruminococcus sp. YE282                  0
+54                              Lachnospira eligens   Faecalibacterium
+55                            Eshraghiella crossota       Eshraghiella
+56                              Hoylesella buccalis        Phocaeicola
+57                          [Clostridium] symbiosum   Faecalibacterium
+58                        Subdoligranulum variabile   Faecalibacterium
+59                     Lachnoclostridium phocaeense   Faecalibacterium
+60                              Anaerostipes hadrus   Faecalibacterium
+61                          Phocaeicola coprophilus        Bacteroides
+62                     Marvinbryantia formatexigens   Faecalibacterium
+63                               Bacteroides ovatus        Phocaeicola
+64                           Clostridium disporicum        Phocaeicola
+65                                                0      Lactobacillus
+66                           Amedibacillus dolichus   Faecalibacterium
+67                       Oxalobacter paraformigenes      Streptococcus
+68                                                0       Heyndrickxia
+69                               Prevotella disiens        Phocaeicola
+70                          Agathobaculum desmolans   Faecalibacterium
+71                             Hungatella hathewayi  Lachnoclostridium
+72                                                0        Megasphaera
+73                               Bacteroides nordii        Phocaeicola
+74                            Ruminococcus callidus   Faecalibacterium
+75                                                0   Faecalibacterium
+76                       Butyricimonas synergistica        Phocaeicola
+77                           Traorella massiliensis            Blautia
+78                         Merdibacter massiliensis Mediterraneibacter
+79                                 Alistipes shahii        Bacteroides
+80                    Prevotellamassilia timonensis        Bacteroides
+81                                Bacteroides ihuae        Phocaeicola
+82                                                0        Coprococcus
+83                                Dorea longicatena   Faecalibacterium
+84                              Acutalibacter muris   Faecalibacterium
+85                              Treponema vincentii          Treponema
+86                            Bacteroides stercoris        Phocaeicola
+87                                                0        Phocaeicola
+88                 Intestinimonas butyriciproducens   Faecalibacterium
+89                                                0     Clostridioides
+90                         Bariatricus massiliensis   Faecalibacterium
+91                            Cellulomonas carbonis        Bacteroides
+92                            Amphibacillus xylanus       Heyndrickxia
+93                        Allobaculum stercoricanis        Megasphaera
+94                          Coprobacter fastidiosus        Phocaeicola
+95                    Peptostreptococcus anaerobius   Faecalibacterium
+96                        Bifidobacterium scardovii    Bifidobacterium
+97  Bittarella massiliensis (ex Durand et al. 2017)     Clostridioides
+98                                                0   Faecalibacterium
+99                           Eubacterium ventriosum   Faecalibacterium
+100                            Phocaeicola plebeius        Phocaeicola
+101                        Porphyromonas gingivalis                  0
+102                          Anaerobutyricum hallii                  0
+103                            Enterococcus cecorum                  0
+104                            Clostridium lundense                  0
+105                            Solobacterium moorei                  0
+106                   Eubacterium coprostanoligenes                  0
+107                             Oribacterium parvum                  0
+108                   Provencibacterium massiliense                  0
+109                        Parafannyhessea umbonata                  0
+110                           Merdimmobilis hominis                  0
+111                              Johnsonella ignava                  0
+112                            Alistipes finegoldii                  0
+113                      Christensenella timonensis                  0
+114                                               0                  0
+115                              Collinsella ihumii                  0
+116                               Merdimonas faecis                  0
+117                   Negativibacillus massiliensis                  0
+118                                               0                  0
+119                       Bifidobacterium angulatum                  0
+120                       Mediterranea massiliensis                  0
+121                      Acetivibrio ethanolgignens                  0
+122                    Butyricicoccus pullicaecorum                  0
+123                             Eubacterium ramulus                  0
+124                                               0                  0
+125                          Alistipes senegalensis                  0
+126                       Ruminococcus flavefaciens                  0
+127                       Mediterraneibacter gnavus                  0
+128                                               0                  0
+129                          Flavonifractor plautii                  0
+130                    Enterocloster asparagiformis                  0
+131                        Treponema succinifaciens                  0
+132                     Limosilactobacillus mucosae                  0
+133                               Segatella salivae                  0
+134                        Phocaeicola salanitronis                  0
+135                       Neglectibacter timonensis                  0
+136                         Xylanibacter ruminicola                  0
+137                              Ruminococcus albus                  0
+138                           Enterococcus columbae                  0
+139                            Prevotella denticola                  0
+140                           Prevotella nigrescens                  0
+141                                               0                  0
+142                          Bifidobacterium longum                  0
+143                       Ethanoligenens harbinense                  0
+144                           Porphyromonas somerae                  0
+145                         Enterocloster citroniae                  0
+146                                               0                  0
+147                            Hoylesella loescheii                  0
+148                            Megasphaera elsdenii                  0
+149                      Streptococcus dysgalactiae                  0
+150                      Bifidobacterium asteroides                  0
+151                                Segatella buccae                  0
+152                       Bifidobacterium choerinum                  0
+153                                               0                  0
+154                       Shuttleworthella satelles                  0
+155                               Treponema putidum                  0
+156                           Phocaeicola coprocola                  0
+157                      Paraprevotella xylaniphila                  0
+158                    Bacteroides reticulotermitis                  0
+    genus_counts                    best_hit_species species_counts
+1             49                     Segatella copri             49
+2             47                Phocaeicola vulgatus             34
+3             50               Bacteroides uniformis             47
+4             50               Agathobacter rectalis             50
+5             49             Collinsella aerofaciens             48
+6             10                 uncultured organism              9
+7             50        Bifidobacterium adolescentis             49
+8             47        Faecalibacterium prausnitzii             46
+9             28     Lachnospiraceae bacterium GAM79             25
+10            49        Bacteroides thetaiotaomicron             45
+11            49        Faecalibacterium prausnitzii             45
+12            42        uncultured human fecal virus             28
+13            36           Mediterraneibacter gnavus             35
+14            28                   Coprococcus comes             28
+15            32                Bacteroides fragilis             28
+16            29        Faecalibacterium prausnitzii             17
+17            35          Parabacteroides distasonis             19
+18            44                    Blautia wexlerae             45
+19            33        Faecalibacterium prausnitzii             15
+20            49                   Phocaeicola dorei             50
+21            47                   Phocaeicola dorei             41
+22            45                   Phocaeicola dorei             44
+23            17        Faecalibacterium prausnitzii             23
+24            31              Roseburia intestinalis             33
+25            47        Faecalibacterium prausnitzii             43
+26            39                unidentified plasmid             28
+27            34                Bacteroides fragilis             28
+28            47                   Phocaeicola dorei             48
+29            36        Faecalibacterium prausnitzii             26
+30            47              Bacteroides caecimuris             23
+31            39               Agathobacter rectalis             37
+32            30        Faecalibacterium prausnitzii             27
+33            50        Bacteroides cellulosilyticus             44
+34            43        Faecalibacterium prausnitzii             40
+35            45        Faecalibacterium prausnitzii             23
+36            23        Faecalibacterium prausnitzii             17
+37            23             Lactobacillus crispatus             16
+38             8        Faecalibacterium prausnitzii              5
+39            48                Coprococcus eutactus             50
+40            30                   Phocaeicola dorei             35
+41            37             Bifidobacterium faecale             18
+42            37        Faecalibacterium prausnitzii             30
+43            34            Clostridioides difficile             34
+44            47        uncultured human fecal virus             41
+45            26        Faecalibacterium prausnitzii             24
+46            29        Faecalibacterium prausnitzii             31
+47            13                    Blautia hansenii             15
+48            39                   Phocaeicola dorei             40
+49            45              Bacteroides caecimuris             36
+50            43        uncultured human fecal virus             20
+51            33        Faecalibacterium prausnitzii             32
+52            21        Faecalibacterium prausnitzii             29
+53             0                                   0              0
+54            35        Faecalibacterium prausnitzii             36
+55            37               Eshraghiella crossota             43
+56            48                   Phocaeicola dorei             48
+57            43     Lachnospiraceae bacterium GAM79             45
+58            47        Faecalibacterium prausnitzii             27
+59            41        Faecalibacterium prausnitzii             41
+60            50        Faecalibacterium prausnitzii             39
+61            46                Bacteroides fragilis             31
+62            36           Mediterraneibacter gnavus             23
+63            50                   Phocaeicola dorei             50
+64            37                   Phocaeicola dorei             41
+65            33             Lactobacillus crispatus             25
+66            44             [Clostridium] symbiosum             34
+67            17                  Streptococcus suis             19
+68            39              Heyndrickxia coagulans             39
+69            50                   Phocaeicola dorei             50
+70            41        uncultured human fecal virus             22
+71            34                    Blautia wexlerae             22
+72            31 Lachnospiraceae bacterium KGMB03038             40
+73            49                   Phocaeicola dorei             49
+74            42        Faecalibacterium prausnitzii             26
+75            50        Faecalibacterium prausnitzii             45
+76            50                   Phocaeicola dorei             50
+77            28     Lachnospiraceae bacterium GAM79             45
+78            31           Mediterraneibacter gnavus             33
+79            29                   Phocaeicola dorei             38
+80            37                   Phocaeicola dorei             44
+81            50                   Phocaeicola dorei             50
+82            33                   Coprococcus comes             37
+83            31        Faecalibacterium prausnitzii             23
+84            37        Faecalibacterium prausnitzii             31
+85            32        Faecalibacterium prausnitzii             27
+86            25                   Phocaeicola dorei             25
+87            24                   Phocaeicola dorei             24
+88            32        Faecalibacterium prausnitzii             27
+89            10        Faecalibacterium prausnitzii             15
+90            25        Faecalibacterium prausnitzii             27
+91            28                Bacteroides fragilis             24
+92            21              Heyndrickxia coagulans             21
+93            11 Lachnospiraceae bacterium KGMB03038             20
+94            25                   Phocaeicola dorei             25
+95            24        uncultured human fecal virus             24
+96            24              Bifidobacterium longum             17
+97             9              [Clostridium] scindens             10
+98            22        Faecalibacterium prausnitzii             17
+99            20        Faecalibacterium prausnitzii             18
+100           18                   Phocaeicola dorei             18
+101            0                                   0              0
+102            0                                   0              0
+103            0                                   0              0
+104            0                                   0              0
+105            0                                   0              0
+106            0                                   0              0
+107            0                                   0              0
+108            0                                   0              0
+109            0                                   0              0
+110            0                                   0              0
+111            0                                   0              0
+112            0                                   0              0
+113            0                                   0              0
+114            0                                   0              0
+115            0                                   0              0
+116            0                                   0              0
+117            0                                   0              0
+118            0                                   0              0
+119            0                                   0              0
+120            0                                   0              0
+121            0                                   0              0
+122            0                                   0              0
+123            0                                   0              0
+124            0                                   0              0
+125            0                                   0              0
+126            0                                   0              0
+127            0                                   0              0
+128            0                                   0              0
+129            0                                   0              0
+130            0                                   0              0
+131            0                                   0              0
+132            0                                   0              0
+133            0                                   0              0
+134            0                                   0              0
+135            0                                   0              0
+136            0                                   0              0
+137            0                                   0              0
+138            0                                   0              0
+139            0                                   0              0
+140            0                                   0              0
+141            0                                   0              0
+142            0                                   0              0
+143            0                                   0              0
+144            0                                   0              0
+145            0                                   0              0
+146            0                                   0              0
+147            0                                   0              0
+148            0                                   0              0
+149            0                                   0              0
+150            0                                   0              0
+151            0                                   0              0
+152            0                                   0              0
+153            0                                   0              0
+154            0                                   0              0
+155            0                                   0              0
+156            0                                   0              0
+157            0                                   0              0
+158            0                                   0              0
+    uniqueness_score species_percentage_hit genus_percentage_hit
+1                  3             1.00000000            1.0000000
+2                  4             0.84000000            1.0000000
+3                  5             1.00000000            1.0000000
+4                  5             1.00000000            1.0000000
+5                  3             1.00000000            1.0000000
+6                 26             0.03571429            0.7058824
+7                  2             1.00000000            1.0000000
+8                 20             0.86000000            1.0000000
+9                 30             0.00000000            0.3000000
+10                 5             0.00000000            1.0000000
+11                 3             0.00000000            0.0000000
+12                33             0.00000000            0.0000000
+13                21             0.78000000            0.8000000
+14                12             0.00000000            0.0000000
+15                 9             0.00000000            0.0600000
+16                 8             0.00000000            0.7021277
+17                11             0.62000000            0.7000000
+18                20             0.30000000            1.0000000
+19                25             0.00000000            0.0000000
+20                 1             0.00000000            0.0000000
+21                 3             0.08000000            0.9600000
+22                 3             0.88000000            0.9200000
+23                43             0.00000000            0.0000000
+24                32             0.76000000            0.8000000
+25                21             0.00000000            0.0000000
+26                15             0.34000000            0.3400000
+27                 6             0.00000000            1.0000000
+28                 5             0.00000000            0.0400000
+29                24             0.40000000            0.4000000
+30                10             0.00000000            0.0000000
+31                20             0.00000000            0.0200000
+32                22             0.00000000            0.0000000
+33                 5             1.00000000            1.0000000
+34                23             0.00000000            0.0000000
+35                24             0.00000000            0.0000000
+36                26             0.90000000            0.9000000
+37                29             0.00000000            0.0000000
+38                 4             0.00000000            0.0000000
+39                12             1.00000000            1.0000000
+40                 5             0.12000000            0.5000000
+41                21             0.00000000            1.0000000
+42                20             0.00000000            0.0000000
+43                17             0.00000000            0.0000000
+44                 6             0.00000000            0.3600000
+45                14             0.00000000            0.0000000
+46                 5             0.00000000            0.0000000
+47                21             0.78000000            0.9200000
+48                 6             0.00000000            0.6800000
+49                 8             0.68000000            0.7200000
+50                31             0.00000000            0.2000000
+51                26             0.00000000            0.0200000
+52                40             0.00000000            0.3800000
+53                 0             0.00000000            0.0000000
+54                21             0.16000000            0.1600000
+55                16             1.00000000            1.0000000
+56                 5             0.00000000            0.0200000
+57                 3             0.00000000            0.0000000
+58                22             0.88000000            0.8800000
+59                24             0.92000000            0.9200000
+60                11             1.00000000            1.0000000
+61                 9             0.18000000            1.0000000
+62                 5             0.72000000            0.7200000
+63                 1             0.24000000            0.2600000
+64                20             0.00000000            1.0000000
+65                14             0.04000000            0.0400000
+66                 3             0.00000000            0.0000000
+67                30             0.00000000            0.0000000
+68                 7             0.00000000            0.8400000
+69                 1             0.00000000            0.0000000
+70                26             0.00000000            0.0000000
+71                18             0.78000000            0.7800000
+72                38             0.00000000            0.0000000
+73                 2             0.00000000            0.0200000
+74                27             0.00000000            0.0200000
+75                10             0.00000000            0.0000000
+76                 1             0.00000000            0.0000000
+77                 3             0.00000000            0.0000000
+78                40             0.00000000            0.0000000
+79                 9             0.92000000            0.9200000
+80                 3             0.00000000            0.0000000
+81                 1             0.00000000            0.0200000
+82                 5             1.00000000            1.0000000
+83                26             0.34090909            0.3863636
+84                 6             0.85714286            0.8571429
+85                 4             0.76923077            1.0000000
+86                 6             0.55263158            0.9473684
+87                 6             0.33333333            0.3333333
+88                12             0.00000000            0.0000000
+89                24             0.00000000            0.1612903
+90                20             0.00000000            0.0000000
+91                 2             0.00000000            0.0000000
+92                12             0.65384615            0.6538462
+93                35             0.00000000            0.0000000
+94                 1             0.00000000            0.0000000
+95                 2             0.00000000            0.0000000
+96                 4             0.00000000            1.0000000
+97                13             0.00000000            0.0000000
+98                10             0.00000000            0.3913043
+99                 6             1.00000000            1.0000000
+100                2             0.00000000            1.0000000
+101                0             0.00000000            0.0000000
+102                0             0.00000000            0.0000000
+103                0             0.00000000            0.0000000
+104                0             0.00000000            0.0000000
+105                0             0.00000000            0.0000000
+106                0             0.00000000            0.0000000
+107                0             0.00000000            0.0000000
+108                0             0.00000000            0.0000000
+109                0             0.00000000            0.0000000
+110                0             0.00000000            0.0000000
+111                0             0.00000000            0.0000000
+112                0             0.00000000            0.0000000
+113                0             0.00000000            0.0000000
+114                0             0.00000000            0.0000000
+115                0             0.00000000            0.0000000
+116                0             0.00000000            0.0000000
+117                0             0.00000000            0.0000000
+118                0             0.00000000            0.0000000
+119                0             0.00000000            0.0000000
+120                0             0.00000000            0.0000000
+121                0             0.00000000            0.0000000
+122                0             0.00000000            0.0000000
+123                0             0.00000000            0.0000000
+124                0             0.00000000            0.0000000
+125                0             0.00000000            0.0000000
+126                0             0.00000000            0.0000000
+127                0             0.00000000            0.0000000
+128                0             0.00000000            0.0000000
+129                0             0.00000000            0.0000000
+130                0             0.00000000            0.0000000
+131                0             0.00000000            0.0000000
+132                0             0.00000000            0.0000000
+133                0             0.00000000            0.0000000
+134                0             0.00000000            0.0000000
+135                0             0.00000000            0.0000000
+136                0             0.00000000            0.0000000
+137                0             0.00000000            0.0000000
+138                0             0.00000000            0.0000000
+139                0             0.00000000            0.0000000
+140                0             0.00000000            0.0000000
+141                0             0.00000000            0.0000000
+142                0             0.00000000            0.0000000
+143                0             0.00000000            0.0000000
+144                0             0.00000000            0.0000000
+145                0             0.00000000            0.0000000
+146                0             0.00000000            0.0000000
+147                0             0.00000000            0.0000000
+148                0             0.00000000            0.0000000
+149                0             0.00000000            0.0000000
+150                0             0.00000000            0.0000000
+151                0             0.00000000            0.0000000
+152                0             0.00000000            0.0000000
+153                0             0.00000000            0.0000000
+154                0             0.00000000            0.0000000
+155                0             0.00000000            0.0000000
+156                0             0.00000000            0.0000000
+157                0             0.00000000            0.0000000
+158                0             0.00000000            0.0000000
+    species_contaminant_score genus_contaminant_score
+1                        0.36               0.1400000
+2                        0.50               0.0800000
+3                        0.86               0.0800000
+4                        1.00               0.1800000
+5                        0.32               0.2200000
+6                        1.00               0.5882353
+7                        0.38               0.0200000
+8                        1.00               0.2653061
+9                        1.00               1.0000000
+10                       1.00               1.0000000
+11                       1.00               1.0000000
+12                       1.00               1.0000000
+13                       1.00               1.0000000
+14                       1.00               1.0000000
+15                       1.00               1.0000000
+16                       1.00               1.0000000
+17                       1.00               1.0000000
+18                       1.00               1.0000000
+19                       1.00               1.0000000
+20                       1.00               1.0000000
+21                       1.00               1.0000000
+22                       1.00               1.0000000
+23                       1.00               1.0000000
+24                       1.00               1.0000000
+25                       1.00               0.0000000
+26                       1.00               1.0000000
+27                       1.00               1.0000000
+28                       1.00               1.0000000
+29                       1.00               1.0000000
+30                       1.00               1.0000000
+31                       1.00               1.0000000
+32                       1.00               1.0000000
+33                       1.00               1.0000000
+34                       1.00               1.0000000
+35                       1.00               1.0000000
+36                       0.88               0.8000000
+37                       1.00               1.0000000
+38                       1.00               0.0000000
+39                       1.00               0.5000000
+40                       1.00               1.0000000
+41                       1.00               0.4600000
+42                       1.00               1.0000000
+43                       1.00               1.0000000
+44                       1.00               1.0000000
+45                       1.00               1.0000000
+46                       1.00               1.0000000
+47                       1.00               1.0000000
+48                       1.00               1.0000000
+49                       1.00               1.0000000
+50                       1.00               1.0000000
+51                       1.00               1.0000000
+52                       1.00               1.0000000
+53                       0.00               0.0000000
+54                       1.00               1.0000000
+55                       0.44               0.4400000
+56                       1.00               1.0000000
+57                       1.00               1.0000000
+58                       1.00               1.0000000
+59                       1.00               1.0000000
+60                       1.00               1.0000000
+61                       1.00               0.9800000
+62                       1.00               1.0000000
+63                       1.00               1.0000000
+64                       1.00               1.0000000
+65                       1.00               1.0000000
+66                       1.00               1.0000000
+67                       1.00               1.0000000
+68                       1.00               1.0000000
+69                       1.00               1.0000000
+70                       1.00               1.0000000
+71                       1.00               1.0000000
+72                       1.00               0.0000000
+73                       1.00               0.9800000
+74                       1.00               1.0000000
+75                       1.00               0.0000000
+76                       1.00               1.0000000
+77                       1.00               1.0000000
+78                       1.00               1.0000000
+79                       1.00               1.0000000
+80                       1.00               1.0000000
+81                       1.00               1.0000000
+82                       1.00               1.0000000
+83                       1.00               1.0000000
+84                       1.00               1.0000000
+85                       1.00               0.8717949
+86                       1.00               1.0000000
+87                       1.00               1.0000000
+88                       1.00               1.0000000
+89                       1.00               1.0000000
+90                       1.00               1.0000000
+91                       1.00               1.0000000
+92                       1.00               1.0000000
+93                       1.00               1.0000000
+94                       1.00               1.0000000
+95                       1.00               1.0000000
+96                       1.00               0.0000000
+97                       1.00               1.0000000
+98                       1.00               1.0000000
+99                       1.00               1.0000000
+100                      1.00               1.0000000
+101                      0.00               0.0000000
+102                      0.00               0.0000000
+103                      0.00               0.0000000
+104                      0.00               0.0000000
+105                      0.00               0.0000000
+106                      0.00               0.0000000
+107                      0.00               0.0000000
+108                      0.00               0.0000000
+109                      0.00               0.0000000
+110                      0.00               0.0000000
+111                      0.00               0.0000000
+112                      0.00               0.0000000
+113                      0.00               0.0000000
+114                      0.00               0.0000000
+115                      0.00               0.0000000
+116                      0.00               0.0000000
+117                      0.00               0.0000000
+118                      0.00               0.0000000
+119                      0.00               0.0000000
+120                      0.00               0.0000000
+121                      0.00               0.0000000
+122                      0.00               0.0000000
+123                      0.00               0.0000000
+124                      0.00               0.0000000
+125                      0.00               0.0000000
+126                      0.00               0.0000000
+127                      0.00               0.0000000
+128                      0.00               0.0000000
+129                      0.00               0.0000000
+130                      0.00               0.0000000
+131                      0.00               0.0000000
+132                      0.00               0.0000000
+133                      0.00               0.0000000
+134                      0.00               0.0000000
+135                      0.00               0.0000000
+136                      0.00               0.0000000
+137                      0.00               0.0000000
+138                      0.00               0.0000000
+139                      0.00               0.0000000
+140                      0.00               0.0000000
+141                      0.00               0.0000000
+142                      0.00               0.0000000
+143                      0.00               0.0000000
+144                      0.00               0.0000000
+145                      0.00               0.0000000
+146                      0.00               0.0000000
+147                      0.00               0.0000000
+148                      0.00               0.0000000
+149                      0.00               0.0000000
+150                      0.00               0.0000000
+151                      0.00               0.0000000
+152                      0.00               0.0000000
+153                      0.00               0.0000000
+154                      0.00               0.0000000
+155                      0.00               0.0000000
+156                      0.00               0.0000000
+157                      0.00               0.0000000
+158                      0.00               0.0000000
+MetaBlast COMPLETE
+Running blast reassignment
+Results written to /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/outputs_new_all/mess_sample_10mil_err/healthy_stool_10_1.metascope_blast_reassigned.csv
+# A tibble: 111 x 23
+   TaxonomyID Genome    read_count Proportion readsEM EMProportion domain phylum
+        <int> <chr>          <dbl>      <dbl>   <dbl>        <dbl>  <int> <chr> 
+ 1     537011 Segatell~   5030656.   0.570     5.03e6     0.570         0 Bacte~
+ 2     435590 Phocaeic~   1400844.   0.159     1.38e6     0.157         0 Bacte~
+ 3     411479 Bacteroi~    865343.   0.0980    8.82e5     0.0999        0 Bacte~
+ 4     515619 Agathoba~    511643.   0.0580    5.09e5     0.0576        0 Bacil~
+ 5     411903 Collinse~    303101.   0.0343    3.03e5     0.0343        0 Actin~
+ 6     445970 Alistipe~    292403    0.0331    2.93e5     0.0332        0 Bacte~
+ 7     367928 Bifidoba~    282807.   0.0320    2.83e5     0.0320        0 Actin~
+ 8     411483 Faecalib~    106204.   0.0120    1.05e5     0.0119        0 Bacil~
+ 9     411461 Dorea fo~      3974    0.000450  4.53e3     0.000513      0 Bacil~
+10     999419 Parabact~      2260    0.000256  2.21e3     0.000250      0 Bacte~
+# i 101 more rows
+# i 15 more variables: class <chr>, order <chr>, family <chr>, genus <chr>,
+#   species <chr>, best_hit_genus <chr>, genus_counts <int>,
+#   best_hit_species <chr>, species_counts <int>, uniqueness_score <int>,
+#   species_percentage_hit <dbl>, genus_percentage_hit <dbl>,
+#   species_contaminant_score <dbl>, genus_contaminant_score <dbl>,
+#   blast_validated <lgl>
+BLAST REASSIGNMENT COMPLETE
+Time difference of 2.254263 hours

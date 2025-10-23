@@ -1,20 +1,21 @@
-RUN_SCRIPT <- TRUE
+suppressPackageStartupMessages({
+  library(rvest)
+  library(tidyverse)
+  library(future)
+  library(furrr)
+  library(progressr)
+  library(xml2)
+})
 
-if (RUN_SCRIPT) {
-  suppressPackageStartupMessages({
-    library(rvest)
-    library(tidyverse)
-    library(future)
-    library(furrr)
-    library(progressr)
-  })
-  
-  # availableCores()
-  plan(multisession, workers = 4)
-  
+# availableCores()
+plan(multisession, workers = availableCores() - 1)
+
+all_profilers <- c("Centrifuge")
+
+for (profiler in all_profilers) {
   csv_files <- list.files(
-    path      = "profilers/MetaScope_priors/combined_files/",
-    pattern   = "\\.csv$",
+    path      = file.path("profilers", profiler, "combined_files/"),
+    pattern   = "noerr.*\\.csv$",
     full.names= TRUE
   )
   
@@ -22,29 +23,48 @@ if (RUN_SCRIPT) {
     url <- URLencode(
       paste0("https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?name=", name_from_profilers)
     )
+    result <- tryCatch({
+      Sys.sleep(1)
+      request <- read_html(url) 
+      
+      # request |> 
+      #   html_elements("*") |>  # all elements
+      #   keep(~grepl("Clostridium", html_text2(.x))) |>
+      #   html_name() 
+      # 
+      current_name <- request |> 
+        html_element("body") |> 
+        html_element("ul") |> 
+        html_element("li") |> 
+        html_element("a") |> 
+        html_element("strong") |> 
+        html_text2()
+      
+      ## special cases
+      if (is.na(current_name)) {
+        current_name <- name_from_profilers
+      }
+      
+      data.frame(
+        old_name = name_from_profilers,
+        current_name = current_name
+      )
+    }, error = function(e) {
+      message("ERROR: Failed to fetch '", name_from_profilers, "' - ", e$message)
+      
+      data.frame(
+        old_name = name_from_profilers,
+        current_name = name_from_profilers  # Keep original name on error
+      )
+    })
     
-    Sys.sleep(0.1)
+    return(result)
     
-    request <- read_html(url)
-    current_name <- request |> 
-      html_element("body") |> 
-      html_element("form") |> 
-      html_element("ul") |> 
-      html_element("strong") |> 
-      html_text2()
-    
-    ## special cases
-    if (!is.na(current_name) && current_name == "1)") {
-      current_name <- name_from_profilers
-    }
-    
-    data.frame(
-      old_name = name_from_profilers,
-      current_name = current_name
-    )
   }
   
+  
   process_file <- function(input_path) {
+    message("now in ", profiler)
     message("Processing ", basename(input_path))
     
     df <- read.csv(input_path) |>
@@ -74,7 +94,7 @@ if (RUN_SCRIPT) {
     diff <- result_df |> 
       filter(old_name != current_name)
     
-    out_dir  <- "profilers/MetaScope_priors/combined_files/updated_species_names/"
+    out_dir  <- file.path("profilers", profiler, "combined_files/updated_species_names/diff")
     
     # create folder if not exist
     dirs_to_create <- c(out_dir)
@@ -89,7 +109,8 @@ if (RUN_SCRIPT) {
   for (file in csv_files) {
     process_file(file)
   }
-  
-  ## close multisession workers
-  plan(sequential)
 }
+
+## close multisession workers
+plan(sequential)
+

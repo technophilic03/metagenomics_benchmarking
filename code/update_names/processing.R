@@ -8,13 +8,13 @@ process_update_names <- function(profiler_name, RUN_SCRIPT){
     
     original_files <- list.files(
       path      = file.path("profilers", profiler_name, "combined_files"),
-      pattern   = "\\.csv$",
+      pattern   = "noerr.*\\.csv$",
       full.names= TRUE
     )
     
     ref_files <- list.files(
       path      = file.path("profilers", profiler_name, "combined_files/updated_species_names/diff"),
-      pattern   = "\\.csv$",
+      pattern   = "noerr.*\\.csv$",
       full.names= TRUE
     )
     
@@ -65,5 +65,5 @@ process_update_names <- function(profiler_name, RUN_SCRIPT){
   }
 }
 
-profilers <- c("Centrifuge", "MetaScope", "MetaScope_priors", "mOTUs", "PathoScope2")
+profilers <- c("Centrifuge", "MetaScope", "MetaScope_priors", "mOTUs", "PathoScope2", "Bracken", "Kraken2")
 lapply(profilers, process_update_names, TRUE)
