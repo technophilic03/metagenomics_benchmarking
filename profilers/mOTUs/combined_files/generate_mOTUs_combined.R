@@ -19,17 +19,21 @@ read_and_format <- function(file) {
   return(df)
 }
 
-generate_mOTUs_combined <- function(res_paths) {
+generate_mOTUs_combined <- function(batch) {
   # Read tables, skip lines 3 and merge
+  res_paths <- list.files(paste0("profilers/mOTUs/outputs/",batch), pattern = ".motus", 
+                          full.names = TRUE)
   tables <- map(res_paths, read_and_format)
   otu_table <- reduce(tables, full_join, by = "consensus_taxonomy")
   
-  # Convert consensus taxonomy (from mOTU) into updated name taxonomy
-  otu_table <- otu_table |> 
-    mutate(species = )
+  write.csv(otu_table,
+            file = file.path("profilers/mOTUs/combined_files", paste0(batch, "_combined.csv")))
+  
 }
 
 res_paths <- list.files("profilers/mOTUs/outputs/mess_sample_1mil_err", pattern = ".motus", 
                         full.names = TRUE)
-generate_mOTUs_combined(res_paths)
+
+batches <- list.files("profilers/mOTUs/outputs/")
+lapply(batches,generate_mOTUs_combined) 
 

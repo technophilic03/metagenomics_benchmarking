@@ -23,7 +23,8 @@ read_in_prof_res <- function(path_to_files, pipeline) {
     mutate(pipeline = pipeline, 
            file_name = tag,
            sample_name = str_to_lower(str_replace(sample_name, "_noerr", "")),
-           full_sample_name = paste0(sample_name, "_", tag))
+           full_sample_name = paste0(sample_name, "_", tag)) |>
+    rename(any_of(c(Name = "consensus_taxonomy")))
   })
   return(res_list)
 }
@@ -33,6 +34,7 @@ ctf_res <- read_in_prof_res("profilers/Centrifuge/combined_files/updated_species
 krk2_res <- read_in_prof_res("profilers/Kraken2/combined_files/updated_species_names/updated", "Kraken2")
 ms_res <- read_in_prof_res("profilers/MetaScope/combined_files/updated_species_names/updated", "MetaScope")
 msp_res <- read_in_prof_res("profilers/MetaScope_priors/combined_files/updated_species_names/updated", "MetaScope Priors")
+msb_res <- read_in_prof_res("profilers/MetaScope_blast/combined_files/updated_species_names/updated", "MetaScope Blast")
 mOTUs_res <- read_in_prof_res("profilers/mOTUs/combined_files/updated_species_names/updated", "mOTUs")
 ps2_res <- read_in_prof_res("profilers/PathoScope2/combined_files/updated_species_names/updated", "PathoScope2")
 
@@ -54,7 +56,7 @@ generate_ground_truth_categories <- function(df) {
   return(res)
 }
 
-profiler_res <- c(ms_res, msp_res,ps2_res, ctf_res, krk2_res, brk_res)
+profiler_res <- c(ms_res, msp_res,msb_res, ps2_res, ctf_res, krk2_res, brk_res, mOTUs_res)
 summary_df <- lapply(profiler_res, generate_ground_truth_categories) |> 
   bind_rows() |>
   filter(rel_read_count > 0)
@@ -75,12 +77,13 @@ summary_df_ground_truth$is_ground_truth <- factor(summary_df_ground_truth$is_gro
 summary_df_ground_truth$pipeline <- factor(summary_df_ground_truth$pipeline,
                                            levels = c("Ground Truth",
                                                       "Centrifuge",
+                                                      "mOTUs",
                                                       "Kraken2",
                                                       "Bracken",
                                                       "PathoScope2",
                                                       "MetaScope",
-                                                      "MetaScope Priors"
-                                                      #"mOTUs"
+                                                      "MetaScope Priors",
+                                                      "MetaScope Blast"
                                                       ))
 
 top_species <- ground_truth |>
@@ -120,14 +123,19 @@ p1 <- ggplot(data = summary_df_ground_truth_20,
   xlab("") +
   #scale_y_continuous(breaks = seq(0,1, by = 0.1)) +
   facet_grid(cols = vars(pipeline)) + 
-  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1),
-        #axis.ticks.x = element_blank(),
+  theme(axis.text.x = element_blank(),
+        axis.ticks.x = element_blank(),
         panel.grid.major = element_blank(), 
         panel.grid.minor = element_blank(),
-        panel.background = element_blank())
-        #legend.position = "none")
+        panel.background = element_blank(),
+        legend.position = "bottom", 
+        text = element_text(size = 8, family = "Arial"))
 
 p1
 
+ggsave("results/figures/relab_plot.png", p1, dpi = 600, units = "mm", width = 240, height = 120)
 
+
+
+write.csv(summary_df_ground_truth, "code/analysis/summary_df.csv", row.names = FALSE)
          
