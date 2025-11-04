@@ -11,7 +11,7 @@ suppressPackageStartupMessages({
   library(tidyverse)
 })
 
-stem <- "/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark"
+stem <- "/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking"
 fig_stem <-  file.path(stem, "results/figures")
 ```
 
@@ -108,7 +108,7 @@ read_in_roc <- function(this_csv) {
 
 ## Loop through
 ```{R}
-all_profilers <- c("PathoScope2", "Bracken", "MetaScope", "MetaScope_priors")
+all_profilers <- c("PathoScope2", "Bracken", "MetaScope", "MetaScope_priors", "MetaScope_blast", "Kraken2", "Centrifuge", "mOTUs")
 prof_stem <- file.path(stem, "profilers", all_profilers, "combined_files/updated_species_names/analysis_results")
 all_files <- list.files(prof_stem, pattern = ".csv$", full.names = TRUE)
 all_files_ROC <- list.files(prof_stem, pattern = "^ROC", full.names = TRUE)
@@ -121,25 +121,51 @@ roc_combined <- do.call(rbind, lapply(all_files_ROC, read_in_roc))
 
 ## Boxplots
 ```{R}
-for (this_metric in unique(files_combined$metric)) {
-  p <- files_combined |>
+
+  
+
+files_combined_new <- files_combined |>
+  mutate(total_bases = factor(total_bases, levels = c("100k", "1mil", "10mil"))) |> 
+  mutate(profiler = factor(profiler, levels = c(
+    "Centrifuge",
+    "Motus",
+    "Kraken2",
+    "Bracken",
+    "Pathoscope2",
+    "Metascope",
+    "Metascope_priors",
+    "Metascope_blast"
+  ), labels = c(
+    "Centrifuge",
+    "mOTUs",
+    "Kraken2",
+    "Bracken",
+    "PathoScope2",
+    "MetaScope",
+    "MetaScope_priors",
+    "MetaScope_blast"
+  )
+  ))
+
+for (this_metric in unique(files_combined_new$metric)) {
+  p <- files_combined_new |>
     filter(metric == this_metric) |>
     mutate("Species Dominance Score" = as.factor(species_dominance_score)) |>
-    ggplot(aes(x = `Species Dominance Score`, y = metric_val,
-               color = `Species Dominance Score`,
-               fill = `Species Dominance Score`)) +
+    ggplot(aes(x = profiler, y = metric_val,
+               color = profiler,
+               fill = profiler)) +
     geom_boxplot(alpha = 0.3) +
-    facet_grid(profiler~total_bases) +
+    facet_grid(`Species Dominance Score` ~ total_bases) +
     ylab(this_metric) +
+    xlab("Profiler") +
     labs(title = paste("Boxplot of", this_metric)) +
-    theme_classic()
+    theme(axis.text.x = element_text(angle = 45, hjust = 1))
   
   ggsave(file.path(fig_stem, paste0("boxplot_", this_metric, ".png")),
          p,
-         units = "in", width = 7, height = 5)
+         units = "in", width = 10, height = 13)
   print(p)
 }
-
 
 ```
 
@@ -156,8 +182,7 @@ p <- files_combined |>
   geom_boxplot(alpha = 0.3) +
   facet_grid(profiler~total_bases) +
   ylab(this_metric) +
-  labs(title = paste("Boxplot of", this_metric, " - 10 mil removed")) +
-  theme_classic()
+  labs(title = paste("Boxplot of", this_metric, " - 10 mil removed"))
 
 ggsave(file.path(fig_stem, paste0("boxplot_", this_metric, "_no10mil.png")),
        p,
@@ -183,7 +208,7 @@ roc_combined |>
   )
 
 ggsave(file.path(fig_stem, paste0("ROC.png")),
-       units = "in", width = 7, height = 5)
+       units = "in", width = 10, height = 15)
 # type of points - no fil
 # increase size
 ```
@@ -191,6 +216,19 @@ ggsave(file.path(fig_stem, paste0("ROC.png")),
 
 
 
+# Profiler names on the x-axis
+# Background (remove theme_classic)
+# order 100k, 1mil, 10mil
+# Profiler reordered 
+Centrifuge
+mOTUs
+Kraken2
+Bracken
+PathoScope2
+MetaScope
+MetaScope Priors
+MetaScope Blast
+# add ticks for axis
 
 
 
