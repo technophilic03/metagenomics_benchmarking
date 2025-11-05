@@ -122,8 +122,6 @@ roc_combined <- do.call(rbind, lapply(all_files_ROC, read_in_roc))
 ## Boxplots
 ```{R}
 
-  
-
 files_combined_new <- files_combined |>
   mutate(total_bases = factor(total_bases, levels = c("100k", "1mil", "10mil"))) |> 
   mutate(profiler = factor(profiler, levels = c(
@@ -142,8 +140,8 @@ files_combined_new <- files_combined |>
     "Bracken",
     "PathoScope2",
     "MetaScope",
-    "MetaScope_priors",
-    "MetaScope_blast"
+    "MetaScope Priors",
+    "MetaScope Blast"
   )
   ))
 
@@ -193,6 +191,14 @@ print(p)
 ## ROC Curves
 
 ```{R}
+roc_combined$total_bases <- factor(roc_combined$total_bases, levels = c("100k", "1mil", "10mil"))
+roc_combined$profiler <- factor(roc_combined$profiler, levels = c("Centrifuge", "Motus", "Kraken2",
+                                                                  "Bracken", "Pathoscope2", "Metascope", 
+                                                                  "Metascope_priors", "Metascope_blast")) 
+levels(roc_combined$profiler) <- c("Centrifuge", "mOTUs", "Kraken2",
+                                    "Bracken", "PathoScope2", "Metascope", 
+                                    "Metascope Priors", "Metascope Blast") 
+
 roc_combined |>
   ggplot(aes(x = FPR, y = TPR,
              color = as.factor(species_dominance_score),
@@ -201,7 +207,7 @@ roc_combined |>
   scale_color_discrete(name = "Dominance Scenario") +
   scale_shape_manual(values = c(0, 2, 3),
                      name = "Sequencing Depth") +
-  facet_grid(profiler~num_species_present) +
+  facet_grid(profiler ~ num_species_present) +
   ggplot2::labs(
     x = "1 - Specificity",
     y = "Sensitivity"

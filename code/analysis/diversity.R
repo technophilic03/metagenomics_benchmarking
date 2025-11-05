@@ -99,6 +99,14 @@ alpha_plots[[1]][1]
 alpha_plots[[1]][2]
 alpha_plots[[1]][3]
 
+alpha_plots[[2]][1]
+alpha_plots[[2]][2]
+alpha_plots[[2]][3]
+
+alpha_plots[[3]][1]
+alpha_plots[[3]][2]
+alpha_plots[[3]][3]
+
 ################################################################################
 # Beta Diversity
 ################################################################################
@@ -140,9 +148,9 @@ pcoa_df <- pcoa_df %>%
 # Plot
 ggplot(pcoa_df, aes(x = Axis1, y = Axis2, color = pipeline, label = Sample)) +
   geom_point(size = 3) +
-  labs(title = "PCoA (Bray-Curtis)", x = "PCoA1", y = "PCoA2") +
-  #facet_grid(vars(seq_depth, distribution_score)) + 
-  ggforce::geom_mark_ellipse(aes(fill = seq_depth), show.legend = FALSE)
+  labs(title = "PCoA (Bray-Curtis)", x = "PCoA1", y = "PCoA2") + 
+  facet_grid(vars(seq_depth, distribution_score))  + 
+  ggforce::geom_mark_ellipse(aes(fill = seq_depth), show.legend = FALSE, alpha = 0.1)
 ##################
 #NMDS
 
