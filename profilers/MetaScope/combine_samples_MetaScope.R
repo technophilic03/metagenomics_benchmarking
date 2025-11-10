@@ -14,8 +14,8 @@ suppressPackageStartupMessages({
 # Set file paths ----
 stem <- "profilers/MetaScope"
 test_dir <- "test_data"
-dat_path <- file.path(stem, "outputs")
-out_path <- file.path(stem, "combined_files")
+dat_path <- file.path(stem, "outputs_2")
+out_path <- file.path(stem, "combined_files_2")
 if (!dir.exists(out_path)) dir.create(out_path)
 if (!dir.exists(test_dir)) dir.create(test_dir)
 taxa_db <- "/projects/f_wj183_1/reflib/2024_accession_taxa/accessionTaxa.sql"

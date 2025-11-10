@@ -1,3 +1,4 @@
+# Edited for MetaScope reruns
 suppressPackageStartupMessages({
   library(rvest)
   library(tidyverse)
@@ -9,13 +10,14 @@ suppressPackageStartupMessages({
 
 # availableCores()
 plan(multisession, workers = availableCores() - 1)
+# plan(multisession, workers = 1)
 
-all_profilers <- c("Centrifuge")
+all_profilers <- c("MetaScope_priors")
 
 for (profiler in all_profilers) {
   csv_files <- list.files(
-    path      = file.path("profilers", profiler, "combined_files/"),
-    pattern   = "noerr.*\\.csv$",
+    path      = file.path("profilers", profiler, "combined_files_2/"),
+    pattern   = ".*\\.csv$",
     full.names= TRUE
   )
   
@@ -94,7 +96,7 @@ for (profiler in all_profilers) {
     diff <- result_df |> 
       filter(old_name != current_name)
     
-    out_dir  <- file.path("profilers", profiler, "combined_files/updated_species_names/diff")
+    out_dir  <- file.path("profilers", profiler, "combined_files_2/updated_species_names/diff")
     
     # create folder if not exist
     dirs_to_create <- c(out_dir)
