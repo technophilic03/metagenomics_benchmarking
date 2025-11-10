@@ -127,6 +127,7 @@ getR2Function <- function(sim_data_file, analysis_res_dir, profiler) {
 }
 
 
+
 # Process each profiler
 for (profiler in profilers) {
   message("Processing profiler: ", profiler)

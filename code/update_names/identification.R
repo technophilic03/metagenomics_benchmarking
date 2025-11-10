@@ -16,7 +16,7 @@ all_profilers <- c("MetaScope_priors")
 
 for (profiler in all_profilers) {
   csv_files <- list.files(
-    path      = file.path("profilers", profiler, "combined_files_2/"),
+    path      = file.path("profilers", profiler, "combined_files/"),
     pattern   = ".*\\.csv$",
     full.names= TRUE
   )
