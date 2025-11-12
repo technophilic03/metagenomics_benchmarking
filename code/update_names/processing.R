@@ -1,3 +1,4 @@
+# Updated for rerun MetaScopes
 RUN_SCRIPT <- TRUE
 
 process_update_names <- function(profiler_name, RUN_SCRIPT){
@@ -8,13 +9,13 @@ process_update_names <- function(profiler_name, RUN_SCRIPT){
     
     original_files <- list.files(
       path      = file.path("profilers", profiler_name, "combined_files"),
-      pattern   = "noerr.*\\.csv$",
+      pattern   = ".*\\.csv$",
       full.names= TRUE
     )
     
     ref_files <- list.files(
       path      = file.path("profilers", profiler_name, "combined_files/updated_species_names/diff"),
-      pattern   = "noerr.*\\.csv$",
+      pattern   = ".*\\.csv$",
       full.names= TRUE
     )
     
@@ -66,4 +67,5 @@ process_update_names <- function(profiler_name, RUN_SCRIPT){
 }
 
 profilers <- c("Centrifuge", "MetaScope", "MetaScope_priors", "mOTUs", "PathoScope2", "Bracken", "Kraken2")
+profilers <- c("MetaScope_priors")
 lapply(profilers, process_update_names, TRUE)

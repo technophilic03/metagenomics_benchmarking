@@ -4,6 +4,7 @@
 # Aubrey Odom
 # 4/27/25
 
+# Updated for MetaScope reruns
 # Setup ----
 suppressPackageStartupMessages({
   library(MetaScope)
