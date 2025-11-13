@@ -141,6 +141,72 @@ MetaScope Blast
 
 
 
+## Drop MetaScope Priors and Blast
 
+## Boxplots
+```{R}
+results_combined_cleaned_no_priors <- results_combined |>
+  mutate(total_bases = factor(total_bases, levels = c("100k", "1mil", "10mil"))) |> 
+  filter(!(profiler %in% c("MetaScope_priors", "MetaScope_blast"))) |>
+  mutate(profiler = factor(profiler, levels = c(
+    "Centrifuge",
+    "Kraken2",
+    "Bracken",
+    "mOTUs",
+    "PathoScope2",
+    "MetaScope"
+  ), labels = c(
+    "Centrifuge",
+    "Kraken2",
+    "Bracken",
+    "mOTUs",
+    "PathoScope2",
+    "MetaScope"
+  )
+  ))
 
+for (this_metric in c("r2", "rmse", "rrmse", "nrmse", "avgre", "MCC")) {
+  p <- results_combined_cleaned_no_priors |>
+    mutate("Species Dominance Score" = as.factor(species_dominance_score)) |>
+    ggplot(aes(x = profiler, y = !! sym(this_metric),
+               color = profiler,
+               fill = profiler)) +
+    geom_boxplot(alpha = 0.3) +
+    facet_grid(`num_species_present` ~ total_bases) +
+    ylab(this_metric) +
+    xlab("Profiler") +
+    labs(title = paste("Boxplot of", this_metric)) +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+    scale_y_continuous(sec.axis = dup_axis(name = "Total Species",
+                                           breaks = NULL, labels = NULL))
+  
+  ggsave(file.path(fig_stem, paste0("boxplot_", this_metric, "_no_priors.png")),
+         p,
+         units = "in", width = 10, height = 13)
+  print(p)
+}
 
+```
+
+```{r}
+p_roc <- results_combined_cleaned_no_priors |>
+  ggplot(aes(x = FPR, y = TPR,
+             color = as.factor(species_dominance_score)
+             ))+
+  ggplot2::geom_point(aes(shape = total_bases),
+                           alpha = 0.35) +
+  scale_color_discrete(name = "Dominance Scenario") +
+  scale_shape_manual(values = c(15,16,17),
+                     name = "Sequencing Depth") +
+  facet_grid(`num_species_present` ~ profiler) +
+  ggplot2::labs(
+    x = "1 - Specificity",
+    y = "Sensitivity"
+  ) +
+  scale_y_continuous(sec.axis = dup_axis(name = "Total Species",
+                                       breaks = NULL, labels = NULL))
+p_roc
+ggsave(file.path(fig_stem, paste0("ROC.png")), p_roc,
+       units = "in", width = 10, height = 15)
+
+```

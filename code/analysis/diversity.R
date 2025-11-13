@@ -21,7 +21,9 @@ summary_df_filtered <- summary_df |>
   filter(Name != "Unassigned") |>
   filter(read_count > 0) |>
   group_by(Name, pipeline, full_sample_name) |> 
-  summarise(read_count = sum(read_count), .groups = "drop")
+  summarise(read_count = sum(read_count), .groups = "drop") |>
+  filter(pipeline != "MetaScope Priors") |>
+  filter(pipeline != "MetaScope Blast")
 
 
 
@@ -59,11 +61,23 @@ alpha_diversity_plots <- function(index, df) {
   shannon_diff <- lapply(shannon_list, function(v) v - shannon_list[[3]][names(v)])
   
   shannon_diff_df <- enframe(shannon_diff, name = "pipeline", value = "differences") |>
-    unnest_longer(differences, values_to = "difference", indices_to = "difference_id")
+    unnest_longer(differences, values_to = "difference", indices_to = "difference_id") |>
+    mutate(total_species = str_split_i(difference_id, "_", 3), 
+           species_distribution = str_split_i(difference_id, "_", 4), 
+           total_reads = str_split_i(difference_id, "_", 5), 
+           err_model = str_split_i(difference_id, "_", 6)) |>
+    filter(pipeline != "Ground Truth")
+  shannon_diff_df$pipeline <- factor(shannon_diff_df$pipeline, 
+                                     levels = c("Centrifuge",
+                                                "Kraken2",
+                                                "Bracken",
+                                                "mOTUs",
+                                                "PathoScope2",
+                                                "MetaScope"))
   
   p1 <- ggplot(shannon_diff_df, aes(x = pipeline, y = difference, fill = pipeline)) +
     geom_violin(trim = FALSE, alpha = 0.5) +
-    geom_jitter() +
+    geom_jitter(aes(shape = total_species, color = pipeline), alpha = 0.5) +
     theme_minimal() +
     labs(y = "Difference from ground truth", x = "Pipeline",
          title = paste(index, "— Distribution of deviations from ground truth")) + 
@@ -107,6 +121,84 @@ alpha_plots[[3]][1]
 alpha_plots[[3]][2]
 alpha_plots[[3]][3]
 
+
+################################################################################
+shannon_list <- lapply(split_list, function(x) calculate_diversity(x, index = "shannon"))
+
+shannon_diff <- lapply(shannon_list, function(v) v - shannon_list[[3]][names(v)])
+
+shannon_diff_df <- enframe(shannon_diff, name = "pipeline", value = "differences") |>
+  unnest_longer(differences, values_to = "difference", indices_to = "difference_id") |>
+  mutate(total_species = str_split_i(difference_id, "_", 3), 
+         species_distribution = str_split_i(difference_id, "_", 4), 
+         total_reads = str_split_i(difference_id, "_", 5), 
+         err_model = str_split_i(difference_id, "_", 6)) |>
+  filter(pipeline != "Ground Truth") 
+shannon_diff_df$pipeline <- factor(shannon_diff_df$pipeline, 
+                                   levels = c("Centrifuge",
+                                              "Kraken2",
+                                              "Bracken",
+                                              "mOTUs",
+                                              "PathoScope2",
+                                              "MetaScope"))
+
+simpson_list <- lapply(split_list, function(x) calculate_diversity(x, index = "simpson"))
+
+simpson_diff <- lapply(simpson_list, function(v) v - simpson_list[[3]][names(v)])
+
+simpson_diff_df <- enframe(simpson_diff, name = "pipeline", value = "differences") |>
+  unnest_longer(differences, values_to = "difference", indices_to = "difference_id") |>
+  mutate(total_species = str_split_i(difference_id, "_", 3), 
+         species_distribution = str_split_i(difference_id, "_", 4), 
+         total_reads = str_split_i(difference_id, "_", 5), 
+         err_model = str_split_i(difference_id, "_", 6)) |>
+  filter(pipeline != "Ground Truth")
+simpson_diff_df$pipeline <- factor(simpson_diff_df$pipeline, 
+                                   levels = c("Centrifuge",
+                                              "Kraken2",
+                                              "Bracken",
+                                              "mOTUs",
+                                              "PathoScope2",
+                                              "MetaScope"))
+
+inv_list <- lapply(split_list, function(x) calculate_diversity(x, index = "inv"))
+
+inv_diff <- lapply(inv_list, function(v) v - inv_list[[3]][names(v)])
+
+inv_diff_df <- enframe(inv_diff, name = "pipeline", value = "differences") |>
+  unnest_longer(differences, values_to = "difference", indices_to = "difference_id") |>
+  mutate(total_species = str_split_i(difference_id, "_", 3), 
+         species_distribution = str_split_i(difference_id, "_", 4), 
+         total_reads = str_split_i(difference_id, "_", 5), 
+         err_model = str_split_i(difference_id, "_", 6)) |>
+  filter(pipeline != "Ground Truth")
+inv_diff_df$pipeline <- factor(inv_diff_df$pipeline, 
+                                   levels = c("Centrifuge",
+                                              "Kraken2",
+                                              "Bracken",
+                                              "mOTUs",
+                                              "PathoScope2",
+                                              "MetaScope"))
+
+shannon_diff_df <- shannon_diff_df |> dplyr::mutate(alpha_metric = "Shannon")
+simpson_diff_df <- simpson_diff_df |> dplyr::mutate(alpha_metric = "Simpson")
+inv_diff_df <- inv_diff_df |> dplyr::mutate(alpha_metric = "Inverse simpson")
+
+full_alpha_df <- rbind(shannon_diff_df, simpson_diff_df, inv_diff_df)
+full_alpha_df$alpha_metric <- factor(full_alpha_df$alpha_metric, 
+                                     levels = c("Shannon", "Simpson", "Inverse simpson"))
+
+alpha_plot_full <- ggplot(full_alpha_df, aes(x = pipeline, y = difference, fill = pipeline)) +
+  geom_violin(trim = FALSE, alpha = 0.5) +
+  geom_jitter(aes(shape = total_species, color = pipeline), alpha = 0.5) +
+  facet_wrap(vars(alpha_metric), scales = "free_x") +
+  labs(y = "Difference from ground truth", x = "Pipeline",
+       title = paste(index, "— Distribution of deviations from ground truth")) + 
+  coord_flip() +
+  geom_hline(yintercept = 0)
+
+ggsave("results/figures/alpha_div_plot.png", alpha_plot_full, dpi = 600)
+
 ################################################################################
 # Beta Diversity
 ################################################################################
@@ -125,7 +217,7 @@ metadata <- data.frame(full_sample_name = row.names(comm_matrix)) |>
   
 
 # Run PERMANOVA
-adonis2(beta ~ pipeline, data = metadata)
+adonis2(beta ~ pipeline+total_species+distribution_score+seq_depth+err_model, data = metadata)
 
 # PCoA
 # Compute beta diversity (e.g., Bray-Curtis or Sørensen)
@@ -148,9 +240,9 @@ pcoa_df <- pcoa_df %>%
 # Plot
 ggplot(pcoa_df, aes(x = Axis1, y = Axis2, color = pipeline, label = Sample)) +
   geom_point(size = 3) +
-  labs(title = "PCoA (Bray-Curtis)", x = "PCoA1", y = "PCoA2") + 
-  facet_grid(vars(seq_depth, distribution_score))  + 
-  ggforce::geom_mark_ellipse(aes(fill = seq_depth), show.legend = FALSE, alpha = 0.1)
+  labs(title = "PCoA (Bray-Curtis)", x = "PCoA1", y = "PCoA2") 
+  #facet_grid(vars(seq_depth, distribution_score))
+  #ggforce::geom_mark_ellipse(aes(fill = seq_depth), show.legend = FALSE, alpha = 0.1)
 ##################
 #NMDS
 
@@ -174,4 +266,40 @@ ggplot(nmds_df, aes(x = NMDS1, y = NMDS2, color = pipeline, label = Sample, shap
   geom_point(size = 3) +
   theme_minimal() +
   labs(title = "NMDS (Bray-Curtis)")
+
+
+# Self calculate bray distance fromg round truth
+calc_bray <- function(x,y) {
+  sum(abs(x-y)) / sum(x+y)
+}
+
+bray_dist_df <- metadata |> 
+  filter(pipeline != "Ground Truth") |>
+  mutate(corres_ground_truth = paste0("Ground Truth_healthy_stool_", total_species, "_", distribution_score, "_", seq_depth, "_", err_model)) |>
+  rowwise() |> 
+  mutate(bray_dist = calc_bray(comm_matrix[full_sample_name,], comm_matrix[corres_ground_truth,])) |>
+  ungroup()
+
+bray_dist_df$pipeline <- factor(bray_dist_df$pipeline, levels = c("Centrifuge",
+                                                                  "Kraken2",
+                                                                  "Bracken",
+                                                                  "mOTUs",
+                                                                  "PathoScope2",
+                                                                  "MetaScope"))
+bray_dist_df$distribution_score <- factor(bray_dist_df$distribution_score, levels = c("1", "10", "50", "100"))
+bray_dist_df$seq_depth <- factor(bray_dist_df$seq_depth, levels = c("100k", "1mil", "10mil"))
+                              
+
+ggplot(bray_dist_df, aes(x = pipeline, y = bray_dist,
+                         color = pipeline)) + 
+  geom_boxplot() + 
+  facet_grid(distribution_score  ~ seq_depth) +
+  ylab("Bray-Curtis Dissimilarity") +
+  xlab("Profiler") +
+  labs(title = paste("Boxplot of Bray-Curtis Dissimilarity from Ground Truth")) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  scale_y_continuous(sec.axis = dup_axis(name = "Species Dominance Score",
+                                         breaks = NULL, labels = NULL)) + 
+  scale_x_continuous(sec.axis = dup_axis(name = "Total Simulated Reads",
+                                         breaks = NULL, labels = NULL))
 
