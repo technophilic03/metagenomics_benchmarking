@@ -290,7 +290,7 @@ bray_dist_df$distribution_score <- factor(bray_dist_df$distribution_score, level
 bray_dist_df$seq_depth <- factor(bray_dist_df$seq_depth, levels = c("100k", "1mil", "10mil"))
                               
 
-ggplot(bray_dist_df, aes(x = pipeline, y = bray_dist,
+final_beta_plot <- ggplot(bray_dist_df, aes(x = pipeline, y = bray_dist,
                          color = pipeline)) + 
   geom_boxplot() + 
   facet_grid(distribution_score  ~ seq_depth) +
@@ -300,6 +300,7 @@ ggplot(bray_dist_df, aes(x = pipeline, y = bray_dist,
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
   scale_y_continuous(sec.axis = dup_axis(name = "Species Dominance Score",
                                          breaks = NULL, labels = NULL)) + 
-  scale_x_continuous(sec.axis = dup_axis(name = "Total Simulated Reads",
+  scale_x_discrete(sec.axis = dup_axis(name = "Total Simulated Reads",
                                          breaks = NULL, labels = NULL))
 
+ggsave("results/figures/final_beta_plot.png", final_beta_plot, dpi = 600)
