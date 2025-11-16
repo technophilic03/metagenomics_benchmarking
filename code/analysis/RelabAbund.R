@@ -138,4 +138,49 @@ ggsave("results/figures/relab_plot.png", p1, dpi = 600, units = "mm", width = 24
 
 
 write.csv(summary_df_ground_truth, "code/analysis/summary_df.csv", row.names = FALSE)
-         
+
+
+
+
+###############################################################################
+# Evaluation of Priors
+###############################################################################
+species_by_sample <- summary_df_ground_truth |> 
+  select(full_sample_name, pipeline, is_ground_truth) |>
+  distinct() |>
+  group_by(full_sample_name, pipeline) |>
+  summarise(species = list(unique(is_ground_truth)), .groups = "drop")
+
+# Spread the two pipelines into columns
+wide <- species_by_sample |> 
+  pivot_wider(
+    names_from = pipeline,
+    values_from = species
+  )
+
+# Compute the differences per sample
+result <- wide |> 
+  mutate(
+    meta_only   = map2(MetaScope, `MetaScope Priors`, ~ setdiff(.x, .y)),
+    priors_only = map2(`MetaScope Priors`, MetaScope, ~ setdiff(.x, .y))
+  ) |> 
+  select(full_sample_name, meta_only, priors_only) |>
+  filter(
+    lengths(meta_only) > 0 |
+    lengths(priors_only) > 0
+  )
+   
+# Priors only identified Alistipes inops
+ground_truth |> filter(species == "Alistipes inops")
+
+
+summary_df_ground_truth_10 |>
+  group_by(full_sample_name, pipeline) |> 
+  filter(is_ground_truth == "Incorrect Call") |>
+  summarize(total_incorrect = sum(rel_read_count), .groups = "drop") |>
+  group_by(pipeline) |>
+  summarize(mean_incorrect = mean(total_incorrect))
+
+
+results_combined_cleaned |> group_by(profiler) |> summarize(mean_TPR = mean(TPR), 
+                                                            mean_FPR = mean(FPR))
