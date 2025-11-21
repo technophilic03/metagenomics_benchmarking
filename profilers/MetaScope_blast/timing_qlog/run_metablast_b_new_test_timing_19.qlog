@@ -1,0 +1,35 @@
+scc-tk2
+20
+Task ID: 19
+Data Directory: 
+Sample Name: healthy_stool_100_1
+Sample Type: mess_sample_10mil_err
+R1 Read Path: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/MeSS_out_noerr/fastq/mess_sample_10mil_err/healthy_stool_100_1_R1.fq.gz
+R2 Read Path: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/MeSS_out_noerr/fastq/mess_sample_10mil_err/healthy_stool_100_1_R2.fq.gz
+Rows: 100 Columns: 2
+-- Column specification --------------------------------------------------------
+Delimiter: ","
+chr (1): species
+dbl (1): tax_abundance
+
+i Use `spec()` to retrieve the full column specification for this data.
+i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Attempting to perform Bowtie2 alignment on target_reference_2 index
+[1] "Samtools found on system. Using samtools to create bam file"
+arguments 'show.output.on.console', 'minimized' and 'invisible' are for Windows only
+(ERR): bowtie2-align died with signal 9 (KILL) 
+[W::sam_hdr_create] Ignored @SQ SN:NW : bad or missing LN tag
+[E::sam_hrecs_update_hashes] Header includes @SQ line "NW" with no LN: tag
+samtools view: failed to add PG line to the header
+Filtering unmapped reads
+Error in .local(file, destination, ...) : 'filename' is not a BAM file
+  file: /scratch/1727975.19.linga/mess_sample_10mil_err_tmp/healthy_stool_100_1_R1.fq.target_reference_2.bam
+Calls: align_target_bowtie ... filter_unmapped_reads -> <Anonymous> -> <Anonymous> -> .local -> .Call
+In addition: Warning message:
+In system(call, intern = TRUE, show.output.on.console = TRUE) :
+  running command 'perl '/restricted/projectnb/pathoscope/work/Yaoan/R/Rbowtie2/bowtie2' --local -R 2 -N 0 -L 25 -i S,1,0.75 -k 9 --score-min L,0,1.7 --threads 4 -x '/restricted/projectnb/pathoscope/reflib/2025_index_bowtie/target_reference_2' -1 '/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/MeSS_out_noerr/fastq/mess_sample_10mil_err/healthy_stool_100_1_R1.fq.gz' -2 '/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/MeSS_out_noerr/fastq/mess_sample_10mil_err/healthy_stool_100_1_R2.fq.gz' | '/share/pkg.7/samtools/1.12/install/bin/samtools' view -bS > '/scratch/1727975.19.linga/mess_sample_10mil_err_tmp/healthy_stool_100_1_R1.fq.target_reference_2.bam'' had status 1
+Execution halted
+
+real	3m48.255s
+user	0m15.287s
+sys	2m54.001s
