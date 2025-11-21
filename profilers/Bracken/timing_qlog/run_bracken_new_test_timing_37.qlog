@@ -1,0 +1,32 @@
+scc-tm1
+20
+mess_sample_1mil_err
+healthy_stool_10_100
+Loading database information... done.
+999699 sequences (299.91 Mbp) processed in 16.047s (3737.8 Kseq/m, 1121.33 Mbp/m).
+  805937 sequences classified (80.62%)
+  193762 sequences unclassified (19.38%)
+ >> Checking for Valid Options...
+ >> Running Bracken 
+      >> python src/est_abundance.py -i /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_1mil_err/healthy_stool_10_100.kreport2 -o /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_1mil_err/healthy_stool_10_100.bracken -k /restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/db/StandardKrakenDB/database150mers.kmer_distrib -l S -t 10
+>> Checking report file: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_1mil_err/healthy_stool_10_100.kreport2
+PROGRAM START TIME: 11-21-2025 15:54:24
+BRACKEN SUMMARY (Kraken report: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_1mil_err/healthy_stool_10_100.kreport2)
+    >>> Threshold: 10 
+    >>> Number of species in sample: 1804 
+	  >> Number of species with reads > threshold: 288 
+	  >> Number of species with reads < threshold: 1516 
+    >>> Total reads in sample: 999699
+	  >> Total reads kept at species level (reads > threshold): 617534
+	  >> Total reads discarded (species reads < threshold): 4903
+	  >> Reads distributed: 182702
+	  >> Reads not distributed (eg. no species above threshold): 798
+	  >> Unclassified reads: 193762
+BRACKEN OUTPUT PRODUCED: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_1mil_err/healthy_stool_10_100.bracken
+PROGRAM END TIME: 11-21-2025 15:54:24
+  Bracken complete.
+DONE!
+
+real	0m47.009s
+user	0m48.947s
+sys	0m33.162s

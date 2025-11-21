@@ -1,0 +1,32 @@
+scc-tm1
+20
+mess_sample_1mil_noerr
+healthy_stool_10_100_noerr
+Loading database information... done.
+999699 sequences (299.91 Mbp) processed in 10.180s (5892.4 Kseq/m, 1767.71 Mbp/m).
+  789173 sequences classified (78.94%)
+  210526 sequences unclassified (21.06%)
+ >> Checking for Valid Options...
+ >> Running Bracken 
+      >> python src/est_abundance.py -i /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_1mil_noerr/healthy_stool_10_100_noerr.kreport2 -o /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_1mil_noerr/healthy_stool_10_100_noerr.bracken -k /restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/db/StandardKrakenDB/database150mers.kmer_distrib -l S -t 10
+>> Checking report file: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_1mil_noerr/healthy_stool_10_100_noerr.kreport2
+PROGRAM START TIME: 11-21-2025 15:58:35
+BRACKEN SUMMARY (Kraken report: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_1mil_noerr/healthy_stool_10_100_noerr.kreport2)
+    >>> Threshold: 10 
+    >>> Number of species in sample: 2360 
+	  >> Number of species with reads > threshold: 341 
+	  >> Number of species with reads < threshold: 2019 
+    >>> Total reads in sample: 999699
+	  >> Total reads kept at species level (reads > threshold): 595777
+	  >> Total reads discarded (species reads < threshold): 7018
+	  >> Reads distributed: 185567
+	  >> Reads not distributed (eg. no species above threshold): 811
+	  >> Unclassified reads: 210526
+BRACKEN OUTPUT PRODUCED: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_1mil_noerr/healthy_stool_10_100_noerr.bracken
+PROGRAM END TIME: 11-21-2025 15:58:35
+  Bracken complete.
+DONE!
+
+real	0m41.351s
+user	0m31.375s
+sys	0m31.266s

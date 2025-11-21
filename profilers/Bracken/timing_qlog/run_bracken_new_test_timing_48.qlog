@@ -1,0 +1,32 @@
+scc-tm2
+20
+mess_sample_1mil_noerr
+healthy_stool_10_50_noerr
+Loading database information... done.
+999713 sequences (299.91 Mbp) processed in 10.327s (5808.4 Kseq/m, 1742.53 Mbp/m).
+  705402 sequences classified (70.56%)
+  294311 sequences unclassified (29.44%)
+ >> Checking for Valid Options...
+ >> Running Bracken 
+      >> python src/est_abundance.py -i /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_1mil_noerr/healthy_stool_10_50_noerr.kreport2 -o /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_1mil_noerr/healthy_stool_10_50_noerr.bracken -k /restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/db/StandardKrakenDB/database150mers.kmer_distrib -l S -t 10
+>> Checking report file: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_1mil_noerr/healthy_stool_10_50_noerr.kreport2
+PROGRAM START TIME: 11-21-2025 15:59:35
+BRACKEN SUMMARY (Kraken report: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_1mil_noerr/healthy_stool_10_50_noerr.kreport2)
+    >>> Threshold: 10 
+    >>> Number of species in sample: 2181 
+	  >> Number of species with reads > threshold: 515 
+	  >> Number of species with reads < threshold: 1666 
+    >>> Total reads in sample: 999713
+	  >> Total reads kept at species level (reads > threshold): 563858
+	  >> Total reads discarded (species reads < threshold): 6221
+	  >> Reads distributed: 134551
+	  >> Reads not distributed (eg. no species above threshold): 772
+	  >> Unclassified reads: 294311
+BRACKEN OUTPUT PRODUCED: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_1mil_noerr/healthy_stool_10_50_noerr.bracken
+PROGRAM END TIME: 11-21-2025 15:59:35
+  Bracken complete.
+DONE!
+
+real	0m42.011s
+user	0m31.484s
+sys	0m32.865s
