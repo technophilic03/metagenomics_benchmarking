@@ -1,0 +1,32 @@
+scc-tk2
+20
+mess_sample_100k_noerr
+healthy_stool_100_1_noerr
+Loading database information... done.
+99916 sequences (29.97 Mbp) processed in 1.623s (3694.1 Kseq/m, 1108.22 Mbp/m).
+  43848 sequences classified (43.88%)
+  56068 sequences unclassified (56.12%)
+ >> Checking for Valid Options...
+ >> Running Bracken 
+      >> python src/est_abundance.py -i /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_100k_noerr/healthy_stool_100_1_noerr.kreport2 -o /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_100k_noerr/healthy_stool_100_1_noerr.bracken -k /restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/db/StandardKrakenDB/database150mers.kmer_distrib -l S -t 10
+>> Checking report file: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_100k_noerr/healthy_stool_100_1_noerr.kreport2
+PROGRAM START TIME: 11-21-2025 15:43:06
+BRACKEN SUMMARY (Kraken report: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_100k_noerr/healthy_stool_100_1_noerr.kreport2)
+    >>> Threshold: 10 
+    >>> Number of species in sample: 1259 
+	  >> Number of species with reads > threshold: 124 
+	  >> Number of species with reads < threshold: 1135 
+    >>> Total reads in sample: 99916
+	  >> Total reads kept at species level (reads > threshold): 33371
+	  >> Total reads discarded (species reads < threshold): 2234
+	  >> Reads distributed: 7887
+	  >> Reads not distributed (eg. no species above threshold): 356
+	  >> Unclassified reads: 56068
+BRACKEN OUTPUT PRODUCED: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_100k_noerr/healthy_stool_100_1_noerr.bracken
+PROGRAM END TIME: 11-21-2025 15:43:06
+  Bracken complete.
+DONE!
+
+real	0m31.979s
+user	0m5.151s
+sys	0m29.613s

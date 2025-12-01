@@ -1,0 +1,32 @@
+scc-tm4
+20
+mess_sample_10mil_err
+healthy_stool_100_100
+Loading database information... done.
+9987279 sequences (2996.18 Mbp) processed in 222.204s (2696.8 Kseq/m, 809.04 Mbp/m).
+  7027260 sequences classified (70.36%)
+  2960019 sequences unclassified (29.64%)
+ >> Checking for Valid Options...
+ >> Running Bracken 
+      >> python src/est_abundance.py -i /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_10mil_err/healthy_stool_100_100.kreport2 -o /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_10mil_err/healthy_stool_100_100.bracken -k /restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/db/StandardKrakenDB/database150mers.kmer_distrib -l S -t 10
+>> Checking report file: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_10mil_err/healthy_stool_100_100.kreport2
+PROGRAM START TIME: 11-21-2025 15:49:56
+BRACKEN SUMMARY (Kraken report: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_10mil_err/healthy_stool_100_100.kreport2)
+    >>> Threshold: 10 
+    >>> Number of species in sample: 5630 
+	  >> Number of species with reads > threshold: 3524 
+	  >> Number of species with reads < threshold: 2106 
+    >>> Total reads in sample: 9987279
+	  >> Total reads kept at species level (reads > threshold): 6030345
+	  >> Total reads discarded (species reads < threshold): 9428
+	  >> Reads distributed: 986424
+	  >> Reads not distributed (eg. no species above threshold): 1063
+	  >> Unclassified reads: 2960019
+BRACKEN OUTPUT PRODUCED: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_10mil_err/healthy_stool_100_100.bracken
+PROGRAM END TIME: 11-21-2025 15:49:57
+  Bracken complete.
+DONE!
+
+real	4m19.660s
+user	9m28.259s
+sys	4m3.915s

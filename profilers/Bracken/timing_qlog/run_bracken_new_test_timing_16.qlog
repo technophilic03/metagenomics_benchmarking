@@ -1,0 +1,32 @@
+scc-tl2
+20
+mess_sample_100k_noerr
+healthy_stool_10_50_noerr
+Loading database information... done.
+99974 sequences (29.99 Mbp) processed in 1.867s (3212.2 Kseq/m, 963.67 Mbp/m).
+  70385 sequences classified (70.40%)
+  29589 sequences unclassified (29.60%)
+ >> Checking for Valid Options...
+ >> Running Bracken 
+      >> python src/est_abundance.py -i /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_100k_noerr/healthy_stool_10_50_noerr.kreport2 -o /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_100k_noerr/healthy_stool_10_50_noerr.bracken -k /restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/db/StandardKrakenDB/database150mers.kmer_distrib -l S -t 10
+>> Checking report file: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_100k_noerr/healthy_stool_10_50_noerr.kreport2
+PROGRAM START TIME: 11-21-2025 15:43:09
+BRACKEN SUMMARY (Kraken report: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_100k_noerr/healthy_stool_10_50_noerr.kreport2)
+    >>> Threshold: 10 
+    >>> Number of species in sample: 864 
+	  >> Number of species with reads > threshold: 72 
+	  >> Number of species with reads < threshold: 792 
+    >>> Total reads in sample: 99974
+	  >> Total reads kept at species level (reads > threshold): 56103
+	  >> Total reads discarded (species reads < threshold): 1322
+	  >> Reads distributed: 12683
+	  >> Reads not distributed (eg. no species above threshold): 277
+	  >> Unclassified reads: 29589
+BRACKEN OUTPUT PRODUCED: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_100k_noerr/healthy_stool_10_50_noerr.bracken
+PROGRAM END TIME: 11-21-2025 15:43:10
+  Bracken complete.
+DONE!
+
+real	0m35.836s
+user	0m5.453s
+sys	0m33.155s

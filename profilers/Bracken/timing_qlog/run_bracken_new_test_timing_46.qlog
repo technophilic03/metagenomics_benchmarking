@@ -1,0 +1,32 @@
+scc-tm3
+20
+mess_sample_1mil_noerr
+healthy_stool_10_10_noerr
+Loading database information... done.
+999731 sequences (299.92 Mbp) processed in 9.407s (6376.7 Kseq/m, 1913.00 Mbp/m).
+  694073 sequences classified (69.43%)
+  305658 sequences unclassified (30.57%)
+ >> Checking for Valid Options...
+ >> Running Bracken 
+      >> python src/est_abundance.py -i /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_1mil_noerr/healthy_stool_10_10_noerr.kreport2 -o /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_1mil_noerr/healthy_stool_10_10_noerr.bracken -k /restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/db/StandardKrakenDB/database150mers.kmer_distrib -l S -t 10
+>> Checking report file: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_1mil_noerr/healthy_stool_10_10_noerr.kreport2
+PROGRAM START TIME: 11-21-2025 15:58:34
+BRACKEN SUMMARY (Kraken report: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_1mil_noerr/healthy_stool_10_10_noerr.kreport2)
+    >>> Threshold: 10 
+    >>> Number of species in sample: 2275 
+	  >> Number of species with reads > threshold: 530 
+	  >> Number of species with reads < threshold: 1745 
+    >>> Total reads in sample: 999731
+	  >> Total reads kept at species level (reads > threshold): 533173
+	  >> Total reads discarded (species reads < threshold): 6228
+	  >> Reads distributed: 153790
+	  >> Reads not distributed (eg. no species above threshold): 882
+	  >> Unclassified reads: 305658
+BRACKEN OUTPUT PRODUCED: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_1mil_noerr/healthy_stool_10_10_noerr.bracken
+PROGRAM END TIME: 11-21-2025 15:58:35
+  Bracken complete.
+DONE!
+
+real	0m40.583s
+user	0m27.756s
+sys	0m31.153s

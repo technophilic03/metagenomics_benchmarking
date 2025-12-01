@@ -1,0 +1,32 @@
+scc-tl4
+20
+mess_sample_10mil_noerr
+healthy_stool_10_10_noerr
+Loading database information... done.
+9997354 sequences (2999.21 Mbp) processed in 73.715s (8137.3 Kseq/m, 2441.20 Mbp/m).
+  6952580 sequences classified (69.54%)
+  3044774 sequences unclassified (30.46%)
+ >> Checking for Valid Options...
+ >> Running Bracken 
+      >> python src/est_abundance.py -i /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_10mil_noerr/healthy_stool_10_10_noerr.kreport2 -o /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_10mil_noerr/healthy_stool_10_10_noerr.bracken -k /restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/db/StandardKrakenDB/database150mers.kmer_distrib -l S -t 10
+>> Checking report file: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_10mil_noerr/healthy_stool_10_10_noerr.kreport2
+PROGRAM START TIME: 11-21-2025 15:52:24
+BRACKEN SUMMARY (Kraken report: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_10mil_noerr/healthy_stool_10_10_noerr.kreport2)
+    >>> Threshold: 10 
+    >>> Number of species in sample: 2719 
+	  >> Number of species with reads > threshold: 2314 
+	  >> Number of species with reads < threshold: 405 
+    >>> Total reads in sample: 9997354
+	  >> Total reads kept at species level (reads > threshold): 5347821
+	  >> Total reads discarded (species reads < threshold): 1761
+	  >> Reads distributed: 1600600
+	  >> Reads not distributed (eg. no species above threshold): 2398
+	  >> Unclassified reads: 3044774
+BRACKEN OUTPUT PRODUCED: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_10mil_noerr/healthy_stool_10_10_noerr.bracken
+PROGRAM END TIME: 11-21-2025 15:52:25
+  Bracken complete.
+DONE!
+
+real	1m44.239s
+user	3m33.009s
+sys	0m46.758s

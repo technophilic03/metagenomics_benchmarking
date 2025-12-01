@@ -1,40 +1,12 @@
 #!/bin/bash -l
 
-# Set SCC project
-#$ -P pathoscope
 
-# Specify hard time limit for the job. 
-#   The job will be aborted if it runs longer than this time.
-#   The default time is 12 hours
-#$ -l h_rt=50:00:00
 
-# Send an email when the job is aborted
-#$ -m a
 
-# Request cores
-#$ -pe omp 8
+SGE_TASK_ID="$1"
+NSLOTS="$2"
 
-# Give job a name
-#$ -N std_kraken_new
-
-# Specify the output file name
-#$ -j y
-#$ -o run_kraken_new_$TASK_ID.qlog
-
-# Ask for scratch space
-#$ -l scratch=100G
-
-# Use the SGE_TASK_ID environment variable to select the appropriate input file from bash array
-# Bash array index starts from 0, so we need to subtract one from SGE_TASK_ID value
-#$ -t 1-24
-
-# Keep track of information related to the current job
-echo "=========================================================="
-echo "Start date : $(date)"
-echo "Job name : $JOB_NAME"
-echo "Job ID : $SGE_TASK_ID"
-echo "=========================================================="
-start_time=$(date +%s)
+nproc --all
 
 # Define samples
 stem=/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/
@@ -52,6 +24,9 @@ sampleType=$(basename "$(dirname "$readPath1")")
 # Strip "_noerr" suffix for matching priors_df files
 sampleNameForPriors="${sampleName%_noerr}" 
 
+echo $sampleType
+echo $sampleName
+
 # Obtain read files
 ForwardRead=$readPath1
 ReverseRead=$readPath2
@@ -59,7 +34,7 @@ ReverseRead=$readPath2
 # Load software
 module load kraken2/2.1.2
 inputDB=/restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/db/StandardKrakenDB
-outDir="${stem}/profilers/Kraken2/outputs/${sampleType}"
+outDir="${stem}/profilers/Kraken2/outputs_timing_test/${sampleType}"
 mkdir -p "$outDir"
 OUTREPORT="${outDir}/${sampleName}"
 
@@ -77,7 +52,3 @@ kraken2 --db $inputDB \
 rm -rf ${OUTREPORT}.out
 
 echo DONE!
-
-end_time=$(date +%s)
-elapsed_time=$((end_time - start_time))
-echo "Execution Time: ${elapsed_time} seconds" >> ${outDir}/${sampleName}_timing.txt

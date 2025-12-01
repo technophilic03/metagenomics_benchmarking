@@ -1,0 +1,32 @@
+scc-tm1
+20
+mess_sample_100k_noerr
+healthy_stool_10_1_noerr
+Loading database information... done.
+99981 sequences (29.99 Mbp) processed in 1.778s (3373.8 Kseq/m, 1012.13 Mbp/m).
+  51140 sequences classified (51.15%)
+  48841 sequences unclassified (48.85%)
+ >> Checking for Valid Options...
+ >> Running Bracken 
+      >> python src/est_abundance.py -i /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_100k_noerr/healthy_stool_10_1_noerr.kreport2 -o /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_100k_noerr/healthy_stool_10_1_noerr.bracken -k /restricted/projectnb/pathoscope/work/aubrey/newMB_02_25_meta_benchmark/db/StandardKrakenDB/database150mers.kmer_distrib -l S -t 10
+>> Checking report file: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_100k_noerr/healthy_stool_10_1_noerr.kreport2
+PROGRAM START TIME: 11-21-2025 15:43:07
+BRACKEN SUMMARY (Kraken report: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_100k_noerr/healthy_stool_10_1_noerr.kreport2)
+    >>> Threshold: 10 
+    >>> Number of species in sample: 1010 
+	  >> Number of species with reads > threshold: 77 
+	  >> Number of species with reads < threshold: 933 
+    >>> Total reads in sample: 99981
+	  >> Total reads kept at species level (reads > threshold): 38142
+	  >> Total reads discarded (species reads < threshold): 1969
+	  >> Reads distributed: 5713
+	  >> Reads not distributed (eg. no species above threshold): 5316
+	  >> Unclassified reads: 48841
+BRACKEN OUTPUT PRODUCED: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/Bracken/outputs_new_timing/mess_sample_100k_noerr/healthy_stool_10_1_noerr.bracken
+PROGRAM END TIME: 11-21-2025 15:43:08
+  Bracken complete.
+DONE!
+
+real	0m34.024s
+user	0m5.586s
+sys	0m31.434s
