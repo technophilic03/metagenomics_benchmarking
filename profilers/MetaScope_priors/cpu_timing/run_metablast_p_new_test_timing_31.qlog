@@ -1,0 +1,104 @@
+scc-tm1
+20
+Task ID: 31
+Data Directory: 
+Sample Name: 
+Sample Type: 
+R1 Read Path: 
+R2 Read Path: 
+Task ID: 31
+Data Directory: 
+Sample Name: healthy_stool_10_1_noerr
+Sample Type: mess_sample_10mil_noerr
+R1 Read Path: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//MeSS_out_noerr/fastq/mess_sample_10mil_noerr/healthy_stool_10_1_noerr_R1.fq.gz
+R2 Read Path: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//MeSS_out_noerr/fastq/mess_sample_10mil_noerr/healthy_stool_10_1_noerr_R2.fq.gz
+Rows: 10 Columns: 2
+-- Column specification --------------------------------------------------------
+Delimiter: ","
+chr (1): species
+dbl (1): tax_abundance
+
+i Use `spec()` to retrieve the full column specification for this data.
+i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Attempting to perform Bowtie2 alignment on target_reference_2 index
+[1] "Samtools found on system. Using samtools to create bam file"
+arguments 'show.output.on.console', 'minimized' and 'invisible' are for Windows only
+(ERR): bowtie2-align died with signal 9 (KILL) 
+[E::sam_parse1] SEQ and QUAL are of different length
+[W::sam_read1_sam] Parse error at line 1700481
+samtools view: error reading file "-"
+Filtering unmapped reads
+Library alignment complete
+DONE! Alignments written to /scratch/2016816.31.linga/healthy_stool_10_1_noerr_tmp/healthy_stool_10_1_noerr.bam
+Warning message:
+In system(call, intern = TRUE, show.output.on.console = TRUE) :
+  running command 'perl '/restricted/projectnb/pathoscope/work/Yaoan/R/Rbowtie2/bowtie2' --local -R 2 -N 0 -L 25 -i S,1,0.75 -k 9 --score-min L,0,1.7 --threads 4 -x '/restricted/projectnb/pathoscope/reflib/2025_index_bowtie/target_reference_2' -1 '/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//MeSS_out_noerr/fastq/mess_sample_10mil_noerr/healthy_stool_10_1_noerr_R1.fq.gz' -2 '/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//MeSS_out_noerr/fastq/mess_sample_10mil_noerr/healthy_stool_10_1_noerr_R2.fq.gz' | '/share/pkg.7/samtools/1.12/install/bin/samtools' view -bS > '/scratch/2016816.31.linga/healthy_stool_10_1_noerr_tmp/healthy_stool_10_1_noerr_R1.fq.target_reference_2.bam'' had status 1
+TARGET STEP COMPLETE
+Writing Intermediate FASTQ file to /scratch/2016816.31.linga/healthy_stool_10_1_noerr_tmp/intermediate.fastq.gz
+  |                                                                              |                                                                      |   0%  |                                                                              |======================================================================| 100%
+Intermediate FASTQ file written to/scratch/2016816.31.linga/healthy_stool_10_1_noerr_tmp/intermediate.fastq.gz
+Attempting to perform Bowtie2 alignment on filter_reference index
+[1] "Samtools found on system. Using samtools to create bam file"
+arguments 'show.output.on.console', 'minimized' and 'invisible' are for Windows only
+1 reads; of these:
+  1 (100.00%) were unpaired; of these:
+    1 (100.00%) aligned 0 times
+    0 (0.00%) aligned exactly 1 time
+    0 (0.00%) aligned >1 times
+0.00% overall alignment rate
+Removing reads mapped to host indices
+  |                                                                              |                                                                      |   0%  |                                                                              |=====================                                                 |  30%  |                                                                              |==========================================                            |  60%  |                                                                              |===============================================================       |  91%  |                                                                              |======================================================================| 100%
+DONE! Alignments written to /scratch/2016816.31.linga/healthy_stool_10_1_noerr_tmp//healthy_stool_10_1_noerr.filtered.csv.gz
+FILTER STEP COMPLETE
+running id step
+Note, cannot generate updated_bam from csv.gz file
+Reading .csv.gz file: /scratch/2016816.31.linga/healthy_stool_10_1_noerr_tmp//healthy_stool_10_1_noerr.filtered.csv.gz
+Setting up the EM algorithm
+	Found 501 unique taxa
+Starting EM iterations
+1 26554.3944063909
+2 0.997794477608193
+3 0.800731554444865
+4 0.761349230999781
+5 0.683134664481342
+6 0.707967467493354
+7 0.735365117297271
+8 0.508766580677958
+9 0.293934638667685
+10 0.248795042089691
+11 0.300936518918015
+12 0.390608567704784
+13 0.453879599121934
+14 0.45700761017111
+15 0.382268068332853
+16 0.261095968929315
+17 0.372786846710031
+18 0.521446427266378
+19 0.640840189780337
+20 0.678808855231665
+21 0.794984987660047
+22 0.707305791926725
+23 0.785007877162703
+24 0.605389412809448
+25 0.191577819671213
+26 0.0641100224660678
+27 0.0347280567209125
+28 0.0181447268830337
+29 0.00929468394177227
+30 0.0047120444993834
+31 0.0023761165629519
+32 0.00119495038334912
+33 0.000600120215723036
+34 0.000301181177728016
+35 0.000151100968786528
+36 7.57933816902113e-05
+DONE! Converged in 36 iterations.
+Found reads for 9 genomes
+Results written to /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/MetaScope_priors/outputs_new_noerr/mess_sample_10mil_noerr/healthy_stool_10_1_noerr.metascope_id.csv
+No coverage plots created
+[1] "/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/MetaScope_priors/outputs_new_noerr/mess_sample_10mil_noerr/healthy_stool_10_1_noerr.metascope_id.csv"
+Time difference of 8.799376 mins
+
+real	8m50.573s
+user	3m49.426s
+sys	4m7.154s

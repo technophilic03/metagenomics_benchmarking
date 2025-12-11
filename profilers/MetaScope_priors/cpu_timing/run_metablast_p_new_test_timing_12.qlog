@@ -1,0 +1,176 @@
+scc-tm2
+20
+Task ID: 12
+Data Directory: 
+Sample Name: 
+Sample Type: 
+R1 Read Path: 
+R2 Read Path: 
+Task ID: 12
+Data Directory: 
+Sample Name: healthy_stool_100_50_noerr
+Sample Type: mess_sample_100k_noerr
+R1 Read Path: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//MeSS_out_noerr/fastq/mess_sample_100k_noerr/healthy_stool_100_50_noerr_R1.fq.gz
+R2 Read Path: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//MeSS_out_noerr/fastq/mess_sample_100k_noerr/healthy_stool_100_50_noerr_R2.fq.gz
+Rows: 100 Columns: 2
+-- Column specification --------------------------------------------------------
+Delimiter: ","
+chr (1): species
+dbl (1): tax_abundance
+
+i Use `spec()` to retrieve the full column specification for this data.
+i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Attempting to perform Bowtie2 alignment on target_reference_2 index
+[1] "Samtools found on system. Using samtools to create bam file"
+arguments 'show.output.on.console', 'minimized' and 'invisible' are for Windows only
+99867 reads; of these:
+  99867 (100.00%) were paired; of these:
+    3819 (3.82%) aligned concordantly 0 times
+    67138 (67.23%) aligned concordantly exactly 1 time
+    28910 (28.95%) aligned concordantly >1 times
+    ----
+    3819 pairs aligned concordantly 0 times; of these:
+      2212 (57.92%) aligned discordantly 1 time
+    ----
+    1607 pairs aligned 0 times concordantly or discordantly; of these:
+      3214 mates make up the pairs; of these:
+        446 (13.88%) aligned 0 times
+        188 (5.85%) aligned exactly 1 time
+        2580 (80.27%) aligned >1 times
+99.78% overall alignment rate
+Filtering unmapped reads
+Library alignment complete
+DONE! Alignments written to /scratch/2016816.12.linga/healthy_stool_100_50_noerr_tmp/healthy_stool_100_50_noerr.bam
+TARGET STEP COMPLETE
+Writing Intermediate FASTQ file to /scratch/2016816.12.linga/healthy_stool_100_50_noerr_tmp/intermediate.fastq.gz
+  |                                                                              |                                                                      |   0%  |                                                                              |======================================================================| 100%
+Intermediate FASTQ file written to/scratch/2016816.12.linga/healthy_stool_100_50_noerr_tmp/intermediate.fastq.gz
+Attempting to perform Bowtie2 alignment on filter_reference index
+[1] "Samtools found on system. Using samtools to create bam file"
+arguments 'show.output.on.console', 'minimized' and 'invisible' are for Windows only
+1 reads; of these:
+  1 (100.00%) were unpaired; of these:
+    1 (100.00%) aligned 0 times
+    0 (0.00%) aligned exactly 1 time
+    0 (0.00%) aligned >1 times
+0.00% overall alignment rate
+Removing reads mapped to host indices
+  |                                                                              |                                                                      |   0%  |                                                                              |===================                                                   |  27%  |                                                                              |======================================                                |  54%  |                                                                              |=========================================================             |  81%  |                                                                              |======================================================================| 100%
+DONE! Alignments written to /scratch/2016816.12.linga/healthy_stool_100_50_noerr_tmp//healthy_stool_100_50_noerr.filtered.csv.gz
+FILTER STEP COMPLETE
+running id step
+Note, cannot generate updated_bam from csv.gz file
+Reading .csv.gz file: /scratch/2016816.12.linga/healthy_stool_100_50_noerr_tmp//healthy_stool_100_50_noerr.filtered.csv.gz
+Setting up the EM algorithm
+	Found 6633 unique taxa
+Starting EM iterations
+1 8484.40273560971
+2 0.998435309362375
+3 0.952192463053494
+4 0.648450576955078
+5 0.732767461160205
+6 0.558794650507462
+7 0.466552656436501
+8 0.485252976139699
+9 0.463566147357709
+10 0.359191953134147
+11 0.224443406059742
+12 0.189857175779689
+13 0.217568011624993
+14 0.243417522918228
+15 0.265480472140143
+16 0.281123514593964
+17 0.286688546379602
+18 0.277967101606946
+19 0.288406106434662
+20 0.331982104375278
+21 0.311895482892652
+22 0.342254933696273
+23 0.401728643690636
+24 0.375600301719046
+25 0.252667386508353
+26 0.118775708925132
+27 0.047247862160517
+28 0.0496405784089988
+29 0.0519748478667783
+30 0.0542186196086032
+31 0.056337273410536
+32 0.0582943803768371
+33 0.0600526548601594
+34 0.0615750759355591
+35 0.062826141574458
+36 0.0637732048464296
+37 0.0643878301718267
+38 0.0646470997029075
+39 0.0645347957778274
+40 0.0640423852710371
+41 0.0631697357453404
+42 0.0619255019824462
+43 0.0603271353364083
+44 0.0584004879860368
+45 0.0561790095807798
+46 0.0545445928810999
+47 0.0576487999253995
+48 0.0609419678269965
+49 0.0644351511528126
+50 0.0681378915366891
+51 0.0720566524628073
+52 0.0761924022281904
+53 0.0805369479783212
+54 0.0850674715970092
+55 0.0897385470126763
+56 0.0944707830233337
+57 0.0991352816351351
+58 0.103533653890051
+59 0.107375018211532
+60 0.110255207393234
+61 0.111650343957409
+62 0.110946546850853
+63 0.130159489258587
+64 0.152072942477124
+65 0.172965749325971
+66 0.189413806714332
+67 0.197276184999829
+68 0.192899062214366
+69 0.174920484971629
+70 0.145779254683725
+71 0.111405301595257
+72 0.0785660827162352
+73 0.051819234585548
+74 0.0324856655694708
+75 0.019649500409446
+76 0.0140774904560026
+77 0.0136986364310988
+78 0.0133208277060968
+79 0.012944712853929
+80 0.0125709087612336
+81 0.012199999172327
+82 0.0118325335240573
+83 0.0114690260661411
+84 0.0111099552586287
+85 0.0107557634354844
+86 0.0104068567209421
+87 0.0100636051833344
+88 0.00972634320946794
+89 0.00939537008137162
+90 0.00907095073635459
+91 0.00875331669073208
+92 0.00844266710737001
+93 0.00813916998723389
+94 0.00784296346545661
+95 0.0075541571930149
+96 0.00727283378584373
+97 0.00699905032416355
+98 0.00673283988585827
+99 0.00647421309890667
+100 0.0062231596991165
+DONE! Converged in 100 iterations.
+Found reads for 148 genomes
+Results written to /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/MetaScope_priors/outputs_new_noerr/mess_sample_100k_noerr/healthy_stool_100_50_noerr.metascope_id.csv
+No coverage plots created
+[1] "/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//profilers/MetaScope_priors/outputs_new_noerr/mess_sample_100k_noerr/healthy_stool_100_50_noerr.metascope_id.csv"
+Time difference of 6.956681 mins
+
+real	6m59.138s
+user	4m33.614s
+sys	3m47.300s

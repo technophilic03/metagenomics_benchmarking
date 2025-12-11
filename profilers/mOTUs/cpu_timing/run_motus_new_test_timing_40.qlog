@@ -1,0 +1,57 @@
+scc-tm2
+20
+Task ID: 40
+Sample Name: healthy_stool_10_50
+Sample Type: mess_sample_1mil_err
+R1 Read Path: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/MeSS_out/fastq/mess_sample_1mil_err/healthy_stool_10_50_R1.fq.gz
+R2 Read Path: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/MeSS_out/fastq/mess_sample_1mil_err/healthy_stool_10_50_R2.fq.gz
+[34m[1m2025-12-05 19:42:49[0m [34m[1mMap reads to the marker gene database[0m
+   [36mReads are aligned (by BWA) to marker gene sequences in the reference database[0m
+   [36mReads are filtered for:[0m
+   [36m - similarity to the reference gene (>97%), and[0m
+   [36m - length of the alignment (at least 75 nucleotides, -l option)[0m
+   
+   Number of detected lanes: 1
+
+   [1m2025-12-05 19:42:49[0m Run bwa on lane 1
+   [35m[1mWarning: [0m[35mfile /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/MeSS_out/fastq/mess_sample_1mil_err/healthy_stool_10_50_R1.fq.gz. The length of the first 2500 reads is 150. It is suggested to quality control the reads before profiling[0m
+   [35m[1mWarning: [0m[35mfile /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/MeSS_out/fastq/mess_sample_1mil_err/healthy_stool_10_50_R2.fq.gz. The length of the first 2500 reads is 150. It is suggested to quality control the reads before profiling[0m
+     map forward reads: 77.26 s
+     map reverse reads: 77.04 s
+     sort alignments: 0.12 s
+   Total number of reads: 999713
+   Number of reads after filtering: 7717 (0.77 percent)
+   
+   Total time for mapping reads: 154.55 s
+   
+[34m[1m2025-12-05 19:45:24[0m [34m[1mCalculate marker gene cluster (MGC) abundance[0m
+   [36mAbundance of MGCs are quantified by the number of inserts aligning to their[0m
+   [36mmember genes[0m
+   [36mInserts can either map to one MGC ('Unique mappers'), or map to many[0m
+   [36mMGCs from different species ('Multiple mappers')
+[0m
+   Total number of inserts: 7438
+     - Unique mappers: 6779
+     - Multiple mappers: 431
+     - Ignored multiple mapper without unique hit: 228
+   
+   Total time to calculate the MGCs: 12.63 s
+   
+[34m[1m2025-12-05 19:45:36[0m [34m[1mGenerate mOTU profile[0m
+   [36mEach mOTU is composed of 6 to 10 MGCs[0m
+   [36mThe final mOTU insert count is obtained as the median of its MGC read counts
+[0m
+   At least 3 (-g) MGCs need to be detected to consider a mOTU as being present
+
+   Create taxonomy profile
+     Number of ref-mOTUs:  9
+     Number of meta-mOTUs: 0
+     Number of ext-mOTUs:  0
+   
+[34m[1m2025-12-05 19:45:37[0m [34m[1mFinished computation[0m
+[34m[1m2025-12-05 19:45:37[0m [34m[1mTotal time: 168.29 s[0m
+done
+
+real	2m54.059s
+user	9m44.589s
+sys	0m28.743s

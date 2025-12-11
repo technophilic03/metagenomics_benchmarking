@@ -1,0 +1,121 @@
+scc-tm4
+chmod: cannot access '2': No such file or directory
+chmod: cannot access '4': No such file or directory
+20
+Task ID: 2
+Sample Name: healthy_stool_100_10
+Sample Type: mess_sample_100k_err
+R1 Read Path: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/MeSS_out_noerr/fastq/mess_sample_100k_err/healthy_stool_100_10_R1.fq.gz
+R2 Read Path: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/MeSS_out_noerr/fastq/mess_sample_100k_err/healthy_stool_100_10_R2.fq.gz
+Attempting to perform Bowtie2 alignment on target_reference_2 index
+[1] "Samtools found on system. Using samtools to create bam file"
+arguments 'show.output.on.console', 'minimized' and 'invisible' are for Windows only
+99854 reads; of these:
+  99854 (100.00%) were paired; of these:
+    52961 (53.04%) aligned concordantly 0 times
+    32031 (32.08%) aligned concordantly exactly 1 time
+    14862 (14.88%) aligned concordantly >1 times
+    ----
+    52961 pairs aligned concordantly 0 times; of these:
+      29357 (55.43%) aligned discordantly 1 time
+    ----
+    23604 pairs aligned 0 times concordantly or discordantly; of these:
+      47208 mates make up the pairs; of these:
+        295 (0.62%) aligned 0 times
+        15470 (32.77%) aligned exactly 1 time
+        31443 (66.61%) aligned >1 times
+99.85% overall alignment rate
+Filtering unmapped reads
+Library alignment complete
+DONE! Alignments written to /scratch/2044964.2.linga/healthy_stool_100_10_tmp/healthy_stool_100_10.bam
+TARGET STEP COMPLETE
+Writing Intermediate FASTQ file to /scratch/2044964.2.linga/healthy_stool_100_10_tmp/intermediate.fastq.gz
+
+  |                                                                            
+  |                                                                      |   0%
+  |                                                                            
+  |======================================================================| 100%
+Intermediate FASTQ file written to/scratch/2044964.2.linga/healthy_stool_100_10_tmp/intermediate.fastq.gz
+Attempting to perform Bowtie2 alignment on filter_reference index
+[1] "Samtools found on system. Using samtools to create bam file"
+arguments 'show.output.on.console', 'minimized' and 'invisible' are for Windows only
+1 reads; of these:
+  1 (100.00%) were unpaired; of these:
+    1 (100.00%) aligned 0 times
+    0 (0.00%) aligned exactly 1 time
+    0 (0.00%) aligned >1 times
+0.00% overall alignment rate
+Removing reads mapped to host indices
+
+  |                                                                            
+  |                                                                      |   0%
+  |                                                                            
+  |==================                                                    |  25%
+  |                                                                            
+  |====================================                                  |  51%
+  |                                                                            
+  |=====================================================                 |  76%
+  |                                                                            
+  |======================================================================| 100%
+DONE! Alignments written to /scratch/2044964.2.linga/healthy_stool_100_10_tmp//healthy_stool_100_10.filtered.csv.gz
+FILTER STEP COMPLETE
+running id step
+Note, cannot generate updated_bam from csv.gz file
+Reading .csv.gz file: /scratch/2044964.2.linga/healthy_stool_100_10_tmp//healthy_stool_100_10.filtered.csv.gz
+Setting up the EM algorithm
+	Found 7786 unique taxa
+Starting EM iterations
+1 4732.74046001622
+2 0.999494701352292
+3 0.999112173923364
+4 0.998205794231916
+5 0.998733226685144
+6 0.998524886000388
+7 0.9918845337792
+8 0.996475580450996
+9 0.972207236075452
+10 0.98587880769603
+11 0.80719446990231
+12 0.767624460952243
+13 0.544285586188397
+14 0.483715270069022
+15 0.467251151131428
+16 0.426448874873259
+17 0.356316994580406
+18 0.263245117778381
+19 0.169249572956996
+20 0.0963162838988524
+21 0.0503398195440861
+22 0.0331197806413196
+23 0.0259141074786996
+24 0.0201263596714145
+25 0.0155387997982768
+26 0.0119408068314116
+27 0.00914233406587108
+28 0.00697981905435437
+29 0.00531713126287083
+30 0.00404369235663067
+31 0.00307127248392334
+32 0.00233040230040639
+33 0.00176692362222035
+34 0.00133892748621139
+35 0.00101416432531111
+36 0.00076792176002399
+37 0.000581322982418367
+38 0.000439983192160056
+39 0.000332960435152744
+40 0.000251942940676418
+41 0.00019062339269478
+42 0.000144219265693759
+43 0.000109106342426107
+44 8.25393990690811e-05
+DONE! Converged in 44 iterations.
+Found reads for 122 genomes
+Results written to /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope/outputs_new_timing/mess_sample_100k_err/healthy_stool_100_10.metascope_id.csv
+No coverage plots created
+[1] "/restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope/outputs_new_timing/mess_sample_100k_err/healthy_stool_100_10.metascope_id.csv"
+Time difference of 8.099772 mins
+
+real	8m8.479s
+user	5m41.710s
+sys	3m33.637s

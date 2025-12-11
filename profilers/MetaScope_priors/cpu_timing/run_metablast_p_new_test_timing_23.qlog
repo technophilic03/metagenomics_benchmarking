@@ -1,0 +1,43 @@
+scc-tl3
+20
+Task ID: 23
+Data Directory: 
+Sample Name: 
+Sample Type: 
+R1 Read Path: 
+R2 Read Path: 
+Task ID: 23
+Data Directory: 
+Sample Name: healthy_stool_10_1
+Sample Type: mess_sample_10mil_err
+R1 Read Path: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//MeSS_out_noerr/fastq/mess_sample_10mil_err/healthy_stool_10_1_R1.fq.gz
+R2 Read Path: /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//MeSS_out_noerr/fastq/mess_sample_10mil_err/healthy_stool_10_1_R2.fq.gz
+Rows: 10 Columns: 2
+-- Column specification --------------------------------------------------------
+Delimiter: ","
+chr (1): species
+dbl (1): tax_abundance
+
+i Use `spec()` to retrieve the full column specification for this data.
+i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Attempting to perform Bowtie2 alignment on target_reference_2 index
+[1] "Samtools found on system. Using samtools to create bam file"
+arguments 'show.output.on.console', 'minimized' and 'invisible' are for Windows only
+Out of memory allocating the ebwt[] array for the Bowtie index.  Please try
+again on a computer with more memory.
+Error: Encountered internal Bowtie 2 exception (#1)
+Command: /restricted/projectnb/pathoscope/work/Yaoan/R/Rbowtie2/bowtie2-align-l --wrapper basic-0 --local -R 2 -N 0 -L 25 -i S,1,0.75 -k 9 --score-min L,0,1.7 --threads 4 -x /restricted/projectnb/pathoscope/reflib/2025_index_bowtie/target_reference_2 -1 /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//MeSS_out_noerr/fastq/mess_sample_10mil_err/healthy_stool_10_1_R1.fq.gz -2 /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking//MeSS_out_noerr/fastq/mess_sample_10mil_err/healthy_stool_10_1_R2.fq.gz 
+(ERR): bowtie2-align exited with value 1
+Filtering unmapped reads
+Library alignment complete
+DONE! Alignments written to /scratch/2016816.23.linga/healthy_stool_10_1_tmp/healthy_stool_10_1.bam
+TARGET STEP COMPLETE
+Writing Intermediate FASTQ file to /scratch/2016816.23.linga/healthy_stool_10_1_tmp/intermediate.fastq.gz
+Error in utils::txtProgressBar(min = 0, max = mx <- nrow(result), style = 3) : 
+  must have 'max' > 'min'
+Calls: filter_host_bowtie ... mk_interim_fastq -> reduceByYield_iterate -> <Anonymous>
+Execution halted
+
+real	3m33.568s
+user	0m36.361s
+sys	2m26.403s
