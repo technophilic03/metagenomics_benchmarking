@@ -33,4 +33,5 @@
 # Bash array index starts from 0, so we need to subtract one from SGE_TASK_ID value
 #$ -t 1-48
 echo $HOSTNAME
+
 time /restricted/projectnb/pathoscope/work/Yaoan/metagenomics_benchmarking/profilers/MetaScope_blast/run_metascope_b.qsub ${SGE_TASK_ID} ${NSLOTS}
